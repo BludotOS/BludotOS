@@ -1,0 +1,40 @@
+
+# ALL CUSTOM ENTRIES SHOULD GO ABOVE THIS LINE
+# BEGIN IWORX header
+# This file was created by InterWorx-CP
+# You may modify this file, but any changes made between
+# BEGIN IWORX and END IWORX tags may be lost on future
+# updates.  Additionally, changes NOT made between these
+# tags will not be recognized in the SiteWorx interface.
+# END IWORX header
+
+# BEGIN IWORX accesscontrol
+# END IWORX accesscontrol
+
+# BEGIN IWORX errordocs
+# END IWORX errordocs
+
+# BEGIN IWORX mimetypes
+# END IWORX mimetypes
+
+# BEGIN IWORX handlers
+# END IWORX handlers
+
+# BEGIN IWORX charset
+# END IWORX charset
+
+# BEGIN IWORX redirects
+# END IWORX redirects
+
+# BEGIN IWORX phpvars
+# END IWORX phpvars
+
+# BEGIN IWORX railsconfig
+# END IWORX railsconfig
+
+# BEGIN IWORX dirindex
+# END IWORX dirindex
+
+# BEGIN IWORX hotlink
+# END IWORX hotlink
+

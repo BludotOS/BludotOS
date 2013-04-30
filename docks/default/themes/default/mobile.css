@@ -1,0 +1,60 @@
+    #dockContainer{
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    height: 0px;
+    text-align: center;
+    /*padding: 5px 5px 2px 5px;*/
+    -webkit-transform-origin: 50% 100%;
+    z-index:10;
+    }
+    #dock{
+    height: 1px;
+    position: relative;
+    padding: 0 20px;
+    }
+    #background {
+    background: hsla(0,0%,30%, 0.7);
+    box-shadow: 0px 1px 5px black inset;
+    border: 3px solid white;
+    //border-radius: 7px 7px 0 0;
+    border-bottom-width: 0;
+    bottom: -3px;
+    //background: url('http://fc05.deviantart.net/fs28/f/2008/181/f/b/tileable_wood_texture_by_ftIsis_Stock.jpg') no-repeat;
+    height: 44px;
+    position: absolute;
+    border-width: 0px;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    opacity: 0.5;
+    -webkit-transform: perspective(500) rotate3d(1,0,0, 30deg);
+    -moz-transform: perspective(500) rotate3d(1,0,0, 30deg);
+    background-size: 100%;
+}
+.label:after {
+position: absolute;
+content: "";
+width: 0;
+height: 0;
+border: 5px solid 
+transparent;
+border-top-color: 
+rgba(0, 0, 0, 0.4);
+bottom: -10px;
+left: 50%;
+margin-left: -5px;
+}
+.dockmenu:after {
+position: absolute;
+content: "";
+width: 0;
+height: 0;
+border: 5px solid 
+transparent;
+border-top-color: 
+rgba(0, 0, 0, 0.4);
+bottom: -10px;
+left: 50%;
+margin-left: -5px;
+}

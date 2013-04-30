@@ -1,0 +1,86 @@
+body, html{
+        width: 100%;
+        height: 100%;
+	margin:0;
+	padding:0;
+	font-family:Trebuchet MS, Helvetica, sans-serif;
+	text-align: center;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.dhtmlwindow{
+position: fixed;
+border: 1px solid black;
+visibility: hidden;
+background-color: white;
+    -moz-box-shadow: 5px 5px 5px #544F4F;
+    -webkit-box-shadow: 5px 5px 5px #544F4F;
+    box-shadow: 5px 5px 5px #544F4F;
+    -moz-border-radius: 4px;
+    -webkit-border-radius:4px;
+    border-radius: 4px;
+}
+
+.drag-handle{ /*CSS for Drag Handle*/
+height:20px;
+width:100%;
+background: url(../images/bar.png) repeat-x;
+position:relative;
+left:0px;
+text-indent: 3px;
+font: bold 14px Arial;
+color: white;
+cursor: move;
+-moz-border-top-left-radius: 4px;
+-moz-border-top-right-radius: 4px;
+-webkit-border-top-left-radius:4px;
+-webkit-border-top-right-radius:4px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+}
+
+* html .drag-handle{ /*IE6 and below CSS hack. Width must be set to 100% in order for opaque title bar to render*/
+width: 100%;
+height:100%;
+}
+
+.drag-contentarea{ /*CSS for Content Display Area div*/
+height:100%;
+width:100%;
+}
+
+.drag-statusarea{ /*CSS for Status Bar div (includes resizearea)*/
+height: 0px; /*height of resize image*/
+width:30px;
+position:absolute;
+bottom:12px;
+right:0px;
+background: url('resize_bottom.png') repeat-x;
+-moz-border-bottom-left-radius: 4px;
+-moz-border-bottom-right-radius: 4px;
+-webkit-border-bottom-left-radius:4px;
+-webkit-border-bottom-right-radius:4px;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+}
+
+.drag-resizearea{ /*CSS for Resize Area itself*/
+float: right;
+width: 13px; /*width of resize image*/
+height: 13px; /*height of resize image*/
+cursor: nw-resize;
+font-size: 0;
+}
+.scroll-track{
+ height:10px;
+ width:10px;
+ background:green;
+}
+
+.scroll-handle{
+ height:10px;
+ width:10px;
+}

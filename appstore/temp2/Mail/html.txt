@@ -1,0 +1,9 @@
+<div style="position:absolute;top:0px;left:0px;right:0px;height:50px;background:grey;">
+<div onclick="thisis[actT.x].checkmail();">check mail</div>
+</div>
+<div style="position:absolute;left:0px;top:50px;width:150px;height:auto;bottom:0px;background:green;">
+<table style="width:100%;">
+</table>
+</div>
+<div style="position:absolute;left:150px;top:50px;width:auto;right:0px;height:auto;bottom:0px;background:blue;">
+</div>

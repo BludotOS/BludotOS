@@ -1,0 +1,1 @@
+<div id="trash_content_left" style="position: relative; float: left; width:135px; height:100%; background-color: #DDE4EB;">left trash<div id="trash_content_seperator" style="float: right; width: 1px; height: 100%; background-color: #B4B4B4;"></div></div><div id="trash_content_right" style="position: relative; float: left; height:100%; top: 0px;">right div</div>'

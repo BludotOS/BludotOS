@@ -1,0 +1,171 @@
+ul li {
+	display: none;
+}
+#menubar {
+        position: fixed;
+	margin: 0;
+        height:50px;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+	padding: 0;
+	line-height: 100%;
+
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+
+	background: #8b8b8b; /* for non-css3 browsers */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#a9a9a9', endColorstr='#7a7a7a'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  rgba(0, 0, 0, 0.4),  rgba(0, 0, 0, 0.4)); /* for firefox 3.6+ */
+
+	border: solid 1px rgba(0, 0, 0, 0.5);
+	z-index: 3640;
+}
+* {
+    font-family: arial;
+}
+#menubar ul {
+	width: auto;
+	position: absolute;
+	left:-40px;
+	top: -15px;
+}
+#menubar ul ul {
+	background: #ddd; /* for non-css3 browsers */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#cfcfcf'); /* for IE */
+	background: rgba(0, 0, 0, 0.4); /* for webkit browsers */
+	background: rgba(0, 0, 0, 0.4); /* for firefox 3.6+ */
+
+	display: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50px;
+	width: 100px;
+	left: 0px;
+	list-style: none;
+	//border: solid 1px #b4b4b4;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+}
+#menubar ul li a {
+	position: relative;
+	height: 50px;
+        align: center;
+	font-weight: normal;
+	//text-shadow: 0 1px 1px rgba(255, 255, 255, .9);
+        font-size: 50;
+        top: -6px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        -webkit-border-radius: 10px;
+}
+#menubar ul li img {
+	position: relative;
+	height: 50px;
+	width: 50px;
+        align: center;
+	font-weight: normal;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, .9);
+        font-size: 25;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        -webkit-border-radius: 10px;
+}
+#menubar ul li {
+	position: static;
+        display: inline-block;
+}
+
+#menubar ul ul li {
+	position: relative;
+        align: center;
+	float: none;
+	margin: 0;
+	padding: 0;
+	left:-1px;
+	width: 102%;
+}
+#menubar ul ul li:first-child {
+	-webkit-border-top-left-radius: 9px;
+	-webkit-border-top-right-radius: 9px;
+	position: relative;
+        align: center;
+	float: none;
+	margin: 0;
+	padding: 0;
+	left: -1px;
+	top: -1px;
+	width: 102%;
+}
+#menubar ul ul li:last-child {
+	-webkit-border-bottom-left-radius: 9px;
+	-webkit-border-bottom-right-radius: 9px;
+	position: relative;
+        align: center;
+	float: none;
+	margin: 0;
+	padding: 0;
+	left: -1px;
+	bottom: -1px;
+	width: 102%;
+}
+#menubar ul ul li:hover {
+	background: -webkit-gradient(linear, left top, left bottom, from(#7a7a7a), to(#6E24FF));
+}
+#menubar ul ul li ul {
+        display:none;
+}
+#menubar ul ul a:hover {
+
+}
+#menubar ul ul form:hover {
+
+}
+#menubar ul ul a {
+        position: relative;
+        top: 0px;
+        align: center;
+	font-weight: 550;
+        color: white;
+	//text-shadow: 0 1px 1px rgba(255, 255, 255, .9);
+        font-size: 25;
+	width: 100px;
+}
+
+#menubar ul ul form {
+        position: relative;
+        top: 0px;
+        align: center;
+	font-weight: normal;
+	//text-shadow: 0 1px 1px rgba(255, 255, 255, .9);
+        font-size: 25;
+	width: 100px;
+}
+/* level 3+ list */
+#menubar ul ul ul {
+	left: 181px;
+	top: -3px;
+}
+/* rounded corners for first and last child */
+#menubar ul ul li:first-child > a {
+	-webkit-border-top-left-radius: 9px;
+	-moz-border-radius-topleft: 9px;
+	-webkit-border-top-right-radius: 9px;
+	-moz-border-radius-topright: 9px;
+}
+#menubar ul ul li:last-child > a {
+	-webkit-border-bottom-left-radius: 9px;
+	-moz-border-radius-bottomleft: 9px;
+	-webkit-border-bottom-right-radius: 9px;
+	-moz-border-radius-bottomright: 9px;
+}

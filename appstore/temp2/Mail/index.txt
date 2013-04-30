@@ -1,0 +1,194 @@
+thisis[actT.x].menu = function() {
+window.bar(0);
+var menu = document.getElementById('menu0');
+menu.innerHTML = '<li onclick="clickt(this);"><a>Mail</a></li><ul></ul><li onclick="clickt(this);"><a>File</a></li><ul><li onmouseover="movet(this.children[1], 1);" onmouseout="movet(this.children[1], 0);"><a onmouseover="movet(this.children[1], 1);" onmouseout="movet(this.children[1], 0);">new</a><ul><li><a onclick="thisis[actT.x].newaccount();">Account</a></li></ul></li></ul><li><a>Edit</a></li><ul></ul>';
+}
+thisis[actT.x].menu();
+thisis[actT.x].newaccount = function () {
+    MainTools.popup(['server', 'ssl', 'username', 'password'], ['text', 'checkbox', 'text', 'password']);
+    thisis[actT.x].form = function (a)
+    {
+        var temps = '';
+        for (var i=0; i < thisis[actT.x].a.length; i++)
+        {
+            if(i == (thisis[actT.x].a.length-1)) {
+            temps+= thisis[actT.x].a[i].server;
+            } else {
+            temps+= thisis[actT.x].a[i].server+',';
+            };
+        }
+        window.temps = temps;
+           var tempu = '';
+        for (var i=0; i < thisis[actT.x].a.length; i++)
+        {
+            if(i == (thisis[actT.x].a.length-1)) {
+            tempu+= thisis[actT.x].a[i].username;
+            } else {
+            tempu+= thisis[actT.x].a[i].username+',';
+            };
+        }
+        window.tempu = tempu;
+        var tempp = '';
+        for (var i=0; i < thisis[actT.x].a.length; i++)
+        {
+            if(i == (thisis[actT.x].a.length-1)) {
+            tempp+= thisis[actT.x].a[i].password;
+            } else {
+            tempp+= thisis[actT.x].a[i].password+',';
+            };
+        }
+        window.tempp = tempp;
+        if(a[1] == true) {
+        a[0]+='/imap/ssl/novalidate-cert/norsh';
+        } else {
+        a[0]+='/novalidate-cert';
+        };
+        Doc.ajax('addaccount.php', function(obj) {MainTools.Notify('Success');thisis[actT.x].loadprefs();}, 'json', 'server='+a[0]+'&user='+a[2]+'&pass='+a[3]+'&oserver='+temps+'&ouser='+tempu+'&opass='+tempp+'&newa=false', false);
+    };
+};
+thisis[actT.x].callback = function(a, b) {
+Doc.ajax('html.txt', function(obj) {
+    window.tester = obj;
+    Doc.ajax('getmesg.php', function(obj) {
+    window.tested = obj; 
+    window.tester.children[2].innerHTML += window.tested.innerHTML;
+    //Doc.innerHTML = tester.innerHTML;
+    if(!thisis[actT.x].a[b].messages) {
+    thisis[actT.x].a[b].messages = tested.children[0].children[0].children.length;
+window.testb = b;
+window.tester.children[2].innerHTML = window.tested.innerHTML;
+//for (var t=0; t < thisis[actT.x].children[1].children[2].getElementsByTagName('div').length; t++){
+//if(thisis[actT.x].children[1].children[2].getElementsByTagName('div')[b].id == a.username.split('@')[0]) {
+var tempadd = tester.children[2].innerHTML.toString();
+tempadd = tester.children[2].children[0];
+for(var g=0; g < tempadd.children[0].children.length; g++) {
+tempadd.children[0].children[g].innerHTML = tempadd.children[0].children[g].innerHTML.replace(/\n/g, '<br>');
+};
+var temptable = core.create('table');
+temptable.style.cssText = 'width:100%;height:100%;position:relative;top:0px;bottom:0px;overflow:hidden;';
+temptable.innerHTML = tester.children[2].children[0].innerHTML.replace(/\n/g, '<br>');
+Doc.children[2].children[b].innerHTML = null;
+Doc.children[2].children[b].appendChild(tempadd);
+window.bobett = tester.children[2].innerHTML.toString();
+Doc.children[2].children[b].style.cssText+='overflow:hidden;';
+Doc.children[2].children[b].children[0].children[0].style.cssText+='overflow: hidden;position: absolute;bottom: 0px;height: 100%;width:100%;';
+MainTools.scrollV(Doc.children[2].children[b].children[0], Doc.parentNode, Doc.children[2].children[b].children[0].children[0]);
+//}
+//};
+    } else {
+        //thisis[actT.x].messages = tested.children[2].children[0].children.length;
+        if(thisis[actT.x].a[b].messages < tested.children[0].children[0].children.length)
+        {
+            MainTools.Notify(tested.children[0].children[0].children[0].children[0].innerText+':<br>'+tested.children[0].children[0].children[0].children[1].innerText);
+    //Doc.innerHTML = tester.innerHTML; 
+            thisis[actT.x].a[b].messages = tested.children[0].children[0].children.length;
+//for (var t=0; t < thisis[actT.x].children[1].children[2].getElementsByTagName('div').length; t++){
+//if(thisis[actT.x].children[1].children[2].getElementsByTagName('div')[b].id == a.username.split('@')[0]) {
+Doc.children[2].children[b].children[0].children[0].insertBefore(window.tested.children[0].children[0].children[0], Doc.children[2].children[b].children[0].children[0].firstChild);
+Doc.children[2].children[b].children[0].children[0].insertBefore(window.tested.children[0].children[0].children[0], Doc.children[2].thildren[b].children[0].children[0].children[1]);
+//}
+//};
+//Doc.innerHTML = tester.innerHTML;
+       } 
+    }
+}, 'html', 'server={'+a.server+'}INBOX&username='+a.username+'&password='+a.password, false);
+}, 'html', null, false);
+};
+Doc.ajax('html.txt', function(obj) {
+    window.tester = obj;
+    Doc.innerHTML = obj.innerHTML;
+}, 'html', null, false);
+thisis[actT.x].loadprefs = function() {
+Doc.ajax('prefs.php', function(obj) {
+    window.tested2 = obj;
+if(!thisis[actT.x].a) {
+thisis[actT.x].a = [];
+        for (var i=0; i < window.tested2.accounts.length; i++)
+        {
+        thisis[actT.x].a.push({
+                       server:window.tested2.accounts[i].server,
+                       username:window.tested2.accounts[i].username,
+                       password:window.tested2.accounts[i].password
+                       });
+        }
+        for(var b=0; b < thisis[actT.x].a.length; b++)
+        {
+        var div = core.create('div');
+        div.id = thisis[actT.x].a[b].username.split('@')[0];
+        thisis[actT.x].children[1].children[2].appendChild(div);
+        var temp = core.create('tr');
+        temp.td = core.create('td');
+        temp.td.innerHTML = thisis[actT.x].a[b].username.split('@')[0];
+        temp.td.id = b;
+        temp.td.onclick = function(){for(var l=0; l < Doc.children[2].children.length; l++){
+                Doc.children[2].children[l].style.display = 'none';
+                };
+                Doc.children[2].children[this.id].style.display = 'block';};
+        thisis[actT.x].children[1].children[1].children[0].appendChild(temp);
+        temp.appendChild(temp.td);
+        div.style.cssText = 'position: relative;width: 100%;height: 100%;display:none;';
+        if(b == 0) {
+        div.style.display = 'block';
+        } else {
+        div.style.display = 'none';
+        };
+        };
+        window.lenit=0;
+        /*thisis[actT.x].push = window.setInterval(function(){for(var b=0; b < thisis[actT.x].a.length; b++)
+        {thisis[actT.x].callback(thisis[actT.x].a[b], b);};}, 1000);*/
+        thisis[actT.x].checkmail = function(){
+        for(var b=0; b < thisis[actT.x].a.length; b++)
+        {thisis[actT.x].callback(thisis[actT.x].a[b], b);};
+        };
+        thisis[actT.x].checkmail();
+        MainTools.scrollV(thisis[actT.x].children[1].children[2], thisis[actT.x], thisis[actT.x].chilren[1].children[2]);
+} else if(thisis[actT.x].a) {
+        thisis[actT.x].a.push({
+                       server:window.tested2.accounts[window.tested2.accounts.length-1].server,
+                       username:window.tested2.accounts[window.tested2.accounts.length-1].username,
+                       password:window.tested2.accounts[window.tested2.accounts.length-1].password
+                       });
+        var div = core.create('div');
+        div.id = thisis[actT.x].a[thisis[actT.x].a.length-1].username.split('@')[0];
+        thisis[actT.x].children[1].children[2].appendChild(div);
+        var temp = core.create('tr');
+        temp.td = core.create('td');
+        temp.td.innerHTML = thisis[actT.x].a[thisis[actT.x].a.length-1].username.split('@')[0];
+        temp.td.id = thisis[actT.x].a.length-1;
+        temp.td.onclick = function(){for(var l=0; l < Doc.children[2].children.length; l++){
+                Doc.children[2].children[l].style.display = 'none';
+                };
+                Doc.children[2].children[this.id].style.display = 'block';};
+        thisis[actT.x].children[1].children[1].children[0].appendChild(temp);
+        temp.appendChild(temp.td);
+        div.style.cssText = 'position: relative;width: 100%;height: 100%;display:none;';
+        div.style.display = 'none';
+        window.lenit=0;
+        /*thisis[actT.x].push = window.setInterval(function(){for(var b=0; b < thisis[actT.x].a.length; b++)
+        {thisis[actT.x].callback(thisis[actT.x].a[b], b);};}, 1000);*/
+        thisis[actT.x].checkmail = function(){
+        for(var b=0; b < thisis[actT.x].a.length; b++)
+        {thisis[actT.x].callback(thisis[actT.x].a[b], b);};
+        };
+        thisis[actT.x].checkmail();
+        MainTools.scrollV(thisis[actT.x].children[1].children[2], thisis[actT.x], thisis[actT.x].chilren[1].children[2]);
+};
+}, 'json', null, false);
+};
+Doc.ajax('prefs.php', function(obj) {
+    window.tested2 = obj;
+    if(!window.tested2.accounts) {
+        thisis[actT.x].form = function (a)
+    {
+        if(a[1] == true) {
+        a[0]+='/imap/ssl/novalidate-cert/norsh';
+        } else {
+        a[0]+='/novalidate-cert';
+        };
+        Doc.ajax('addaccount.php', function(obj) {MainTools.Notify('Success');thisis[actT.x].loadprefs();}, 'json', 'server='+a[0]+'&user='+a[2]+'&pass='+a[3]+'&oserver=empty&ouser=empty&opass=empty&newa=true', false);
+    };
+        MainTools.popup(['server', 'ssl', 'username', 'password'], ['text', 'checkbox', 'text', 'password']);
+    } else {
+        thisis[actT.x].loadprefs();
+    };
+}, 'json', null, false);

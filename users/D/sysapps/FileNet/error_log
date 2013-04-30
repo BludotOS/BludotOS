@@ -1,0 +1,284 @@
+[22-Aug-2012 13:12:02] PHP Warning:  opendir(/path/to/files) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 3
+[22-Aug-2012 13:12:25] PHP Warning:  opendir(../HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 3
+[22-Aug-2012 13:15:29] PHP Fatal error:  Cannot use [] for reading in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 2
+[22-Aug-2012 13:16:06] PHP Parse error:  syntax error, unexpected '[' in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 2
+[22-Aug-2012 13:16:07] PHP Parse error:  syntax error, unexpected '[' in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 2
+[22-Aug-2012 13:19:32] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 6
+[22-Aug-2012 13:19:32] PHP Parse error:  syntax error, unexpected T_STRING in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 6
+[22-Aug-2012 13:19:50] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 6
+[22-Aug-2012 13:19:50] PHP Parse error:  syntax error, unexpected T_STRING in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 6
+[22-Aug-2012 13:19:52] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 6
+[22-Aug-2012 13:19:52] PHP Parse error:  syntax error, unexpected T_STRING in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 6
+[22-Aug-2012 13:21:48] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 6
+[22-Aug-2012 13:21:48] PHP Parse error:  syntax error, unexpected T_STRING in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 6
+[22-Aug-2012 13:27:43] PHP Fatal error:  Function name must be a string in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Aug-2012 13:27:44] PHP Fatal error:  Function name must be a string in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Aug-2012 13:35:22] PHP Fatal error:  Call to a member function read() on a non-object in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 4
+[22-Aug-2012 13:35:49] PHP Fatal error:  Call to a member function read() on a non-object in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 4
+[22-Aug-2012 13:37:10] PHP Parse error:  syntax error, unexpected '/' in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 6
+[22-Aug-2012 13:44:02] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:44:35] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:39] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:41] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:42] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:42] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:42] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:43] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:43] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:43] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:43] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:43] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:44] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:44] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:44] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:44] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:45] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:45] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:45] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:45] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:45] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:45:46] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:46:33] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:46:34] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:47:01] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:47:02] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:47:59] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:48:00] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:48:45] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:49:27] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:49:28] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:49:28] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 24
+[22-Aug-2012 13:51:15] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 25
+[22-Aug-2012 13:51:17] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 25
+[22-Aug-2012 13:56:27] PHP Warning:  array_push() [<a href='function.array-push'>function.array-push</a>]: First argument should be an array in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Aug-2012 13:56:27] PHP Warning:  array_push() [<a href='function.array-push'>function.array-push</a>]: First argument should be an array in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Aug-2012 13:56:27] PHP Warning:  array_push() [<a href='function.array-push'>function.array-push</a>]: First argument should be an array in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Aug-2012 13:56:27] PHP Warning:  array_push() [<a href='function.array-push'>function.array-push</a>]: First argument should be an array in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Aug-2012 13:56:27] PHP Warning:  array_push() [<a href='function.array-push'>function.array-push</a>]: First argument should be an array in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Aug-2012 13:56:27] PHP Warning:  array_push() [<a href='function.array-push'>function.array-push</a>]: First argument should be an array in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Aug-2012 14:01:18] PHP Parse error:  syntax error, unexpected $end in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 34
+[22-Oct-2012 08:34:17] PHP Parse error:  syntax error, unexpected ':' in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 39
+[22-Oct-2012 09:41:28] PHP Warning:  opendir(HDD/images.HDD/Pictures.) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:42:50] PHP Warning:  opendir(HDD/images.HDD/Pictures.) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:43:57] PHP Warning:  opendir(HDD/images.HDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:43:59] PHP Warning:  opendir(HDD/images.HDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:43:59] PHP Warning:  opendir(HDD/images.HDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:44:16] PHP Warning:  opendir(HDD/images.HDD/Pictures.) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:44:29] PHP Warning:  opendir(HDD/images.HDD/Picture) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:44:30] PHP Warning:  opendir(HDD/images.HDD/Picture) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:44:30] PHP Warning:  opendir(HDD/images.HDD/Picture) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:44:30] PHP Warning:  opendir(HDD/images.HDD/Picture) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:44:30] PHP Warning:  opendir(HDD/images.HDD/Picture) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:45:52] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 63
+[22-Oct-2012 09:46:58] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:48:33] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:49:25] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:49:25] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[22-Oct-2012 09:49:26] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:49:26] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[22-Oct-2012 09:49:28] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:49:28] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[22-Oct-2012 09:49:29] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:49:29] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[22-Oct-2012 09:49:29] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:49:29] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[22-Oct-2012 09:49:29] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:49:29] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[22-Oct-2012 09:49:29] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:49:29] PHP Warning:  opendir(HDD/imagesHDD/Pictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[22-Oct-2012 09:51:18] PHP Warning:  opendir(HDD/My docsHDD/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:51:18] PHP Warning:  opendir(HDD/My docsHDD/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[22-Oct-2012 09:52:20] PHP Warning:  opendir(HDD/My docsHDD/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:52:20] PHP Warning:  opendir(HDD/My docsHDD/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[22-Oct-2012 09:53:10] PHP Warning:  opendir(HDD/HDD/Documents/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Oct-2012 09:53:10] PHP Warning:  opendir(HDD/HDD/Documents/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[22-Oct-2012 10:01:34] PHP Parse error:  syntax error, unexpected '{' in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 65
+[22-Oct-2012 10:01:48] PHP Parse error:  syntax error, unexpected '{' in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 65
+[22-Oct-2012 10:03:11] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 63
+[24-Oct-2012 12:50:54] PHP Warning:  opendir(HDD/test.php) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[24-Oct-2012 12:50:54] PHP Warning:  opendir(HDD/test.php) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[24-Oct-2012 12:52:25] PHP Warning:  opendir(HDD/test.php) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[24-Oct-2012 12:52:25] PHP Warning:  opendir(HDD/test.php) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[24-Oct-2012 12:59:31] PHP Warning:  opendir(HDD/images) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[24-Oct-2012 12:59:31] PHP Warning:  opendir(HDD/images) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[29-Oct-2012 01:24:37] PHP Warning:  opendir(HDD/HD//Applications) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[29-Oct-2012 01:24:37] PHP Warning:  opendir(HDD/HD//Applications) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[29-Oct-2012 01:25:39] PHP Warning:  opendir(HDD/HD//Applications) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[29-Oct-2012 01:25:39] PHP Warning:  opendir(HDD/HD//Applications) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[29-Oct-2012 01:25:39] PHP Warning:  opendir(HDD/HD//Applications) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[29-Oct-2012 01:25:39] PHP Warning:  opendir(HDD/HD//Applications) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[29-Oct-2012 01:27:18] PHP Warning:  opendir(HDD/HD//Desktop) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[29-Oct-2012 01:27:18] PHP Warning:  opendir(HDD/HD//Desktop) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[21-Nov-2012 12:58:26] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[21-Nov-2012 12:58:26] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[21-Nov-2012 13:00:03] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[21-Nov-2012 13:00:03] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[21-Nov-2012 13:00:05] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[21-Nov-2012 13:00:05] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[21-Nov-2012 13:01:48] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[21-Nov-2012 13:01:48] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[21-Nov-2012 13:01:50] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[21-Nov-2012 13:01:50] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[21-Nov-2012 13:02:41] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[21-Nov-2012 13:02:41] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[21-Nov-2012 13:03:33] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[21-Nov-2012 13:03:33] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[21-Nov-2012 13:08:11] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[21-Nov-2012 13:08:11] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[21-Nov-2012 13:09:06] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[21-Nov-2012 13:09:06] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[21-Nov-2012 13:09:45] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[21-Nov-2012 13:09:45] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[21-Nov-2012 13:10:04] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[21-Nov-2012 13:10:04] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 01:30:48] PHP Warning:  opendir(HDD/search_hov.pngHDD/MyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 01:30:48] PHP Warning:  opendir(HDD/search_hov.pngHDD/MyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 02:18:50] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 02:18:50] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 02:20:08] PHP Warning:  opendir(HDD/MyPictures/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 02:20:08] PHP Warning:  opendir(HDD/MyPictures/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 02:42:34] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 02:42:34] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 02:42:35] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 02:42:35] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 02:42:36] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 02:42:36] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 02:42:37] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 02:42:37] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 02:42:37] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 02:42:37] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 02:42:37] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 02:42:37] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 02:42:37] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 02:42:37] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 02:42:37] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 02:42:37] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 02:42:40] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 02:42:40] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 11:22:24] PHP Warning:  opendir(HDD/Applications/Applications) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 11:22:24] PHP Warning:  opendir(HDD/Applications/Applications) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 12:35:16] PHP Warning:  opendir(HDD/MyPictures/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 12:35:16] PHP Warning:  opendir(HDD/MyPictures/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 12:38:48] PHP Warning:  opendir(HDD/MyPictures/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 12:38:48] PHP Warning:  opendir(HDD/MyPictures/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 12:38:50] PHP Warning:  opendir(HDD/MyPictures/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 12:38:50] PHP Warning:  opendir(HDD/MyPictures/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 12:38:55] PHP Warning:  opendir(HDD/MyPictures/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 12:38:55] PHP Warning:  opendir(HDD/MyPictures/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 12:39:00] PHP Warning:  opendir(HDD/MyPictures/MyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 12:39:00] PHP Warning:  opendir(HDD/MyPictures/MyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 12:39:02] PHP Warning:  opendir(HDD/MyPictures/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 12:39:02] PHP Warning:  opendir(HDD/MyPictures/Documents) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[27-Dec-2012 12:46:24] PHP Warning:  opendir(HDD/MyPictures/MyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[27-Dec-2012 12:46:24] PHP Warning:  opendir(HDD/MyPictures/MyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[31-Dec-2012 14:49:55] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[31-Dec-2012 14:49:55] PHP Warning:  opendir(HDD/Documents/My docs/My docs) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[22-Jan-2013 15:20:28] PHP Warning:  opendir(HDD/test.phpHDD/MyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[22-Jan-2013 15:20:28] PHP Warning:  opendir(HDD/test.phpHDD/MyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[26-Jan-2013 15:03:23] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:03:40] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:05:04] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:06:44] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:06:52] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:07:24] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:08:10] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:09:10] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:09:41] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:10:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:10:36] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:11:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:11:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:11:40] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:11:46] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:15:26] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:15:33] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:16:07] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:16:18] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:20:20] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:20:33] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:20:59] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:21:02] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:21:21] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:21:27] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:21:48] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[26-Jan-2013 15:21:55] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:32:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:32:43] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:33:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:33:37] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:34:09] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:34:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:35:20] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:35:22] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:37:04] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:37:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:39:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:39:17] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:40:24] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:40:30] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:41:50] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:42:04] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:42:42] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:42:44] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:48:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Jan-2013 15:48:45] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[01-Mar-2013 18:53:54] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[01-Mar-2013 18:56:14] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[01-Mar-2013 18:57:14] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[01-Mar-2013 18:58:07] PHP Warning:  rmdir(../FileNet/HDD/Applications/temp/) [<a href='function.rmdir'>function.rmdir</a>]: Directory not empty in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 66
+[05-Mar-2013 14:48:00] PHP Warning:  opendir(HDD/Documents
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[05-Mar-2013 14:48:00] PHP Warning:  opendir(HDD/Documents
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[05-Mar-2013 14:48:04] PHP Warning:  opendir(HDD/Applications
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[05-Mar-2013 14:48:04] PHP Warning:  opendir(HDD/Applications
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[05-Mar-2013 14:48:19] PHP Warning:  opendir(HDD/Documents
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[05-Mar-2013 14:48:19] PHP Warning:  opendir(HDD/Documents
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[05-Mar-2013 14:48:21] PHP Warning:  opendir(HDD/Applications
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[05-Mar-2013 14:48:21] PHP Warning:  opendir(HDD/Applications
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[05-Mar-2013 14:48:27] PHP Warning:  opendir(HDD/Applications
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[05-Mar-2013 14:48:27] PHP Warning:  opendir(HDD/Applications
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[05-Mar-2013 14:48:28] PHP Warning:  opendir(HDD/Documents
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[05-Mar-2013 14:48:28] PHP Warning:  opendir(HDD/Documents
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[05-Mar-2013 14:48:30] PHP Warning:  opendir(HDD/Documents
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[05-Mar-2013 14:48:30] PHP Warning:  opendir(HDD/Documents
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[05-Mar-2013 14:49:01] PHP Warning:  opendir(HDD/Applications
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[05-Mar-2013 14:49:01] PHP Warning:  opendir(HDD/Applications
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[05-Mar-2013 14:49:01] PHP Warning:  opendir(HDD/Documents
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[05-Mar-2013 14:49:01] PHP Warning:  opendir(HDD/Documents
+) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[24-Mar-2013 17:32:43] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[24-Mar-2013 17:32:54] PHP Warning:  ZipArchive::open() [<a href='ziparchive.open'>ziparchive.open</a>]: Empty string as source in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 13
+[24-Mar-2013 17:32:59] PHP Warning:  ZipArchive::open() [<a href='ziparchive.open'>ziparchive.open</a>]: Empty string as source in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 13
+[24-Mar-2013 17:33:51] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[24-Mar-2013 17:38:23] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[24-Mar-2013 17:38:26] PHP Warning:  ZipArchive::open() [<a href='ziparchive.open'>ziparchive.open</a>]: Empty string as source in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 13
+[24-Mar-2013 17:38:28] PHP Warning:  ZipArchive::open() [<a href='ziparchive.open'>ziparchive.open</a>]: Empty string as source in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 13
+[24-Mar-2013 17:38:38] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[24-Mar-2013 17:38:57] PHP Warning:  ZipArchive::open() [<a href='ziparchive.open'>ziparchive.open</a>]: Empty string as source in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 13
+[24-Mar-2013 17:39:03] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[24-Mar-2013 17:43:16] PHP Warning:  ZipArchive::open() [<a href='ziparchive.open'>ziparchive.open</a>]: Empty string as source in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 13
+[24-Mar-2013 17:43:21] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[24-Mar-2013 17:44:22] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[24-Mar-2013 17:44:28] PHP Warning:  ZipArchive::open() [<a href='ziparchive.open'>ziparchive.open</a>]: Empty string as source in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 13
+[24-Mar-2013 17:45:27] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[24-Mar-2013 17:45:35] PHP Warning:  ZipArchive::open() [<a href='ziparchive.open'>ziparchive.open</a>]: Empty string as source in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 13
+[24-Mar-2013 17:46:43] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[24-Mar-2013 17:46:52] PHP Warning:  ZipArchive::open() [<a href='ziparchive.open'>ziparchive.open</a>]: Empty string as source in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 13
+[24-Mar-2013 17:50:26] PHP Warning:  ZipArchive::open() [<a href='ziparchive.open'>ziparchive.open</a>]: Empty string as source in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 13
+[24-Mar-2013 17:50:43] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13

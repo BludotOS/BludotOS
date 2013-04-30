@@ -1,0 +1,89 @@
+.dhtmlwindow{
+position: absolute;
+border: 1px solid black;
+visibility: hidden;
+background-color: white;
+    -moz-box-shadow: 5px 5px 5px #544F4F;
+    -webkit-box-shadow: 5px 5px 5px #544F4F;
+    box-shadow: 5px 5px 5px #544F4F;
+    -moz-border-radius: 4px;
+    -webkit-border-radius:4px;
+    border-radius: 4px;
+}
+
+.drag-handle{ /*CSS for Drag Handle*/
+height:20px;
+width:100%;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#82806B), color-stop(100%,#716E61));
+position:relative;
+left:0px;
+text-indent: 3px;
+font: bold 14px Arial;
+color: white;
+cursor: move;
+-webkit-border-top-left-radius:4px;
+-webkit-border-top-right-radius:4px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+}
+
+* html .drag-handle{ /*IE6 and below CSS hack. Width must be set to 100% in order for opaque title bar to render*/
+width: 100%;
+}
+
+.drag-contentarea{ /*CSS for Content Display Area div*/
+height: 150px;
+width: 100%;
+}
+
+.drag-statusarea{ /*CSS for Status Bar div (includes resizearea)*/
+height: 0px; /*height of resize image*/
+width:30px;
+position:absolute;
+bottom:12px;
+right:0px;
+background: red;
+-moz-border-bottom-left-radius: 4px;
+-moz-border-bottom-right-radius: 4px;
+-webkit-border-bottom-left-radius:4px;
+-webkit-border-bottom-right-radius:4px;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+}
+
+.drag-topbar {
+background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 1)));
+background:-moz-linear-gradient(top,  rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 1));
+border-top-right-radius:5px;
+border-top-left-radius:5px;
+}
+
+.drag-left1 {
+border-top-left-radius:5px;
+}
+
+.drag-left1 img {
+border-top-left-radius:5px;
+}
+
+.drag-content {
+border-radius:5px;
+}
+
+.drag-resizearea{ /*CSS for Resize Area itself*/
+float: right;
+width: 13px; /*width of resize image*/
+height: 13px; /*height of resize image*/
+cursor: nw-resize;
+font-size: 0;
+}
+.scroll-track{
+ height:10px;
+ width:10px;
+ background:green;
+}
+
+.scroll-handle{
+ height:10px;
+ width:10px;
+}

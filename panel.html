@@ -1,0 +1,275 @@
+<html>
+<head>
+<meta name="keywords" content="webos, operating system, online os, online operating system, idevice os, oses, apfelsine, apfelsineos, apfelsineoses">
+	<title>bludot</title>
+	<link rel="shortcut icon" href="wallpaper/BluDotlogo.png">
+	<meta itemprop="name" content="ApfelsineOS">
+	<meta itemprop="description" content="An easy WebOS for on the go. Fast, simple, and small. A new way for cloud computing.">
+	<meta itemprop="image" content="http://bludot.tk/wallpaper/BluDotlogo.png">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="apple-touch-startup-image" href="images/bludotipod.png" />
+	<link rel="apple-touch-icon" href="wallpaper/BluDotlogo.png"/>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script>
+function mnotifyscroll(node) {
+var e = window.event.touches[0];
+var temp = node.scrollTop+e.pageY;
+node.ontouchmove= function(e){
+node.scrollTop = temp-e.pageY;
+};
+};
+function mnotifyscrolla(node) {
+var e = window.event.touches[0];
+var temp = node.scrollLeft+e.pageX;
+node.ontouchmove= function(e){
+node.scrollLeft = temp-e.pageX;
+};
+};
+</script>
+<script type="text/javascript">
+	// TOUCH-EVENTS SINGLE-FINGER SWIPE-SENSING JAVASCRIPT
+	// Courtesy of PADILICIOUS.COM and MACOSXAUTOMATION.COM
+	
+	// this script can be used with one or more page elements to perform actions based on them being swiped with a single finger
+
+	var triggerElementID = null; // this variable is used to identity the triggering element
+	var fingerCount = 0;
+	var startX = 0;
+	var startY = 0;
+	var curX = 0;
+	var curY = 0;
+	var deltaX = 0;
+	var deltaY = 0;
+	var horzDiff = 0;
+	var vertDiff = 0;
+	var minLength = 1; // the shortest distance the user may swipe
+	var swipeLength = 0;
+	var swipeAngle = null;
+	var swipeDirection = null;
+	
+	// The 4 Touch Event Handlers
+	
+	// NOTE: the touchStart handler should also receive the ID of the triggering element
+	// make sure its ID is passed in the event call placed in the element declaration, like:
+	// <div id="picture-frame" ontouchstart="touchStart(event,'picture-frame');"  ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">
+
+	function touchStart(event,passedName) {
+		// disable the standard ability to select the touched object
+		event.preventDefault();
+		// get the total number of fingers touching the screen
+		fingerCount = event.touches.length;
+		// since we're looking for a swipe (single finger) and not a gesture (multiple fingers),
+		// check that only one finger was used
+		if ( fingerCount == 1 ) {
+			// get the coordinates of the touch
+			startX = event.touches[0].pageX;
+			startY = event.touches[0].pageY;
+			// store the triggering element ID
+			triggerElementID = passedName;
+		} else {
+			// more than one finger touched so cancel
+			touchCancel(event);
+		}
+	}
+
+	function touchMove(event) {
+		event.preventDefault();
+		if ( event.touches.length == 1 ) {
+			curX = event.touches[0].pageX;
+			curY = event.touches[0].pageY;
+// use the Distance Formula to determine the length of the swipe
+			swipeLength = Math.round(Math.sqrt(Math.pow(curX - startX,2) + Math.pow(curY - startY,2)));
+			// if the user swiped more than the minimum length, perform the appropriate action
+
+				caluculateAngle();
+				determineSwipeDirection();
+				processingRoutine();
+		} else {
+			touchCancel(event);
+		}
+	}
+	
+	function touchEnd(event) {
+		event.preventDefault();
+		// check to see if more than one finger was used and that there is an ending coordinate
+		if ( fingerCount == 1 && curX != 0 ) {
+			// use the Distance Formula to determine the length of the swipe
+			swipeLength = Math.round(Math.sqrt(Math.pow(curX - startX,2) + Math.pow(curY - startY,2)));
+			// if the user swiped more than the minimum length, perform the appropriate action
+			if ( swipeLength >= minLength ) {
+				caluculateAngle();
+				determineSwipeDirection();
+				processingRoutine();
+				touchCancel(event); // reset the variables
+			} else {
+				touchCancel(event);
+			}	
+		} else {
+			touchCancel(event);
+		}
+	}
+
+	function touchCancel(event) {
+		// reset the variables back to default values
+		fingerCount = 0;
+		startX = 0;
+		startY = 0;
+		curX = 0;
+		curY = 0;
+		deltaX = 0;
+		deltaY = 0;
+		horzDiff = 0;
+		vertDiff = 0;
+		swipeLength = 0;
+		swipeAngle = null;
+		swipeDirection = null;
+		triggerElementID = null;
+	}
+	
+	function caluculateAngle() {
+		var X = startX-curX;
+		var Y = curY-startY;
+		var Z = Math.round(Math.sqrt(Math.pow(X,2)+Math.pow(Y,2))); //the distance - rounded - in pixels
+		var r = Math.atan2(Y,X); //angle in radians (Cartesian system)
+		swipeAngle = Math.round(r*180/Math.PI); //angle in degrees
+		if ( swipeAngle < 0 ) { swipeAngle =  360 - Math.abs(swipeAngle); }
+	}
+	
+	function determineSwipeDirection() {
+		if ( (swipeAngle <= 45) && (swipeAngle >= 0) ) {
+			swipeDirection = 'left';
+		} else if ( (swipeAngle <= 360) && (swipeAngle >= 315) ) {
+			swipeDirection = 'left';
+		} else if ( (swipeAngle >= 135) && (swipeAngle <= 225) ) {
+			swipeDirection = 'right';
+		} else if ( (swipeAngle > 45) && (swipeAngle < 135) ) {
+			swipeDirection = 'down';
+		} else {
+			swipeDirection = 'up';
+		}
+	}
+	
+	function processingRoutine() {
+		var swipedElement = document.getElementById(triggerElementID);
+		if ( swipeDirection == 'left' ) {
+			// REPLACE WITH YOUR ROUTINES
+			swipedElement.style.backgroundColor = 'orange';
+		} else if ( swipeDirection == 'right' ) {
+			// REPLACE WITH YOUR ROUTINES
+			swipedElement.style.backgroundColor = 'green';
+		} else if ( swipeDirection == 'up' ) {
+			// REPLACE WITH YOUR ROUTINES
+			if(window.event.touches[0].pageY >= (window.innerHeight-100) && document.getElementById('note').offsetTop != (window.innerHeight-100) && !swipedElement.open) {
+document.getElementById('note').style.top=window.event.touches[0].pageY+'px';
+swipedElement.ontouchend=function(){
+document.getElementById('note').style.top=(window.innerHeight-100)+'px';
+swipedElement.open=1;
+};
+} else if((swipedElement.open == 1) && window.event.touches[0].pageY <= (window.innerHeight-100)) {
+document.getElementById('note').style.top=window.event.touches[0].pageY+'px';
+swipedElement.ontouchend=function(){
+document.getElementById('note').style.top=-100+'px';
+swipedElement.open=2;
+};
+} else if(swipedElement.open == 2) {
+document.getElementById('note').style.top='';
+document.getElementById('note').style.bottom=(window.innerHeight-window.event.touches[0].pageY)+'px';
+swipedElement.ontouchend=function(){
+document.getElementById('note').style.top=100+'%';
+delete swipedElement.open;
+};
+};
+		} else if ( swipeDirection == 'down' ) {
+			// REPLACE WITH YOUR ROUTINES
+			swipedElement.style.backgroundColor = 'purple';
+		}
+	}
+</script>
+</head>
+<body ontouchmove="window.event.preventDefault();" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;">
+<div id="test" ontouchstart="touchStart(event,'test');"  ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);" style="position:fixed;bottom:0px;left:0px;width:100%;height:15px;z-index:5;background:green;border:none;padding:0;margin:0;">
+</div>
+<div id="note" style="position:fixed;width:100%;height:125%;top:100%;left:0px;z-index:1;">
+<div style="position:relative;top:0px;height:100px;width:100px;margin:0 auto;background:grey;border-radius:100px;">
+</div>
+<div style="position:absolute;left:0px;top:35px;width:50px;height:50px;border-radius:50;background:red;z-index:1;">
+</div>
+<div style="position:absolute;right:0px;top:35px;width:50px;height:50px;border-radius:50;background:red;z-index:1;">
+</div>
+<div style="position:relative;margin: 0 auto;top:-90px;width:80px;height:80px;border-radius:90;background:red;z-index:1;">
+</div>
+<div style="position:absolute;top:30px;width:100%;bottom:0px;background:grey;">
+</div>
+<div style="position:absolute;top:100px;left:0px;right:0px;height:50px;background:transparent;border-bottom:1px solid black-top;border:1px solid black;margin-top:1px;margin-bottom:1px;box-shadow: inset 0px 10px 20px -5px black;white-space: nowrap;overfow-y:hidden;overflow-x:auto;" ontouchstart="mnotifyscrolla(this);">
+<div style="position:relative;top:0px;left:0px;height:50px;background:rgb(128, 128, 128);
+box-shadow: inset 0px -10px 20px -5px black;opacity:.5;">
+<div style="width:50px;height:50px;top:0px;left:0px;position:relative;background:green;display:inline-block;">
+</div>
+<div style="width:50px;height:50px;top:0px;left:0px;position:relative;background:green;display:inline-block;">
+</div>
+<div style="width:50px;height:50px;top:0px;left:0px;position:relative;background:green;display:inline-block;">
+</div>
+<div style="width:50px;height:50px;top:0px;left:0px;position:relative;background:green;display:inline-block;">
+</div>
+<div style="width:50px;height:50px;top:0px;left:0px;position:relative;background:green;display:inline-block;">
+</div>
+<div style="width:50px;height:50px;top:0px;left:0px;position:relative;background:green;display:inline-block;">
+</div>
+<div style="width:50px;height:50px;top:0px;left:0px;position:relative;background:green;display:inline-block;">
+</div>
+<div style="width:50px;height:50px;top:0px;left:0px;position:relative;background:green;display:inline-block;">
+</div>
+
+
+</div>
+</div>
+<div style="position:absolute;top:155px;right:0px;left:0px;bottom:0;overflow:hidden;" ontouchstart="mnotifyscroll(this);">
+
+<div style="position:relative;top:0px;width:100%;height:50px;float:left;background:transparent;border:1px solid black;border-radius:5px;margin-top:1px;margin-bottom:1px;">
+<div style="position:relative;top:0px;left:0px;width:100%;height:100%;background:rgb(128, 128, 128);box-shadow:black 0px 0px 8px 5px inset;opacity:.5;">
+1
+</div>
+</div>
+<div style="position:relative;top:0px;width:100%;height:50px;float:left;background:transparent;border:1px solid black;border-radius:5px;margin-top:1px;margin-bottom:1px;">
+<div style="position:relative;top:0px;left:0px;width:100%;height:100%;background:rgb(128, 128, 128);box-shadow:black 0px 0px 8px 5px inset;opacity:.5;">
+2
+</div>
+</div>
+<div style="position:relative;top:0px;width:100%;height:50px;float:left;background:transparent;border:1px solid black;border-radius:5px;margin-top:1px;margin-bottom:1px;">
+<div style="position:relative;top:0px;left:0px;width:100%;height:100%;background:rgb(128, 128, 128);box-shadow:black 0px 0px 8px 5px inset;opacity:.5;">
+3
+</div>
+</div>
+<div style="position:relative;top:0px;width:100%;height:50px;float:left;background:transparent;border:1px solid black;border-radius:5px;margin-top:1px;margin-bottom:1px;">
+<div style="position:relative;top:0px;left:0px;width:100%;height:100%;background:rgb(128, 128, 128);box-shadow:black 0px 0px 8px 5px inset;opacity:.5;">
+4
+</div>
+</div>
+<div style="position:relative;top:0px;width:100%;height:50px;float:left;background:transparent;border:1px solid black;border-radius:5px;margin-top:1px;margin-bottom:1px;">
+<div style="position:relative;top:0px;left:0px;width:100%;height:100%;background:rgb(128, 128, 128);box-shadow:black 0px 0px 8px 5px inset;opacity:.5;">
+5
+</div>
+</div>
+<div style="position:relative;top:0px;width:100%;height:50px;float:left;background:transparent;border:1px solid black;border-radius:5px;margin-top:1px;margin-bottom:1px;">
+<div style="position:relative;top:0px;left:0px;width:100%;height:100%;background:rgb(128, 128, 128);box-shadow:black 0px 0px 8px 5px inset;opacity:.5;">
+</div>
+</div>
+<div style="position:relative;top:0px;width:100%;height:50px;float:left;background:transparent;border:1px solid black;border-radius:5px;margin-top:1px;margin-bottom:1px;">
+<div style="position:relative;top:0px;left:0px;width:100%;height:100%;background:rgb(128, 128, 128);box-shadow:black 0px 0px 8px 5px inset;opacity:.5;">
+</div>
+</div>
+<div style="position:relative;top:0px;width:100%;height:50px;float:left;background:transparent;border:1px solid black;border-radius:5px;margin-top:1px;margin-bottom:1px;">
+<div style="position:relative;top:0px;left:0px;width:100%;height:100%;background:rgb(128, 128, 128);box-shadow:black 0px 0px 8px 5px inset;opacity:.5;">
+</div>
+</div>
+<div style="position:relative;top:0px;width:100%;height:50px;float:left;background:transparent;border:1px solid black;border-radius:5px;margin-top:1px;margin-bottom:1px;">
+<div style="position:relative;top:0px;left:0px;width:100%;height:100%;background:rgb(128, 128, 128);box-shadow:black 0px 0px 8px 5px inset;opacity:.5;">
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

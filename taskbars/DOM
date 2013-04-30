@@ -1,0 +1,90 @@
+
+<ul id="menu1">
+    <li onclick="clickt(this);"><img src="wallpaper/BluDotlogo.png"/></li>
+        <ul id="menu2sub1" name="test">
+			<li>
+                                <a id="testt" onclick="clickt(clicked);window.loadApps.AboutOS();">About This OS</a>
+			</li>
+			<li>
+				<a onclick="clickt(clicked);window.loadApps.Prefs();">System Preferences...</a>
+			</li>
+			<li onmouseover="movet(this.children[1], 1);" onmouseout="movet(this.children[1], 0);">
+				<a onclick="clickt(clicked);"  onmouseover="movet(this.parentNode.children[1], 1);">Dock</a>
+                                <ul onmouseout="movet(this.children[1]);">
+                                    <li>
+                                         <a onclick="dock.skipT(!dock.skip);if(dock.skip == false) {this.innerText = \"Magnification on\";MainTools.dockmag(window.user, \"false\");} else {this.innerText = \"Magnification off\";MainTools.dockmag(window.user, \"true\");}">Magnification</a>
+                                    </li>
+                               </ul>
+			</li>
+			<li>
+				<a onclick="clickt(clicked);window.loadApps.AdminC();" style="width:250px;">Admin Center</a>
+			</li>
+			<li id="ajax1" style="display:none;">
+				<a onclick="clickt(clicked);window.loadApps.AdminC();">Admin Center</a>
+			</li>
+			<li>
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="RKMHF5AUUTUL8">
+				<input type="image" src="images/donate.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" style="position:absolute;">
+				</form>
+			</li>
+
+			<li>
+				<a onclick="clickt(clicked);window.loadApps.logout();">Log Out...</a>
+			</li>
+			<li>
+				<a id="ajax2" onclick="clickt(clicked);window.loadApps.logout();">logout </a>
+			</li>
+			<li>
+			<a onclick="clickt(clicked);window.close();">Shutdown</a>
+			</li>
+			<li>
+				<a onClick="window.location.href=\"http://dev.bludot.tk\";">Reboot</a>
+			</li>
+		</ul>
+    <li onclick="clickt(this);"><a>FileNet</a></li>
+        <ul id="menu2sub3">
+			<li>
+			<a onclick="clickt(clicked);testdock();">test</a>
+			</li>
+			<li>
+			<a onclick="clickt(clicked);testremove();">testremove</a>
+			</li>
+			<li>
+			<a onclick="clickt(clicked);testbounce();">Test 3</a>
+			</li>
+			<li>
+			<a onclick="clickt(clicked);testdocks();">Test 4</a>
+			</li>
+                        <li>
+                        <a onclick="clickt(clicked);homebar();">test 5</a>
+                        </li>
+                        <li>
+                        <a onclick="clickt(clicked);clearall();">clear cache</a>
+                        </li>
+                        <li>
+                        <a onclick="clickt(clicked);Safar();">safari</a>
+                        </li>
+                        <li>
+                        <a onclick="alert(window.applicationCache.status);">check cache</a>
+                        </li>
+                        <li>
+                        <a onclick="window.applicationCache.update();">update cache</a>
+                        </li>
+                        <li>
+                        <a onclick="window.applicationCache.swapCache();">swap cache</a>
+                        </li>
+		</ul>
+	<li style="position:fixed;top:1px;right:85px;z-index:2;">
+                        <img onclick="window.notificationDesktop(\"open\");" src="images/notificationDesktop.png" />
+                        </li>
+</ul>
+<ul id="menu2" style="top:-8px;">
+    <li onclick="clickt(this);"><a>App</a></li>
+    <li><a>File</a></li>
+    <li><a>Edit</a></li>
+</ul>
+<ul id="menu0" style="top:-8px;">
+</ul>

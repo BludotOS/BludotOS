@@ -1,0 +1,38 @@
+canvas {
+	width: 100%;
+	height: 100%;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:2147486;
+}
+.meter {
+	position: absolute;
+	left: 50%;
+	width: 200px;
+	margin-left: -100px;
+	top: 75%;
+	text-align: center;
+	color: white;
+	z-index:2147486;
+}
+.meter progress {
+	apearance: none;
+	-webkit-appearance: none;
+}
+.meter progress::-webkit-progress-bar {
+	background: rgba(1, 1, 1, 0.4);
+	border-radius: 4px;
+}
+.meter progress::-webkit-progress-value {
+	border-radius: 5px;
+	background: -webkit-linear-gradient(top, #217fff 0%, #0075d4 100%);
+}
+.meter progress[aria-valuenow]:before {
+	border-radius: 5px;
+
+}
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
