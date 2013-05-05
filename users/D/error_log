@@ -19,3 +19,10 @@
 [11-Feb-2013 12:53:13] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vios/public_html/users/D/Mysites.php:22) in /home/vios/public_html/users/D/Mysites.php on line 95
 [11-Feb-2013 13:12:25] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vios/public_html/users/D/mailform.php:7) in /home/vios/public_html/users/D/mailform.php on line 8
 [11-Feb-2013 13:15:52] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vios/public_html/users/D/pcrepair.php:22) in /home/vios/public_html/users/D/pcrepair.php on line 94
+[28-Apr-2013 17:57:16] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vios/public_html/users/D/Buy.php:22) in /home/vios/public_html/users/D/Buy.php on line 95
+[28-Apr-2013 17:57:17] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vios/public_html/users/D/Mysites.php:22) in /home/vios/public_html/users/D/Mysites.php on line 95
+[28-Apr-2013 17:57:17] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vios/public_html/users/D/buysite.php:22) in /home/vios/public_html/users/D/buysite.php on line 93
+[28-Apr-2013 17:57:18] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vios/public_html/users/D/mailform.php:7) in /home/vios/public_html/users/D/mailform.php on line 8
+[28-Apr-2013 17:57:18] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vios/public_html/users/D/pcrepair.php:22) in /home/vios/public_html/users/D/pcrepair.php on line 94
+[28-Apr-2013 17:57:19] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vios/public_html/users/D/repair.php:22) in /home/vios/public_html/users/D/repair.php on line 90
+[28-Apr-2013 17:57:19] PHP Parse error:  syntax error, unexpected T_STRING in /home/vios/public_html/users/D/send.php on line 2

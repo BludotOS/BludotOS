@@ -26,13 +26,21 @@ init:function(wid, height, width, left, top, size, bar){
 	windowdiv.className=wid;
 	var wid = windowdiv;
 	document.getElementById('dhtmlwindowholder').appendChild(wid);
-	wid.style.cssText = 'position:fixed;left:0px;top:23px;width:'+width+'px;height:'+height+'px;display:block;-webkit-border-radius: 30px;-moz-border-radius: 20px;border-radius: 20px;';
-        if(left) {
+	wid.style.cssText = 'position:fixed;left:0px;top:23px;width:0px;height:0px;display:block;-webkit-border-radius: 30px;-moz-border-radius: 20px;border-radius: 20px;display:none;opacity = 0;';
+	wid.style.display = 'block';
+	wid.style['-webkit-transition'] = 'all .2s';
+        wid.style.width = width+'px';
+        wid.style.height = height+'px';
+                if(left) {
         wid.style.left = left(wid)+'px';
         };
         if(top) {
         wid.style.top = top(wid)+'px';
         };
+        wid.style.opacity = 1;
+        setTimeout(function(){
+        	wid.style['-webkit-transition'] = '';
+        }, 1000);
 	wid.children[1].style.height = wid.innerheight+'px';
 	wid.style.zIndex=parseInt(SimpleWin.zindexbase)+1;
 	SimpleWin.zindexbase=wid.style.zIndex;
@@ -134,8 +142,16 @@ close:function(wid){
 	};
 	if (widclosef){ //if custom event handler function returns true
 		window.wid = wid;
-		document.getElementById('dhtmlwindowholder').removeChild(wid);
+		window.wid.style['-webkit-transition'] = 'all .2s';
+        window.wid.style.width = 0+'px';
+        window.wid.style.height = 0+'px';
+        window.wid.style.left = -15+'px';
+        window.wid.style.top = -15+'px';
+        window.wid.style.opacity = 0;
+		setTimeout(function(){
+			document.getElementById('dhtmlwindowholder').removeChild(wid);
 		delete window.wid;
+		}, 180);
 		this.Winds=parseInt(this.Winds)-1;
 	};
         //if (actT.x > 0) {
@@ -170,7 +186,16 @@ minimize:function(wid){
 		wid.attrstop=wid.style.top;
 		wid.attrswidth=wid.style.width;
 		wid.attrsheight=wid.style.height;
-		wid.style.display='none';
+		wid = wid;
+		wid.style['-webkit-transition'] = 'all .2s';
+        wid.style.width = 0+'px';
+        wid.style.height = 0+'px';
+        wid.style.left = -15+'px';
+        wid.style.top = -15+'px';
+        wid.style.opacity = 0;
+		setTimeout(function(){
+			wid.style.display='none';
+		}, 200);
                 wid.nim+=1;
 		dock.AddNew({
                              name:      '../../icons/'+wid.id,
@@ -187,6 +212,15 @@ minimize:function(wid){
                 dock.removeApp(wid.id+wid.nim);
                 wid.nim-=1;
 		wid.style.display='block';
+		wid.style['-webkit-transition'] = 'all .2s';
+        wid.style.width = wid.attrswidth;
+        wid.style.height = wid.attrsheight;
+        wid.style.left = wid.attrsleft;
+        wid.style.top = wid.attrstop;
+        wid.style.opacity = 1;
+        setTimeout(function(){
+        	wid.style['-webkit-transition'] = '';
+        	}, 180);
 		wid.min=false;
 this.setfocus(wid);
 	};

@@ -11,8 +11,8 @@ function load($path)
 {
     return require $path;
 }
-$version = '0.69';
-$updateinfo = "Core bug fixes<br>New Notifycation system!";
+$version = '0.70';
+$updateinfo = "Core bug fixes<br>More secure!<br>Developer API Updated!!!";
 ?>
 <?
 if (!$isMobile) {
@@ -209,7 +209,7 @@ font-family:arial;
 <? if(!$isMobile) { ?>
 <link rel="stylesheet" href="loadOS.css" type="text/css"/>
 <? }; ?>
-<script src="ace/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://rawgithub.com/ajaxorg/ace-builds/master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
 
 window.ontouchmove = function(e){
@@ -307,8 +307,7 @@ return true;
 },
 DevCenter:function ()
 {
-alert('How to use:\nthe variable "Doc" is the window element of the object you are building. "Doc.ajax()" is an ajax call.\n Example:\nDoc.ajax("prefs.php", function(obj) {\nwindow.tested2 = obj;\nif(window.tested2.accounts.length < 1) {\nMainTools.popup(["test", "test2", "test3"]);\n} else {\nvar a = [];\na[0] = window.tested2.accounts[0].server;\na[1] = window.tested2.accounts[0].username;\na[2] = window.tested2.accounts[0].password;\nthisis[actT.x].callback(a);\n};\n}, "json", null, false);');
-var DevCenter=SimpleWin.create("DevCenter", "DevCenter", "users/"+window.user+"/sysapps/DevCenter/?thefile=file.txt&userN="+window.user+"");
+var DevCenter=SimpleWin.create("DevCenter", "DevCenter", "users/"+core.user+"/sysapps/DevCenter/?thefile=file.txt&userN="+core.user+"");
 <?
 if (!$isMobile) {
 ?>
@@ -330,7 +329,7 @@ for (var x=0; x < thisis.length; x++)
 var renameit = new XMLHttpRequest();
         var nameit = window.thisis[actT.x].old.split("/")[window.thisis[actT.x].old.split("/").length-1];
         var sendit2 = 'path=../FileNet/HDD/Applications/temp/&old='+encodeURIComponent(nameit+'/')+'&new='+encodeURIComponent('../FileNet/HDD/Applications/'+nameit+'.blu')+'&move='+nameit;
-	renameit.open('POST', 'users/'+window.user+'/sysapps/DevCenter/build.php', false);
+	renameit.open('POST', 'users/'+core.user+'/sysapps/DevCenter/build.php', false);
         renameit.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	renameit.onreadystatechange = function() {
 	if (renameit.readyState==4) {
@@ -348,7 +347,7 @@ return true;
 FileNet:function ()
 {
 
-var FileNet=SimpleWin.create("FileNet", "FileNet", "users/"+window.user+"/sysapps/FileNet/?userN="+window.user+"", 400, 750, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
+var FileNet=SimpleWin.create("FileNet", "FileNet", "users/"+core.user+"/sysapps/FileNet/?userN="+core.user+"", 400, 750, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
 dock.addclick('FileNet', ['close', 'minimize'], [function(){SimpleWin.close(FileNet);}, function(){SimpleWin.minimize(FileNet);}]);
      
 FileNet.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
@@ -371,12 +370,12 @@ window.dock.AddNew({
             menuClick: [function(){this.name();}],
             onclick:   function (){return false;}
           }, dock.findApp('Trash'));
-var Prefer=SimpleWin.create("Preferences", "prefed", "users/"+window.user+"/sysapps/Preferences/index.php?userN="+window.user+"", 420, 540, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
+var Prefer=SimpleWin.create("Preferences", "prefed", "users/"+core.user+"/sysapps/Preferences/index.php?userN="+core.user+"", 420, 540, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
 dock.addclick('Prefs', ['close', 'minimize'], [function(){SimpleWin.close(Prefer);}, function(){SimpleWin.minimize(Prefer);}]);
 <?
 } else if ($isMobile) {
 ?>
-var Prefer=SimpleWin.create("pref", "prefed", "users/"+window.user+"/sysapps/Preferences/index.php");
+var Prefer=SimpleWin.create("pref", "prefed", "users/"+core.user+"/sysapps/Preferences/index.php");
 <?
 };
 ?>
@@ -394,7 +393,7 @@ return true;
 },
 AdminC:function ()
 {
-var AdminC=SimpleWin.create("AdminC", "AdminC", "users/"+window.user+"/admin/admin.php")
+var AdminC=SimpleWin.create("AdminC", "AdminC", "users/"+core.user+"/admin/admin.php")
 AdminC.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
 return true
 }
@@ -488,7 +487,7 @@ window.dock.AddNew({
             menuClick: [function(){return false;}],
             onclick:   function (){return false;}
           }, dock.findApp('Trash'));
-var temp = SimpleWin.create(name, name, "users/"+core.user+"/sysapps/FileNet/HDD/Applications/temp/"+name+"/index.php?name="+name+"&userN="+window.user+"");
+var temp = SimpleWin.create(name, name, "users/"+core.user+"/sysapps/FileNet/HDD/Applications/temp/"+name+"/index.php?name="+name+"&userN="+core.user+"");
 window.tempname = name;
 <?
 if ($isMobile) {
@@ -504,7 +503,7 @@ if (!$isMobile) {
 window.dock.removeApp(thisis[actT.x].id);
 var saveapp = new XMLHttpRequest();
         var sendit2 = 'path=HDD/Applications/temp/&old='+encodeURIComponent(window.tempname+'/')+'&new='+encodeURIComponent('apps/'+window.tempname+'/'+window.tempname+'.blu')+'&move='+window.tempname;
-        saveapp.open('POST', 'users/'+window.user+'/sysapps/FileNet/saveapp.php', true);
+        saveapp.open('POST', 'users/'+core.user+'/sysapps/FileNet/saveapp.php', true);
 	saveapp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	//goto2.setRequestHeader("Content-length", sendit2.length);
 	saveapp.onreadystatechange = function() {
@@ -587,7 +586,7 @@ openapp.send(sendit);
                                         var divit = document.getElementById('logdiv');
                                         document.body.removeChild(divit);
                                         document.body.removeChild(document.getElementById('loginback'));
-                                        window.user = resp.user;
+                                        core.user = resp.user;
                                         core.user = resp.user;
                                         core.Admin = resp.Admin;
                                         core.Cversion = <?echo $version;?>;
@@ -597,7 +596,7 @@ core.checkupdates();
                          checkp.onreadystatechange = function() {
                                if(checkp.readyState == 4){
                                      window.prefit = JSON.parse(checkp.responseText);
-                                     //window.userprefs = prefit;
+                                     //core.userprefs = prefit;
                                      core.OS.Desktop.background.src = prefit.wallpaper;
                                      if (prefit.Dockmag == 'false') {
                                          prefit.Dockmag = false;
@@ -895,7 +894,7 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
     				core.getscript(prefit.windows[0], 'window', prefit.windows[3]);
                                      if('<? echo $version; ?>' > prefit.version) {
                                      var updatev = new XMLHttpRequest();
-                         updatev.open("GET", "uconf.php?path=users/"+window.user+"/config&change=<? echo $version; ?>", true);
+                         updatev.open("GET", "uconf.php?path=users/"+core.user+"/config&change=<? echo $version; ?>", true);
                          updatev.onreadystatechange = function() {
                                if(updatev.readyState == 4){
                                      MainTools.Notify('Version Updatdhtmldhtmled\n<? echo $version; ?>B<br><? echo $updateinfo; ?>', null, 8);
@@ -909,7 +908,7 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
                                         if (resp.Admin == 1) {
                                         //document.getElementById('ajax1').style.display = 'block';
                                         };
-                                        //document.getElementById('ajax2').innerHTML += window.user+'...';
+                                        //document.getElementById('ajax2').innerHTML += core.user+'...';
                                      }
                                }
                          }
@@ -1077,9 +1076,11 @@ var loadPrefs = function(every, done){
 		//every(progressMeter.value = loadedPackets/packets*2);
 		loadedPackets++;
 		if(packets > loadedPackets)
+		{
 			setTimeout(go, loadTime);
-		else
-			done();
+		} else {
+		done();
+		}
 	};
 	go();
 }
@@ -1235,8 +1236,9 @@ core.Dev = 1;
 <?
 };
 ?>
+delete core.register;
 core.user = '<? echo $session->username; ?>';
-window.user = '<? echo $session->username; ?>';
+core.user = '<? echo $session->username; ?>';
 core.checkupdates();
 var divit = document.getElementById('logdiv');
                                         document.body.removeChild(divit);
@@ -1246,7 +1248,7 @@ var checkp = new XMLHttpRequest();
                          checkp.onreadystatechange = function() {
                                if(checkp.readyState == 4){
                                      window.prefit = JSON.parse(checkp.responseText);
-                                     //window.userprefs = prefit;
+                                     //core.userprefs = prefit;
                                         core.Cversion = <?echo $version;?>;
                                      core.OS.Desktop.background.src = prefit.wallpaper;
                                      if (prefit.Dockmag == 'false') {
@@ -1559,7 +1561,7 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
     				core.getscript(prefit.windows[0], 'window', prefit.windows[3]);
                                      if('<? echo $version; ?>' > prefit.version) {
                                      var updatev = new XMLHttpRequest();
-                         updatev.open("GET", "uconf.php?path=users/"+window.user+"/config&change=<? echo $version; ?>", true);
+                         updatev.open("GET", "uconf.php?path=users/"+core.user+"/config&change=<? echo $version; ?>", true);
                          updatev.onreadystatechange = function() {
                                if(updatev.readyState == 4){
                                      MainTools.Notify('Version Updated\n<? echo $version; ?>B<br><? echo $updateinfo; ?>', null, 8);
@@ -1608,7 +1610,9 @@ updateitq.onreadystatechange = function() {
         if(updateitq.readyState==4) {
                 var respw = JSON.parse(updateitq.responseText.toString());
                 window.respw = respw;
-                if(parseFloat(window.resp2.version) < parseFloat(window.respw.version)) {core.capps.push(window.resp2.app);};
+                if(parseFloat(window.resp2.version) < parseFloat(window.respw.version)) {
+                	core.capps.push(window.resp2.app);
+                	};
                 
         }
 }
@@ -1616,6 +1620,9 @@ updateitq.send();
         }
 }
 cupdateitq.send();
+if(i == respit.dirs.length) {
+	Object.seal(core);Object.freeze(core);
+}
         };
 }
 }
@@ -1651,7 +1658,7 @@ test.send();
     return core;
 }());
 //window.onload = function(){core.getscript('default', 'script', 'maintools');core.load();document.forms[0].children[0].children[0].focus();};
-window.onload = function(){core.getscript('default', 'script', 'maintools');core.load();};
+window.onload = function(){core.getscript('default', 'script', 'maintools');core.load();core.checkupdates();};
 </script>
 </head>
 <body scrolling="no" id="body" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">

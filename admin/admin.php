@@ -21,7 +21,7 @@ include("../include/session.php");
 function displayUsers(){
    global $database;
    $q = "SELECT username,userlevel,email,timestamp "
-       ."FROM ".TBL_USERS." ORDER BY userlevel DESC,username";
+       ."FROM ".TBL_USERS." ORDER BY timestamp DESC,username";
    $result = $database->query($q);
    /* Error occurred, return given name by default */
    $num_rows = mysql_numrows($result);
@@ -44,7 +44,7 @@ function displayUsers(){
       $usernames[] = mysql_result($result,$i,"username");
       $email2[]  = mysql_result($result,$i,"email");
 
-      echo "<tr><td>$uname</td><td>$ulevel</td><td>$email</td><td>$time</td></tr>\n";
+      echo "<tr><td>$uname</td><td>$ulevel</td><td>$email</td><td>".date('m/d/y', $time)."</td></tr>\n";
    }
    echo "</table><br>\n";
    $usernamesa = "";
