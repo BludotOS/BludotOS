@@ -1,0 +1,22 @@
+Doc.menu(
+['test1', 'test2', 'test3'],
+[['test', 'test1'], [], ['test', 'test1', 'test2']],
+[['alert(\'bob\')', null], [], ['alert(this.innerHTML);', 'alert(this.innerHTML);', 'alert(this.innerHTML);']]
+);
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                         //
+//     Enter ALL code below                                                                                //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Doc.style.background = 'gray';
+var topbar = Doc.create('div');
+topbar.style.cssText = 'position:absolute;background:blue;top:0px;left:0px;right:0px;height:50px;';
+Doc.appendChild(topbar);
+var content = Doc.create('div');
+content.style.cssText = 'position:absolute;top:50px;left:0px;right:0px;bottom:0px;';
+Doc.appendChild(content);
+var header = Doc.create('h1');
+header.innerHTML = 'Welcome<br>This is a test App!';
+content.appendChild(header);
+header.style.cssText = 'position:relative;width:100%;top:opx;left:0px;height:auto;';
+header.style['text-align'] = 'center';
+Doc.Notify('This is a test Notification');

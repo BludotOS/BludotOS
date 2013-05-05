@@ -84,6 +84,7 @@ getdata:function(data, callback){
 	xmlhttp.send();
 },
 create:function(wid, title, data, height, width, left, top, size, bar){
+	this.lastwid = this.lastact;
 	var d=SimpleWin;
 	wid=this.init(wid, height, width, left, top, size, bar);
 	window.wid=wid;
@@ -152,6 +153,11 @@ close:function(wid){
 			document.getElementById('dhtmlwindowholder').removeChild(wid);
 		delete window.wid;
 		}, 180);
+		if(thisis.length > 1) {
+	        this.lastwid.menu();
+		} else {
+			window.bar(1);
+		};
 		this.Winds=parseInt(this.Winds)-1;
 	};
         //if (actT.x > 0) {
@@ -178,7 +184,16 @@ resize:function(e){
 		wid.style.height=(e.pageY-window.wsetY)+'px';
 		wid.style.width=(e.pageX-window.wsetX)+'px';
 	};
-	document.onmouseup=function(){document.onmousemove=null;delete window.wsetX;delete window.wsetY;document.body.removeChild(document.getElementById('SHIM'));};
+	document.onmouseup=function(){
+		document.onmousemove=null;
+		delete window.wsetX;
+		delete window.wsetY;
+		document.body.removeChild(document.getElementById('SHIM'));
+		if(thisis[actT.x].editor)
+		{
+			thisis[actT.x].editor.resize();
+		};
+		};
 },
 minimize:function(wid){	
 	if (!wid.min || wid.min==false){
@@ -207,7 +222,11 @@ minimize:function(wid){
                              onclick:   function (){SimpleWin.minimize(wid);}
                              }, dock.findApp('Trash'));
 		wid.min=true;
-        window.bar(1);
+		if(thisis.length > 1) {
+	        this.setfocus(this.lastwid);
+		} else {
+			window.bar(1);
+		};
 	} else if (wid.min==true){
                 dock.removeApp(wid.id+wid.nim);
                 wid.nim-=1;
@@ -264,10 +283,11 @@ for (var x=0; x < thisis.length; x++)
      {
         var thisislength = x;
         window.actT.x = x;
-        thisis[thisislength].menu();
+        //thisis[thisislength].menu();
      }
 }
 	this.lastact = wid;
+	this.setfocus(wid);
         
 },
 };
@@ -394,3 +414,7 @@ window.addEventListener('keydown', function(event) {
 	}
 return false;
 }, false);
+		if(window.SimpleWin && window.SimpleDock && window.MainTools)
+		{
+			document.body.removeChild(document.getElementById('loading'));
+		};

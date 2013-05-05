@@ -2882,3 +2882,236 @@ Stack trace:
 [29-Mar-2013 18:26:39] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
 [29-Mar-2013 18:29:47] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
 [29-Mar-2013 18:34:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[02-Apr-2013 18:53:16] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[02-Apr-2013 18:54:53] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[02-Apr-2013 19:01:33] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[02-Apr-2013 19:02:36] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[02-Apr-2013 19:02:46] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[02-Apr-2013 22:25:29] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[02-Apr-2013 22:26:37] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[02-Apr-2013 22:35:01] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[02-Apr-2013 22:51:38] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[03-Apr-2013 00:56:43] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[03-Apr-2013 01:23:33] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[03-Apr-2013 17:48:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[03-Apr-2013 18:39:48] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[03-Apr-2013 23:33:13] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[04-Apr-2013 07:35:13] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/cache) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[04-Apr-2013 07:35:13] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/cache) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[04-Apr-2013 07:36:06] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[04-Apr-2013 12:03:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[04-Apr-2013 12:04:03] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[04-Apr-2013 12:08:49] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[04-Apr-2013 12:11:39] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[04-Apr-2013 12:17:50] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[04-Apr-2013 12:18:03] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[04-Apr-2013 12:18:03] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/APP/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:18:03] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:18:03] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[04-Apr-2013 12:18:04] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/APP) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[04-Apr-2013 12:18:04] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/APP) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[04-Apr-2013 12:18:09] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/app/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[04-Apr-2013 12:18:09] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/app/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:18:09] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:18:09] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[04-Apr-2013 12:18:10] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/app) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[04-Apr-2013 12:18:10] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/app) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[04-Apr-2013 12:18:15] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(../FileNet/HDD/Applications/temp/app/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(20): RecursiveDirectoryIterator->__construct('../FileNet/HDD/...')
+#1 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 20
+[04-Apr-2013 12:18:42] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[04-Apr-2013 12:18:53] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:18:58] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:20:09] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[04-Apr-2013 12:20:09] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/APP/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:20:09] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:20:09] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[04-Apr-2013 12:20:09] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/APP) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[04-Apr-2013 12:20:09] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/APP) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[04-Apr-2013 12:20:24] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/update.php on line 6
+[04-Apr-2013 12:20:24] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/update.php on line 6
+[04-Apr-2013 12:20:27] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(../FileNet/HDD/Applications/temp/APP/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(20): RecursiveDirectoryIterator->__construct('../FileNet/HDD/...')
+#1 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 20
+[04-Apr-2013 12:20:29] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/update.php on line 6
+[04-Apr-2013 12:20:32] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(../FileNet/HDD/Applications/temp/APP/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(20): RecursiveDirectoryIterator->__construct('../FileNet/HDD/...')
+#1 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 20
+[04-Apr-2013 12:23:12] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[04-Apr-2013 12:23:29] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[04-Apr-2013 12:23:29] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/APP/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:23:29] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:23:29] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[04-Apr-2013 12:23:30] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/APP) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[04-Apr-2013 12:23:30] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/APP) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[04-Apr-2013 12:23:32] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[04-Apr-2013 12:23:32] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/APP/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:23:32] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:23:32] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[04-Apr-2013 12:23:39] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(../FileNet/HDD/Applications/temp/APP/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(20): RecursiveDirectoryIterator->__construct('../FileNet/HDD/...')
+#1 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 20
+[04-Apr-2013 12:24:16] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[04-Apr-2013 12:24:26] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:28:09] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[04-Apr-2013 12:31:54] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/mail5/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[04-Apr-2013 12:31:54] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/mail5/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:31:54] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:31:54] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[04-Apr-2013 12:31:54] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/mail5) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[04-Apr-2013 12:31:54] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/mail5) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[04-Apr-2013 12:31:57] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(../FileNet/HDD/Applications/temp/mail5/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(20): RecursiveDirectoryIterator->__construct('../FileNet/HDD/...')
+#1 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 20
+[04-Apr-2013 12:32:05] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[04-Apr-2013 12:32:23] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[04-Apr-2013 12:32:26] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[04-Apr-2013 12:37:55] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[04-Apr-2013 12:38:35] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[04-Apr-2013 12:41:26] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/mail4/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[04-Apr-2013 12:41:26] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/mail4/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:41:26] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[04-Apr-2013 12:41:26] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[04-Apr-2013 12:41:26] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/mail4) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[04-Apr-2013 12:41:26] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/mail4) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[04-Apr-2013 12:49:44] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[09-Apr-2013 10:57:09] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/mail5/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[09-Apr-2013 10:57:09] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/mail5/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[09-Apr-2013 10:57:09] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[09-Apr-2013 10:57:09] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[09-Apr-2013 10:57:09] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/mail5) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[09-Apr-2013 10:57:09] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/mail5) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[09-Apr-2013 10:57:12] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(../FileNet/HDD/Applications/temp/mail5/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(20): RecursiveDirectoryIterator->__construct('../FileNet/HDD/...')
+#1 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 20
+[09-Apr-2013 10:57:28] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/mail5/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[09-Apr-2013 10:57:28] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/mail5/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[09-Apr-2013 10:57:28] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[09-Apr-2013 10:57:28] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[09-Apr-2013 10:57:29] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/mail5) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[09-Apr-2013 10:57:29] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/mail5) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[09-Apr-2013 10:58:41] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/mail5/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[09-Apr-2013 10:58:41] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/mail5/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[09-Apr-2013 10:58:41] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[09-Apr-2013 10:58:41] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[09-Apr-2013 10:58:41] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/mail5) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[09-Apr-2013 10:58:41] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/mail5) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[09-Apr-2013 10:58:44] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(../FileNet/HDD/Applications/temp/mail5/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(20): RecursiveDirectoryIterator->__construct('../FileNet/HDD/...')
+#1 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 20
+[09-Apr-2013 10:59:24] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/tempmail/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[09-Apr-2013 10:59:24] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/tempmail/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[09-Apr-2013 10:59:24] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[09-Apr-2013 10:59:24] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[09-Apr-2013 10:59:24] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/tempmail) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[09-Apr-2013 10:59:24] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/tempmail) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[09-Apr-2013 10:59:37] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[09-Apr-2013 10:59:42] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[09-Apr-2013 10:59:42] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/tempmail/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[09-Apr-2013 10:59:42] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/tempmail/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[09-Apr-2013 10:59:42] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[09-Apr-2013 10:59:42] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[09-Apr-2013 10:59:42] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/tempmail) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[09-Apr-2013 10:59:42] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/tempmail) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[09-Apr-2013 11:02:37] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[16-Apr-2013 11:20:30] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/amoebachat/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[16-Apr-2013 11:20:30] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/amoebachat/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[16-Apr-2013 11:20:30] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[16-Apr-2013 11:20:30] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[16-Apr-2013 11:20:31] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/amoebachat) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[16-Apr-2013 11:20:31] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/amoebachat) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[16-Apr-2013 17:49:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[18-Apr-2013 10:37:37] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[25-Apr-2013 09:55:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[25-Apr-2013 10:03:40] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[01-May-2013 19:56:03] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/undefined/undefined) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[01-May-2013 19:56:03] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/undefined/undefined in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[01-May-2013 19:56:03] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[01-May-2013 19:56:03] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[04-May-2013 18:17:35] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[04-May-2013 19:07:07] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[05-May-2013 16:35:02] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[05-May-2013 16:38:02] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[05-May-2013 16:38:19] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[05-May-2013 16:57:29] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[05-May-2013 16:57:29] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/APP/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[05-May-2013 16:57:29] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[05-May-2013 16:57:29] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[05-May-2013 16:57:29] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/APP) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[05-May-2013 16:57:29] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/APP) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[05-May-2013 16:57:35] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[05-May-2013 16:57:35] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/APP/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[05-May-2013 16:57:35] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[05-May-2013 16:57:35] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[05-May-2013 16:57:40] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[05-May-2013 16:57:48] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[05-May-2013 16:57:48] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/APP/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[05-May-2013 16:57:48] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[05-May-2013 16:57:48] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[05-May-2013 16:57:48] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/APP) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[05-May-2013 16:57:48] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/APP) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[05-May-2013 16:59:38] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(../FileNet/HDD/Applications/temp/APP/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(20): RecursiveDirectoryIterator->__construct('../FileNet/HDD/...')
+#1 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 20
+[05-May-2013 19:19:33] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[05-May-2013 19:19:45] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3

@@ -396,3 +396,7 @@ window.addEventListener('contextmenu', function (e){MainTools.desktopRightClick(
 window.applicationCache.addEventListener('downloading', function() { MainTools.alertsystem('Downloading'); }, false);
 
 window.applicationCache.addEventListener('updateready', function() { MainTools.alertsystem('Done'); }, false);
+		if(window.SimpleWin && window.SimpleDock && window.MainTools)
+		{
+			document.body.removeChild(document.getElementById('loading'));
+		};

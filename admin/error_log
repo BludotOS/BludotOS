@@ -156,3 +156,4 @@
 [24-Mar-2013 02:00:03] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
 [28-Mar-2013 12:43:10] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
 [31-Mar-2013 16:37:27] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[05-May-2013 13:53:47] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36

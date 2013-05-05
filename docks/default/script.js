@@ -1155,3 +1155,7 @@ if (SimpleDock.prototype.skip== false) {
                 }
     }
 }
+		if(window.SimpleWin && window.SimpleDock && window.MainTools)
+		{
+			document.body.removeChild(document.getElementById('loading'));
+		};

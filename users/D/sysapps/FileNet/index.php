@@ -41,7 +41,7 @@ window.dock.AddNew({
             menuClick: [function(){return false;}],
             onclick:   function (){return false;}
           }, dock.findApp('Trash'));
-thisis[actT.x].FileNet[thisis[actT.x].i]=SimpleWin.create(name, name, "users/"+window.user+"/sysapps/FileNet/HDD/Applications/temp/"+name+"/index.php?name="+name+"&userN="+window.user+"");
+var temp =SimpleWin.create(name, name, "users/"+core.user+"/sysapps/FileNet/HDD/Applications/temp/"+name+"/index.php?name="+name+"&userN="+core.user+"");
 <?
 if ($isMobile) {
 ?>
@@ -49,13 +49,13 @@ dock.addclick(name, ['close', 'minimize'], [function(){SimpleWin.close(window.th
 <?
 };
 ?>
-thisis[actT.x].onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
+temp.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
 <?
 if (!$isMobile) {
 ?>
 var closeapp = new XMLHttpRequest();
         var sendit2 = 'name='+window.tempname;
-        closeapp.open('POST', 'users/<? echo $user; ?>/sysapps/FileNet/resolve.php', true);
+        closeapp.open('POST', 'users/'+core.user+'/sysapps/FileNet/resolve.php', true);
 	closeapp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	//goto2.setRequestHeader("Content-length", sendit2.length);
 	closeapp.onreadystatechange = function() {

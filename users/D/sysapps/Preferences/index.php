@@ -188,6 +188,7 @@ window.loadwall = function(folder, obj, tempload) {
 			tempimg.onclick = function(){window.change = this.src;document.getElementById('thedesktop').style.opacity = 0;setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change);",500);};
                         };
 			document.getElementById('thedesktop').style['-webkit-transition'] = "opacity .5s linear";
+			document.getElementById('thedesktop').style.MozTransition = "opacity .5s linear";
 		}
                 if(tempload) {
                 obj.children[1].removeChild(tempload);

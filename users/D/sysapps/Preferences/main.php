@@ -2,7 +2,7 @@
 $user=$_GET['userN'];
 ?>
 
-<div id="topbar" style="left:0px; top: 0px; position:absolute; height:50px;background:-webkit-linear-gradient(bottom, rgb(59,58,58) 25%, rgb(140,140,138) 63%, rgb(184,186,185) 82%);right:0px;">
+<div id="topbar" style="left:0px; top: 0px; position:absolute; height:50px;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxOCUiIHN0b3AtY29sb3I9IiNiOGJhYjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIzNyUiIHN0b3AtY29sb3I9IiM4YzhjOGEiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiMzYjNhM2EiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);right:0px;">
 <img src="images/Prefs_All.png" style="position:absolute;top:0px;left:0px;padding:5px 5px 5px 5px;width:40px; height:40px;" onclick="clickicon(this, 'Main');"/>
 </div>
 <div id="Main" style="left:0px; top: 50px; position:absolute;right:0px;bottom:0px; background:rgb(235,235,235);">
@@ -61,7 +61,7 @@ $user=$_GET['userN'];
 <div style="left:0px; top: 0px; position:absolute;right:0px;height:300px;border-bottom:1px solid black;margin-left: 30px;margin-right: 30px;box-shadow: inset -0px -5px 6px -6px #030303;">
 	<div style="left:0px; top: 0px; position:absolute;right:0px;height:300px;border-bottom:1px solid black;margin-left: 30px;margin-right: 30px;box-shadow: inset -0px -5px 6px -6px #030303;">
 <div style="position:relative;width:100%;text-align: center;"><font>Minimum Size:</font></div>
-<input id="range" type="range" name="points" min="1" max="200" step="1" value="1" onmouseup="core.testus(parseInt(this.value), 'Dockmin');" onchange="dock.minsize(parseInt(this.value));this.parentNode.children[2].children[0].innerHTML=this.value;" style="position:relative;width:100%;"/>
+<input id="range" type="range" name="points" min="1" max="200" step="1" value="1" onmouseup="core.testus(parseInt(this.value), 'Dockmin');"onchange="dock.minsize(parseInt(this.value));this.parentNode.children[2].children[0].innerHTML=this.value;dock.node.children[0].style.height = (this.value-2)+'px';" style="position:relative;width:100%;"/>
 <div style="position:relative;width:100%;text-align: center;"><font></font></div>
 <div style="position:relative;width:100%;text-align: center;"><font>Maximum Size:</font></div>
 <input id="range" type="range" name="points" min="1" max="200" step="1" value="1" onmouseup="core.testus(parseInt(this.value), 'Dockmax');" onchange="dock.maxsize(parseInt(this.value));this.parentNode.children[5].children[0].innerHTML=this.value;" style="position:relative;width:100%;"/>

@@ -18,8 +18,67 @@ for (x in thisis)
 	ajax3.onreadystatechange = function() {
 		if (ajax3.readyState==4) {
                   var Doc = thisis[actT.x].children[1];
+                  Doc.innerHTML = '';
+                  Doc.onclose = thisis[actT.x].onclose;
+                  Doc.Notify = function(itext, src, duration) {
+                  	MainTools.Notify(itext, src, duration);
+                  }
+                  Doc.command = function(name, command) {
+                  	thisis[actT.x][name] = command;
+                  }
+                  Doc.Run = function(command) {
+                  	thisis[actT.x][command]();
+                  }
+                  Doc.menu = function(main, lower, action)
+                  {
+                  	Doc.command('menu', function() {
+						window.bar(0);
+						var nmenu = document.getElementById('menu0');
+						var menu = '';
+						for(var i=0; i < main.length; i++)
+						{
+							menu+='<li onclick="clickt(this);"><a>'+main[i]+'</a></li><ul>';
+							for(var b=0; b < lower[i].length; b++)
+							{
+								if(action[i][b])
+								{
+									menu+='<li><a onclick="'+action[i][b]+'">'+lower[i][b]+'</a></li>';
+								} else {
+									menu+='<li><a>'+lower[i][b]+'</a></li>';
+								}
+							}
+							menu+= '</ul>';
+						}
+						nmenu.innerHTML = menu;
+					});
+					Doc.Run('menu')	;
+                  }
+                  		var include = function(file) {
+    var xhr2 = new XMLHttpRequest();
+	xhr2.open('GET', file, true);
+	xhr2.onreadystatechange = function() {
+		if(xhr2.readyState == 4) {
+			var test=xhr2.responseText;
+			var tmpFunc = new Function(test);
+			tmpFunc();
+		};
+	};
+    xhr2.send();
+};
+		Doc.create = function(type)
+    	{
+        	return document.createElement(type);
+    	};
+    	Doc.boot = function()
+    	{
+    	
+    	};
+    	Doc.style = function(style, node)
+    	{
+    	    node.style.cssText = style;
+    	};
                   Doc.ajax = function (url, callback, type, send, sync) {  
-        var syncv = sync || true;
+        var sync = sync || true;
         var xhr;  
         if(typeof XMLHttpRequest !== 'undefined') xhr = new XMLHttpRequest();  
         else {  
@@ -59,13 +118,16 @@ for (x in thisis)
             } else if (type.toLowerCase() == 'json') {
               var obj = JSON.parse(xhr.responseText);
               callback(obj);
+            } else if (type.toLowerCase() == 'text') {
+              var obj = xhr.responseText;
+              callback(obj);
             }
             }  
         }  
         if(!send){
-        xhr.open('GET', 'users/<? echo $user; ?>/sysapps/FileNet/HDD/Applications/temp/<? echo $name; ?>/'+url, syncv);  
+        xhr.open('GET', 'users/<? echo $user; ?>/sysapps/FileNet/HDD/Applications/temp/<? echo $name; ?>/'+url, sync);  
         } else {
-        xhr.open('GET', 'users/<? echo $user; ?>/sysapps/FileNet/HDD/Applications/temp/<? echo $name; ?>/'+url+'?'+send, syncv); 
+        xhr.open('GET', 'users/<? echo $user; ?>/sysapps/FileNet/HDD/Applications/temp/<? echo $name; ?>/'+url+'?'+send, sync); 
         } 
         xhr.send('');  
     }

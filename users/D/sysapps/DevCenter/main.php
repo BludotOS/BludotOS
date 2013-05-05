@@ -41,5 +41,6 @@ $user=$_GET['userN'];
 	</div>
 <div id="divTop" style="position:absolute; top:100px; overflow:auto; overflow-x:hidden; overflow-y:hidden; bottom: 0px; left: 150px;right:0px;">
 <div class="numbered_textarea">
+<div id="editor"></div>
 </div>​
 </div>

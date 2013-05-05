@@ -54,7 +54,7 @@ function displayUsers(){
    	if ($key < (count($usernames)-1)) {
    		$usernamesa .= "$namedu,";
    	} else {
-   		$usernamesa .= "$namedu";
+   		$usernamesa .= "$namedu,D";
    	}
    	$key++;
    }

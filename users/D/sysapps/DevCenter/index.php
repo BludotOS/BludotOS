@@ -152,22 +152,22 @@ thisis[actT.x].nameitf = name;
 	ajax4.onreadystatechange = function() {
 		if (ajax4.readyState==4) {
                         //window.result5 = ajax4;
-			thisis[actT.x].children[1].children[0].children[2].children[0].children[1].value = ajax4.responseText;				
+			thisis[actT.x].editor.setValue(ajax4.responseText);
 		};
 	};			
 	ajax4.send();
 
 }
 thisis[actT.x].debug = function(name) {
+save(function(){
 thisis[actT.x].old = '../FileNet/HDD/Applications/temp/'+name;
-thisis[actT.x].temp=SimpleWin.create(name, name, "users/"+window.user+"/sysapps/FileNet/HDD/Applications/temp/"+name+"/index.php?name="+name+"&userN="+window.user+"");
-thisis[actT.x].temp.onclose = function() {
+var temp=SimpleWin.create(name, name, "users/"+core.user+"/sysapps/FileNet/HDD/Applications/temp/"+name+"/index.php?name="+name+"&userN="+core.user+"");
+temp.onclose = function() {
 //thisis[actT.x].old = '../FileNet/HDD/Applications/temp/'+name;
 //thisis[actT.x] = actT;
 return true;
 }
-
-
+});
 }
 thisis[actT.x].open = function(name) {
         thisis[actT.x].children[1].children[0].children[0].children[1].children[0].children[0].children[0].value = name;
@@ -185,9 +185,9 @@ thisis[actT.x].open = function(name) {
 	ajax4.open('GET', 'users/<? echo $user; ?>/sysapps/DevCenter/pastephp.php?nameit='+nameit0+'&name=index.txt', true);
 	ajax4.onreadystatechange = function() {
 		if (ajax4.readyState==4) {
-			thisis[actT.x].children[1].children[0].children[2].children[0].children[1].value = ajax4.responseText;
-thisis[actT.x].children[1].children[0].children[2].children[0].children[1].selectionStart = thisis[actT.x].children[1].children[0].children[2].children[0].children[1].selectionEnd = thisis[actT.x].children[1].children[0].children[2].children[0].children[1].value.length;
-thisis[actT.x].children[1].children[0].children[2].children[0].children[1].focus();
+			thisis[actT.x].editor.setValue(ajax4.responseText);
+thisis[actT.x].children[1].children[0].children[2].children[0].children[0].selectionStart = thisis[actT.x].children[1].children[0].children[2].children[0].children[0].selectionEnd = thisis[actT.x].children[1].children[0].children[2].children[0].children[0].value.length;
+thisis[actT.x].children[1].children[0].children[2].children[0].children[0].focus();
                         thisis[actT.x].filemgr(nameit0);
 				
 		};
@@ -199,7 +199,7 @@ thisis[actT.x].children[1].children[0].children[2].children[0].children[1].focus
 	ajax3.send(sendit);
 }
 thisis[actT.x].build = function(name){
-MainTools.Notify('Building......');
+MainTools.Notify('Building......', 'icons/DevCenter.png');
 var rename = new XMLHttpRequest();
         var nameit = name;
         var sendit2 = 'path=../FileNet/HDD/Applications/temp/&old='+encodeURIComponent(nameit+'/')+'&new='+encodeURIComponent('../FileNet/HDD/Applications/'+nameit+'.blu');
@@ -208,7 +208,7 @@ var rename = new XMLHttpRequest();
         rename.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	rename.onreadystatechange = function() {
 	if (rename.readyState==4) {
-        MainTools.Notify('Done');
+        MainTools.Notify('Done', 'icons/DevCenter.png');
         window.thisis[actT.x].old = '../FileNet/HDD/Applications/temp/'+nameit;
 	};
 	};
@@ -234,10 +234,10 @@ var rename = new XMLHttpRequest();
 	};
 rename.send(sendit2);
 }
-save = function () {
-        MainTools.Notify('Saving...');
+save = function (callback) {
+        MainTools.Notify('Saving...', 'icons/DevCenter.png');
 	var ajax4 = new XMLHttpRequest();
-	var sendit = 'filedir=../FileNet/HDD/Applications/temp/'+thisis[actT.x].old.split("/")[thisis[actT.x].old.split("/").length-1]+'/'+thisis[actT.x].nameitf+'&filed='+encodeURIComponent(thisis[actT.x].children[1].children[0].children[2].children[0].children[1].value)+'&uname=<? echo $user; ?>';
+	var sendit = 'filedir=../FileNet/HDD/Applications/temp/'+thisis[actT.x].old.split("/")[thisis[actT.x].old.split("/").length-1]+'/'+thisis[actT.x].nameitf+'&filed='+encodeURIComponent(thisis[actT.x].editor.getValue())+'&uname=<? echo $user; ?>';
 	ajax4.open('POST', 'users/<? echo $user; ?>/sysapps/DevCenter/update.php', true);
 	//Send the proper header information along with the request
 	ajax4.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -245,7 +245,11 @@ save = function () {
 	//ajax4.setRequestHeader("Connection", "close");
 	ajax4.onreadystatechange = function() {
 		if (ajax4.readyState==4) {
-				MainTools.Notify(ajax4.responseText);
+				MainTools.Notify(ajax4.responseText, 'icons/DevCenter.png');
+				if(callback)
+				{
+					callback();
+				}
 		};
 	};			
 	ajax4.send(sendit);
@@ -343,24 +347,33 @@ var ajax = new XMLHttpRequest();
 	ajax.onreadystatechange = function() {
 		if (ajax.readyState==4) {
 			//thisis[actT.x].children[1].children[0].innerHTML = ajax.responseText;
-			var ajax2 = new XMLHttpRequest();
-	ajax2.open('GET', 'users/<? echo $user; ?>/sysapps/DevCenter/editor.js', true);
+			/*var ajax2 = new XMLHttpRequest();
+	ajax2.open('GET', 'ace-builds-master/src-min-noconflict/ace.js', true);
 	ajax2.onreadystatechange = function() {
 		if (ajax2.readyState==4) {
-			eval(ajax2.responseText);
+			//eval(ajax2.responseText);
+                            //var ace = require("../../../../test/editor/ace-master/lib/ace");
+                            thisis[actT.x].editor = ace.edit("editor");
+    thisis[actT.x].editor.setTheme("ace/theme/ambiance");
+    thisis[actT.x].editor.getSession().setMode("ace/mode/javascript");
                         thisis[actT.x].children[1].children[0].children[0].children[1].children[0].children[0].children[0].value = 'APP';
-			MainTools.mscroll(thisis[actT.x].children[1].children[0].children[2].children[0]);
-			MainTools.scrollV(thisis[actT.x].children[1].children[0].children[2], thisis[actT.x], thisis[actT.x].children[1].children[0].children[2].children[0].children[1]);
+			//MainTools.mscroll(thisis[actT.x].children[1].children[0].children[2].children[0]);
+			//MainTools.scrollV(thisis[actT.x].children[1].children[0].children[2], thisis[actT.x], thisis[actT.x].children[1].children[0].children[2].children[0].children[0]);
 				
 		};
 	};			
-	ajax2.send();	
+	ajax2.send();*/
+thisis[actT.x].children[1].children[0].children[0].children[1].children[0].children[0].children[0].value = 'APP';
 			var ajax3 = new XMLHttpRequest();
-	ajax3.open('GET', '<? echo $filename; ?>', true);
+	ajax3.open('GET', 'users/<? echo $user; ?>/sysapps/DevCenter/include/index.txt', true);
 	ajax3.onreadystatechange = function() {
 		if (ajax3.readyState==4) {
-			thisis[actT.x].children[1].children[0].children[2].children[0].children[1].value = ajax3.responseText;
-                        thisis[actT.x].children[1].children[0].children[2].children[0].children[1].focus();
+			thisis[actT.x].editor = ace.edit("editor");
+thisis[actT.x].editor.setTheme("ace/theme/ambiance");
+thisis[actT.x].editor.getSession().setMode("ace/mode/javascript");
+thisis[actT.x].editor.setShowPrintMargin(false);
+			thisis[actT.x].editor.setValue(ajax3.responseText);
+                        thisis[actT.x].children[1].children[0].children[2].children[0].children[0].focus();
 var goto = new XMLHttpRequest();
         var sendit3 = 'goto=../FileNet/HDD/Applications/temp/APP';
 	goto.open('POST', 'users/<? echo $user; ?>/sysapps/DevCenter/goto.php', true);
@@ -400,6 +413,7 @@ goto.send(sendit3);
 		};
 	};			
 	ajax.send();
+thisis[actT.x].nameitf = 'index.txt';
 /*window.mousedownN = function(node, e){
      if(!e){ e=window.event; };
      document.onmousemove = function(e){
@@ -411,6 +425,14 @@ node.onmouseup = function(){
 };*/
 </script>
 <style type='text/css'>
+    #editor { 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        font-family:monospace;
+    }
 .topbarfont{
         font-size:13px;
 }
@@ -431,106 +453,10 @@ node.onmouseup = function(){
 	float: left;
 	padding: 3px;
 	}
-textarea,p,blockquote,th,td { 
-    margin:0;
-    padding:0;
-}
-table {
-    border-collapse:collapse;
-    border-spacing:0;
-}
-fieldset,img { 
-    border:0;
-}
-address,caption,cite,code,dfn,em,strong,th,var {
-    font-style:normal;
-    font-weight:normal;
-}
-ol,ul {
-    list-style:none;
-}
-caption,th {
-    text-align:left;
-}
-h1,h2,h3,h4,h5,h6 {
-    font-size:100%;
-    font-weight:normal;
-}
-q:before,q:after {
-    content:'';
-}
-abbr,acronym { border:0;}
 
-    .numbered_textarea table {
-    width: 100%;
-    heigth: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    
-}
-tr.currentLine {
-    background: #073642 !important;
-}
-.numbered_textarea table tr  td.lineNumber {
-    min-width: 2.5em !important;
-    max-width: 2.5em !important;
-    width: 2.5em !important;
-    vertical-align: top;
-    overflow-y:hidden;
-    font-family: monospace;
-    border-right: 1px solid #aaa;
-    text-align: left;
-    color: #586e75;
-    background: #073642;
-}
-.numbered_textarea table tr td.line {
-    /* 268 */
-    /*width: 268px !important;*/
-    max-width: 500px !important;
-    word-wrap:break-word;
-    padding: 0;
-    margin: 0;
-    white-space: pre-wrap;
-    overflow-y:hidden;
-    overflow-x: hidden;
-    color: #93a1a1;
-    text-align: left;
-}
-.numbered_textarea {
-    outline: 1px solid #aaa;
-    letter-spacing: 0;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    background: #002b36;
-}
-.numbered_textarea textarea {
-    border: 0px solid transparent;
-    border-left: 1px solid #777;
-    position: absolute;
-    left: 2.5em;
-    top: 0;
-    width:-moz-calc(100% - 2.5em);
-    height: 100%;
-    bottom: 0;
-    right: 0;
-    background: rgba(255,255,255,0);
-    -webkit-appearance: none;
-    overflow-y: hidden;
-    color: rgba(255,255,255,0.1);
-    resize: none;
-    outline: none;
-}
-.numbered_textarea * {
-    font-family: monospace;
-    font-size: 11pt;
-    line-spacing: 0;
-    overflow:hidden;
-}
 html, body {
     height: 100%;
+    width:100%;
 }
 
 
@@ -582,6 +508,7 @@ html, body {
 .green {
     color: #859900;
 }
+
   </style>
 <div style="position: absolute;top: 0px;overflow: hidden;bottom: 0px;right: 0px;left: 0px;width: auto;">
 <div id="topbar" style="left:0px; top: 0px; position:relative; height:100px; width:100%; background:-webkit-linear-gradient(bottom, rgb(59,58,58) 25%, rgb(140,140,138) 63%, rgb(184,186,185) 82%);background: -moz-linear-gradient(top, rgba(184,186,185,1) 0%, rgba(140,140,138,1) 43%, rgba(59,58,58,1) 100%);">
@@ -651,6 +578,6 @@ html, body {
                 </table>
 	</div>
 <div id="divTop" style="position:absolute; top:100px; overflow:auto; overflow-x:hidden; overflow-y:hidden; bottom: 0px; left: 150px;right:0px;">
-<div class="numbered_textarea"></div>​
+<div id="editor"></div>
 </div>
 </div>

@@ -282,3 +282,5 @@
 [24-Mar-2013 17:46:52] PHP Warning:  ZipArchive::open() [<a href='ziparchive.open'>ziparchive.open</a>]: Empty string as source in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 13
 [24-Mar-2013 17:50:26] PHP Warning:  ZipArchive::open() [<a href='ziparchive.open'>ziparchive.open</a>]: Empty string as source in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 13
 [24-Mar-2013 17:50:43] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[04-May-2013 22:36:55] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[04-May-2013 22:38:05] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13

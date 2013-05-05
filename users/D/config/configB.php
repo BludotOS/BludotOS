@@ -18,10 +18,10 @@ $array = array (
     3 => 'Applications()',
   ),
   'Dockmag' => false,
-  'Dockmin' => 44,
-  'Dockmax' => 100,
+  'Dockmin' => '44',
+  'Dockmax' => '100',
   'wallpaper' => 'http://bludotos.com/users/admin/sysapps/FileNet/wallpaper/BluDot.svg',
-  'version' => '0.67',
+  'version' => '0.70',
   'dock' => 
   array (
     0 => 'default',
