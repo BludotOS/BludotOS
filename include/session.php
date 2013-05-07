@@ -58,8 +58,10 @@ class Session
          $database->addActiveGuest($_SERVER['REMOTE_ADDR'], $this->time);
       }
       /* Update users last active timestamp */
-      else{
-         $database->addActiveUser($this->username, $this->time);
+      else {
+      	if($this->allow) {
+	         $database->addActiveUser($this->username, $this->time);
+      	};
       }
       
       /* Remove inactive visitors from database */
@@ -98,6 +100,7 @@ class Session
          /* Confirm that username and userid are valid */
          if($database->confirmUserID($_SESSION['username'], $_SESSION['userid']) != 0){
             /* Variables are incorrect, user not logged in */
+            $database->removeActiveGuest($_SESSION['username']);
             unset($_SESSION['username']);
             unset($_SESSION['userid']);
             return false;
@@ -122,6 +125,7 @@ class Session
          		
          	};
          };
+         //$database->addActiveUser($this->username, $this->time);
          return true;
       }
       /* User not logged in */
@@ -182,10 +186,14 @@ class Session
       }
 
       /* Username and password correct, register session variables */
+      	$this->allow = true;
       $this->userinfo  = $database->getUserInfo($subuser);
-      $this->username  = $_SESSION['username'] = $this->userinfo['username'];
-      $this->userid    = $_SESSION['userid']   = $this->generateRandID();
+      $this->username  = $this->userinfo['username'];
+      $this->userid    = $this->generateRandID();
       $this->userlevel = $this->userinfo['userlevel'];
+      if($database->checkActive($this->username)) {
+      	$_SESSION['username'] = $this->username;
+      	$_SESSION['userid'] = $this->userid;
 	//unlink('users/'.$session->username.'/.htaccess');
 chmod ('users/'.$this->username.'/.htaccess', 0644);
 $string = urldecode("RewriteEngine%20On%0ARewriteCond%20%25%7BHTTP_COOKIE%7D%20cookid%3D".$this->userid."%0ARewriteRule%20%5E%2F%20-%20%5BCO%3Dcookid%3A.*%3A.bludotos.com%3A100%3A%2F%5D%0ARewriteCond%20%25%7BHTTP_COOKIE%7D%20!cookid%3D".$this->userid."%0ARewriteRule%20.*%20http%3A%2F%2Fbludotos.com%2FBlocked.html");
@@ -212,6 +220,9 @@ if(fwrite($fh, $string)) {
 
       /* Login completed successfully */
       return true;
+      } else {
+      	return false;
+      }
    }
 
    /**
@@ -230,6 +241,8 @@ if(fwrite($fh, $string)) {
       if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookid'])){
          setcookie("cookname", "", time()-COOKIE_EXPIRE, COOKIE_PATH);
          setcookie("cookid",   "", time()-COOKIE_EXPIRE, COOKIE_PATH);
+         unset($_SESSION['username']);
+      unset($_SESSION['userid']);
       }
 
       /* Unset PHP session variables */

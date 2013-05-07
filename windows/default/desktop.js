@@ -28,9 +28,14 @@ init:function(wid, height, width, left, top, size, bar){
 	document.getElementById('dhtmlwindowholder').appendChild(wid);
 	wid.style.cssText = 'position:fixed;left:0px;top:23px;width:0px;height:0px;display:block;-webkit-border-radius: 30px;-moz-border-radius: 20px;border-radius: 20px;display:none;opacity = 0;';
 	wid.style.display = 'block';
-	wid.style['-webkit-transition'] = 'all .2s';
         wid.style.width = width+'px';
         wid.style.height = height+'px';
+        wid.style['-webkit-transform'] = 'scale(.1)';
+        wid.style['-moz-transform'] = 'scale(.1)';
+        wid.style['-webkit-transition'] = 'all .2s';
+        wid.style['-moz-transition'] = 'all .2s';
+        wid.style['-webkit-transform'] = 'scale(1)';
+        wid.style['-moz-transform'] = 'scale(1)';
                 if(left) {
         wid.style.left = left(wid)+'px';
         };
@@ -40,6 +45,7 @@ init:function(wid, height, width, left, top, size, bar){
         wid.style.opacity = 1;
         setTimeout(function(){
         	wid.style['-webkit-transition'] = '';
+        	wid.style['-moz-transition'] = '';
         }, 1000);
 	wid.children[1].style.height = wid.innerheight+'px';
 	wid.style.zIndex=parseInt(SimpleWin.zindexbase)+1;
@@ -144,8 +150,11 @@ close:function(wid){
 	if (widclosef){ //if custom event handler function returns true
 		window.wid = wid;
 		window.wid.style['-webkit-transition'] = 'all .2s';
-        window.wid.style.width = 0+'px';
-        window.wid.style.height = 0+'px';
+		window.wid.style['-moz-transition'] = 'all .2s';
+		window.wid.style['-moz-transform'] = 'scale(.1)';
+		window.wid.style['-webkit-transform'] = 'scale(.1)';
+        //window.wid.style.width = 0+'px';
+        //window.wid.style.height = 0+'px';
         window.wid.style.left = -15+'px';
         window.wid.style.top = -15+'px';
         window.wid.style.opacity = 0;
@@ -203,8 +212,11 @@ minimize:function(wid){
 		wid.attrsheight=wid.style.height;
 		wid = wid;
 		wid.style['-webkit-transition'] = 'all .2s';
-        wid.style.width = 0+'px';
-        wid.style.height = 0+'px';
+		wid.style['-moz-transition'] = 'all .2s';
+        //wid.style.width = 0+'px';
+        //wid.style.height = 0+'px';
+        wid.style['-webkit-transform'] = 'scale(.1)';
+		wid.style['-moz-transform'] = 'scale(1)';
         wid.style.left = -15+'px';
         wid.style.top = -15+'px';
         wid.style.opacity = 0;
@@ -232,6 +244,9 @@ minimize:function(wid){
                 wid.nim-=1;
 		wid.style.display='block';
 		wid.style['-webkit-transition'] = 'all .2s';
+		wid.style['-moz-transition'] = 'all .2s';
+		wid.style['-webkit-transform'] = 'scale(1)';
+		wid.style['-moz-transform'] = 'scale(1)';
         wid.style.width = wid.attrswidth;
         wid.style.height = wid.attrsheight;
         wid.style.left = wid.attrsleft;
@@ -239,6 +254,7 @@ minimize:function(wid){
         wid.style.opacity = 1;
         setTimeout(function(){
         	wid.style['-webkit-transition'] = '';
+        	wid.style['-moz-transition'] = '';
         	}, 180);
 		wid.min=false;
 this.setfocus(wid);

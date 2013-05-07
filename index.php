@@ -11,8 +11,8 @@ function load($path)
 {
     return require $path;
 }
-$version = '0.71';
-$updateinfo = "Major security update!<br>All user files are now secure<br>Core bug fixes<br>More secure!<br>Developer API Completed!!!";
+$version = '0.72';
+$updateinfo = "minor security update with logins<br>Major security update!<br>All user files are now secure<br>Core bug fixes<br>More secure!<br>Developer API Completed!!!";
 ?>
 <?
 if (!$isMobile) {

@@ -21,7 +21,7 @@ class MySQLDB
    /* Class constructor */
    function MySQLDB(){
       /* Make connection to database */
-      $this->connection = mysql_connect("127.0.0.1", "vios_admin", "qlalsldl") or die(mysql_error());
+      $this->connection = mysql_connect("127.0.0.1", "user", "pass") or die(mysql_error());
       mysql_select_db("vios_users", $this->connection) or die(mysql_error());
       
       /**
@@ -231,6 +231,16 @@ class MySQLDB
       $q = "REPLACE INTO ".TBL_ACTIVE_USERS." VALUES ('$username', '$time')";
       mysql_query($q, $this->connection);
       $this->calcNumActiveUsers();
+   }
+   
+   function checkActive($username){
+       $q = "SELECT * FROM ".TBL_ACTIVE_USERS." WHERE username = '$username'";
+      $result = mysql_query($q, $this->connection);
+      if(mysql_numrows($result) === 0) {
+      	return true;
+      } else {
+      	return false;
+      }
    }
    
    /* addActiveGuest - Adds guest to active guests table */
