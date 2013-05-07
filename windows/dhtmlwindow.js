@@ -59,7 +59,8 @@ init:function(wid, height, width, size, bar){
 getdata:function(data, callback){
 	var callback=callback;
 	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open("GET", data,true);
+	xmlhttp.open("GET", data, true);
+	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	xmlhttp.onreadystatechange=function() {
 		if (xmlhttp.readyState==4) {
 			var datad=xmlhttp.responseText;

@@ -124,7 +124,7 @@ var goto = new XMLHttpRequest();
 		for(var i=0; i < response.dirs.length; i++)
 		{
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;"><a onclick="thisis[actT.x].goto(this.innerText);">'+response.dirs[i]+'</a></td>';
+			newtr.innerHTML = '<td style="text-align:left;" class="DevCenternotclicked"><a onclick="thisis[actT.x].goto(this.innerHTML);">'+response.dirs[i]+'</a></td>';
 			window.actT.children[1].children[0].children[1].children[1].children[0].appendChild(newtr);
 		};
                 }
@@ -132,7 +132,11 @@ var goto = new XMLHttpRequest();
 		{
 			if(response.files[i] != 'index.php'){
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;"><a oncontextmenu="thisis[actT.x].Rclick(this.innerText); return false;"; onclick="thisis[actT.x].view(this.innerText, thisis[actT.x].nameit);">'+response.files[i]+'</a></td>';
+			if(response.files[i] == 'index.txt'){
+				newtr.innerHTML = '<td style="text-align:left;" class="DevCenterclicked"><a oncontextmenu="thisis[actT.x].Rclick(this.innerHTML); return false;"; onclick="thisis[actT.x].view(this.innerHTML, thisis[actT.x].nameit);">'+response.files[i]+'</a></td>';
+			} else {
+				newtr.innerHTML = '<td style="text-align:left;" class="DevCenternotclicked"><a oncontextmenu="thisis[actT.x].Rclick(this.innerHTML); return false;"; onclick="thisis[actT.x].view(this.innerHTML, thisis[actT.x].nameit);">'+response.files[i]+'</a></td>';
+			}
 			window.actT.children[1].children[0].children[1].children[1].children[0].appendChild(newtr);
                 }
 		};
@@ -144,6 +148,16 @@ var goto = new XMLHttpRequest();
 goto.send(sendit3);
 }
 thisis[actT.x].view = function(name, nameit) {
+	var name = name;
+	for(var t=0; t < thisis[actT.x].children[1].children[0].children[1].children[1].children[0].children.length; t++)
+	{
+		if(thisis[actT.x].children[1].children[0].children[1].children[1].children[0].children[t].children[0].children[0].innerHTML == name)
+		{
+			thisis[actT.x].children[1].children[0].children[1].children[1].children[0].children[t].children[0].className = 'DevCenterclicked';
+		} else {
+			thisis[actT.x].children[1].children[0].children[1].children[1].children[0].children[t].children[0].className = 'DevCenternotclicked';
+		}
+	}
 thisis[actT.x].nameitf = name;
         var ajax4 = new XMLHttpRequest();
 	//ajax4.open('GET', 'users/<? echo $user; ?>/sysapps/FileNet/HDD/Applications/temp/'+nameit+'/'+name, true);
@@ -277,7 +291,7 @@ var goto2 = new XMLHttpRequest();
 		for(var i=0; i < thisis[actT.x].response.dirs.length; i++)
 		{
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;"><a oncontextmenu="thisis[actT.x].Rclick();"; onclick="thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.innerText));">'+thisis[actT.x].response.dirs[i]+'</a></td>';
+			newtr.innerHTML = '<td style="text-align:left;"><a oncontextmenu="thisis[actT.x].Rclick();"; onclick="thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.innerHTML), this.innerHTML);">'+thisis[actT.x].response.dirs[i]+'</a></td>';
 			window.actT.children[1].children[0].children[1].children[0].children[2].children[0].appendChild(newtr);
 		};
 		}
@@ -286,7 +300,7 @@ var goto2 = new XMLHttpRequest();
 		{
 			if(response.files[i] != 'index.php'){
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;"><a oncontextmenu="thisis[actT.x].Rclick();"; onclick="thisis[actT.x].goto((this.innerText+thisis[actT.x].response.location));">'+thisis[actT.x].response.files[i]+'</a></td>';
+			newtr.innerHTML = '<td style="text-align:left;"><a oncontextmenu="thisis[actT.x].Rclick();"; onclick="thisis[actT.x].goto((this.innerHTML+thisis[actT.x].response.location), this.innerHTML);">'+thisis[actT.x].response.files[i]+'</a></td>';
 			window.actT.children[1].children[0].children[1].children[0].children[2].children[0].appendChild(newtr);
                 }
 		};
@@ -297,7 +311,15 @@ var goto2 = new XMLHttpRequest();
 	};
 goto2.send(sendit);
 };
-thisis[actT.x].goto = function(gotoit){
+thisis[actT.x].goto = function(gotoit, name){
+	for(var t=0; t < thisis[actT.x].children[1].children[0].children[1].children[1].children[0].children; t++)
+	{
+		thisis[actT.x].children[1].children[0].children[1].children[1].children[0].children[t].children[0].className = 'DevCenternotclicked';
+		if(thisis[actT.x].children[1].children[0].children[1].children[1].children[0].children[t].children[0].children[0].innerHTML == name)
+		{
+			thisis[actT.x].children[1].children[0].children[1].children[1].children[0].children[t].children[0].className = 'DevCenterclicked';
+		}
+	}
 var goto2 = new XMLHttpRequest();
 thisis[actT.x].gotoit=gotoit;
 	if(gotoit.substring(0, 33) != "../FileNet/HDD/Applications/temp/"){
@@ -321,7 +343,7 @@ thisis[actT.x].gotoit=gotoit;
 		for(var i=0; i < thisis[actT.x].response.dirs.length; i++)
 		{
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;"><a onclick="thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.innerText));">'+thisis[actT.x].response.dirs[i]+'</a></td>';
+			newtr.innerHTML = '<td style="text-align:left;" class="DevCenternotclicked"><a onclick="thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.innerHTML), this.innerHTML);">'+thisis[actT.x].response.dirs[i]+'</a></td>';
 			window.actT.children[1].children[0].children[1].children[0].children[2].children[0].appendChild(newtr);
 		};
 		}
@@ -330,7 +352,7 @@ thisis[actT.x].gotoit=gotoit;
 		{
 			if(response.files[i] != 'index.php'){
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;"><a oncontextmenu="thisis[actT.x].Rclick();"; onclick="thisis[actT.x].goto((this.innerText+thisis[actT.x].response.location));">'+thisis[actT.x].response.files[i]+'</a></td>';
+			newtr.innerHTML = '<td style="text-align:left;" class="DevCenternotclicked"><a oncontextmenu="thisis[actT.x].Rclick();"; onclick="thisis[actT.x].goto((this.innerHTML+thisis[actT.x].response.location), this.innerHTML);">'+thisis[actT.x].response.files[i]+'</a></td>';
 			window.actT.children[1].children[0].children[1].children[0].children[2].children[0].appendChild(newtr);
                 }
 		};
@@ -388,7 +410,7 @@ var goto = new XMLHttpRequest();
 		for(var i=0; i < response.dirs.length; i++)
 		{
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;"><a onclick="thisis[actT.x].goto(this.innerText);">'+response.dirs[i]+'</a></td>';
+			newtr.innerHTML = '<td style="text-align:left;" class="DevCenternotclicked"><a onclick="thisis[actT.x].goto(this.innerHTML, this.innerHTML);">'+response.dirs[i]+'</a></td>';
 			window.actT.children[1].children[0].children[1].children[1].children[0].appendChild(newtr);
 		};
                 }
@@ -396,7 +418,12 @@ var goto = new XMLHttpRequest();
 		{
 			if(response.files[i] != 'index.php'){
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;"><a oncontextmenu="thisis[actT.x].Rclick(); return false;"; onclick="thisis[actT.x].view(this.innerText, \'APP\');">'+response.files[i]+'</a></td>';
+			if(response.files[i] == 'index.txt')
+			{
+				newtr.innerHTML = '<td style="text-align:left;" class="DevCenterclicked"><a oncontextmenu="thisis[actT.x].Rclick(); return false;"; onclick="thisis[actT.x].view(this.innerHTML, \'APP\', this.innerHTML);">'+response.files[i]+'</a></td>';
+			} else {
+				newtr.innerHTML = '<td style="text-align:left;" class="DevCenternotclicked"><a oncontextmenu="thisis[actT.x].Rclick(); return false;"; onclick="thisis[actT.x].view(this.innerHTML, \'APP\', this.innerHTML);">'+response.files[i]+'</a></td>';
+			}
 			window.actT.children[1].children[0].children[1].children[1].children[0].appendChild(newtr);
                 }
 		};
@@ -425,6 +452,19 @@ node.onmouseup = function(){
 };*/
 </script>
 <style type='text/css'>
+.DevCenternotclicked {
+	text-align:left;
+}
+.DevCenterclicked:after {
+content: "";
+display: inline-block;
+position: absolute;
+border: 6px solid black;
+border-color: transparent #3A3A3A transparent transparent;
+left: 0px;
+width: 139px;
+margin-top: 4px;
+}
     #editor { 
         position: absolute;
         top: 0;

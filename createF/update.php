@@ -25,7 +25,7 @@ umask($oldumask);
 $dir_handle = @opendir($source) or die("Unable to open");
 while ($file = readdir($dir_handle)) 
 {
-if($file!="." && $file!=".." && !is_dir("$source/$file"))
+if($file!="." && $file!=".." && $file!=".htaccess" && !is_dir("$source/$file"))
 {
 unlink($destination.DIRECTORY_SEPARATOR.$file);
 copy("$source/$file","$destination/$file");

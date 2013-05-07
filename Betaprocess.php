@@ -19,12 +19,12 @@ $username = addslashes($username);
                  ."\.([a-z]{2,}){1}$";
          if(!eregi($regex,$subemail)){
             print "The email you have entered is invalid";
-	    header('Location:http://bludot.tk/');
+	    header('Location:http://bludotos.com/');
          };
          $subemail = stripslashes($subemail);
       if (mysql_numrows($resulted) > 0) {
 	echo 'username already taken';
-	header('Location:http://bludot.tk/');
+	header('Location:http://bludotos.com/');
       } else {
 
 $SQL = "INSERT INTO beta_codes (username, betacode, email) VALUES ('$_POST[username]', '$_POST[betacode]', '$_POST[email]')";
@@ -47,7 +47,7 @@ if (mail($to, $subject, $body, $from)) {
  }
 };
 mysql_close($db_handle);
-header("location: http://bludot.tk/register.php?code=".$_POST[betacode]."");
+header("location: http://bludotos.com/register.php?code=".$_POST[betacode]."");
 }
 else {
 print "Database NOT Found ";

@@ -11,8 +11,8 @@ function load($path)
 {
     return require $path;
 }
-$version = '0.70';
-$updateinfo = "Core bug fixes<br>More secure!<br>Developer API Updated!!!";
+$version = '0.71';
+$updateinfo = "Major security update!<br>All user files are now secure<br>Core bug fixes<br>More secure!<br>Developer API Completed!!!";
 ?>
 <?
 if (!$isMobile) {
@@ -211,6 +211,317 @@ font-family:arial;
 <? }; ?>
 <script src="http://rawgithub.com/ajaxorg/ace-builds/master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                             //
+//                    Firefox input fix                                                        //
+//                                                                                             //
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+html5slider - a JS implementation of <input type=range> for Firefox 16 and up
+https://github.com/fryn/html5slider
+
+Copyright (c) 2010-2013 Frank Yan, <http://frankyan.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+*/
+
+(function() {
+  window.twebkit;
+  var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+    
+    if (isChrome || isSafari)
+    {
+      window.twebkit = 'true';
+    } else {
+      window.twebkit = 'false';
+    };
+
+// test for native support
+var test = document.createElement('input');
+try {
+  test.type = 'range';
+  if (test.type == 'range')
+    return;
+} catch (e) {
+  return;
+}
+
+// test for required property support
+test.style.background = 'linear-gradient(red, red)';
+if (!test.style.backgroundImage || !('MozAppearance' in test.style) ||
+    !document.mozSetImageElement || !this.MutationObserver)
+  return;
+
+var scale;
+var isMac = navigator.platform == 'MacIntel';
+var thumb = {
+  radius: isMac ? 19 : 16,
+  width: isMac ? 22 : 12,
+  height: isMac ? 16 : 25
+};
+var track = 'linear-gradient(transparent ' + (isMac ?
+  '6px, #999 6px, #999 7px, #ccc 8px, #bbb 9px, #bbb 10px, transparent 10px' :
+  '6px, #999 6px, #bbb 10px, #999 20px, #bbb 20px, transparent 23px') +
+  ', transparent)';
+var styles = {
+  'min-width': thumb.width + 'px',
+  'min-height': thumb.height + 'px',
+  'max-height': thumb.height + 'px',
+  //padding: '0 0 ' + (isMac ? '2px' : '1px'),
+  border: 0,
+  'border-radius': 0,
+  cursor: 'default',
+  'text-indent': '-999999px' // -moz-user-select: none; breaks mouse capture
+};
+var options = {
+  attributes: true,
+  attributeFilter: ['min', 'max', 'step', 'value']
+};
+var forEach = Array.prototype.forEach;
+var onInput = document.createEvent('HTMLEvents');
+onInput.initEvent('input', true, false);
+var onChange = document.createEvent('HTMLEvents');
+onChange.initEvent('change', true, false);
+
+if (document.readyState == 'loading')
+  document.addEventListener('DOMContentLoaded', initialize, true);
+else
+  initialize();
+
+function initialize() {
+  // create initial sliders
+  forEach.call(document.querySelectorAll('input[type=range]'), transform);
+  // create sliders on-the-fly
+  new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.addedNodes)
+        forEach.call(mutation.addedNodes, function(node) {
+          check(node);
+          if (node.childElementCount)
+            forEach.call(node.querySelectorAll('input'), check);
+        }); 
+    });
+  }).observe(document, { childList: true, subtree: true });
+}
+
+function check(input) {
+  if (input.localName == 'input' && input.type != 'range' &&
+      input.getAttribute('type') == 'range')
+    transform(input);
+}
+
+function transform(slider) {
+
+  var isValueSet, areAttrsSet, isChanged, isClick, prevValue, rawValue, prevX;
+  var min, max, step, range, value = slider.value;
+
+  // lazily create shared slider affordance
+  if (!scale) {
+    scale = document.body.appendChild(document.createElement('div'));
+    style(scale, {
+      //'-moz-appearance': isMac ? 'scale-horizontal' : 'scalethumb-horizontal',
+      display: 'block',
+      visibility: 'visible',
+      opacity: 1,
+      position: 'fixed',
+      top: '-999999px',
+      background: 'red',
+      width: '20px',
+      height: '20px',
+      'border-radius': '20px',
+      'border': '2px solid rgb(150, 150, 150)',
+      'background-color': 'rgb(200, 200, 200)'
+    });
+    document.mozSetImageElement('__sliderthumb__', scale);
+  };
+
+  // reimplement value and type properties
+  var getValue = function() { return '' + value; };
+  var setValue = function setValue(val) {
+    value = '' + val;
+    isValueSet = true;
+    draw();
+    delete slider.value;
+    slider.value = value;
+    Object.defineProperty(slider, 'value', {
+        get: getValue,
+        set: setValue
+    });
+  };
+  Object.defineProperty(slider, 'value', {
+    get: getValue,
+    set: setValue
+  });
+  Object.defineProperty(slider, 'type', {
+    get: function() { return 'range'; }
+  });
+
+  // sync properties with attributes
+  ['min', 'max', 'step'].forEach(function(prop) {
+    if (slider.hasAttribute(prop))
+      areAttrsSet = true;
+    Object.defineProperty(slider, prop, {
+      get: function() { return this.hasAttribute(prop) ? this.getAttribute(prop) : ''; },
+      set: function(val) { val === null ? this.removeAttribute(prop) : this.setAttribute(prop, val); }
+    });
+  });
+
+  // initialize slider
+  slider.readOnly = true;
+  style(slider, styles);
+  update();
+
+  new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.attributeName != 'value') {
+        update();
+        areAttrsSet = true;
+      }
+      // note that value attribute only sets initial value
+      else if (!isValueSet) {
+        value = slider.getAttribute('value');
+        draw();
+      }
+    });
+  }).observe(slider, options);
+
+  slider.addEventListener('mousedown', onDragStart, true);
+  slider.addEventListener('keydown', onKeyDown, true);
+  slider.addEventListener('focus', onFocus, true);
+  slider.addEventListener('blur', onBlur, true);
+
+  function onDragStart(e) {
+    isClick = true;
+    setTimeout(function() { isClick = false; }, 0);
+    if (e.button || !range)
+      return;
+    var width = parseFloat(getComputedStyle(this, 0).width);
+    var multiplier = (width - thumb.width) / range;
+    if (!multiplier)
+      return;
+    // distance between click and center of thumb
+    var dev = e.clientX - this.getBoundingClientRect().left - thumb.width / 2 -
+              (value - min) * multiplier;
+    // if click was not on thumb, move thumb to click location
+    if (Math.abs(dev) > thumb.radius) {
+      isChanged = true;
+      this.value -= -dev / multiplier;
+    }
+    rawValue = value;
+    prevX = e.clientX;
+    this.addEventListener('mousemove', onDrag, true);
+    this.addEventListener('mouseup', onDragEnd, true);
+  }
+
+  function onDrag(e) {
+    var width = parseFloat(getComputedStyle(this, 0).width);
+    var multiplier = (width - thumb.width) / range;
+    if (!multiplier)
+      return;
+    rawValue += (e.clientX - prevX) / multiplier;
+    prevX = e.clientX;
+    isChanged = true;
+    this.value = rawValue;
+  }
+
+  function onDragEnd() {
+    this.removeEventListener('mousemove', onDrag, true);
+    this.removeEventListener('mouseup', onDragEnd, true);
+    slider.dispatchEvent(onChange);
+  }
+
+  function onKeyDown(e) {
+    if (e.keyCode > 36 && e.keyCode < 41) { // 37-40: left, up, right, down
+      onFocus.call(this);
+      isChanged = true;
+      this.value = value + (e.keyCode == 38 || e.keyCode == 39 ? step : -step);
+    }
+  }
+
+  function onFocus() {
+    if (!isClick)
+      this.style.boxShadow = !isMac ? '0 0 0 2px #fb0' :
+        'inset 0 0 20px rgba(0,127,255,.1), 0 0 1px rgba(0,127,255,.4)';
+  }
+
+  function onBlur() {
+    this.style.boxShadow = '';
+  }
+
+  // determines whether value is valid number in attribute form
+  function isAttrNum(value) {
+    return !isNaN(value) && +value == parseFloat(value);
+  }
+
+  // validates min, max, and step attributes and redraws
+  function update() {
+    min = isAttrNum(slider.min) ? +slider.min : 0;
+    max = isAttrNum(slider.max) ? +slider.max : 100;
+    if (max < min)
+      max = min > 100 ? min : 100;
+    step = isAttrNum(slider.step) && slider.step > 0 ? +slider.step : 1;
+    range = max - min;
+    draw(true);
+  }
+
+  // recalculates value property
+  function calc() {
+    if (!isValueSet && !areAttrsSet)
+      value = slider.getAttribute('value');
+    if (!isAttrNum(value))
+      value = (min + max) / 2;;
+    // snap to step intervals (WebKit sometimes does not - bug?)
+    value = Math.round((value - min) / step) * step + min;
+    if (value < min)
+      value = min;
+    else if (value > max)
+      value = min + ~~(range / step) * step;
+  }
+
+  // renders slider using CSS background ;)
+  function draw(attrsModified) {
+    calc();
+    if (isChanged && value != prevValue)
+      slider.dispatchEvent(onInput);
+    isChanged = false;
+    if (!attrsModified && value == prevValue)
+      return;
+    prevValue = value;
+    var position = range ? (value - min) / range * 100 : 0;
+    var bg = '-moz-element(#__sliderthumb__) ' + position + '% no-repeat, ';
+    style(slider, {
+      background: bg + track,
+      'border-radius': '100px',
+    });
+  }
+
+}
+
+function style(element, styles) {
+  for (var prop in styles)
+    element.style.setProperty(prop, styles[prop], 'important');
+}
+
+})();
+
 
 window.ontouchmove = function(e){
     e.preventDefault();
@@ -587,12 +898,13 @@ openapp.send(sendit);
                                         document.body.removeChild(divit);
                                         document.body.removeChild(document.getElementById('loginback'));
                                         core.user = resp.user;
-                                        core.user = resp.user;
+                                        window.user = resp.user;
                                         core.Admin = resp.Admin;
                                         core.Cversion = <?echo $version;?>;
 core.checkupdates();
                      var checkp = new XMLHttpRequest();
-                         checkp.open("GET", "users/"+user+"/config/configB.php", true);
+                         checkp.open("GET", "users/"+window.user+"/config/configB.php", true);
+                         checkp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                          checkp.onreadystatechange = function() {
                                if(checkp.readyState == 4){
                                      window.prefit = JSON.parse(checkp.responseText);
@@ -1225,8 +1537,9 @@ var loadPrefs = function(every, done){
     	//this.style('', this.OS.Dock.dock);
     	
         clearInterval(core.progressI);
-        <?
+<?
 if ($session->logged_in && $session->username != 'Guest') {
+
 if($session->isAdmin()){?>
 core.Admin = 1;
 <?
@@ -1245,8 +1558,10 @@ var divit = document.getElementById('logdiv');
                                         document.body.removeChild(document.getElementById('loginback'));
 var checkp = new XMLHttpRequest();
                          checkp.open("GET", "users/<? echo $session->username; ?>/config/configB.php", true);
+                         checkp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                          checkp.onreadystatechange = function() {
                                if(checkp.readyState == 4){
+                               	window.testo = checkp.responseText;
                                      window.prefit = JSON.parse(checkp.responseText);
                                      //core.userprefs = prefit;
                                         core.Cversion = <?echo $version;?>;
@@ -1562,6 +1877,7 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
                                      if('<? echo $version; ?>' > prefit.version) {
                                      var updatev = new XMLHttpRequest();
                          updatev.open("GET", "uconf.php?path=users/"+core.user+"/config&change=<? echo $version; ?>", true);
+                         updatev.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                          updatev.onreadystatechange = function() {
                                if(updatev.readyState == 4){
                                      MainTools.Notify('Version Updated\n<? echo $version; ?>B<br><? echo $updateinfo; ?>', null, 8);
@@ -1591,6 +1907,7 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
     core.checkupdates = function() {
 var getapps = new XMLHttpRequest();
 getapps.open('GET', 'apps.php?goto=users/'+core.user+'/sysapps/FileNet/apps/', true);
+getapps.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 getapps.onreadystatechange = function() {
         if(getapps.readyState==4) {
         window.respit = window.installed = JSON.parse(getapps.responseText);
@@ -1599,6 +1916,7 @@ core.capps = [];
 window.capp = respit.dirs[i];
 var cupdateitq = new XMLHttpRequest();
 cupdateitq.open('GET', 'users/'+core.user+'/sysapps/FileNet/apps/'+respit.dirs[i]+'/version.txt', false);
+cupdateitq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 cupdateitq.onreadystatechange = function() {
         if(cupdateitq.readyState==4) {
                 var resp = JSON.parse(cupdateitq.responseText.toString());
@@ -1606,6 +1924,7 @@ cupdateitq.onreadystatechange = function() {
                 window.resp2.app = window.capp;
 var updateitq = new XMLHttpRequest();
 updateitq.open('GET', 'appstore/apps/'+window.resp2.cat+'/'+window.resp2.app+'/version.txt', false);
+updateitq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 updateitq.onreadystatechange = function() {
         if(updateitq.readyState==4) {
                 var respw = JSON.parse(updateitq.responseText.toString());
@@ -1631,6 +1950,7 @@ getapps.send();
 core.testu = function(array, name) {
 var test = new XMLHttpRequest();
 test.open('GET', 'updateconf.php?user='+core.user+'&array='+array+'&name='+name, true);
+test.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 test.onreadystatechange = function() {
 if(test.readyState == 4) {
 };
@@ -1640,6 +1960,7 @@ test.send();
 core.testus = function(array, name) {
 var test = new XMLHttpRequest();
 test.open('GET', 'updateconf.php?user='+core.user+'&change='+array+'&name='+name, true);
+test.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 test.onreadystatechange = function() {
 if(test.readyState == 4) {
 };
@@ -1658,7 +1979,7 @@ test.send();
     return core;
 }());
 //window.onload = function(){core.getscript('default', 'script', 'maintools');core.load();document.forms[0].children[0].children[0].focus();};
-window.onload = function(){core.getscript('default', 'script', 'maintools');core.load();core.checkupdates();};
+window.onload = function(){core.getscript('default', 'script', 'maintools');core.load();};
 </script>
 </head>
 <body scrolling="no" id="body" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">

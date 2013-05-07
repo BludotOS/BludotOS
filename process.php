@@ -16,6 +16,8 @@ class Process
 {
    /* Class constructor */
    function Process(){
+   $this->connection = mysql_connect("127.0.0.1", "vios_admin", "qlalsldl") or die(mysql_error());
+      mysql_select_db("vios_users", $this->connection) or die(mysql_error());
       global $session;
       /* User submitted login form */
       if(isset($_POST['sublogin'])){
@@ -46,7 +48,7 @@ class Process
        * by mistake and therefore is redirected.
        */
        else{
-          //header("Location: http://bludot.tk");
+          //header("Location: http://bludotos.com");
        }
    }
 
@@ -82,7 +84,31 @@ class Process
    function procLogout(){
       global $session;
       $retval = $session->logout();
-      header("Location: http://bludot.tk/index.php");
+      header("Location: http://bludotos.com/index.php");
+   }
+   
+   function generateRandStr($length){
+      $randstr = "";
+      for($i=0; $i<$length; $i++){
+         $randnum = mt_rand(0,61);
+         if($randnum < 10){
+            $randstr .= chr($randnum+48);
+         }else if($randnum < 36){
+            $randstr .= chr($randnum+55);
+         }else{
+            $randstr .= chr($randnum+61);
+         }
+      }
+      return $randstr;
+   }
+
+   function generateRandID(){
+      return md5($this->generateRandStr(16));
+   }
+   
+   function updateUserField($username, $field, $value){
+      $q = "UPDATE ".TBL_USERS." SET ".$field." = '$value' WHERE username = '$username'";
+      return mysql_query($q, $this->connection);
    }
    
    /**
@@ -106,7 +132,9 @@ class Process
          $_SESSION['reguname'] = $_POST['user'];
          $_SESSION['regsuccess'] = true;
          $newuser = $_POST['user'];
-         header("Location: http://bludot.tk/createF/create.php?namer=$newuser");
+         $userid = $this->generateRandID();
+      	 $this->updateUserField($newuser, "userid", $userid);
+         header("Location: http://bludotos.com/createF/createT.php?namer=$newuser&id=$userid");
       }
       /* Error found with form */
       else if($retval == 1){

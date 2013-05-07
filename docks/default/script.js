@@ -114,9 +114,12 @@ function SimpleDock(node, imageDetails, minimumSize, maximumSize, range, height,
         reflectedIconNodes[index].style.marginTop = height+'px';
         
     }
-    window.onmousemove = function(){
-    if(window.event.pageX > 0) {
-    window.testnew = setInterval(function(){document.getElementById('dockContainer').style.bottom=parseInt(document.getElementById('dockContainer').style.bottom)-1+'px';}, 10);
+    window.onmousemove = function(e){
+    if(!e) var e = window.event;
+    if(e.pageX > 0) {
+    window.testnew = setInterval(function(){
+    	document.getElementById('dockContainer').style.bottom=(parseInt(document.getElementById('dockContainer').style.bottom)-1)+"px";
+    	}, 10);
     };
 };
     

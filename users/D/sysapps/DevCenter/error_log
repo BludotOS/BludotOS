@@ -3115,3 +3115,22 @@ Stack trace:
   thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 20
 [05-May-2013 19:19:33] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
 [05-May-2013 19:19:45] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[05-May-2013 23:06:37] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[05-May-2013 23:06:40] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[05-May-2013 23:09:48] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[05-May-2013 23:23:34] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/bobett1234@gmail.com) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[05-May-2013 23:23:34] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/bobett1234@gmail.com) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[05-May-2013 23:43:50] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[05-May-2013 23:44:28] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[05-May-2013 23:44:31] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[05-May-2013 23:49:10] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[05-May-2013 23:49:48] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[05-May-2013 23:54:13] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[05-May-2013 23:56:03] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[05-May-2013 23:56:09] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[06-May-2013 12:04:27] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[06-May-2013 19:45:14] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61

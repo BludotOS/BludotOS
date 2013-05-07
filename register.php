@@ -104,7 +104,7 @@ if($form->num_errors > 0){
 ?>
 <script>
 	alert('You do not have access to this!!!\nYou will be redirected!');
-	window.location = 'http://bludot.tk';
+	window.location = 'http://bludotos.com';
 </script>
 <?
 };

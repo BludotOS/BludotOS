@@ -108,6 +108,20 @@ class Session
          $this->username  = $this->userinfo['username'];
          $this->userid    = $this->userinfo['userid'];
          $this->userlevel = $this->userinfo['userlevel'];
+         $string = urldecode("RewriteEngine%20On%0ARewriteCond%20%25%7BHTTP_COOKIE%7D%20cookid%3D".$this->userid."%0ARewriteRule%20%5E%2F%20-%20%5BCO%3Dcookid%3A.*%3A.bludotos.com%3A100%3A%2F%5D%0ARewriteCond%20%25%7BHTTP_COOKIE%7D%20!cookid%3D".$this->userid."%0ARewriteRule%20.*%20http%3A%2F%2Fbludotos.com%2FBlocked.html");
+         if(file_exists('users/'.$this->username.'/.htaccess')) {
+         	chmod ('users/'.$this->username.'/.htaccess', 0644);
+         	$fh = fopen("users/".$this->username."/.htaccess", "w") or die("can't open file");
+         	if(fwrite($fh, $string)) {
+         		
+         	};
+         } else if(file_exists('../users/'.$this->username.'/.htaccess')) {
+         	chmod ('../users/'.$this->username.'/.htaccess', 0644);
+         	$fh = fopen("../users/".$this->username."/.htaccess", "w") or die("can't open file");
+         	if(fwrite($fh, $string)) {
+         		
+         	};
+         };
          return true;
       }
       /* User not logged in */
@@ -172,6 +186,12 @@ class Session
       $this->username  = $_SESSION['username'] = $this->userinfo['username'];
       $this->userid    = $_SESSION['userid']   = $this->generateRandID();
       $this->userlevel = $this->userinfo['userlevel'];
+	//unlink('users/'.$session->username.'/.htaccess');
+chmod ('users/'.$this->username.'/.htaccess', 0644);
+$string = urldecode("RewriteEngine%20On%0ARewriteCond%20%25%7BHTTP_COOKIE%7D%20cookid%3D".$this->userid."%0ARewriteRule%20%5E%2F%20-%20%5BCO%3Dcookid%3A.*%3A.bludotos.com%3A100%3A%2F%5D%0ARewriteCond%20%25%7BHTTP_COOKIE%7D%20!cookid%3D".$this->userid."%0ARewriteRule%20.*%20http%3A%2F%2Fbludotos.com%2FBlocked.html");
+$fh = fopen("users/".$this->username."/.htaccess", "w") or die("can't open file");
+if(fwrite($fh, $string)) {
+};
       
       /* Insert userid into database and update active users table */
       $database->updateUserField($this->username, "userid", $this->userid);

@@ -117,7 +117,7 @@ var goto2 = new XMLHttpRequest();
 		for(var i=0; i < thisis[actT.x].response.dirs.length; i++)
 		{
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.children[0].children[1].innerText));" class="name"><div><img alt="" src="<? echo $Ifolder; ?>" /><a>'+thisis[actT.x].response.dirs[i]+'</a></div></td><td style="text-align:left;" class="type">Size</td>';
+			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.children[0].children[1].innerHTML));" class="name"><div><img alt="" src="<? echo $Ifolder; ?>" /><a>'+thisis[actT.x].response.dirs[i]+'</a></div></td><td style="text-align:left;" class="type">Size</td>';
 			window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].appendChild(newtr);
 		};
 		}
@@ -128,10 +128,10 @@ var goto2 = new XMLHttpRequest();
 			var newtr = document.createElement('tr');
 			if(temp == 'png' || temp == 'jpg' || temp == 'jpeg' || temp == 'gif'){
 				var type = 'image';
-			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].goto((this.children[0].children[1].innerText+thisis[actT.x].response.location));" class="name"><div><img alt="" src="<? echo $Iimage; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type">'+type+'</td>';
+			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].goto((this.children[0].children[1].innerHTML+thisis[actT.x].response.location));" class="name"><div><img alt="" src="<? echo $Iimage; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type">'+type+'</td>';
 			} else {
 				var type = 'undefined';
-			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].goto((this.children[0].children[1].innerText+thisis[actT.x].response.location));" class="name"><div><img alt="" src="<? echo $Ifile; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type">'+type+'</td>';
+			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].goto((this.children[0].children[1].innerHTML+thisis[actT.x].response.location));" class="name"><div><img alt="" src="<? echo $Ifile; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type">'+type+'</td>';
 			}
 			window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].appendChild(newtr);
 		};
@@ -156,12 +156,12 @@ var goto2 = new XMLHttpRequest();
 				var type = 'undefined';
 			}
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].openapp((this.children[0].children[1].innerText));" class="name"><div><img alt="" src="<? echo $Iapp; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type">'+type+'</td>';
+			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].openapp((this.children[0].children[1].innerHTML));" class="name"><div><img alt="" src="<? echo $Iapp; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type">'+type+'</td>';
 			window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].appendChild(newtr);
 		};
 		}
         }
-        window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[1].innerText = thisis[actT.x].response.location;
+        window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[1].innerHTML = thisis[actT.x].response.location;
         window.actT.children[1].children[2].children[thisis[actT.x].cdivs].removeChild(window.actT.children[1].children[2].children[thisis[actT.x].cdivs].lastChild);
 		MainTools.scrollV(thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs], thisis[actT.x], thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0]);	
 				
@@ -208,7 +208,7 @@ thisis[actT.x].gotoit=gotoit;
 		for(var i=0; i < thisis[actT.x].response.dirs.length; i++)
 		{
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].click(this);thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.children[0].children[1].innerText));" class="name"><div><img alt="" src="<? echo $Ifolder; ?>" /><a>'+thisis[actT.x].response.dirs[i]+'</a></div></td><td style="text-align:left;" class="type">Size</td>';
+			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].click(this);thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.children[0].children[1].innerHTML));" class="name"><div><img alt="" src="<? echo $Ifolder; ?>" /><a>'+thisis[actT.x].response.dirs[i]+'</a></div></td><td style="text-align:left;" class="type">Size</td>';
 			window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].appendChild(newtr);
 		};
 		}
@@ -222,7 +222,7 @@ thisis[actT.x].gotoit=gotoit;
 			newtr.innerHTML = '<td style="text-align:left;" class="name"><div><img alt="" src="<? echo $Iimage; ?>" /><a onclick="void(0);">'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type">'+type+'</td>';
 			}  else if(temp != 'png' || temp != 'jpg' || temp != 'jpeg' || temp != 'gif'){
 				var type = 'undefined';
-                        newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].goto(this.children[0].children[1].innerText);" class="name"><div><img alt="" src="<? echo $Ifile; ?>" /><a>'+response.files[i]+'</a></div></td><td class="type" style="text-align:left;">Size</td>';
+                        newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].goto(this.children[0].children[1].innerHTML);" class="name"><div><img alt="" src="<? echo $Ifile; ?>" /><a>'+response.files[i]+'</a></div></td><td class="type" style="text-align:left;">Size</td>';
                         };
 			window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].appendChild(newtr);
 		};
@@ -247,12 +247,12 @@ thisis[actT.x].gotoit=gotoit;
 				var type = 'undefined';
 			}
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].openapp((this.children[0].children[1].innerText));" class="name"><div><img alt="" src="<? echo $Iapp; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type">'+type+'</td>';
+			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].openapp((this.children[0].children[1].innerHTML));" class="name"><div><img alt="" src="<? echo $Iapp; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type">'+type+'</td>';
 			window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].appendChild(newtr);
 		};
 		}
         }
-        window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[1].innerText = thisis[actT.x].response.location;
+        window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[1].innerHTML = thisis[actT.x].response.location;
         window.actT.children[1].children[2].children[thisis[actT.x].cdivs].removeChild(window.actT.children[1].children[2].children[thisis[actT.x].cdivs].lastChild);
 window.actT.children[1].children[2].children[thisis[actT.x].cdivs].style.width = window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].clientWidth+'px';
 		MainTools.scrollV(thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs], thisis[actT.x], thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0], -(parseInt(window.actT.children[1].children[2].children[thisis[actT.x].cdivs].offsetLeft)+150));				
@@ -305,7 +305,7 @@ node.onmouseup = function(){
 		for(var i=0; i < response.dirs.length; i++)
 		{
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].click(this);thisis[actT.x].goto(this.children[0].children[1].innerText);" class="name"><div><img alt="" src="<? echo $Ifolder; ?>" /><a>'+response.dirs[i]+'</a></div></td><td class="type" style="text-align:left;">Size</td>';
+			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].click(this);thisis[actT.x].goto(this.children[0].children[1].innerHTML);" class="name"><div><img alt="" src="<? echo $Ifolder; ?>" /><a>'+response.dirs[i]+'</a></div></td><td class="type" style="text-align:left;">Size</td>';
 			window.actT.children[1].children[2].children[0].children[0].children[0].appendChild(newtr);
 		};
 		for(var i=0; i < response.files.length; i++)
@@ -313,14 +313,14 @@ node.onmouseup = function(){
 			var newtr = document.createElement('tr');
                         var temp = response.files[i].split('.')[1];
                         if(temp != 'png' || temp != 'jpg' || temp != 'jpeg' || temp != 'gif'){
-			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].goto(this.children[0].children[1].innerText);" class="name"><div><img alt="" src="<? echo $Ifile; ?>" /><a>'+response.files[i]+'</a></div></td><td class="type" style="text-align:left;">Size</td>';
+			newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].goto(this.children[0].children[1].innerHTML);" class="name"><div><img alt="" src="<? echo $Ifile; ?>" /><a>'+response.files[i]+'</a></div></td><td class="type" style="text-align:left;">Size</td>';
                         } else if(temp == 'png' || temp == 'jpg' || temp == 'jpeg' || temp == 'gif'){
-                        newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].goto(this.children[0].children[1].innerText);" class="name"><div><img alt="" src="<? echo $Iimage; ?>" /><a>'+response.files[i]+'</a></div></td><td class="type" style="text-align:left;">Size</td>';
+                        newtr.innerHTML = '<td style="text-align:left;" onclick="thisis[actT.x].goto(this.children[0].children[1].innerHTML);" class="name"><div><img alt="" src="<? echo $Iimage; ?>" /><a>'+response.files[i]+'</a></div></td><td class="type" style="text-align:left;">Size</td>';
                         };
 			window.actT.children[1].children[2].children[0].children[0].children[0].appendChild(newtr);
 		};
         thisis[actT.x].response.location = "HDD/";
-        window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[1].innerText = thisis[actT.x].response.location;
+        window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[1].innerHTML = thisis[actT.x].response.location;
 window.actT.children[1].children[2].children[thisis[actT.x].cdivs].style.width = window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].clientWidth+'px';
 		//MainTools.mscroll(thisis[actT.x].children[1].children[0].children[2].children[0]);
 		MainTools.scrollV(thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs], thisis[actT.x], thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0], (parseInt(window.actT.children[1].children[2].children[thisis[actT.x].cdivs].offsetLeft)+150*(-1)));	
@@ -442,16 +442,16 @@ box-shadow: -1px -1px 8px 0px rgba(0, 0, 0, 0.5);
 " onmouseover="thisis[actT.x].cdiv=parseInt(this.id);">
 <table style="width:100%;">
 <tr style="background:rgba(70,70,70,1);box-shadow: inset 0px 0px 3px 1px black;width:142px;">
-<td style="width:142px;" onclick="thisis[actT.x].click(this.parentNode);thisis[actT.x].back(this.children[0].children[1].innerText+'/');thisis[actT.x].cdiv=parseInt(-1);"><div><img alt="" src="<? echo $IHDD; ?>" /><font>HDD</font></div></td>
+<td style="width:142px;" onclick="thisis[actT.x].click(this.parentNode);thisis[actT.x].back(this.children[0].children[1].innerHTML+'/');thisis[actT.x].cdiv=parseInt(-1);"><div><img alt="" src="<? echo $IHDD; ?>" /><font>HDD</font></div></td>
 </tr>
 <tr>
-<td style="width:142px;" onclick="thisis[actT.x].click(this.parentNode);thisis[actT.x].goto(this.children[0].children[1].innerText);"><div><img alt="" src="<? echo $Ifolder; ?>" /><font>Documents</font></div></td>
+<td style="width:142px;" onclick="thisis[actT.x].click(this.parentNode);thisis[actT.x].goto(this.children[0].children[1].innerHTML);"><div><img alt="" src="<? echo $Ifolder; ?>" /><font>Documents</font></div></td>
 </tr>
 <tr>
-<td style="width:142px;" onclick="thisis[actT.x].click(this.parentNode);thisis[actT.x].goto(this.children[0].children[1].innerText);"><div><img alt="" src="<? echo $Ifolder; ?>" /><font>Applications</font></div></td>
+<td style="width:142px;" onclick="thisis[actT.x].click(this.parentNode);thisis[actT.x].goto(this.children[0].children[1].innerHTML);"><div><img alt="" src="<? echo $Ifolder; ?>" /><font>Applications</font></div></td>
 </tr>
 <tr>
-<td style="width:142px;" onclick="thisis[actT.x].click(this.parentNode);thisis[actT.x].goto(this.children[0].children[1].innerText);"><div><img alt="" src="<? echo $Ifolder; ?>" /><font>MyPictures</font></div></td>
+<td style="width:142px;" onclick="thisis[actT.x].click(this.parentNode);thisis[actT.x].goto(this.children[0].children[1].innerHTML);"><div><img alt="" src="<? echo $Ifolder; ?>" /><font>MyPictures</font></div></td>
 </tr>
 </table>
 </div>

@@ -157,3 +157,10 @@
 [28-Mar-2013 12:43:10] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
 [31-Mar-2013 16:37:27] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
 [05-May-2013 13:53:47] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 00:28:49] PHP Warning:  chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory in /home/vios/public_html/include/session.php on line 111
+[07-May-2013 00:28:49] PHP Warning:  fopen(users/admin/.htaccess) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/include/session.php on line 113
+[07-May-2013 00:29:03] PHP Warning:  chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory in /home/vios/public_html/include/session.php on line 111
+[07-May-2013 00:29:03] PHP Warning:  fopen(users/admin/.htaccess) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/include/session.php on line 113
+[07-May-2013 00:29:38] PHP Warning:  chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory in /home/vios/public_html/include/session.php on line 93
+[07-May-2013 00:29:38] PHP Warning:  fopen(users/admin/.htaccess) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/include/session.php on line 95
+[07-May-2013 00:39:13] PHP Warning:  chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory in /home/vios/public_html/include/session.php on line 112

@@ -46,6 +46,6 @@ $betacoded = base_convert(mt_rand(0x1D39D3E06400000, 0x41C21CB8E0FFFFFF), 36, 15
 <br>
 <input type="submit" />
 </form>
-<a onclick="parent.window.location.href='http://bludot.tk';">Home</a>
+<a onclick="parent.window.location.href='http://bludotos.com';">Home</a>
 </body>
 </html>
