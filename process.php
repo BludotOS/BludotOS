@@ -73,7 +73,11 @@ class Process
          $_SESSION['value_array'] = $_POST;
          $_SESSION['error_array'] = $form->getErrorArray();
          //header("Location: ".$session->referrer);
+         session_unset();
+         header("Connection: close");
          echo '{"result":"false"}';
+         //exit;
+         
       }
    }
    
@@ -111,6 +115,62 @@ class Process
       return mysql_query($q, $this->connection);
    }
    
+   function betacode($user, $pass, $mail, $code){
+   	
+$quser_name = "vios_admin";
+$qpassword = "qlalsldl";
+$qdatabase = "vios_beta";
+$qserver = "127.0.0.1";
+$db_handle = mysql_connect($qserver, $quser_name, $qpassword);
+$db_found = mysql_select_db($qdatabase, $db_handle);
+
+if ($db_found) {
+$qsubemail = $mail;
+$qusername = $user;
+$qusername = addslashes($qusername);
+      $q = "SELECT * FROM beta_codes WHERE username = '$qusername'";
+      $resulted = mysql_query($q);
+         $regex = "^[_+a-z0-9-]+(\.[_+a-z0-9-]+)*"
+                 ."@[a-z0-9-]+(\.[a-z0-9-]{1,})*"
+                 ."\.([a-z]{2,}){1}$";
+         if(!eregi($regex,$subemail)){
+            print "The email you have entered is invalid";
+	    //header('Location:http://bludotos.com/');
+         };
+         $subemail = stripslashes($subemail);
+      if (mysql_numrows($resulted) > 0) {
+	echo 'username already taken';
+	//header('Location:http://bludotos.com/');
+      } else {
+
+$SQL = "INSERT INTO beta_codes (username, betacode, email) VALUES ('$user', '$code', '$mail')";
+$result = mysql_query($SQL);
+print "Records added to the database";
+$from = "From: bludot";
+$to = $subemail;
+$subject = "bludot - Welcome!";
+$body = $user.",\n\n"
+             ."Welcome! You've just registered at the bludot Site "
+             ."with the following information:\n\n"
+             ."Username: ".$user."\n"
+             ."Password: ".$subemail."\n\n"
+             ."You will receive a beta code shortly."
+             ."- administrator";
+if (mail($to, $subject, $body, $from)) {
+  echo("<p>Message successfully sent!</p>");
+ } else {
+  echo("<p>Message delivery failed...</p>");
+ }
+};
+mysql_close($db_handle);
+//header("location: http://bludotos.com/register.php?code=".$_POST[betacode]."");
+}
+else {
+print "Database NOT Found ";
+mysql_close($db_handle);
+}
+   }
+   
    /**
     * procRegister - Processes the user submitted registration form,
     * if errors are found, the user is redirected to correct the
@@ -129,24 +189,30 @@ class Process
       
       /* Registration Successful */
       if($retval == 0){
+      	 $this->betacode($_POST['user'], $_POST['pass'], $_POST['email'], $_POST['betacode']);
          $_SESSION['reguname'] = $_POST['user'];
          $_SESSION['regsuccess'] = true;
          $newuser = $_POST['user'];
          $userid = $this->generateRandID();
       	 $this->updateUserField($newuser, "userid", $userid);
          header("Location: http://bludotos.com/createF/createT.php?namer=$newuser&id=$userid");
+         //echo "success";
       }
       /* Error found with form */
       else if($retval == 1){
          $_SESSION['value_array'] = $_POST;
          $_SESSION['error_array'] = $form->getErrorArray();
-         header("Location: ".$session->referrer);
+         //header("Location: ".$session->referrer);
+         header("Connection: close");
+         exit;
       }
       /* Registration attempt failed */
       else if($retval == 2){
          $_SESSION['reguname'] = $_POST['user'];
          $_SESSION['regsuccess'] = false;
-         header("Location: ".$session->referrer);
+         //header("Location: ".$session->referrer);
+         header("Connection: close");
+         exit;
       }
    }
    

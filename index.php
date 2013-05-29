@@ -25,6 +25,7 @@ if (!$isMobile) {
 	<meta name="keywords" content="webos, operating system, online os, online operating system, idevice os, oses, apfelsine, apfelsineos, apfelsineoses">
 	<title>bludot</title>
 	<link rel="shortcut icon" href="wallpaper/BluDotlogo.png">
+	<meta name="google-site-verification" content="vfXTQKdRGnkavfXcKZjSPoToLOSVV0JDvQ_HjgEAhmo" />
 	<meta itemprop="name" content="ApfelsineOS">
 	<meta itemprop="description" content="An easy WebOS for on the go. Fast, simple, and small. A new way for cloud computing.">
 	<meta itemprop="image" content="http://bludotos.com/wallpaper/BluDotlogo.png">
@@ -35,6 +36,20 @@ if (!$isMobile) {
 	<link rel="apple-touch-icon" href="wallpaper/BluDotlogo.png"/>
 
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="jqnoconflict.js"></script>
+<script src="jqezbgresize.js"></script>
+<script type="text/javascript" for="jqlibcyc" src="http://malsup.github.io/jquery.cycle.all.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40966109-1', 'bludotos.com');
+  ga('send', 'pageview');
+
+</script>
 	<style>
 input[type="range"]{
     background: white;
@@ -637,6 +652,7 @@ for (var x=0; x < thisis.length; x++)
         var thisislength = x;
      }
 }
+thisis[actT.x].checknew();
 var renameit = new XMLHttpRequest();
         var nameit = window.thisis[actT.x].old.split("/")[window.thisis[actT.x].old.split("/").length-1];
         var sendit2 = 'path=../FileNet/HDD/Applications/temp/&old='+encodeURIComponent(nameit+'/')+'&new='+encodeURIComponent('../FileNet/HDD/Applications/'+nameit+'.blu')+'&move='+nameit;
@@ -873,30 +889,32 @@ openapp.send(sendit);
     core.ajaxlogin = function (user, pass, sub, box)
                 {
                      var checkit = new XMLHttpRequest();
+                     window.testtemp = checkit;
                          var sendit = 'sublogin='+sub+'&user='+user+'&pass='+pass+'&remember='+box;
                          checkit.open("POST", "process.php", true);
                          checkit.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                         //checkit.setRequestHeader("Content-length", sendit.length);
-                         //checkit.setRequestHeader("Connection", "close");
+                         checkit.setRequestHeader( "Pragma", "no-cache" );
+						checkit.setRequestHeader( "Cache-Control", "no-cache" );
                          checkit.onreadystatechange = function() {
                                if(checkit.readyState == 4){
                                      var resp = JSON.parse(checkit.responseText);
                                      //window.resp = JSON.parse(checkit.responseText);
                                      if (resp.result == 'false'){
+                                     	checkit.abort();
                                             alert("LOGIN DOES NOT EXIST");
+                                            window.location.href="http://bludotos.com";
                                             delete resp.result;
                                             delete checkit;
                                             delete user;
                                             delete pass;
                                             delete sub;
                                             delete box;
-                                            document.forms[0].children[2].children[0].value = '';
-                                            core.OS.logindiv.body.content.form.action = 'javascript:core.ajaxlogin(document.forms[0].children[0].children[0].value, document.forms[0].children[2].children[0].value, document.forms[0].children[2].children[1].value, document.forms[0].children[4].checked);';
-                                            //delete window.resp;
+                                            delete resp;
+                                            
+                                            document.getElementById('loginf').action = "javascript:core.ajaxlogin(document.getElementById('loginf').children[0].value, document.getElementById('loginf').children[2].value, document.getElementById('loginf').children[1].value, document.getElementById('loginf').children[3].checked);";                                            //delete window.resp;';                                            //delete window.resp;
                                      } else if (resp.result == 'true') {
                                         var divit = document.getElementById('logdiv');
                                         document.body.removeChild(divit);
-                                        document.body.removeChild(document.getElementById('loginback'));
                                         core.user = resp.user;
                                         window.user = resp.user;
                                         core.Admin = resp.Admin;
@@ -1227,8 +1245,44 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
                          checkit.send(sendit);
                 };
     core.register = function(){
-    	window.location = 'http://bludotos.com/registerBeta.php';
-    	};
+    	var temp = core.create('div');
+    	temp.id="regbox";
+    	core.style('position:fixed;top:'+(window.innerHeight-200)/2+'px;left:'+(window.innerWidth-100)/2+'px;width:257px;height:246px;background: #707070;background-image: url("images/zenbg-1.png"), url("images/zenbg-2.png");background-repeat: repeat-x, repeat;border-radius: 20px;border: 10px solid rgba(0,0,0,0.5);z-index:2147487;', temp);
+    	document.body.appendChild(temp);
+    	core.getreg(temp);
+    };
+    core.getreg = function(node){
+    	var node = node;
+    	var ajax = new XMLHttpRequest();
+    		ajax.open('GET', 'reg.php', true);
+    		ajax.onreadystatechange = function(){
+    			if(ajax.readyState == 4) {
+    				node.innerHTML = ajax.responseText;
+    			}
+    		}
+    		ajax.send();
+    }
+    core.sendreg = function(user, pass, mail, sub, beta){
+    	var regit = new XMLHttpRequest();
+                         var sendit = 'user='+user+'&pass='+pass+'&email='+mail+'&subjoin='+sub+'&betacode='+beta;
+                         regit.open("POST", "process.php", true);
+                         regit.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                         //checkit.setRequestHeader("Content-length", sendit.length);
+                         //checkit.setRequestHeader("Connection", "close");
+                        regit.onreadystatechange = function() {
+                               if(regit.readyState == 4){
+                               	window.testresp = regit.responseText;
+                               	if(regit.responseText=="success"){
+                               		alert('success');
+                               		core.getreg(document.getElementById('regbox'));
+                               	} else {
+                               		alert('error');
+                               		core.getreg(document.getElementById('regbox'));
+                               	}
+                               };
+                         };
+                         regit.send(sendit);
+    };
     core.load = function(){
 
 	document.body.innerHTML+='<div id="dhtmlwindowholder" style="position: fixed;top: 0px;left: 0px;z-index:30;"></div>';
@@ -1414,94 +1468,21 @@ var loadPrefs = function(every, done){
 			setTimeout("document.body.removeChild(document.getElementById('loading'));", 500);
 		});
 	})});
-        this.OS.loginback = this.create('img');
-        document.body.appendChild(this.OS.loginback);
-        this.style('position:fixed; width:100%; height:100%; top:0px; left:0px; z-index:2147485;', this.OS.loginback);
-        this.OS.loginback.src = 'http://bludotos.com/wallpaper/BluDot.svg';
-        this.OS.loginback.id = 'loginback';
         this.OS.logindiv = this.create('div');
         document.body.appendChild(this.OS.logindiv);
-        this.style('position:fixed;width:auto;height:auto;left:15%;top:10%;z-index:2147487;', this.OS.logindiv);
+        this.style('position:fixed;width:100%;height:100%;left:0px;top:0px;z-index:2147487;background:url(images/BluDot-svg.jpg) no-repeat;background-size:100%;', this.OS.logindiv);
         this.OS.logindiv.id = 'logdiv';
-        this.OS.logindiv.head = this.create('div');
-        this.OS.logindiv.appendChild(this.OS.logindiv.head);
-        this.style('-webkit-border-top-left-radius:5px;-webkit-border-top-right-radius:5px;position:relative;top:0px;background:rgba(33, 33, 33, 1);width:100%;height:15px;color:white;font-size:10px;', this.OS.logindiv.head);
-        this.OS.logindiv.head.center = this.create('center');
-        this.OS.logindiv.head.appendChild(this.OS.logindiv.head.center);
-        this.OS.logindiv.head.center.innerHTML = 'BluDot';
-        this.OS.logindiv.body = this.create('div');
-        this.OS.logindiv.appendChild(this.OS.logindiv.body);
-        this.style('position:relative;width:100%;height:100%;background:rgba(16, 16, 16, 0.3);', this.OS.logindiv.body);
-        this.OS.logindiv.body.content = this.create('div');
-        this.OS.logindiv.body.appendChild(this.OS.logindiv.body.content);
-        this.style('width:100%;height:100%;', this.OS.logindiv.body.content);
-        this.OS.logindiv.body.content.inner = this.create('div');
-        this.OS.logindiv.body.content.appendChild(this.OS.logindiv.body.content.inner);
-        this.style('position:relative;width:100%;height:125px;', this.OS.logindiv.body.content.inner);
-        this.OS.logindiv.body.content.form = this.create('form');
-        this.OS.logindiv.body.content.appendChild(this.OS.logindiv.body.content.form);
-        this.OS.logindiv.body.content.form.action = 'javascript:core.ajaxlogin(document.forms[0].children[0].children[0].value, document.forms[0].children[2].children[0].value, document.forms[0].children[2].children[1].value, document.forms[0].children[4].checked);';
-        this.OS.logindiv.body.content.form.font1 = this.create('font');
-        this.OS.logindiv.body.content.form.appendChild(this.OS.logindiv.body.content.form.font1);
-        this.style('position:relative;top:3%;left:3%;right:3%;font-wheight:10px;color:white;', this.OS.logindiv.body.content.form.font1);
-        this.OS.logindiv.body.content.form.font1.innerHTML = 'Username:';
-        this.OS.logindiv.body.content.form.font1.input = this.create('input');
-        this.OS.logindiv.body.content.form.font1.appendChild(this.OS.logindiv.body.content.form.font1.input);
-        this.style('color: black; background-color: gray;border-radius: 15px;border: none;outline-width:0;padding-left: 5px;padding-right: 5px;margin-right: 15px;', this.OS.logindiv.body.content.form.font1.input);
-        this.OS.logindiv.body.content.form.font1.input.type = 'text';
-        this.OS.logindiv.body.content.form.font1.input.name = 'user';
-        this.OS.logindiv.body.content.form.font1.input.maxlength = 30;
-        this.OS.logindiv.body.content.form.br = this.create('br');
-        this.OS.logindiv.body.content.form.appendChild(this.OS.logindiv.body.content.form.br);
-        this.OS.logindiv.body.content.form.font2 = this.create('font');
-        this.OS.logindiv.body.content.form.appendChild(this.OS.logindiv.body.content.form.font2);
-        this.style('position:relative;top:3%;left:3%;right:3%;font-wheight:10px;color:white;', this.OS.logindiv.body.content.form.font2);
-        this.OS.logindiv.body.content.form.font2.innerHTML = 'Password:';
-        this.OS.logindiv.body.content.form.font2.input = this.create('input');
-        this.OS.logindiv.body.content.form.font2.appendChild(this.OS.logindiv.body.content.form.font2.input);
-        this.style('color: black; background-color: gray;border-radius: 15px;border: none;outline-width:0;padding-left: 5px;padding-right: 5px;margin-right: 15px;', this.OS.logindiv.body.content.form.font2.input);
-        this.OS.logindiv.body.content.form.font2.input.type = 'password';
-        this.OS.logindiv.body.content.form.font2.input.name = 'pass';
-        this.OS.logindiv.body.content.form.font2.input.maxlength = 30;
-        this.OS.logindiv.body.content.form.font2.input2 = this.create('input');
-        this.OS.logindiv.body.content.form.font2.appendChild(this.OS.logindiv.body.content.form.font2.input2);
-        this.OS.logindiv.body.content.form.font2.input2.type = 'hidden';
-        this.OS.logindiv.body.content.form.font2.input2.name = 'sublogin';
-        this.OS.logindiv.body.content.form.font2.input2.value = 1;
-        this.OS.logindiv.body.content.form.br2 = this.create('br');
-        this.OS.logindiv.body.content.form.appendChild(this.OS.logindiv.body.content.form.br2);
-        this.OS.logindiv.body.content.form.input3 = this.create('input');
-        this.OS.logindiv.body.content.form.appendChild(this.OS.logindiv.body.content.form.input3);
-        this.OS.logindiv.body.content.form.input3.type = 'checkbox';
-        this.OS.logindiv.body.content.form.input3.name = 'remember';
-        this.style('width:100%', this.OS.logindiv.body.content.form.input3);
-        this.OS.logindiv.body.content.form.br3 = this.create('br');
-        this.OS.logindiv.body.content.form.appendChild(this.OS.logindiv.body.content.form.br3);
-        this.OS.logindiv.body.content.form.input4 = this.create('input');
-        this.OS.logindiv.body.content.form.appendChild(this.OS.logindiv.body.content.form.input4);
-        this.style('position:relative;left:10%;', this.OS.logindiv.body.content.form.input4);
-        this.OS.logindiv.body.content.form.input4.type = 'submit';
-        this.OS.logindiv.body.content.form.input4.value = 'Login';
-        this.OS.logindiv.body.content.form.input5 = this.create('input');
-        this.OS.logindiv.body.content.form.appendChild(this.OS.logindiv.body.content.form.input5);
-        this.style('position:relative;left:37%;', this.OS.logindiv.body.content.form.input5);
-        this.OS.logindiv.body.content.form.input5.type = 'button';
-        this.OS.logindiv.body.content.form.input5.value = 'Signup';
-        this.OS.logindiv.body.content.form.input5.onclick = function(){
-            alert('We are now in the Dev/Beta mode. Anyone can now sign up!');
-            core.register();
-        };
-        //this.OS.logindiv.body.content.form.br4 = this.create('br');
-        //this.OS.logindiv.body.content.form.appendChild(this.OS.logindiv.body.content.form.br4);
-        this.OS.logindiv.body.content.font = this.create('font');
-        this.OS.logindiv.body.content.appendChild(this.OS.logindiv.body.content.font);
-        this.style('position:relative;bottom:20%;left:5%;font-size:13px;', this.OS.logindiv.body.content.font);
-        this.OS.logindiv.body.content.font.innerHTML = '<b>Help/Support</b><a href="mailto:support@bludotos.com">support@bludotos.com</a>';
-        this.OS.logindiv.body.content.br5 = this.create('br');
-        this.OS.logindiv.body.content.appendChild(this.OS.logindiv.body.content.br5);
-        this.OS.logindiv.bottom = this.create('div');
-        this.OS.logindiv.appendChild(this.OS.logindiv.bottom);
-        this.style('-webkit-border-bottom-left-radius:5px;-webkit-border-bottom-right-radius:5px;position:relative;top:100%;background:rgba(33, 33, 33, 1);width:100%;height:15px;', this.OS.logindiv.bottom);
+        var loadmain = new XMLHttpRequest();
+        	loadmain.open('GET', 'main.php', true);
+        	loadmain.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            loadmain.onreadystatechange = function() {
+	            if(loadmain.readyState == 4){
+	            	core.OS.logindiv.innerHTML = loadmain.responseText;
+	            	$j(document).ready(function() { $j("body").ezBgResize({ img : "images/BluDot__1_-svg.jpg" }) ;});
+	            	$j(document).ready(function() { $j('#ss_i_1368247137').cycle({ fx: 'uncover', timeout: 2000, sync: 1, next: '#next_1368247137', prev: '#prev_1368247137' });  });
+	            }
+            }
+            loadmain.send();
         
         
         
@@ -1555,7 +1536,6 @@ core.user = '<? echo $session->username; ?>';
 core.checkupdates();
 var divit = document.getElementById('logdiv');
                                         document.body.removeChild(divit);
-                                        document.body.removeChild(document.getElementById('loginback'));
 var checkp = new XMLHttpRequest();
                          checkp.open("GET", "users/<? echo $session->username; ?>/config/configB.php", true);
                          checkp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

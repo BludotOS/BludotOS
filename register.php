@@ -19,7 +19,7 @@ $db_handle = mysql_connect($server, $user_name, $password);
 $db_found = mysql_select_db($database, $db_handle);
 $q = "SELECT * FROM beta_codes WHERE betacode = '$betacode'";
       $resulted = mysql_query($q);
-      if (mysql_numrows($resulted) > 0) {
+      //if (mysql_numrows($resulted) > 0) {
       $q = "SELECT username,email FROM beta_codes WHERE betacode = '$betacode'";
       $result = mysql_query($q);
       if($result){
@@ -100,12 +100,12 @@ if($form->num_errors > 0){
 </body>
 </html>
 <?
-} else {
+//} else {
 ?>
 <script>
-	alert('You do not have access to this!!!\nYou will be redirected!');
-	window.location = 'http://bludotos.com';
+//	alert(document.body.innerHTML);
+//	window.location = 'http://bludotos.com';
 </script>
 <?
-};
+//};
 ?>

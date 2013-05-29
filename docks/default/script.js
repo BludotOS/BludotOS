@@ -114,14 +114,14 @@ function SimpleDock(node, imageDetails, minimumSize, maximumSize, range, height,
         reflectedIconNodes[index].style.marginTop = height+'px';
         
     }
-    window.onmousemove = function(e){
+    /*node.onmousemove = function(e){
     if(!e) var e = window.event;
     if(e.pageX > 0) {
     window.testnew = setInterval(function(){
     	document.getElementById('dockContainer').style.bottom=(parseInt(document.getElementById('dockContainer').style.bottom)-1)+"px";
     	}, 10);
     };
-};
+};*/
     
     /* Sets a toolbar image to the specified size. The parameter is:
      *
@@ -298,9 +298,9 @@ function SimpleDock(node, imageDetails, minimumSize, maximumSize, range, height,
      * index - the 0-based index of the image to be sized
      */
     SimpleDock.prototype.updateIconPropertiest = function(index){
-        if (SimpleDock.prototype.skip== false) {
+        if (SimpleDock.prototype.skip == false) {
             label[index].style.marginLeft = (iconNodes[index].offsetLeft-20+((iconNodes[index].clientWidth-label[index].clientWidth)/2))+'px';
-if (SimpleDock.prototype.skip== false) {
+if (SimpleDock.prototype.skip == false) {
             label[index].style.marginTop = -(SimpleDock.prototype.max*2)+20+'px';
         } else {
             label[index].style.marginTop = -(SimpleDock.prototype.min*2)-SimpleDock.prototype.min+'px';
@@ -355,20 +355,20 @@ if (SimpleDock.prototype.skip== false) {
             // determine the size for the icon, taking into account the scale factor
             var size = SimpleDock.prototype.min + scale * (iconSizes[index] - SimpleDock.prototype.min);
             // find the index of the appropriate image size
-            var sizeIndex = 0;
-            while (imageDetails[index].sizes[sizeIndex] < size
-                   && sizeIndex + 1 < imageDetails[index].sizes.length){
-                sizeIndex++;
-            }
+            //var sizeIndex = 0;
+            //while (imageDetails[index].sizes[sizeIndex] < size
+            //       && sizeIndex + 1 < imageDetails[index].sizes.length){
+            //    sizeIndex++;
+            //}
             
             // check whether the full icon with its caption should be displayed
-            if (size == SimpleDock.prototype.max){
+            if (size == SimpleDock.prototype.max) {
                 label[index].style.opacity = 1;
                 
-            }else{
+            } else {
                 label[index].style.opacity = 0;
                 
-            }
+            };
         }
     }
     

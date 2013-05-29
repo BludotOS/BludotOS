@@ -164,3 +164,35 @@
 [07-May-2013 00:29:38] PHP Warning:  chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory in /home/vios/public_html/include/session.php on line 93
 [07-May-2013 00:29:38] PHP Warning:  fopen(users/admin/.htaccess) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/include/session.php on line 95
 [07-May-2013 00:39:13] PHP Warning:  chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory in /home/vios/public_html/include/session.php on line 112
+[07-May-2013 18:09:43] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:10:15] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:10:52] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:11:38] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:12:57] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:13:40] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:14:23] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:14:58] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:18:23] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:20:11] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:21:35] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:21:41] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:21:48] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:23:44] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:24:00] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:25:55] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:28:00] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:29:06] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:29:43] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:33:07] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:36:26] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:38:26] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:49:08] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[07-May-2013 18:58:35] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[08-May-2013 23:26:56] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[08-May-2013 23:29:21] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[09-May-2013 15:59:40] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[18-May-2013 10:48:28] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[20-May-2013 22:19:07] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vios/public_html/admin/admin.php:82) in /home/vios/public_html/admin/admin.php on line 127
+[23-May-2013 11:18:16] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[23-May-2013 11:46:39] PHP Fatal error:  Call to a member function error() on a non-object in /home/vios/public_html/admin/newusers.php on line 36
+[27-May-2013 09:39:33] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vios/public_html/admin/admin.php:82) in /home/vios/public_html/admin/admin.php on line 127

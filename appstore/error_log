@@ -581,3 +581,36 @@ Stack trace:
 #1 /home/vios/public_html/appstore/update.php(28): ZIP('temp/Mail.blu', 'temp/Mail', '/')
 #2 {main}
   thrown in /home/vios/public_html/appstore/update.php on line 47
+[10-May-2013 11:44:06] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 5
+[10-May-2013 11:44:06] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 16
+[10-May-2013 11:44:07] PHP Warning:  unlink(temp/Mail/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 26
+[10-May-2013 11:44:07] PHP Warning:  copy(temp/Mail/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[10-May-2013 11:44:07] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(temp/Mail/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/appstore/update.php:47
+Stack trace:
+#0 /home/vios/public_html/appstore/update.php(47): RecursiveDirectoryIterator->__construct('temp/Mail/')
+#1 /home/vios/public_html/appstore/update.php(28): ZIP('temp/Mail.blu', 'temp/Mail', '/')
+#2 {main}
+  thrown in /home/vios/public_html/appstore/update.php on line 47
+[23-May-2013 11:25:40] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 5
+[23-May-2013 11:25:40] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 5
+[23-May-2013 13:47:35] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 5
+[25-May-2013 09:27:24] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 5
+[25-May-2013 09:27:24] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 16
+[25-May-2013 09:27:25] PHP Warning:  unlink(temp/Mail/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 26
+[25-May-2013 09:27:25] PHP Warning:  copy(temp/Mail/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[25-May-2013 09:27:25] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(temp/Mail/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/appstore/update.php:47
+Stack trace:
+#0 /home/vios/public_html/appstore/update.php(47): RecursiveDirectoryIterator->__construct('temp/Mail/')
+#1 /home/vios/public_html/appstore/update.php(28): ZIP('temp/Mail.blu', 'temp/Mail', '/')
+#2 {main}
+  thrown in /home/vios/public_html/appstore/update.php on line 47
+[28-May-2013 09:56:43] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 5
+[28-May-2013 09:56:43] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 16
+[28-May-2013 09:56:43] PHP Warning:  unlink(temp/Mail/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 26
+[28-May-2013 09:56:43] PHP Warning:  copy(temp/Mail/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[28-May-2013 09:56:43] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(temp/Mail/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/appstore/update.php:47
+Stack trace:
+#0 /home/vios/public_html/appstore/update.php(47): RecursiveDirectoryIterator->__construct('temp/Mail/')
+#1 /home/vios/public_html/appstore/update.php(28): ZIP('temp/Mail.blu', 'temp/Mail', '/')
+#2 {main}
+  thrown in /home/vios/public_html/appstore/update.php on line 47

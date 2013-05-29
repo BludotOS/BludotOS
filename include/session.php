@@ -357,6 +357,8 @@ if(fwrite($fh, $string)) {
             }
             return 0;  //New user added succesfully
          }else{
+         	header("Connection: close");
+         exit;
             return 2;  //Registration attempt failed
          }
       }

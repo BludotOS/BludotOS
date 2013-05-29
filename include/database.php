@@ -21,7 +21,7 @@ class MySQLDB
    /* Class constructor */
    function MySQLDB(){
       /* Make connection to database */
-      $this->connection = mysql_connect("127.0.0.1", "user", "pass") or die(mysql_error());
+      $this->connection = mysql_connect("74.53.164.85", "vios_pub", "qlalsldl") or die(mysql_error());
       mysql_select_db("vios_users", $this->connection) or die(mysql_error());
       
       /**

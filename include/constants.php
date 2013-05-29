@@ -16,9 +16,9 @@
  * to the MySQL database. Make sure the information is
  * correct.
  */
-define("DB_SERVER", "localhost");
-define("DB_USER", "user");
-define("DB_PASS", "pass");
+define("DB_SERVER", "74.53.164.85");
+define("DB_USER", "vios_pub");
+define("DB_PASS", "qlalsldl");
 define("DB_NAME", "vios_users");
 
 /**

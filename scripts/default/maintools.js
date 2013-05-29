@@ -176,7 +176,7 @@ desktopRightClick: function (e){
     };
     }
   },
-scrollV:function (ele, elem, eleme, right, top, bottom){
+scrollV:function (id, ele, elem, eleme, right, top, bottom){
 	if (!right) {
 		var right = 0;
 	};
@@ -190,6 +190,9 @@ scrollV:function (ele, elem, eleme, right, top, bottom){
 	var sidebarinner = document.createElement('div');
 	sidebard.style.cssText = 'position:absolute;width:10px;left:'+(ele.clientWidth-10)+'px;top:'+top+'px;background:rgba(225, 225, 225, 1);box-shadow:0px 1px 5px black inset;display:block;bottom:0px;';
 	sidebarinner.style.cssText = 'position:relative;width:5px;height:'+(((ele.clientHeight-bottom)/eleme.scrollHeight)*(ele.clientHeight-bottom))+'px;top:0px;left:5px;background:rgba(61, 61, 61, 1);-webkit-border-top-left-radius:10px;-webkit-border-bottom-left-radius:10px;';
+	if(id) {
+		sidebard.id = id;
+	}
 	ele.appendChild(sidebard);
 	sidebard.appendChild(sidebarinner);
 	ele.onmousemove = function (e){
@@ -333,6 +336,13 @@ div.form.appendChild(temp3);
 var last = document.createElement('input');
 last.type = 'submit';
 div.form.appendChild(last);
+var vlast = document.createElement('input');
+vlast.type = 'button';
+vlast.onclick = function(){
+	document.body.removeChild(this.parentNode.parentNode);
+};
+vlast.value = "cancel";
+div.form.appendChild(vlast);
 div.form.children[1].focus();
 },
 Notify:function(itext, src, duration) {

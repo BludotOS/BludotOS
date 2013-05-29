@@ -72,7 +72,7 @@ thisis[actT.x].Rclick = function (details) {
          }
 	div.style.cssText = 'display:block;z-index:3647;top:0;left:0;position:fixed;border-color:gray;border:0.5pxsolid;width:auto;height:auto;background:white;opacity:.8;border-radius:10px;';
          div.ul.style.cssText = 'display: block;margin: 0;padding: 0;position: relative;top: 0px;width: auto;left: 0;list-style: none;';
-         div.style.top = window.event.pageY-5+'px';
+         div.style.top = window.event.pageY-42+'px';
          div.style.left = window.event.pageX-5+'px';
         var offsetY2 = (div.offsetTop+div.clientHeight);
         var offsetY1 = div.offsetTop;
@@ -133,15 +133,15 @@ var goto = new XMLHttpRequest();
 			if(response.files[i] != 'index.php'){
 			var newtr = document.createElement('tr');
 			if(response.files[i] == 'index.txt'){
-				newtr.innerHTML = '<td style="text-align:left;" class="DevCenterclicked"><a oncontextmenu="thisis[actT.x].Rclick(this.innerHTML); return false;"; onclick="thisis[actT.x].view(this.innerHTML, thisis[actT.x].nameit);">'+response.files[i]+'</a></td>';
+				newtr.innerHTML = '<td style="text-align:left;" class="DevCenterclicked" oncontextmenu="thisis[actT.x].Rclick(this.children[0].innerHTML); return false;"; onclick="thisis[actT.x].view(this.children[0].innerHTML, thisis[actT.x].nameit);"><a>'+response.files[i]+'</a></td>';
 			} else {
-				newtr.innerHTML = '<td style="text-align:left;" class="DevCenternotclicked"><a oncontextmenu="thisis[actT.x].Rclick(this.innerHTML); return false;"; onclick="thisis[actT.x].view(this.innerHTML, thisis[actT.x].nameit);">'+response.files[i]+'</a></td>';
+				newtr.innerHTML = '<td style="text-align:left;" class="DevCenternotclicked" oncontextmenu="thisis[actT.x].Rclick(this.children[0].innerHTML); return false;"; onclick="thisis[actT.x].view(this.children[0].innerHTML, thisis[actT.x].nameit);"><a>'+response.files[i]+'</a></td>';
 			}
 			window.actT.children[1].children[0].children[1].children[1].children[0].appendChild(newtr);
                 }
 		};
 1		//MainTools.mscroll(thisis[actT.x].children[1].children[0].children[1].children[1]);
-			MainTools.scrollV(thisis[actT.x].children[1].children[0].children[1].children[1], thisis[actT.x], thisis[actT.x].children[1].children[0].children[1].children[1].children[0]);
+
 				
 	};
 	};
@@ -182,6 +182,19 @@ temp.onclose = function() {
 return true;
 }
 });
+}
+thisis[actT.x].checknew = function() {
+	if(thisis[actT.x].children[1].children[0].children[0].children[1].children[0].children[0].children[0].value == "APP")
+	{
+		MainTools.popup(['Save'], ['text']);
+        thisis[actT.x].form = function(a) {
+        	thisis[actT.x].children[1].children[0].children[0].children[1].children[0].children[0].children[0].value = a[0]
+               thisis[actT.x].rename(thisis[actT.x].children[1].children[0].children[0].children[1].children[0].children[0].children[0].value);
+               save();
+        };
+        return false;
+	};
+	return true;
 }
 thisis[actT.x].open = function(name) {
         thisis[actT.x].children[1].children[0].children[0].children[1].children[0].children[0].children[0].value = name;
@@ -291,7 +304,7 @@ var goto2 = new XMLHttpRequest();
 		for(var i=0; i < thisis[actT.x].response.dirs.length; i++)
 		{
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;"><a oncontextmenu="thisis[actT.x].Rclick();"; onclick="thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.innerHTML), this.innerHTML);">'+thisis[actT.x].response.dirs[i]+'</a></td>';
+			newtr.innerHTML = '<td style="text-align:left;"><a oncontextmenu="thisis[actT.x].Rclick();" onclick="thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.innerHTML), this.innerHTML);">'+thisis[actT.x].response.dirs[i]+'</a></td>';
 			window.actT.children[1].children[0].children[1].children[0].children[2].children[0].appendChild(newtr);
 		};
 		}
@@ -305,7 +318,6 @@ var goto2 = new XMLHttpRequest();
                 }
 		};
 		}
-		MainTools.scrollV(thisis[actT.x].children[1].children[0].children[1].children[0].children[2], thisis[actT.x], thisis[actT.x].children[1].children[0].children[1].children[0].children[2].children[0]);
 				
 	};
 	};
@@ -357,7 +369,6 @@ thisis[actT.x].gotoit=gotoit;
                 }
 		};
 		}
-		MainTools.scrollV(thisis[actT.x].children[1].children[0].children[1].children[0].children[2], thisis[actT.x], thisis[actT.x].children[1].children[0].children[1].children[0].children[2].children[0]);
 				
 	};
 	};
@@ -428,7 +439,7 @@ var goto = new XMLHttpRequest();
                 }
 		};
 1		//MainTools.mscroll(thisis[actT.x].children[1].children[0].children[1].children[1]);
-			MainTools.scrollV(thisis[actT.x].children[1].children[0].children[1].children[1], thisis[actT.x], thisis[actT.x].children[1].children[0].children[1].children[1].children[0]);
+
 				
 	};
 	};
@@ -551,27 +562,17 @@ html, body {
 
   </style>
 <div style="position: absolute;top: 0px;overflow: hidden;bottom: 0px;right: 0px;left: 0px;width: auto;">
-<div id="topbar" style="left:0px; top: 0px; position:relative; height:100px; width:100%; background:-webkit-linear-gradient(bottom, rgb(59,58,58) 25%, rgb(140,140,138) 63%, rgb(184,186,185) 82%);background: -moz-linear-gradient(top, rgba(184,186,185,1) 0%, rgba(140,140,138,1) 43%, rgba(59,58,58,1) 100%);">
-<div id="topbarleft" style="float:left; position:relative; height:100px; background:-webkit-linear-gradient(bottom, rgb(59,58,58) 25%, rgb(140,140,138) 63%, rgb(184,186,185) 82%);">
+<div id="topbar" style="left:0px; top: 0px; position:relative; height:70px; width:100%; background:-webkit-linear-gradient(bottom, rgb(59,58,58) 25%, rgb(140,140,138) 63%, rgb(184,186,185) 82%);background: -moz-linear-gradient(top, rgba(184,186,185,1) 0%, rgba(140,140,138,1) 43%, rgba(59,58,58,1) 100%);">
+<div id="topbarleft" style="float:left; position:relative; height:70px; background:-webkit-linear-gradient(bottom, rgb(59,58,58) 25%, rgb(140,140,138) 63%, rgb(184,186,185) 82%);">
 	<div class="topbaricons">
               <img class="topbaricons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/save.png" onclick="save();"/>
               <br>
               <font class="topbarfont">Save</font>
         </div>
 	<div class="topbaricons">
-             <img class="topbaricons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/new.png" onclick="newproj();"/>
-              <br>
-              <font class="topbarfont">New Proj</font>
-        </div>
-	<div class="topbaricons">
              <img class="topbaricons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/open.png" onclick="thisis[actT.x].popen();">
               <br>
               <font class="topbarfont">Open</font>
-        </div>
-	<div class="topbaricons">
-             <img class="topbaricons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/upload.png" onclick="upload();"/>
-              <br>
-              <font class="topbarfont">Upload</font>
         </div>
 	<div class="topbaricons">
              <img class="topbaricons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/help.png" onclick="help();"/>
@@ -597,27 +598,27 @@ html, body {
 	</center>
 </div>
 </div>
-<div id="content" style="position: absolute;top: 100px;width: 150px;bottom: 0px;background:grey;">
+<div id="content" style="position: absolute;top: 70px;width: 150px;bottom: 0px;background:grey;">
 	<div id="leftsidebar" style="relative; float:left; width:200px;background:-webkit-linear-gradient(bottom, rgb(59,58,58) 25%, rgb(140,140,138) 63%, rgb(184,186,185) 82%);">
 		<div id="topsidebar" style="position:relative;left:0px;float:left;">
-			<img class="smallicons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/new.png">
-			<img class="smallicons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/newfolder.png">
-			<img class="smallicons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/deletefile-folder.png">
-			<img class="smallicons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/upload.png">
-		</div>
-                <div id="topsidebar" style="position:relative;left:0px;float:left;">
-			<img class="smallicons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/new.png" onclick="thisis[actT.x].pnewfile();"/>
-			<img class="smallicons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/newfolder.png">
-			<img class="smallicons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/deletefile-folder.png">
-			<img class="smallicons" onclick="thisis[actT.x].back(thisis[actT.x].response.location.split((thisis[actT.x].response.location.split('/')[(thisis[actT.x].response.location.split('/')).length-1]))[0].substring(0, thisis[actT.x].response.location.split((thisis[actT.x].response.location.split('/')[(thisis[actT.x].response.location.split('/')).length]))[0].length-1));" src="users/<? echo $user; ?>/sysapps/DevCenter/images/upload.png"/>
+			<img class="smallicons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/Folderview.png" onclick="for(var i=1; i < thisis[actT.x].children[1].children[0].children[1].children.length; i++){thisis[actT.x].children[1].children[0].children[1].children[i].style.display='none';};thisis[actT.x].children[1].children[0].children[1].children[1].style.display='block';">
+			<img class="smallicons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/Function.png" onclick="for(var i=1; i < thisis[actT.x].children[1].children[0].children[1].children.length; i++){thisis[actT.x].children[1].children[0].children[1].children[i].style.display='none';};thisis[actT.x].children[1].children[0].children[1].children[2].style.display='block';">
+			<img class="smallicons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/Notes.png" onclick="for(var i=1; i < thisis[actT.x].children[1].children[0].children[1].children.length; i++){thisis[actT.x].children[1].children[0].children[1].children[i].style.display='none';};thisis[actT.x].children[1].children[0].children[1].children[3].style.display='block';">
+			<img class="smallicons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/Description.png" onclick="for(var i=1; i < thisis[actT.x].children[1].children[0].children[1].children.length; i++){thisis[actT.x].children[1].children[0].children[1].children[i].style.display='none';};thisis[actT.x].children[1].children[0].children[1].children[4].style.display='block';">
 		</div>
 	</div>
                 <table id="leftfilemgr" align="left" style="position:relative;top:0px;width:150px;height:auto;">
                 <tbody  style="position:relative;overflow:hidden;height:auto;width:100%;top:100px;">
                 </tbody>
                 </table>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
 	</div>
-<div id="divTop" style="position:absolute; top:100px; overflow:auto; overflow-x:hidden; overflow-y:hidden; bottom: 0px; left: 150px;right:0px;">
+<div id="divTop" style="position:absolute; top:70px; overflow:auto; overflow-x:hidden; overflow-y:hidden; bottom: 0px; left: 150px;right:0px;">
 <div id="editor"></div>
 </div>
 </div>

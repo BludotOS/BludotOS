@@ -21,7 +21,7 @@ return array (
   'Dockmin' => '44',
   'Dockmax' => '100',
   'wallpaper' => 'http://bludotos.com/users/admin/sysapps/FileNet/wallpaper/BluDot.svg',
-  'version' => '0.70',
+  'version' => '0.72',
   'dock' => 
   array (
     0 => 'default',

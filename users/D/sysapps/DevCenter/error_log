@@ -3134,3 +3134,98 @@ Stack trace:
 [05-May-2013 23:56:09] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
 [06-May-2013 12:04:27] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
 [06-May-2013 19:45:14] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[07-May-2013 12:51:20] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[07-May-2013 23:54:56] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[09-May-2013 18:26:15] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[09-May-2013 18:26:32] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/maild/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[09-May-2013 18:26:32] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/maild/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[09-May-2013 18:26:32] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[09-May-2013 18:26:32] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[09-May-2013 18:26:32] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/maild) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[09-May-2013 18:26:32] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/maild) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[09-May-2013 18:26:36] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[09-May-2013 18:27:15] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[09-May-2013 18:35:37] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[10-May-2013 11:17:10] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[10-May-2013 11:18:50] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[10-May-2013 11:19:01] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[10-May-2013 11:19:09] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[10-May-2013 11:19:39] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[10-May-2013 11:19:57] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[10-May-2013 11:20:50] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[10-May-2013 11:24:47] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[10-May-2013 11:25:07] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[10-May-2013 11:25:19] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[10-May-2013 11:25:26] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[10-May-2013 11:35:50] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[10-May-2013 11:36:14] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/amoebachat/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[10-May-2013 11:36:14] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/amoebachat/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[10-May-2013 11:36:14] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[10-May-2013 11:36:14] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[10-May-2013 11:36:14] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/amoebachat) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[10-May-2013 11:36:14] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/amoebachat) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[10-May-2013 11:36:21] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/Amoebachat/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[10-May-2013 11:36:21] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/Amoebachat/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[10-May-2013 11:36:21] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[10-May-2013 11:36:21] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[10-May-2013 11:36:21] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/Amoebachat) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[10-May-2013 11:36:21] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/Amoebachat) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[11-May-2013 00:32:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[11-May-2013 00:32:46] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[11-May-2013 00:34:29] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[12-May-2013 11:00:34] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[12-May-2013 11:13:12] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[12-May-2013 11:46:23] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[20-May-2013 10:30:15] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[20-May-2013 10:30:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[25-May-2013 06:25:55] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[25-May-2013 06:27:32] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[25-May-2013 06:31:08] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[25-May-2013 06:31:12] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[25-May-2013 06:34:34] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/usertest3/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[25-May-2013 06:34:34] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/usertest3/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[25-May-2013 06:34:34] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[25-May-2013 06:34:34] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[25-May-2013 06:34:35] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/usertest3) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[25-May-2013 06:34:35] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/usertest3) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[25-May-2013 06:34:57] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[27-May-2013 18:58:43] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[27-May-2013 18:59:22] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[27-May-2013 19:00:08] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[27-May-2013 19:00:41] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[27-May-2013 19:01:14] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[27-May-2013 19:01:48] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[27-May-2013 19:02:03] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[27-May-2013 19:08:31] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[27-May-2013 19:08:50] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[27-May-2013 19:09:15] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[27-May-2013 19:13:28] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[27-May-2013 19:15:09] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[27-May-2013 19:17:00] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[27-May-2013 19:18:55] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[27-May-2013 19:20:53] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 3
+[27-May-2013 19:21:50] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
