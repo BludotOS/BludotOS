@@ -13,9 +13,13 @@ for (x in thisis)
      }
 }
 thisis[actT.x].menu = function() {
+var menu = document.getElementById('menu1').cloneNode(true);
 window.bar(0);
-var menu = document.getElementById('menu0');
 menu.innerHTML = '<li onclick="clickt(this);"><a>FileNet</a></li><ul></ul><li><a>File</a></li><ul></ul><li><a>Edit</a></li><ul></ul><li onclick="clickt(this);"><a>View</a></li><ul><li onclick="clickt(this);"><a onclick="clickt(clicked);thisis[actT.x].listviewt();">Splitview</a></li><li onclick="clickt(this);"><a onclick="clickt(clicked);thisis[actT.x].listviewt();">List View</a></li></ul>';
+for(var i = 2; i < menu.children.length; i++)
+{
+document.getElementById('menu0').appendChild(menu.children[i].cloneNode(true));
+}
 }
 thisis[actT.x].menu();
 thisis[actT.x].FileNet = [];
@@ -413,30 +417,15 @@ line-height: 25px;
 padding-left: 5px;
 }
 #FileNet #back {
-width: 20px;
-height: 40px;
+	top:2px;
+width: auto;
+height: 30px;
 position: relative;
 overflow: hidden;
-box-shadow: 0 16px -10px -15px rgba(0, 0, 0, 0.5);
 }
-#FileNet #back:after {
-content: "";
-position: absolute;
-width: 20px;
-height: 20px;
-background: #999;
-transform: rotate(45deg);
--ms-transform: rotate(45deg);
--moz-transform: rotate(45deg);
--webkit-transform: rotate(45deg);
--o-transform: rotate(45deg);
-top: 10px;
-left: 10px;
-box-shadow: -1px -1px 8px 0px rgba(0, 0, 0, 0.5);
-}​
 </style>
-<div style="position:absolute;left:0px;top:0px;right:0px;height:35px;background: -moz-linear-gradient(top, rgba(206,220,231,1) 0%, rgba(89,106,114,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(206,220,231,1)), color-stop(100%,rgba(89,106,114,1)));">
-<div id="back" onclick="thisis[actT.x].back(thisis[actT.x].response.location.split((thisis[actT.x].response.location.split('/')[(thisis[actT.x].response.location.split('/')).length-1]))[0].substring(0, thisis[actT.x].response.location.split((thisis[actT.x].response.location.split('/')[(thisis[actT.x].response.location.split('/')).length]))[0].length-1));"></div>
+<div style="position:absolute;left:0px;top:0px;right:0px;height:35px;background: -moz-linear-gradient(top, rgba(160,160,160,1) 0%, rgba(63,63,63,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(160,160,160,1)), color-stop(100%,rgba(63,63,63,1)));">
+<div id="back" onclick="thisis[actT.x].back(thisis[actT.x].response.location.split((thisis[actT.x].response.location.split('/')[(thisis[actT.x].response.location.split('/')).length-1]))[0].substring(0, thisis[actT.x].response.location.split((thisis[actT.x].response.location.split('/')[(thisis[actT.x].response.location.split('/')).length]))[0].length-1));"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QgMEzsftwiuzAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAADS0lEQVRYw61YS4vUQBCu7mRmddxW8SjehD2s4GlPixcvHsW/MIg/yF+Q/+FNXB8nD4KiwqqLIiIKSuM+MknKS3emtqY66U7SUPQ8kuqvv3p0dSnoH0r4TkWzmYofyKRhMxU6MJ8AnCQhgI0T5WYgM322XU8PBKcBIHOSO5k5mZvC/gaALSZz8ox/x+vQAeY3QIT+C7GWsYVyU9hv/iW7NDcJezWTinxuiJwzt4oEB2SXfsc5AThz4I64Irs0t9zCFNjKzRUB6p9BYnbUieA0M+8MdvYvO7MeSTs1hX0LABedXCAmp+bOmP+2uHRkFLfg8rsPt1vWdvYNfHzRmMJ+7lJgCvuaAlTXblxyPin5oqbrqg4GJdNmsLgyz/ceXK1+Hip4f9ALjpn7DmR5CXV1CgBnAFC6eUXMXlNT68jIXZv2+K+ufn1B+P4BUsA5Jg+grnhUSwy2Ua0j8+Aa6O17C3j3tDKPPx3CgGEK+8yBm5MAywI5NAhQiSzu3V/AmyelKexXGDFMYZ+TIMkEBluQOuHUULPru9umsD9ggmEK+yoAjq4tphTJ93KX5/7AxMMuzS4A+KA5Y8HSxABc57y17/i8tjCFfRlaHIlSuzSPHJATADgGgH9uPnFy6qK6pAD1gE2ryKOS/6kj8i6vZqISNQpVydAhvdt06EWdoJgqwY4FY3Tw4kCqC5EziAGF/H+uNBVgIwjGAOwzKwYq49jRRMo5S+mEnXP2hjDIwdRd4CAxqpqAL03FoHQ32WAQe4DiBAxiB6iNiM4j2MNAJKdGsQQuaNpYE3elChzAoJQNMJDGggAx4bfUpN1EprTkRC2Zeugp0nVZ39CtBy4yBCT2+LWoTycCi/19jE4YyiCO9MGoXswQE+NEzHUFyCQMjvVD7DvWJNBj82DKUVdHlFijGew6VWIA1uxijn215Zg82CQyuGKNohhTgx6Qv3i5lAJwJXS0eOGBKT6IPf6XAtD3YlasL9h1qkT3B2kDyXek/BV0i7TVaL9Fk/Tie4K+WUSbRyVj9dx1Io+40tLvyMzrG5Ilea4mnQIgz1bCvbcOmBhi6kGIMG/FNtKQbpVioCsCkgdMMN3kkeAUCxLllHOWPRAtvENBShEtFsL/AUa5FgALpIeLAAAAAElFTkSuQmCC"></div>
 </div>
 <div id="0" style="position:absolute;left:0px;top:35px;width:150px;bottom:0px;background:rgba(30,30,30,1);border-right:1px solid black;box-shadow:inset -3px 0px 3px gray;background-image: url(data:image/png;base64,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);
 " onmouseover="thisis[actT.x].cdiv=parseInt(this.id);">

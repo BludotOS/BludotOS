@@ -288,3 +288,8 @@
 [08-May-2013 23:15:15] PHP Warning:  opendir(HDD/MyPictures/Applications) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
 [08-May-2013 23:15:24] PHP Warning:  opendir(HDD/Documents/MyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
 [08-May-2013 23:15:24] PHP Warning:  opendir(HDD/Documents/MyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[09-Aug-2013 02:18:40] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[09-Aug-2013 02:18:44] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[09-Aug-2013 02:19:18] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[09-Aug-2013 02:19:41] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[09-Aug-2013 02:59:52] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13

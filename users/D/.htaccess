@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteCond %{HTTP_COOKIE} cookid=0c39fa62a2782e1f37d56925e9d837d2
+RewriteCond %{HTTP_COOKIE} cookid=
 RewriteRule ^/ - [CO=cookid:.*:.bludotos.com:100:/]
-RewriteCond %{HTTP_COOKIE} !cookid=0c39fa62a2782e1f37d56925e9d837d2
+RewriteCond %{HTTP_COOKIE} !cookid=
 RewriteRule .* http://bludotos.com/Blocked.html

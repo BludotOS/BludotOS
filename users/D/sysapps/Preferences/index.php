@@ -1,12 +1,12 @@
 <?
-$user = $_GET['userN'];
+$user=$_GET['userN'];
 //$filename="users/".$user."/sysapps/FileNet/HDD/Applications/file.txt";
-include("../../../../include/session.php");
+//include("../../../../include/session.php");
 ?>
 <script>
 window.updatecon = function(change) {
 var wall = new XMLHttpRequest();
-	wall.open('GET', 'users/<? echo $user; ?>/sysapps/Preferences/uconf.php?user=<? echo $user; ?>&name=wallpaper&change='+change, true);
+	wall.open('GET', 'users/'+core.user+'/sysapps/Preferences/uconf.php?user='+core.user+'&name=wallpaper&change='+change, true);
 	wall.onreadystatechange = function() {
 		if (wall.readyState==4) {
 		
@@ -20,7 +20,7 @@ window.setrangedockmax = function(node) {
 window.setrangedockmin = function(node) {
     node.value = window.dock.min;
 };
-window.thumbnail = function(tempim, imt) {
+window.thumbnail = function(tempim, imt, name) {
 var tempim = tempim,
       imt = imt,
       c  = document.createElement( 'canvas' ),
@@ -35,7 +35,7 @@ function loadImage(file) {
     img.src = file;
     img.onload = function() {
       grabformvalues();
-      imagetocanvas( this, thumbwidth, thumbheight, crop, background );
+      imagetocanvas( this, thumbwidth, thumbheight, crop, background, name );
     };
   }
   function grabformvalues() {
@@ -46,7 +46,7 @@ function loadImage(file) {
     //jpeg  = document.querySelector( '#jpeg' ).checked,
     //quality = document.querySelector( '#quality ').value / 100;
   }
-  function imagetocanvas( img, thumbwidth, thumbheight, crop, background ) {
+  function imagetocanvas( img, thumbwidth, thumbheight, crop, background, name ) {
     c.width = thumbwidth;
     c.height = thumbheight;
     var dimensions = resize( img.width, img.height, thumbwidth, thumbheight );
@@ -63,18 +63,79 @@ function loadImage(file) {
     cx.drawImage( 
       img, dimensions.x, dimensions.y, dimensions.w, dimensions.h 
     );
-    addtothumbslist( jpeg, quality );
+    addtothumbslist( jpeg, quality, name );
   };
-  function addtothumbslist( jpeg, quality ) {
+  function addtothumbslist( jpeg, quality, name ) {
     var thumb = new Image(),
         url = jpeg ? c.toDataURL( 'image/jpeg' , quality ) : c.toDataURL();
     thumb.src = url;
-    thumb.title = Math.round( url.length / 1000 * 100 ) / 100 + ' KB';
+    thumb.title = name;
     thumb.id = imt;
     thumb.style.cssText = 'width:90px;height:90px;position:relative;float:left;top:0px;left:0px;padding:2px;background:transparent;';
-    tempim.children[1].children[0].appendChild( thumb );
+    tempim.children[2].children[0].appendChild( thumb );
 			//tempimg.onclick = function(){document.getElementById('thedesktop').src = this.src;};
-			thumb.onclick = function(){window.change = this.id;document.getElementById('thedesktop').style.opacity = 0;setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change);",500);};
+			thumb.oncontextmenu = function(e){
+				if(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
+				{
+					window.prefs.obj.children[2].children[0].children[2].children[0].removeChild(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
+				}
+            	if(!e)
+            	{
+            		var e = window.event;
+            	}
+            	var div = document.createElement('div');
+            	div.innerHTML = "<ul><li>Set as Background</li><li>Delete</li></ul>";
+            	div.children[0].children[0].onclick = function(){
+            		window.change = e.target.id;
+            		document.getElementById('thedesktop').style.opacity = 0;
+            		setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change);",500);
+            	};
+            	div.children[0].children[1].onclick = function(){
+            		alert(e.target.title);
+            		var ajax = new XMLHttpRequest();
+            		var sendit = "loc="+e.target.title;
+            		ajax.open('POST', 'users/'+core.user+'/sysapps/Preferences/delete.php', false);
+            		ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            		ajax.onreadystatechange = function() {
+            			if(ajax.readyState == 4)
+            			{
+            				if(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
+				{
+					window.prefs.obj.children[2].children[0].children[2].children[0].removeChild(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
+				};
+            			};
+            		};
+            		ajax.send(sendit);
+            	};
+            	div.children[0].children[0].onmouseover = div.children[0].children[1].onmouseover = function(){
+            		this.style.background = 'blue';
+					this.style.border-radius = 5+'px';
+            	};
+            	div.children[0].children[0].onmouseout = div.children[0].children[1].onmouseout = function(){
+            		this.style.background = 'transparent';
+            	};
+            	div.style.width = 100+'px';
+            	div.style.height = 26+'px';
+            	div.style.background = 'rgba(0,0,0,0.7)';
+            	div.style.position = 'absolute';
+            	div.style.zIndex = 99999;
+            	div.style.left = e.target.offsetLeft+'px';
+            	div.style.top = e.target.offsetTop+e.target.clientHeight+'px';
+            	div.style.borderRadius = 5+'px';
+            	div.children[0].style.cssText = "display: block;padding: 0px;margin: 0px;text-align:center;"
+            	div.children[0].children[0].style.cssText = div.children[0].children[1].style.cssText = "display: block;color: white;font-size: 11px;line-height: 10px;float: left;position: relative;top: 0px;left: 0px;padding: 2px 0 2px 0px;width:100%;"
+            	window.prefs.obj.children[2].children[0].children[2].children[0].appendChild(div);
+            	return false;
+            };
+			thumb.onclick = function(){
+				if(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
+				{
+					window.prefs.obj.children[2].children[0].children[2].children[0].removeChild(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
+				}
+				window.change = this.id;
+				document.getElementById('thedesktop').style.opacity = 0;
+				setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change);",500);
+			};
   };
 function resize( imagewidth, imageheight, thumbwidth, thumbheight ) {
     var w = 0, h = 0, x = 0, y = 0,
@@ -107,7 +168,7 @@ var string = 'default,'+string+',check,script';
 core.getstyle('default', string, 'dock', 'style');
 var string = 'default,'+string+',style,script';
 };
-	wall.open('GET', 'users/<? echo $user; ?>/sysapps/Preferences/uconf.php?array=true&user=<? echo $user; ?>&name='+type+'&change='+encodeURIComponent(string), true);
+	wall.open('GET', 'users/'+core.user+'/sysapps/Preferences/uconf.php?array=true&user='+core.user+'&name='+type+'&change='+encodeURIComponent(string), true);
 	wall.onreadystatechange = function() {
 		if (wall.readyState==4) {
 		};
@@ -115,77 +176,140 @@ var string = 'default,'+string+',style,script';
 wall.send();
 };
 window.Themes = function() {
-var div = document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div')['Themes'].children[0].children[0];
+var div = window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0];
 	var win = new XMLHttpRequest();
-	win.open('GET', 'users/<? echo $user; ?>/sysapps/Preferences/themes.php?user=<? echo $user; ?>&type=windows', true);
+	win.open('GET', 'users/'+core.user+'/sysapps/Preferences/themes.php?user='+core.user+'&type=windows', true);
 	win.onreadystatechange = function() {
 		if (win.readyState==4) {
                 var temp = JSON.parse(win.responseText);
                 //alert(temp.dirs);
-                document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div')['Themes'].children[0].children[0].children[0].innerHTML+='<ul></ul>';
+                window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[0].innerHTML+='<ul></ul>';
                 for(var i=0; i < temp.dirs.length; i++) {
-                document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div')['Themes'].children[0].children[0].children[0].children[1].innerHTML+='<li style="display:block;"><a onclick="window.themeup(\'windows\', \''+temp.dirs[i]+'\');">'+temp.dirs[i]+'</a></li>';
+                window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[0].children[1].innerHTML+='<li style="display:block;"><a onclick="window.themeup(\'windows\', \''+temp.dirs[i]+'\');">'+temp.dirs[i]+'</a></li>';
 if(core.windowtheme == temp.dirs[i]) {
-document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div')['Themes'].children[0].children[0].children[0].children[1].children[i].style.cssText+="background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 52%,#676868 100%);margin: 5px 0px 5px 0px;";
+window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[0].children[1].children[i].style.cssText+="background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 52%,#676868 100%);margin: 5px 0px 5px 0px;";
 };
                 };
-document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div')['Themes'].children[0].children[0].children[0].children[1].style.cssText ="height: auto;position: absolute;left: 5px;right: 5px;bottom: 5px;top: 20px;list-style: none;text-align: center;margin: 0px;padding: 0px;background: white;box-shadow: inset 0px 0px 10px 5px grey;border-radius: 5px;"
+window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[0].children[1].style.cssText ="height: auto;position: absolute;left: 5px;right: 5px;bottom: 5px;top: 20px;list-style: none;text-align: center;margin: 0px;padding: 0px;background: white;box-shadow: inset 0px 0px 10px 5px grey;border-radius: 5px;"
                 };
         };
 win.send();
-var div = document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div')['Themes'].children[0].children[0];
+var div = window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0];
 	var task = new XMLHttpRequest();
-	task.open('GET', 'users/<? echo $user; ?>/sysapps/Preferences/themes.php?user=<? echo $user; ?>&type=taskbars', true);
+	task.open('GET', 'users/'+core.user+'/sysapps/Preferences/themes.php?user='+core.user+'&type=taskbars', true);
 	task.onreadystatechange = function() {
 		if (task.readyState==4) {
                 var temp = JSON.parse(task.responseText);
                 //alert(temp.dirs);
-                document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div')['Themes'].children[0].children[0].children[1].innerHTML+='<ul></ul>';
+                window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[1].innerHTML+='<ul></ul>';
                 for(var i=0; i < temp.dirs.length; i++) {
-                document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div')['Themes'].children[0].children[0].children[1].children[1].innerHTML+='<li  style="display:block;"><a onclick="window.themeup(\'taskbar\', \''+temp.dirs[i]+'\');">'+temp.dirs[i]+'</a></li>';
+                window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[1].children[1].innerHTML+='<li  style="display:block;"><a onclick="window.themeup(\'taskbar\', \''+temp.dirs[i]+'\');">'+temp.dirs[i]+'</a></li>';
 if(core.taskbartheme == temp.dirs[i]) {
-document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div')['Themes'].children[0].children[0].children[1].children[1].children[i].style.cssText+="background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 52%,#676868 100%);margin: 5px 0px 5px 0px;";
+window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[1].children[1].children[i].style.cssText+="background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 52%,#676868 100%);margin: 5px 0px 5px 0px;";
 };
                 };
-document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div')['Themes'].children[0].children[0].children[1].children[1].style.cssText ="height: auto;position: absolute;left: 5px;right: 5px;bottom: 5px;top: 20px;list-style: none;text-align: center;margin: 0px;padding: 0px;background: white;box-shadow: inset 0px 0px 10px 5px grey;border-radius: 5px;"
+window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[1].children[1].style.cssText ="height: auto;position: absolute;left: 5px;right: 5px;bottom: 5px;top: 20px;list-style: none;text-align: center;margin: 0px;padding: 0px;background: white;box-shadow: inset 0px 0px 10px 5px grey;border-radius: 5px;"
                 };
         };
 task.send();
-var div = document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div')['Themes'].children[0].children[0];
+var div = window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0];
 	var dock = new XMLHttpRequest();
-	dock.open('GET', 'users/<? echo $user; ?>/sysapps/Preferences/themes.php?user=<? echo $user; ?>&type=docks', true);
+	dock.open('GET', 'users/'+core.user+'/sysapps/Preferences/themes.php?user='+core.user+'&type=docks', true);
 	dock.onreadystatechange = function() {
 		if (dock.readyState==4) {
                 var temp = JSON.parse(dock.responseText);
                 //alert(temp.dirs);
-                document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div')['Themes'].children[0].children[0].children[2].innerHTML+='<ul></ul>';
+                window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[2].innerHTML+='<ul></ul>';
                 for(var i=0; i < temp.dirs.length; i++) {
-                document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div')['Themes'].children[0].children[0].children[2].children[1].innerHTML+='<li style="display:block;"><a onclick="window.themeup(\'dock\', \''+temp.dirs[i]+'\');">'+temp.dirs[i]+'</a></li>';
+                window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[2].children[1].innerHTML+='<li style="display:block;"><a onclick="window.themeup(\'dock\', \''+temp.dirs[i]+'\');">'+temp.dirs[i]+'</a></li>';
 if(core.docktheme == temp.dirs[i]) {
-document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div')['Themes'].children[0].children[0].children[2].children[1].children[i].style.cssText+="background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 52%,#676868 100%);margin: 5px 0px 5px 0px;";
+window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[2].children[1].children[i].style.cssText+="background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 52%,#676868 100%);margin: 5px 0px 5px 0px;";
 };
                 };
-document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div')['Themes'].children[0].children[0].children[2].children[1].style.cssText ="height: auto;position: absolute;left: 5px;right: 5px;bottom: 5px;top: 20px;list-style: none;text-align: center;margin: 0px;padding: 0px;background: white;box-shadow: inset 0px 0px 10px 5px grey;border-radius: 5px;"
+window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[2].children[1].style.cssText ="height: auto;position: absolute;left: 5px;right: 5px;bottom: 5px;top: 20px;list-style: none;text-align: center;margin: 0px;padding: 0px;background: white;box-shadow: inset 0px 0px 10px 5px grey;border-radius: 5px;"
                 };
         };
 dock.send();
 };
 window.loadwall = function(folder, obj, tempload) {
+	obj.children[2].children[0].innerHTML = '';
 	var wall = new XMLHttpRequest();
-	wall.open('GET', 'users/<? echo $user; ?>/sysapps/Preferences/getwall.php?user=<? echo $user; ?>&folder='+folder, true);
+	wall.open('GET', 'users/'+core.user+'/sysapps/Preferences/getwall.php?user='+core.user+'&folder='+folder, true);
 	wall.onreadystatechange = function() {
 		if (wall.readyState==4) {
 		window.results = JSON.parse(wall.responseText);
 		for(var i=0; i < results.files.length; i++) {
-                        if(('users/<? echo $user; ?>/sysapps/FileNet/'+folder+'/'+results.files[i]).split('.')[1] != 'svg') {
-			window.thumbnail(obj, 'users/<? echo $user; ?>/sysapps/FileNet/'+folder+'/'+results.files[i]);
+                        if(('users/'+core.user+'/sysapps/FileNet/'+folder+'/'+results.files[i]).split('.')[1] != 'svg') {
+			window.thumbnail(obj, 'users/'+core.user+'/sysapps/FileNet/'+folder+'/'+results.files[i], results.files[i]);
                         } else {
                         var tempimg = document.createElement('img');
                         tempimg.style.cssText = 'width:90px;height:90px;position:relative;float:left;top:0px;left:0px;padding:2px;background:transparent;';
-                        tempimg.src = 'users/<? echo $user; ?>/sysapps/FileNet/'+folder+'/'+results.files[i];
-                        obj.children[1].children[0].appendChild( tempimg );
+                        tempimg.title = results.files[i];
+                        tempimg.src = 'users/'+core.user+'/sysapps/FileNet/'+folder+'/'+results.files[i];
+                        obj.children[2].children[0].appendChild( tempimg );
 			//tempimg.onclick = function(){document.getElementById('thedesktop').src = this.src;};
-			tempimg.onclick = function(){window.change = this.src;document.getElementById('thedesktop').style.opacity = 0;setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change);",500);};
+			tempimg.oncontextmenu = function(e){
+				if(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
+				{
+					window.prefs.obj.children[2].children[0].children[2].children[0].removeChild(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
+				}
+            	if(!e)
+            	{
+            		var e = window.event;
+            	}
+            	var div = document.createElement('div');
+            	div.innerHTML = "<ul><li>Set as Background</li><li>Delete</li></ul>";
+            	div.children[0].children[0].onclick = function(){
+            		window.change = e.target.src;
+            		document.getElementById('thedesktop').style.opacity = 0;
+            		setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change);",500);
+            	};
+            	div.children[0].children[0].onmouseover = div.children[0].children[1].onmouseover = function(){
+            		this.style.background = 'blue';
+					this.style.border-radius = 5+'px';
+            	};
+            	div.children[0].children[0].onmouseout = div.children[0].children[1].onmouseout = function(){
+            		this.style.background = 'transparent';
+            	};
+            	div.children[0].children[1].onclick = function(){
+            		alert(e.target.title);
+            		var ajax = new XMLHttpRequest();
+            		var sendit = "loc="+e.target.title;
+            		ajax.open('POST', 'users/'+core.user+'/sysapps/Preferences/delete.php', false);
+            		ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            		ajax.onreadystatechange = function() {
+            			if(ajax.readyState == 4)
+            			{
+            				if(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
+				{
+					window.prefs.obj.children[2].children[0].children[2].children[0].removeChild(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
+				};
+            			};
+            		};
+            		ajax.send(sendit);
+            	};
+            	div.style.width = 100+'px';
+            	div.style.height = 26+'px';
+            	div.style.background = 'rgba(0,0,0,0.7)';
+            	div.style.position = 'absolute';
+            	div.style.zIndex = 99999;
+            	div.style.left = e.target.offsetLeft+'px';
+            	div.style.top = e.target.offsetTop+e.target.clientHeight+'px';
+            	div.style.borderRadius = 5+'px';
+            	div.children[0].style.cssText = "display: block;padding: 0px;margin: 0px;text-align:center;"
+            	div.children[0].children[0].style.cssText = div.children[0].children[1].style.cssText = "display: block;color: white;font-size: 11px;line-height: 10px;float: left;position: relative;top: 0px;left: 0px;padding: 2px 0 2px 0px;width:100%;"
+            	window.prefs.obj.children[2].children[0].children[2].children[0].appendChild(div);
+            	return false;
+            };
+			tempimg.onclick = function(){
+				if(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
+				{
+					window.prefs.obj.children[2].children[0].children[2].children[0].removeChild(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
+				}
+				window.change = this.src;
+				document.getElementById('thedesktop').style.opacity = 0;
+				setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change);",500);
+			};
                         };
 			document.getElementById('thedesktop').style['-webkit-transition'] = "opacity .5s linear";
 			document.getElementById('thedesktop').style.MozTransition = "opacity .5s linear";
@@ -193,7 +317,7 @@ window.loadwall = function(folder, obj, tempload) {
                 if(tempload) {
                 obj.children[1].removeChild(tempload);
                 }
-                MainTools.scrollV(obj.children[1], document.getElementById('Preferences').children[1], obj.children[1].children[0]);
+                MainTools.scrollV(obj.children[2], document.getElementById('Preferences').children[1], obj.children[2].children[0]);
 		};
 	};
 wall.send();
@@ -203,15 +327,15 @@ window.useredit = function () {
 	usered2.open('GET', 'useredit.php', true);
 	usered2.onreadystatechange = function() {
 		if (usered2.readyState==4) {
-		document.getElementById('Preferences').children[1].children[0].children[3].children[0].innerHTML = usered2.responseText;
-		document.getElementById('Preferences').children[1].children[0].getElementsByTagName('form')[0].onsubmit = function (){
+		window.prefs.obj.children[3].children[0].innerHTML = usered2.responseText;
+		window.prefs.obj.getElementsByTagName('form')[0].onsubmit = function (){
 					var usered = new XMLHttpRequest();
 					var senditt = 'subedit='+this.subedit.value+'&curpass='+this.curpass.value+'&newpass='+this.newpass.value+'&email='+this.email.value;
 					usered.open('POST', 'process.php', true);
 					usered.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 					usered.onreadystatechange = function() {
 						if (usered.readyState==4) {
-						document.getElementById('Preferences').children[1].children[0].children[3].children[0].innerHTML = usered.responseText;
+						window.prefs.obj.children[3].children[0].innerHTML = usered.responseText;
 						};
 					};
 				usered.send(senditt);
@@ -222,8 +346,8 @@ usered2.send();
 };
 window.saveit = function() {
 var ajax4 = new XMLHttpRequest();
-	var sendit = 'filedir=../FileNet/HDD/Applications/file.txt'+'&filed='+encodeURIComponent("test")+'&uname=<? echo $user; ?>';
-	ajax4.open('POST', 'users/<? echo $user; ?>/sysapps/DevCenter/update.php', true);
+	var sendit = 'filedir=../FileNet/HDD/Applications/file.txt'+'&filed='+encodeURIComponent("test")+'&uname='+core.user+'';
+	ajax4.open('POST', 'users/'+core.user+'/sysapps/DevCenter/update.php', true);
 	//Send the proper header information along with the request
 	ajax4.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	//ajax4.setRequestHeader("Content-length", sendit.length);
@@ -243,7 +367,7 @@ window.selectpic = function(val) {
         } else {
             var folder = val;
         }
-        var setr = document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div');
+        var setr = window.prefs.obj.getElementsByTagName('div');
         var tempi = setr[11].children[0].children[1].children[0].children.length;
         tempload = document.createElement('img');
                 tempload.src = 'icons/load_progress.gif';
@@ -259,7 +383,10 @@ window.selectpic = function(val) {
 window.clickicon = function(obj, name) {
 	if (name != 'Main') {
 	var objc = obj.cloneNode(true);
-	document.getElementById('Preferences').children[1].children[0].children[0].appendChild(objc);
+	console.log('0');
+	console.log(window.prefs.obj.innerHTML);
+	window.prefs.obj.children[0].appendChild(objc);
+	console.log('1');
 	objc.style.top = 0+'px';
 	objc.style.left = 50+'px';
 	objc.style.width = 40+'px';
@@ -267,7 +394,7 @@ window.clickicon = function(obj, name) {
 	objc.style.padding = '5px 5px 5px 5px';
 	objc.style.borderRadius= 13+'px';
 	objc.style.position = 'absolute';
-	var setr = document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div');
+	var setr = window.prefs.obj.getElementsByTagName('div');
 	for(var i=0; i < setr.length; i++) {
 		if (setr[i].id == name) {
 		setr[1].style.display = 'none';
@@ -277,16 +404,17 @@ window.clickicon = function(obj, name) {
                 tempload = document.createElement('img');
                 tempload.src = 'icons/load_progress.gif';
                 setr[i].children[0].children[1].appendChild(tempload);
+                console.log('2');
                 var folder = 'wallpaper';
 		loadwall(folder, setr[i].children[0], tempload);
 		}
 		}
 	}
 	} else if (name == 'Main') {
-	var setr = document.getElementById('Preferences').children[1].children[0].getElementsByTagName('div');
-	var tope = document.getElementById('Preferences').children[1].children[0].children[0].getElementsByTagName('img');
+	var setr = window.prefs.obj.getElementsByTagName('div');
+	var tope = window.prefs.obj.children[0].getElementsByTagName('img');
 	for(var i=1; i < tope.length; i++) {
-		document.getElementById('Preferences').children[1].children[0].children[0].removeChild(tope[i]);
+		window.prefs.obj.children[0].removeChild(tope[i]);
 	}
 	for(var i=0; i < setr.length; i++) {
 		if (setr[i].id == name) {
@@ -297,18 +425,22 @@ window.clickicon = function(obj, name) {
 	}		
 	
 };
+console.log('username:'+core.user);
 var ajax = new XMLHttpRequest();
-	ajax.open('GET', 'users/<? echo $user; ?>/sysapps/Preferences/main.php?userN=<? echo $user; ?>', true);
+	ajax.open('GET', 'users/'+core.user+'/sysapps/Preferences/main.php?userN='+core.user+'', true);
 	ajax.onreadystatechange = function() {
 		if (ajax.readyState==4) {
-			document.getElementById('Preferences').children[1].children[0].innerHTML = ajax.responseText;
+			document.getElementById('dhtmlwindowholder').lastChild.children[1].children[0].innerHTML = ajax.responseText;
+			window.prefs = {};
+			window.prefs['obj'] = document.getElementById('dhtmlwindowholder').lastChild.children[1].children[0];
+			console.log(ajax.responseText);
 			var ajax2 = new XMLHttpRequest();
-	ajax2.open('GET', 'users/<? echo $user; ?>/sysapps/Preferences/editor.js', true);
+	ajax2.open('GET', 'users/'+core.user+'/sysapps/Preferences/editor.js', true);
 	ajax2.onreadystatechange = function() {
 		if (ajax2.readyState==4) {
 			eval(ajax2.responseText);
-			//MainTools.mscroll(document.getElementById('Preferences').children[1].children[0].children[2].children[0]);
-			//MainTools.scrollV(document.getElementById('Preferences').children[1].children[0].children[2], document.getElementById('Preferences'), document.getElementById('Preferences').children[1].children[0].children[2].children[0].children[1]);				
+			//MainTools.mscroll(window.prefs.obj.children[2].children[0]);
+			//MainTools.scrollV(window.prefs.obj.children[2], document.getElementById('Preferences'), window.prefs.obj.children[2].children[0].children[1]);				
 		};
 	};			
 	ajax2.send();	
@@ -316,7 +448,7 @@ var ajax = new XMLHttpRequest();
 	ajax3.open('GET', '<? echo $filename; ?>', true);
 	ajax3.onreadystatechange = function() {
 		if (ajax3.readyState==4) {
-			document.getElementById('Preferences').children[1].children[0].children[2].children[0].children[1].value = ajax3.responseText;
+			document.getElementById('dhtmlwindowholder').lastChild.children[1].children[0].children[2].children[0].children[1].value = ajax3.responseText;
 				
 		};
 	};			
@@ -326,8 +458,8 @@ var ajax = new XMLHttpRequest();
 	ajax.send();
 save = function () {
 	var ajax4 = new XMLHttpRequest();
-	var sendit = 'filedir=../FileNet/HDD/Applications/file.txt'+'&filed='+encodeURIComponent(document.getElementById("Preferences").children[1].children[0].children[2].children[0].children[1].value)+'&uname=<? echo $user; ?>';
-	ajax4.open('POST', 'users/<? echo $user; ?>/sysapps/Preferences/update.php', true);
+	var sendit = 'filedir=../FileNet/HDD/Applications/file.txt'+'&filed='+encodeURIComponent(document.getElementById("Preferences").children[1].children[0].children[2].children[0].children[1].value)+'&uname='+core.user+'';
+	ajax4.open('POST', 'users/'+core.user+'/sysapps/Preferences/update.php', true);
 	//Send the proper header information along with the request
 	ajax4.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	//ajax4.setRequestHeader("Content-length", sendit.length);

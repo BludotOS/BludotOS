@@ -2,7 +2,7 @@
 $user=$_GET['userN'];
 ?>
 
-<div id="topbar" style="left:0px; top: 0px; position:absolute; height:50px;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxOCUiIHN0b3AtY29sb3I9IiNiOGJhYjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIzNyUiIHN0b3AtY29sb3I9IiM4YzhjOGEiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiMzYjNhM2EiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);right:0px;">
+<div id="topbar" style="left:0px; top: 0px; position:absolute; height:50px;right:0px;background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(160,160,160,1)), color-stop(100%,rgba(63,63,63,1)));background: -moz-linear-gradient(top, rgba(160,160,160,1) 0%, rgba(63,63,63,1) 100%);">
 <img src="images/Prefs_All.png" style="position:absolute;top:0px;left:0px;padding:5px 5px 5px 5px;width:40px; height:40px;" onclick="clickicon(this, 'Main');"/>
 </div>
 <div id="Main" style="left:0px; top: 50px; position:absolute;right:0px;bottom:0px; background:rgb(235,235,235);">
@@ -41,11 +41,12 @@ $user=$_GET['userN'];
 </div>
 <div id="Display" style="left:0px; top: 50px; position:absolute;right:0px;bottom:0px; background:rgb(235,235,235);display:none;">
 <div style="left:0px; top: 0px; position:absolute;right:0px;border-bottom:1px solid black;margin-left: 30px;margin-right: 30px;box-shadow: inset -0px -5px 6px -6px #030303;bottom:10px;">
+	<input type="button" value="upload" style="position: absolute;top: 0px;left: 150px;" onclick="core.loadApps.Uploader('../FileNet/wallpaper/', function(){window.prefs.obj.children[2].children[0].children[2].children[0].innerHTML = ''; clickicon(window.prefs.obj.children[2].children[0], 'Display');});" />
 	<select id="dropchoose" style="position:absolute;left:0px;width:auto;top:0px;height:20px;float:left;box-shadow: inset 0px 0px 3px #030303;" onchange="selectpic('HDD/'+this.value);">
 	  <option value="Wallpapers">Wallpapers</option>
 	  <option value="MyPictures">MyPictures</option>
 	</select>
-	<div id="wallpaper" style="position:absolute;left:0px;top:30px;height:300px;float:left;box-shadow: inset 0px 0px 3px #030303;overflow:hidden;left:0px;right:0px;"><div style="position:absolute;left:0px;top:0px;height:300px;float:left;box-shadow: inset 0px 0px 3px #030303;overflow:hidden;left:0px;right:0px;"></div></div>
+	<div id="wallpaper" style="position:absolute;left:0px;top:30px;bottom:10px;float:left;box-shadow: inset 0px 0px 3px #030303;overflow:hidden;left:0px;right:0px;"><div style="position:absolute;left:0px;top:0px;bottom:10px;float:left;box-shadow: inset 0px 0px 3px #030303;overflow:hidden;left:0px;right:0px;"></div></div>
 	
 </div>
 </div>
