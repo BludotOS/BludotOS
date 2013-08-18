@@ -11,8 +11,8 @@ function load($path)
 {
     return require $path;
 }
-$version = '0.72';
-$updateinfo = "minor security update with logins<br>Major security update!<br>All user files are now secure<br>Core bug fixes<br>More secure!<br>Developer API Completed!!!";
+$version = '0.91';
+$updateinfo = "<We are almost there!!!!</br>Huge update to most of the system and apps</br>Now runs on Android and iOS!</br>New uploader for wallpapers!</br>New improved Dock</br>ETA:Late August(Hopefully the 26th)!!";
 ?>
 <?
 if (!$isMobile) {
@@ -186,11 +186,11 @@ background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHh
   box-shadow:5px 5px 15px black;
 }
 #notifylogo {
-  position:absolute;
+  position:relative;
   top:0px;
   left:0px;
-  width:50px;
-  height:auto;
+  width:100%;
+  height:50px;
   float:left;
 }
 .notifylogo {
@@ -224,7 +224,7 @@ font-family:arial;
 <? if(!$isMobile) { ?>
 <link rel="stylesheet" href="loadOS.css" type="text/css"/>
 <? }; ?>
-<script src="http://rawgithub.com/ajaxorg/ace-builds/master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://rawgithub.com/ajaxorg/ace-builds/master/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                             //
@@ -589,7 +589,7 @@ var AchatS = prompt('Username');
 
      // if (favorite) equivalent to if (favorite != null && favorite != "");
      if (AchatS) {
-        window.dock.AddNew({
+        window.dock.addIcon({
             name:      'images/AmoebaChat',
             label:     'AmoebaChat',
             extension: '.png',
@@ -688,7 +688,7 @@ Prefs:function ()
 <?
 if (!$isMobile) {
 ?>
-window.dock.AddNew({
+window.dock.addIcon({
             name:      'icons/Preferences',
             label:     'Prefs',
             extension: '.png',
@@ -718,11 +718,31 @@ window.dock.removeApp('Prefs');
 return true;
 }
 },
+Uploader:function(loc, callback){
+	var tempdiv;
+	var Uploader=SimpleWin.create("Uploader", "Uploader", "users/"+core.user+"/sysapps/uploader/index.php?user="+core.user+"&location="+loc+"", 250, 525, function(obj){
+		var temp = document.createElement('div');
+		temp.style.cssText = "position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: transparent;z-index:1;";
+		document.getElementById('dhtmlwindowholder').insertBefore(temp, document.getElementById('dhtmlwindowholder').children[0]);
+		temp.style.zIndex = parseInt(document.getElementById('dhtmlwindowholder').lastChild.previousSibling.style.zIndex)+1;
+		tempdiv = temp;
+		window.tempdiv = tempdiv;
+		temp.onclick = function(){
+			var num = 0;
+			var interval = setInterval(function(){num++; if(num == 10){thisis[actT.x].style.display = 'block';clearInterval(interval);} else {thisis[actT.x].style.display = thisis[actT.x].style.display == 'none' ? 'block' : 'none';}}, 150);
+		};
+		});
+Uploader.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
+document.getElementById('dhtmlwindowholder').removeChild(window.tempdiv);
+callback();
+return true;
+}
+},
 AdminC:function ()
 {
 var AdminC=SimpleWin.create("AdminC", "AdminC", "users/"+core.user+"/admin/admin.php")
 AdminC.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
-return true
+return true;
 }
 },
 Safari:function ()
@@ -759,13 +779,13 @@ window.appdivopen =1;
 window.appdiv = core.create('div');
 document.body.appendChild(appdiv);
 appdiv.style.cssText = 'background: black;width: 300px;height: 250px;z-index: 2147486;position: fixed;bottom: 60px;border-radius: 20px;right: 486px;border: 2px solid blue;box-shadow: inset 0px 0px 23px -3px white;padding:5px;';
-if(dock.skip == 1 || dock.skip == true) {
-appdiv.style.bottom = dock.min+'px';
-} else if(dock.skip == 0 || dock.skip == false) {
+if(dock.mag == 1 || dock.mag == true) {
 appdiv.style.bottom = dock.max+'px';
+} else if(dock.mag == 0 || dock.mag == false) {
+appdiv.style.bottom = dock.min+'px';
 };
-appdiv.style.left = checkthis.offsetLeft+((window.innerWidth-dock.node.clientWidth)/2)-(appdiv.clientWidth/2)+(node.clientWidth/2)+'px';
-docklock = true;
+appdiv.style.left = checkthis.offsetLeft+((window.innerWidth-dock.dock.clientWidth)/2)-(appdiv.clientWidth/2)+(node.clientWidth/2)+'px';
+dock.docklock();
 appdiv.className = 'appdiv';
 var getapps = new XMLHttpRequest();
 getapps.open('GET', 'apps.php?goto=users/'+core.user+'/sysapps/FileNet/apps/', true);
@@ -784,7 +804,7 @@ getapps.onreadystatechange = function() {
         temp.img.style.cssText = 'position:relative;top:0px;left:0px;width:75px;height75px;';
         temp.appendChild(temp.name);
         temp.name.style.cssText = 'position:relative;top:0px;left:0px;width:100%;height75px;color:white;text-align:center;';
-        temp.onclick = function(){core.openapp(this.name.innerHTML);core.loadApps.Applications(null);if(dock.skip == 1) {dock.skipT(0);setTimeout(function(){dock.skipT(1);}, 5);} else if(dock.skip == false || dock.skip == 0){dock.skipT(0);};};
+        temp.onclick = function(){core.openapp(this.name.innerHTML);core.loadApps.Applications(null);if(dock.skip == 1) {dock.magT(0);setTimeout(function(){dock.magT(1);}, 5);} else if(dock.skip == false || dock.skip == 0){dock.magT(0);};};
         };
 }
 }
@@ -792,7 +812,7 @@ getapps.send();
 } else if (window.appdivopen == 1) {
 delete window.appdivopen;
 document.body.removeChild(window.appdiv);
-docklock = false;
+dock.docklock();
 };
 }
 };
@@ -805,7 +825,7 @@ var openapp = new XMLHttpRequest();
 	//goto2.setRequestHeader("Content-length", sendit.length);
 	openapp.onreadystatechange = function() {
 	if (openapp.readyState==4) {
-window.dock.AddNew({
+window.dock.addIcon({
             name:      'icons/'+name,
             label:     name,
             extension: '.png',
@@ -989,7 +1009,7 @@ core.checkupdates();
                                                <? if(!$isMobile){?>
                                                 prefit.Dockmag);
                                                <? } else if($isMobile){?>
-                                                true);
+                                                false);
                                                <?};?>
                                      } else if(core.Admin != 1 && reap.Dev != 1) {
                                       window.dockit = [];
@@ -1017,7 +1037,7 @@ core.checkupdates();
                                                <? if(!$isMobile){?>
                                                 prefit.Dockmag);
                                                <? } else if($isMobile){?>
-                                                true);
+                                                false);
                                                <?};?>
                                      }
                                      }, 3000);
@@ -1089,14 +1109,15 @@ core.checkupdates();
     	core.OS.Taskbar.menu1.menu2sub1.li6.a = core.create('a');
     	core.OS.Taskbar.menu1.menu2sub1.li6.appendChild(core.OS.Taskbar.menu1.menu2sub1.li6.a);
     	core.OS.Taskbar.menu1.menu2sub1.li6.a.innerHTML = 'Reboot';
-    	core.OS.Taskbar.temp = core.create('ul');
+    	core.OS.Taskbar.temp = core.OS.Taskbar.menu1.cloneNode(true);
     	document.body.appendChild(core.OS.Taskbar.temp);
-    	core.style('top:-8px', core.OS.Taskbar.temp);
+    	//core.style('top:-8px', core.OS.Taskbar.temp);
     	core.OS.Taskbar.temp.id = 'menu0';
-    	core.OS.Taskbar.temp2 = core.create('ul');
+    	core.OS.Taskbar.temp2 = core.OS.Taskbar.menu1.cloneNode(true);
     	document.body.appendChild(core.OS.Taskbar.temp2);
-    	core.style('top:-8px', core.OS.Taskbar.temp2);
+    	//core.style('top:-8px', core.OS.Taskbar.temp2);
     	core.OS.Taskbar.temp2.id = 'menu2';
+			document.getElementById('menubar').style.right = '0px';
     	
     	
     	});
@@ -1122,8 +1143,7 @@ window.bar = function(idn){
     clearNodes(menubar);
     //menubar.appendChild(document.querySelector("#menu"+idn).cloneNode(true));
     menubar.appendChild(document.getElementById("menu"+idn).cloneNode(true));
-if(idn == 1)
-{
+
 core.OS.Taskbar.children[0].children[0].onclick = function()
     	{
     	clickt(this);
@@ -1145,10 +1165,10 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
         core.OS.Taskbar.children[0].children[1].children[2].children[1].children[0].onclick = function(){
                 if(dock.skip == 1)
                 {
-                     dock.skipT(0);
+                     dock.magT(0);
                      this.innerHTML = 'on';
                 } else {
-                     dock.skipT(1);
+                     dock.magT(1);
                      this.innerHTML = 'off';
                 };
         };
@@ -1178,7 +1198,6 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
     		window.location.href='http://bludotos.com';
     	};
     	};
-};
 };
 bar(1);
 core.OS.Taskbar.children[0].children[0].onclick = function()
@@ -1227,7 +1246,7 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
                          updatev.open("GET", "uconf.php?path=users/"+core.user+"/config&change=<? echo $version; ?>", true);
                          updatev.onreadystatechange = function() {
                                if(updatev.readyState == 4){
-                                     MainTools.Notify('Version Updatdhtmldhtmled\n<? echo $version; ?>B<br><? echo $updateinfo; ?>', null, 8);
+                                     MainTools.Notify('Version Updatdhtmldhtmled\n<? echo $version; ?>B<br><? echo $updateinfo; ?>', null, 20);
                                }
                                }
                                updatev.send();
@@ -1473,7 +1492,18 @@ var loadPrefs = function(every, done){
         this.style('position:fixed;width:100%;height:100%;left:0px;top:0px;z-index:2147487;background:url(images/BluDot-svg.jpg) no-repeat;background-size:100%;', this.OS.logindiv);
         this.OS.logindiv.id = 'logdiv';
         var loadmain = new XMLHttpRequest();
+<?
+if(!$isMobile)
+{
+?>
         	loadmain.open('GET', 'main.php', true);
+<?
+} else {
+?>
+        	loadmain.open('GET', 'main-mobile.php', true);
+<?
+};
+?>
         	loadmain.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             loadmain.onreadystatechange = function() {
 	            if(loadmain.readyState == 4){
@@ -1506,15 +1536,18 @@ var loadPrefs = function(every, done){
     	this.OS.Desktop.appendChild(this.OS.Desktop.background);
     	this.OS.Dock = this.create('div');
     	document.body.appendChild(this.OS.Dock);
-    	this.OS.Dock.id = 'dockContainer'
+    	this.OS.Dock.id = 'dockcontainer'
     	//this.style('', this.OS.Dock);
-    	this.OS.Dock.bg = this.create('div');
-    	this.OS.Dock.appendChild(this.OS.Dock.bg);
-    	this.OS.Dock.bg.id = 'background';
+    	this.OS.Dock.Dock = this.create('div');
+    	this.OS.Dock.Dock.id = "dock";
+    	this.OS.Dock.appendChild(this.OS.Dock.Dock);
+    	this.OS.Dock.Dock.bg = this.create('div');
+    	this.OS.Dock.Dock.appendChild(this.OS.Dock.Dock.bg);
+    	this.OS.Dock.Dock.bg.id = 'background';
     	//this.style('', this.OS.Dock.bg);
-    	this.OS.Dock.dock = this.create('div');
-    	this.OS.Dock.appendChild(this.OS.Dock.dock);
-    	this.OS.Dock.dock.id = 'dock';
+    	this.OS.Dock.Dock.dock = this.create('div');
+    	this.OS.Dock.Dock.appendChild(this.OS.Dock.Dock.dock);
+    	this.OS.Dock.Dock.dock.id = 'iconNodes';
     	//this.style('', this.OS.Dock.dock);
     	
         clearInterval(core.progressI);
@@ -1607,7 +1640,7 @@ var checkp = new XMLHttpRequest();
                                                <? if(!$isMobile){?>
                                                 prefit.Dockmag);
                                                <? } else if($isMobile){?>
-                                                true);
+                                                false);
                                                <?};?>
                                      } else if(core.Admin != 1 && core.Dev != 1) {
                                       window.dockit = [];
@@ -1635,7 +1668,7 @@ var checkp = new XMLHttpRequest();
                                                <? if(!$isMobile){?>
                                                 prefit.Dockmag);
                                                <? } else if($isMobile){?>
-                                                true);
+                                                false);
                                                <?};?>
                                      }
                                      }, 3000);
@@ -1713,14 +1746,15 @@ var checkp = new XMLHttpRequest();
     	core.OS.Taskbar.menu1.menu2sub1.li6.a = core.create('a');
     	core.OS.Taskbar.menu1.menu2sub1.li6.appendChild(core.OS.Taskbar.menu1.menu2sub1.li6.a);
     	core.OS.Taskbar.menu1.menu2sub1.li6.a.innerHTML = 'Reboot';
-    	core.OS.Taskbar.temp = core.create('ul');
+    	core.OS.Taskbar.temp = core.OS.Taskbar.menu1.cloneNode(true);
     	document.body.appendChild(core.OS.Taskbar.temp);
-    	core.style('top:-8px', core.OS.Taskbar.temp);
+    	//core.style('top:-8px', core.OS.Taskbar.temp);
     	core.OS.Taskbar.temp.id = 'menu0';
     	core.OS.Taskbar.temp2 = core.create('ul');
     	document.body.appendChild(core.OS.Taskbar.temp2);
-    	core.style('top:-8px', core.OS.Taskbar.temp2);
+    	//core.style('top:-8px', core.OS.Taskbar.temp2);
     	core.OS.Taskbar.temp2.id = 'menu2';
+			document.getElementById('menubar').style.right = '0px';
     	
     	
     	});
@@ -1746,9 +1780,11 @@ window.bar = function(idn){
     var loc = document.location+"";
     clearNodes(menubar);
     //menubar.appendChild(document.querySelector("#menu"+idn).cloneNode(true));
+    /*document.getElementById('menu0').innerHTML = '';
+document.getElementById('menu0').appendChild(document.getElementById('menu1').children[0].cloneNode(true));
+document.getElementById('menu0').appendChild(document.getElementById('menu1').children[1].cloneNode(true));*/
     menubar.appendChild(document.getElementById("menu"+idn).cloneNode(true));
     menubar.children[0].style.display = 'block';
-if(idn == 1) {
 core.OS.Taskbar.children[0].children[0].onclick = function()
     	{
     	clickt(this);
@@ -1770,10 +1806,10 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
         core.OS.Taskbar.children[0].children[1].children[2].children[1].onclick = function(){
                 if(dock.skip == 1)
                 {
-                     dock.skipT(0);
+                     dock.magT(0);
                      this.innerHTML = 'on';
                 } else {
-                     dock.skipT(1);
+                     dock.magT(1);
                      this.innerHTML = 'off';
                 };
         };
@@ -1802,7 +1838,6 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
     		window.location.href='http://bludotos.com';
     	};
     	<? }; ?>
-};
 }
 bar(1);
 core.OS.Taskbar.children[0].children[0].onclick = function()
@@ -1962,7 +1997,7 @@ test.send();
 window.onload = function(){core.getscript('default', 'script', 'maintools');core.load();};
 </script>
 </head>
-<body scrolling="no" id="body" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
+<body scrolling="no" id="body" ondragstart="return false;" onselectstart="return false;">
 <div id="notifications"></div>
 </body>
 </html>

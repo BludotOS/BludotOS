@@ -74,7 +74,7 @@ ul li {
         align: center;
 	font-weight: normal;
 	text-shadow: 0 1px 1px rgba(255, 255, 255, .9);
-        font-size: 25;
+        font-size: 50;
         padding-left: 5px;
         padding-right: 5px;
         padding-top: 0px;
@@ -138,7 +138,7 @@ ul li {
 	font-weight: 550;
         color: white;
 	//text-shadow: 0 1px 1px rgba(255, 255, 255, .9);
-        font-size: 25;
+        font-size: 50;
 	width: 100px;
 }
 
@@ -148,7 +148,7 @@ ul li {
         align: center;
 	font-weight: normal;
 	//text-shadow: 0 1px 1px rgba(255, 255, 255, .9);
-        font-size: 25;
+        font-size: 50;
 	width: 100px;
 }
 /* level 3+ list */

@@ -224,7 +224,7 @@ minimize:function(wid){
 			wid.style.display='none';
 		}, 200);
                 wid.nim+=1;
-		dock.AddNew({
+		dock.addIcon({
                              name:      '../../icons/'+wid.id,
                              label:     wid.id+wid.nim,
                              extension: '.png',
@@ -240,7 +240,7 @@ minimize:function(wid){
 			window.bar(1);
 		};
 	} else if (wid.min==true){
-                dock.removeApp(wid.id+wid.nim);
+                window.dock.removeApp(wid.id+wid.nim);
                 wid.nim-=1;
 		wid.style.display='block';
 		wid.style['-webkit-transition'] = 'all .2s';

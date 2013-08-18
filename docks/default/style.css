@@ -5,7 +5,7 @@
     text-align: center;
     /*padding: 5px 5px 2px 5px;*/
     -webkit-transform-origin: 50% 100%;
-    z-index:2147483;
+    z-index:99999;
     }
     #dock{
     height: 1px;
