@@ -21,17 +21,23 @@ $string = urldecode("RewriteEngine%20On%0ARewriteCond%20%25%7BHTTP_COOKIE%7D%20c
          		
          	};
          };
-copydir("../users/admin","../users/$name");
+//copydir("../users/admin","../users/$name");
 copydir("../users/admin/config","../users/$name/config");
-copydir("../users/admin/sysapps","../users/$name/sysapps");
+//copydir("../users/admin/sysapps","../users/$name/sysapps");
 copydir("../users/admin/sysapps/DevCenter","../users/$name/sysapps/DevCenter");
-copydir("../users/admin/sysapps/DevCenter/images","../users/$name/sysapps/DevCenter/images");
+//copydir("../users/admin/sysapps/DevCenter/images","../users/$name/sysapps/DevCenter/images");
+if($name != "admin")
+{
+	//rrmdir("../users/$name/sysapps/DevCenter/include");
+	//mkdir("../users/$name/sysapps/DevCenter/include/APP_core");
+};
 copydir("../users/admin/sysapps/DevCenter/include","../users/$name/sysapps/DevCenter/include");
+copydir("../users/admin/sysapps/DevCenter/include/APP_core","../users/$name/sysapps/DevCenter/include/APP_core");
 copydir("../users/admin/sysapps/FileNet","../users/$name/sysapps/FileNet");
-copydir("../users/admin/sysapps/FileNet/wallpaper","../users/$name/sysapps/FileNet/wallpaper");
+//copydir("../users/admin/sysapps/FileNet/wallpaper","../users/$name/sysapps/FileNet/wallpaper");
 copydir("../users/admin/sysapps/FileNet/include","../users/$name/sysapps/FileNet/include");
 //rrmdir("../users/$name/sysapps/uploader");
-copydir("../users/admin/sysapps/uploader","../users/$name/sysapps/uploader");
+copydir("../users/admin/sysapps/Uploader","../users/$name/sysapps/Uploader");
 //copydir("../users/admin/sysapps/FileNet/images","../users/$name/sysapps/FileNet/images");
 copydir("../users/admin/sysapps/Preferences","../users/$name/sysapps/Preferences");
 $link = mysql_connect('localhost','vios_admin','qlalsldl');

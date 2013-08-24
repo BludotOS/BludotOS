@@ -188,7 +188,7 @@ scrollV:function (ele, elem, eleme, right, top, bottom){
 	};
 	var sidebard = document.createElement('div');
 	var sidebarinner = document.createElement('div');
-	sidebard.style.cssText = 'position:absolute;width:10px;left:'+(ele.clientWidth-10)+'px;top:'+top+'px;background:rgba(225, 225, 225, 1);box-shadow:0px 1px 5px black inset;display:block;bottom:0px;';
+	sidebard.style.cssText = 'position:absolute;width:10px;right:0px;top:'+top+'px;background:rgba(225, 225, 225, 1);box-shadow:0px 1px 5px black inset;display:block;bottom:0px;';
 	sidebarinner.style.cssText = 'position:relative;width:5px;height:'+(((ele.clientHeight-bottom)/eleme.scrollHeight)*(ele.clientHeight-bottom))+'px;top:0px;left:5px;background:rgba(61, 61, 61, 1);-webkit-border-top-left-radius:10px;-webkit-border-bottom-left-radius:10px;';
 	ele.appendChild(sidebard);
 	sidebard.appendChild(sidebarinner);

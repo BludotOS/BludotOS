@@ -4,6 +4,16 @@ $user=$_GET['userN'];
 //include("../../../../include/session.php");
 ?>
 <script>
+window.thisis.push(actT);
+//var x = 0;
+for (var x=0; x < thisis.length; x++)
+{
+     if(window.actT == thisis[x])
+     {
+        var thisislength = x;
+        window.actT.x = x;
+     }
+}
 window.updatecon = function(change) {
 var wall = new XMLHttpRequest();
 	wall.open('GET', 'users/'+core.user+'/sysapps/Preferences/uconf.php?user='+core.user+'&name=wallpaper&change='+change, true);
@@ -75,9 +85,9 @@ function loadImage(file) {
     tempim.children[2].children[0].appendChild( thumb );
 			//tempimg.onclick = function(){document.getElementById('thedesktop').src = this.src;};
 			thumb.oncontextmenu = function(e){
-				if(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
+				if(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
 				{
-					window.prefs.obj.children[2].children[0].children[2].children[0].removeChild(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
+					thisis[actT.x].pobj.children[2].children[0].children[2].children[0].removeChild(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
 				}
             	if(!e)
             	{
@@ -88,7 +98,7 @@ function loadImage(file) {
             	div.children[0].children[0].onclick = function(){
             		window.change = e.target.id;
             		document.getElementById('thedesktop').style.opacity = 0;
-            		setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change);",500);
+            		setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change.split('FileNet/')[1]);",500);
             	};
             	div.children[0].children[1].onclick = function(){
             		alert(e.target.title);
@@ -99,21 +109,15 @@ function loadImage(file) {
             		ajax.onreadystatechange = function() {
             			if(ajax.readyState == 4)
             			{
-            				if(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
+            				if(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
 				{
-					window.prefs.obj.children[2].children[0].children[2].children[0].removeChild(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
+					thisis[actT.x].pobj.children[2].children[0].children[2].children[0].removeChild(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
 				};
             			};
             		};
             		ajax.send(sendit);
             	};
-            	div.children[0].children[0].onmouseover = div.children[0].children[1].onmouseover = function(){
-            		this.style.background = 'blue';
-					this.style.border-radius = 5+'px';
-            	};
-            	div.children[0].children[0].onmouseout = div.children[0].children[1].onmouseout = function(){
-            		this.style.background = 'transparent';
-            	};
+            	div.className = "wallpaperdrop";
             	div.style.width = 100+'px';
             	div.style.height = 26+'px';
             	div.style.background = 'rgba(0,0,0,0.7)';
@@ -124,17 +128,17 @@ function loadImage(file) {
             	div.style.borderRadius = 5+'px';
             	div.children[0].style.cssText = "display: block;padding: 0px;margin: 0px;text-align:center;"
             	div.children[0].children[0].style.cssText = div.children[0].children[1].style.cssText = "display: block;color: white;font-size: 11px;line-height: 10px;float: left;position: relative;top: 0px;left: 0px;padding: 2px 0 2px 0px;width:100%;"
-            	window.prefs.obj.children[2].children[0].children[2].children[0].appendChild(div);
+            	thisis[actT.x].pobj.children[2].children[0].children[2].children[0].appendChild(div);
             	return false;
             };
 			thumb.onclick = function(){
-				if(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
+				if(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
 				{
-					window.prefs.obj.children[2].children[0].children[2].children[0].removeChild(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
+					thisis[actT.x].pobj.children[2].children[0].children[2].children[0].removeChild(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
 				}
 				window.change = this.id;
 				document.getElementById('thedesktop').style.opacity = 0;
-				setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change);",500);
+				setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change.split('FileNet/')[1]);",500);
 			};
   };
 function resize( imagewidth, imageheight, thumbwidth, thumbheight ) {
@@ -165,8 +169,8 @@ var string = 'default,'+string+',check,check';
 core.getstyle('default', string, 'taskbar', 'check');
 var string = 'default,'+string+',check,script';
 } else if(type == 'dock') {
-core.getstyle('default', string, 'dock', 'style');
-var string = 'default,'+string+',style,script';
+core.getstyle('default', string, 'dock', 'check');
+var string = 'default,'+string+',check,script';
 };
 	wall.open('GET', 'users/'+core.user+'/sysapps/Preferences/uconf.php?array=true&user='+core.user+'&name='+type+'&change='+encodeURIComponent(string), true);
 	wall.onreadystatechange = function() {
@@ -176,57 +180,57 @@ var string = 'default,'+string+',style,script';
 wall.send();
 };
 window.Themes = function() {
-var div = window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0];
+var div = thisis[actT.x].pobj.getElementsByTagName('div')['Themes'].children[0].children[0];
 	var win = new XMLHttpRequest();
 	win.open('GET', 'users/'+core.user+'/sysapps/Preferences/themes.php?user='+core.user+'&type=windows', true);
 	win.onreadystatechange = function() {
 		if (win.readyState==4) {
                 var temp = JSON.parse(win.responseText);
                 //alert(temp.dirs);
-                window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[0].innerHTML+='<ul></ul>';
+                thisis[actT.x].pobj.getElementsByTagName('div')['Themes'].children[0].children[0].children[0].innerHTML+='<ul></ul>';
                 for(var i=0; i < temp.dirs.length; i++) {
-                window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[0].children[1].innerHTML+='<li style="display:block;"><a onclick="window.themeup(\'windows\', \''+temp.dirs[i]+'\');">'+temp.dirs[i]+'</a></li>';
+                thisis[actT.x].pobj.getElementsByTagName('div')['Themes'].children[0].children[0].children[0].children[1].innerHTML+='<li style="display:block;"><a onclick="window.themeup(\'windows\', \''+temp.dirs[i]+'\');">'+temp.dirs[i]+'</a></li>';
 if(core.windowtheme == temp.dirs[i]) {
-window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[0].children[1].children[i].style.cssText+="background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 52%,#676868 100%);margin: 5px 0px 5px 0px;";
+thisis[actT.x].pobj.getElementsByTagName('div')['Themes'].children[0].children[0].children[0].children[1].children[i].style.cssText+="background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 52%,#676868 100%);margin: 5px 0px 5px 0px;";
 };
                 };
-window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[0].children[1].style.cssText ="height: auto;position: absolute;left: 5px;right: 5px;bottom: 5px;top: 20px;list-style: none;text-align: center;margin: 0px;padding: 0px;background: white;box-shadow: inset 0px 0px 10px 5px grey;border-radius: 5px;"
+thisis[actT.x].pobj.getElementsByTagName('div')['Themes'].children[0].children[0].children[0].children[1].style.cssText ="height: auto;position: absolute;left: 5px;right: 5px;bottom: 5px;top: 20px;list-style: none;text-align: center;margin: 0px;padding: 0px;background: white;box-shadow: inset 0px 0px 10px 5px grey;border-radius: 5px;"
                 };
         };
 win.send();
-var div = window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0];
+var div = thisis[actT.x].pobj.getElementsByTagName('div')['Themes'].children[0].children[0];
 	var task = new XMLHttpRequest();
 	task.open('GET', 'users/'+core.user+'/sysapps/Preferences/themes.php?user='+core.user+'&type=taskbars', true);
 	task.onreadystatechange = function() {
 		if (task.readyState==4) {
                 var temp = JSON.parse(task.responseText);
                 //alert(temp.dirs);
-                window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[1].innerHTML+='<ul></ul>';
+                thisis[actT.x].pobj.getElementsByTagName('div')['Themes'].children[0].children[0].children[1].innerHTML+='<ul></ul>';
                 for(var i=0; i < temp.dirs.length; i++) {
-                window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[1].children[1].innerHTML+='<li  style="display:block;"><a onclick="window.themeup(\'taskbar\', \''+temp.dirs[i]+'\');">'+temp.dirs[i]+'</a></li>';
+                thisis[actT.x].pobj.getElementsByTagName('div')['Themes'].children[0].children[0].children[1].children[1].innerHTML+='<li  style="display:block;"><a onclick="window.themeup(\'taskbar\', \''+temp.dirs[i]+'\');">'+temp.dirs[i]+'</a></li>';
 if(core.taskbartheme == temp.dirs[i]) {
-window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[1].children[1].children[i].style.cssText+="background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 52%,#676868 100%);margin: 5px 0px 5px 0px;";
+thisis[actT.x].pobj.getElementsByTagName('div')['Themes'].children[0].children[0].children[1].children[1].children[i].style.cssText+="background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 52%,#676868 100%);margin: 5px 0px 5px 0px;";
 };
                 };
-window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[1].children[1].style.cssText ="height: auto;position: absolute;left: 5px;right: 5px;bottom: 5px;top: 20px;list-style: none;text-align: center;margin: 0px;padding: 0px;background: white;box-shadow: inset 0px 0px 10px 5px grey;border-radius: 5px;"
+thisis[actT.x].pobj.getElementsByTagName('div')['Themes'].children[0].children[0].children[1].children[1].style.cssText ="height: auto;position: absolute;left: 5px;right: 5px;bottom: 5px;top: 20px;list-style: none;text-align: center;margin: 0px;padding: 0px;background: white;box-shadow: inset 0px 0px 10px 5px grey;border-radius: 5px;"
                 };
         };
 task.send();
-var div = window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0];
+var div = thisis[actT.x].pobj.getElementsByTagName('div')['Themes'].children[0].children[0];
 	var dock = new XMLHttpRequest();
 	dock.open('GET', 'users/'+core.user+'/sysapps/Preferences/themes.php?user='+core.user+'&type=docks', true);
 	dock.onreadystatechange = function() {
 		if (dock.readyState==4) {
                 var temp = JSON.parse(dock.responseText);
                 //alert(temp.dirs);
-                window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[2].innerHTML+='<ul></ul>';
+                thisis[actT.x].pobj.getElementsByTagName('div')['Themes'].children[0].children[0].children[2].innerHTML+='<ul></ul>';
                 for(var i=0; i < temp.dirs.length; i++) {
-                window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[2].children[1].innerHTML+='<li style="display:block;"><a onclick="window.themeup(\'dock\', \''+temp.dirs[i]+'\');">'+temp.dirs[i]+'</a></li>';
+                thisis[actT.x].pobj.getElementsByTagName('div')['Themes'].children[0].children[0].children[2].children[1].innerHTML+='<li style="display:block;"><a onclick="window.themeup(\'dock\', \''+temp.dirs[i]+'\');">'+temp.dirs[i]+'</a></li>';
 if(core.docktheme == temp.dirs[i]) {
-window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[2].children[1].children[i].style.cssText+="background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 52%,#676868 100%);margin: 5px 0px 5px 0px;";
+thisis[actT.x].pobj.getElementsByTagName('div')['Themes'].children[0].children[0].children[2].children[1].children[i].style.cssText+="background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 52%,#676868 100%);margin: 5px 0px 5px 0px;";
 };
                 };
-window.prefs.obj.getElementsByTagName('div')['Themes'].children[0].children[0].children[2].children[1].style.cssText ="height: auto;position: absolute;left: 5px;right: 5px;bottom: 5px;top: 20px;list-style: none;text-align: center;margin: 0px;padding: 0px;background: white;box-shadow: inset 0px 0px 10px 5px grey;border-radius: 5px;"
+thisis[actT.x].pobj.getElementsByTagName('div')['Themes'].children[0].children[0].children[2].children[1].style.cssText ="height: auto;position: absolute;left: 5px;right: 5px;bottom: 5px;top: 20px;list-style: none;text-align: center;margin: 0px;padding: 0px;background: white;box-shadow: inset 0px 0px 10px 5px grey;border-radius: 5px;"
                 };
         };
 dock.send();
@@ -249,9 +253,9 @@ window.loadwall = function(folder, obj, tempload) {
                         obj.children[2].children[0].appendChild( tempimg );
 			//tempimg.onclick = function(){document.getElementById('thedesktop').src = this.src;};
 			tempimg.oncontextmenu = function(e){
-				if(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
+				if(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
 				{
-					window.prefs.obj.children[2].children[0].children[2].children[0].removeChild(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
+					thisis[actT.x].pobj.children[2].children[0].children[2].children[0].removeChild(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
 				}
             	if(!e)
             	{
@@ -262,15 +266,9 @@ window.loadwall = function(folder, obj, tempload) {
             	div.children[0].children[0].onclick = function(){
             		window.change = e.target.src;
             		document.getElementById('thedesktop').style.opacity = 0;
-            		setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change);",500);
+            		setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change.split('FileNet/')[1]);",500);
             	};
-            	div.children[0].children[0].onmouseover = div.children[0].children[1].onmouseover = function(){
-            		this.style.background = 'blue';
-					this.style.border-radius = 5+'px';
-            	};
-            	div.children[0].children[0].onmouseout = div.children[0].children[1].onmouseout = function(){
-            		this.style.background = 'transparent';
-            	};
+            	div.className = "wallpaperdrop";
             	div.children[0].children[1].onclick = function(){
             		alert(e.target.title);
             		var ajax = new XMLHttpRequest();
@@ -280,9 +278,9 @@ window.loadwall = function(folder, obj, tempload) {
             		ajax.onreadystatechange = function() {
             			if(ajax.readyState == 4)
             			{
-            				if(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
+            				if(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
 				{
-					window.prefs.obj.children[2].children[0].children[2].children[0].removeChild(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
+					thisis[actT.x].pobj.children[2].children[0].children[2].children[0].removeChild(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
 				};
             			};
             		};
@@ -298,17 +296,17 @@ window.loadwall = function(folder, obj, tempload) {
             	div.style.borderRadius = 5+'px';
             	div.children[0].style.cssText = "display: block;padding: 0px;margin: 0px;text-align:center;"
             	div.children[0].children[0].style.cssText = div.children[0].children[1].style.cssText = "display: block;color: white;font-size: 11px;line-height: 10px;float: left;position: relative;top: 0px;left: 0px;padding: 2px 0 2px 0px;width:100%;"
-            	window.prefs.obj.children[2].children[0].children[2].children[0].appendChild(div);
+            	thisis[actT.x].pobj.children[2].children[0].children[2].children[0].appendChild(div);
             	return false;
             };
 			tempimg.onclick = function(){
-				if(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
+				if(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
 				{
-					window.prefs.obj.children[2].children[0].children[2].children[0].removeChild(window.prefs.obj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
+					thisis[actT.x].pobj.children[2].children[0].children[2].children[0].removeChild(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
 				}
 				window.change = this.src;
 				document.getElementById('thedesktop').style.opacity = 0;
-				setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change);",500);
+				setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change.split('FileNet/')[1]);",500);
 			};
                         };
 			document.getElementById('thedesktop').style['-webkit-transition'] = "opacity .5s linear";
@@ -327,15 +325,15 @@ window.useredit = function () {
 	usered2.open('GET', 'useredit.php', true);
 	usered2.onreadystatechange = function() {
 		if (usered2.readyState==4) {
-		window.prefs.obj.children[3].children[0].innerHTML = usered2.responseText;
-		window.prefs.obj.getElementsByTagName('form')[0].onsubmit = function (){
+		thisis[actT.x].pobj.children[3].children[0].innerHTML = usered2.responseText;
+		thisis[actT.x].pobj.getElementsByTagName('form')[0].onsubmit = function (){
 					var usered = new XMLHttpRequest();
 					var senditt = 'subedit='+this.subedit.value+'&curpass='+this.curpass.value+'&newpass='+this.newpass.value+'&email='+this.email.value;
 					usered.open('POST', 'process.php', true);
 					usered.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 					usered.onreadystatechange = function() {
 						if (usered.readyState==4) {
-						window.prefs.obj.children[3].children[0].innerHTML = usered.responseText;
+						thisis[actT.x].pobj.children[3].children[0].innerHTML = usered.responseText;
 						};
 					};
 				usered.send(senditt);
@@ -367,25 +365,26 @@ window.selectpic = function(val) {
         } else {
             var folder = val;
         }
-        var setr = window.prefs.obj.getElementsByTagName('div');
-        var tempi = setr[11].children[0].children[1].children[0].children.length;
+        var setr = window.pobj.getElementsByTagName('div');
+        window.temptr = setr;
+        var tempi = setr[12].children[0].children[1].children[0].children.length;
         tempload = document.createElement('img');
                 tempload.src = 'icons/load_progress.gif';
         for(var i=0; i < tempi; i++) {
-        setr[11].children[0].children[1].children[0].removeChild(setr[11].children[0].children[1].children[0].children[0]);
+        setr[12].children[0].children[1].children[0].removeChild(setr[12].children[0].children[1].children[0].children[0]);
         }
         tempload = document.createElement('img');
                 tempload.src = 'icons/load_progress.gif';
-                setr[11].children[0].children[1].appendChild(tempload);
-	loadwall(folder, setr[11].children[0], tempload);
+                setr[12].children[0].children[1].appendChild(tempload);
+	loadwall(folder, setr[12].children[0], tempload);
 }
 
 window.clickicon = function(obj, name) {
 	if (name != 'Main') {
 	var objc = obj.cloneNode(true);
 	console.log('0');
-	console.log(window.prefs.obj.innerHTML);
-	window.prefs.obj.children[0].appendChild(objc);
+	console.log(thisis[actT.x].pobj.innerHTML);
+	thisis[actT.x].pobj.children[0].appendChild(objc);
 	console.log('1');
 	objc.style.top = 0+'px';
 	objc.style.left = 50+'px';
@@ -394,7 +393,7 @@ window.clickicon = function(obj, name) {
 	objc.style.padding = '5px 5px 5px 5px';
 	objc.style.borderRadius= 13+'px';
 	objc.style.position = 'absolute';
-	var setr = window.prefs.obj.getElementsByTagName('div');
+	var setr = thisis[actT.x].pobj.getElementsByTagName('div');
 	for(var i=0; i < setr.length; i++) {
 		if (setr[i].id == name) {
 		setr[1].style.display = 'none';
@@ -411,10 +410,10 @@ window.clickicon = function(obj, name) {
 		}
 	}
 	} else if (name == 'Main') {
-	var setr = window.prefs.obj.getElementsByTagName('div');
-	var tope = window.prefs.obj.children[0].getElementsByTagName('img');
+	var setr = thisis[actT.x].pobj.getElementsByTagName('div');
+	var tope = thisis[actT.x].pobj.children[0].getElementsByTagName('img');
 	for(var i=1; i < tope.length; i++) {
-		window.prefs.obj.children[0].removeChild(tope[i]);
+		thisis[actT.x].pobj.children[0].removeChild(tope[i]);
 	}
 	for(var i=0; i < setr.length; i++) {
 		if (setr[i].id == name) {
@@ -431,16 +430,16 @@ var ajax = new XMLHttpRequest();
 	ajax.onreadystatechange = function() {
 		if (ajax.readyState==4) {
 			document.getElementById('dhtmlwindowholder').lastChild.children[1].children[0].innerHTML = ajax.responseText;
-			window.prefs = {};
-			window.prefs['obj'] = document.getElementById('dhtmlwindowholder').lastChild.children[1].children[0];
-			console.log(ajax.responseText);
+			thisis[actT.x].pobj = document.getElementById('dhtmlwindowholder').lastChild.children[1].children[0];
+			window.pobj = document.getElementById('dhtmlwindowholder').lastChild.children[1].children[0];
+			//console.log(ajax.responseText);
 			var ajax2 = new XMLHttpRequest();
 	ajax2.open('GET', 'users/'+core.user+'/sysapps/Preferences/editor.js', true);
 	ajax2.onreadystatechange = function() {
 		if (ajax2.readyState==4) {
 			eval(ajax2.responseText);
-			//MainTools.mscroll(window.prefs.obj.children[2].children[0]);
-			//MainTools.scrollV(window.prefs.obj.children[2], document.getElementById('Preferences'), window.prefs.obj.children[2].children[0].children[1]);				
+			//MainTools.mscroll(thisis[actT.x].pobj.children[2].children[0]);
+			//MainTools.scrollV(thisis[actT.x].pobj.children[2], document.getElementById('Preferences'), thisis[actT.x].pobj.children[2].children[0].children[1]);				
 		};
 	};			
 	ajax2.send();	
@@ -473,6 +472,9 @@ save = function () {
 };
 </script>
 <style type='text/css'>
+.wallpaperdrop li:hover {
+	background: blue;
+}
 .topbaricons{
 	width:30px;
 	height:30px;

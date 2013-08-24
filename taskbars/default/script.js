@@ -2,7 +2,7 @@ var taskbar = document.createElement('div');
 taskbar.id = "taskbar-bg";
 document.body.appendChild(taskbar);
 window.addEventListener("orientationchange", function(){
-	document.getElementById('menubar').style.width = window.innerWidth-137+'px';
+	//document.getElementById('menubar').style.width = window.innerWidth-137+'px';
 }, false);
 function clickt(clickth) {
 Object.prototype.nextObject = function() {

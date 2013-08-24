@@ -38,16 +38,17 @@ if ($handle2 = opendir('HDD')) {
     closedir($handle2);
 }
 }
+echo "{";
 if (count($dirs1) > 0) {
-	$dirs = "{ \"dirs\": [";
+	$dirs = " \"dirs\": [";
 	for ($i = 0; $i < count($dirs1); $i++) {
 	if ($i < (count($dirs1)-1)) {
 		$dirs .= "\"$dirs1[$i]\", ";
 	} else {
 		if (count($files1) > 0) {
-		$dirs .= "\"$dirs1[$i]\"], ";
+		$dirs .= "\"$dirs1[$i]\"],";
 		} else {
-		$dirs .= "\"$dirs1[$i]\"], ";
+		$dirs .= "\"$dirs1[$i]\"],";
 		}
 	}
 	}
@@ -55,18 +56,18 @@ if (count($dirs1) > 0) {
 }
 if (count($files1) > 0) {
 	if (count($dirs1) > 0) {
-		$files = "\"files\": [";
+		$files = " \"files\": [";
 	} else {
-		$files = "{ \"files\": [";
+		$files = " \"files\": [";
 	}
 	for ($k = 0; $k < count($files1); $k++) {
 	if ($k < (count($files1)-1)) {
 		$files .= "\"$files1[$k]\", ";
 	} else {
-		$files .= "\"$files1[$k]\"], ";
+		$files .= "\"$files1[$k]\"],";
 	}
 	}
 	echo $files;
 }
-echo "\"location\": \"$goto\" }";
+echo " \"location\": \"$goto\" }";
 ?>

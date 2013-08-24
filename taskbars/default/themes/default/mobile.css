@@ -2,7 +2,7 @@ ul li {
 	display: none;
 }
 #taskbar-bg {
-	position: fixed;
+	position: absolute;
         -webkit-transform: translate3d(0, 0, 0);
 	margin: 0;
         height:50px;
@@ -26,7 +26,7 @@ ul li {
 }
 
 #menubar {
-        position: fixed;
+        position: absolute;
         -webkit-transform: translate3d(0, 0, 0);
 	margin: 0;
         height:50px;
@@ -35,10 +35,7 @@ ul li {
 				right:137px;
 	padding: 0;
 	line-height: 100%;
-	z-index: 50;
-}
-* {
-    font-family: arial;
+	z-index: 999;
 }
 #menubar ul {
 	width: auto;

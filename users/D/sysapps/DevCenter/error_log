@@ -3364,3 +3364,390 @@ Stack trace:
 [15-Aug-2013 23:42:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
 [15-Aug-2013 23:49:01] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
 [18-Aug-2013 05:09:41] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[19-Aug-2013 13:59:27] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[20-Aug-2013 13:26:55] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[20-Aug-2013 13:31:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[20-Aug-2013 13:31:37] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[20-Aug-2013 13:32:03] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[20-Aug-2013 13:32:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[20-Aug-2013 13:33:41] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[20-Aug-2013 13:33:48] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[20-Aug-2013 13:34:06] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[20-Aug-2013 13:34:12] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[20-Aug-2013 13:34:19] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[20-Aug-2013 13:34:36] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[20-Aug-2013 13:35:14] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[20-Aug-2013 13:35:23] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[20-Aug-2013 13:35:30] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[20-Aug-2013 13:35:53] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[20-Aug-2013 13:36:03] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/mail/APP_core/descript.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/update.php on line 6
+[20-Aug-2013 13:36:09] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/mail/APP_core/descript.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/update.php on line 6
+[20-Aug-2013 13:36:13] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/mail/APP_core/descript.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/update.php on line 6
+[20-Aug-2013 13:36:45] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[20-Aug-2013 13:36:51] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[20-Aug-2013 13:36:56] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/mail/APP_core/descript.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/update.php on line 6
+[20-Aug-2013 17:03:32] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[20-Aug-2013 17:21:01] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[20-Aug-2013 17:24:13] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[22-Aug-2013 01:38:07] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[22-Aug-2013 01:38:14] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[22-Aug-2013 22:31:26] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 00:09:43] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 00:10:50] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 00:11:40] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 00:13:33] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 00:14:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 00:44:38] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 00:45:02] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 00:45:05] PHP Warning:  rmdir(../FileNet/HDD/Applications/temp/APP) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 6
+[23-Aug-2013 00:45:32] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 00:46:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 00:47:47] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 00:48:58] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 00:49:00] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 01:41:18] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 01:41:22] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 01:41:42] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 01:41:45] PHP Warning:  rmdir(../FileNet/HDD/Applications/temp/APP) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 6
+[23-Aug-2013 01:42:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 01:42:59] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 01:55:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:35:05] PHP Warning:  rmdir(../FileNet/HDD/Applications/temp/APP) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 6
+[23-Aug-2013 11:36:32] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:36:46] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:36:47] PHP Warning:  rmdir(../FileNet/HDD/Applications/temp/APP) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 6
+[23-Aug-2013 11:37:24] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:37:25] PHP Warning:  rmdir(../FileNet/HDD/Applications/temp/APP) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 6
+[23-Aug-2013 11:39:23] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:39:25] PHP Warning:  rmdir(../FileNet/HDD/Applications/temp/APP) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 6
+[23-Aug-2013 11:40:01] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:40:09] PHP Warning:  rmdir(../FileNet/HDD/Applications/temp/APP) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 6
+[23-Aug-2013 11:41:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:41:14] PHP Warning:  rmdir(../FileNet/HDD/Applications/temp/APP) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 6
+[23-Aug-2013 11:44:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:44:37] PHP Warning:  rmdir(../FileNet/HDD/Applications/temp/APP) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 6
+[23-Aug-2013 11:45:39] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:45:42] PHP Warning:  rmdir(../FileNet/HDD/Applications/temp/APP) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 6
+[23-Aug-2013 11:46:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:46:13] PHP Warning:  rmdir(../FileNet/HDD/Applications/temp/APP) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 6
+[23-Aug-2013 11:46:59] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:47:02] PHP Warning:  rmdir(../FileNet/HDD/Applications/temp/APP) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 6
+[23-Aug-2013 11:53:01] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:53:03] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:53:05] PHP Warning:  rmdir(../FileNet/HDD/Applications/temp/APP) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 6
+[23-Aug-2013 11:55:09] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:55:27] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 11:55:27] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 11:55:39] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:55:49] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 11:55:49] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 11:56:04] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 11:58:44] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 12:00:39] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 14:00:12] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 14:00:49] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 14:05:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 14:06:05] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 14:07:38] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:06:04] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 17:06:04] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 17:06:13] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 17:06:13] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 17:09:45] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:09:51] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 17:09:51] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 17:10:02] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:10:04] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 17:10:04] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 17:10:07] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 17:10:07] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 17:14:12] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 17:14:12] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 17:16:54] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:16:59] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 17:16:59] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 17:17:03] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:17:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:18:03] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:18:10] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:18:42] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:18:50] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:20:24] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:20:33] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:20:40] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/notes.txt../FileNet/HDD/Applications/temp/Chatters/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 17:20:40] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/notes.txt../FileNet/HDD/Applications/temp/Chatters/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 17:21:40] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:21:47] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:22:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:22:18] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:22:20] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/Chatters/notes.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[23-Aug-2013 17:22:20] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/Chatters/notes.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 17:22:20] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 17:22:20] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[23-Aug-2013 17:22:39] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:22:47] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:36:04] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 17:36:04] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 17:36:10] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:40:02] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:40:10] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:41:10] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:41:18] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:41:29] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:41:38] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:43:53] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:43:59] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:44:59] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:45:07] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:46:16] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:46:24] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:47:22] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:47:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:48:35] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:48:44] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:50:27] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:50:33] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:50:54] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:51:56] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:52:03] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:53:08] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:53:14] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:54:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:54:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:57:09] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:57:17] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 17:57:42] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 17:57:49] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:00:56] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:02:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:03:32] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:04:57] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:05:04] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:05:43] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:05:51] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:06:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:06:44] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:07:18] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:07:24] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:08:54] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:09:01] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:11:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:11:38] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 18:11:38] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 18:11:44] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:14:01] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:14:09] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:16:44] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:17:13] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:20:27] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:22:51] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:28:23] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:28:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:31:19] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:39:30] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:39:40] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:40:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:40:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:40:37] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:41:52] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:41:53] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:42:00] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/CHatters/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[23-Aug-2013 18:42:00] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/CHatters/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:42:00] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:42:00] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[23-Aug-2013 18:42:01] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/CHatters) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 18:42:01] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/CHatters) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 18:42:05] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:42:05] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/Chatters/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[23-Aug-2013 18:42:05] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/Chatters/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:42:05] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:42:05] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[23-Aug-2013 18:42:10] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/notes.txt../FileNet/HDD/Applications/temp/Chatters) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 18:42:10] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/notes.txt../FileNet/HDD/Applications/temp/Chatters) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 18:42:44] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:42:51] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:44:18] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:44:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:44:51] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:45:16] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:45:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:47:41] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:47:49] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:50:16] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:50:23] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:50:29] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/Chatters/notes.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[23-Aug-2013 18:50:29] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/Chatters/notes.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:50:29] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:50:29] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[23-Aug-2013 18:50:31] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/Chatters/descript.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[23-Aug-2013 18:50:31] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/Chatters/descript.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:50:31] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:50:31] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[23-Aug-2013 18:50:35] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/Chatters/notes.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[23-Aug-2013 18:50:35] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/Chatters/notes.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:50:35] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:50:35] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[23-Aug-2013 18:53:26] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:53:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:53:39] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/Chatters/notes.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[23-Aug-2013 18:53:39] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/Chatters/notes.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:53:39] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:53:39] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[23-Aug-2013 18:53:41] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/Chatters/descript.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[23-Aug-2013 18:53:41] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/Chatters/descript.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:53:41] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:53:41] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[23-Aug-2013 18:53:43] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/Chatters/notes.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[23-Aug-2013 18:53:43] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/Chatters/notes.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:53:43] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 18:53:43] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[23-Aug-2013 18:53:46] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/index.txt../FileNet/HDD/Applications/temp/Chatters) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 18:53:46] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/index.txt../FileNet/HDD/Applications/temp/Chatters) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 18:53:49] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/error_log../FileNet/HDD/Applications/temp/Chatters) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 18:53:49] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/error_log../FileNet/HDD/Applications/temp/Chatters) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 18:54:27] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:54:48] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:55:19] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:55:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:55:39] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/index.txt../FileNet/HDD/Applications/temp/Chatters) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 18:55:39] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/index.txt../FileNet/HDD/Applications/temp/Chatters) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 18:57:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:57:41] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:59:42] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 18:59:50] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 18:59:57] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/Chatters) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Is a directory in /home/vios/public_html/users/admin/sysapps/DevCenter/update.php on line 6
+[23-Aug-2013 19:00:01] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/Chatters) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Is a directory in /home/vios/public_html/users/admin/sysapps/DevCenter/update.php on line 6
+[23-Aug-2013 19:00:07] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/Chatters) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Is a directory in /home/vios/public_html/users/admin/sysapps/DevCenter/update.php on line 6
+[23-Aug-2013 19:00:08] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/Chatters) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Is a directory in /home/vios/public_html/users/admin/sysapps/DevCenter/update.php on line 6
+[23-Aug-2013 19:01:24] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:01:36] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:04:59] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:05:07] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:05:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:05:41] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:06:55] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 19:07:03] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 19:10:19] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:10:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:10:36] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 19:11:02] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:11:18] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:12:19] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:12:38] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:12:51] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:12:55] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:13:57] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:14:07] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:23:22] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:25:14] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:25:19] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:25:29] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:31:59] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:33:08] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:33:14] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:35:37] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:35:44] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:37:50] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:37:56] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:38:39] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:38:45] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:39:09] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:39:15] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:39:51] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:39:57] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:40:37] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:40:43] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:42:22] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:42:29] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:43:05] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:43:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:43:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:43:33] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:44:22] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:44:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:45:12] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:45:19] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:46:32] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:46:38] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:49:40] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:49:48] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:50:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:50:16] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:50:20] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:50:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:50:57] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:51:02] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:51:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 19:51:40] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 19:52:06] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 22:49:33] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 22:49:33] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 22:49:39] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 22:58:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:09:00] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:09:09] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:09:23] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/newfile.php on line 10
+[23-Aug-2013 23:10:20] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/newfile.php on line 10
+[23-Aug-2013 23:10:35] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 23:14:21] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:14:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:15:45] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:15:54] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:16:18] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:20:30] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:20:45] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:20:53] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/../FileNet/HDD/Applications/temp/Chatters/tempit) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/newfile.php on line 9
+[23-Aug-2013 23:24:44] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:25:22] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:27:19] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 23:27:32] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:28:59] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[23-Aug-2013 23:28:59] PHP Warning:  opendir(../FileNet/HDD/Aplications/temp/APP_core) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[23-Aug-2013 23:29:02] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:30:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:30:32] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 23:31:52] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:31:54] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:31:59] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:32:26] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/update.php on line 6
+[23-Aug-2013 23:32:48] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/update.php on line 6
+[23-Aug-2013 23:32:53] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[23-Aug-2013 23:32:53] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/APP/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 23:32:53] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[23-Aug-2013 23:32:53] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[23-Aug-2013 23:36:18] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:36:21] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:36:29] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:36:29] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[23-Aug-2013 23:36:45] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[23-Aug-2013 23:36:49] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:36:53] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:36:58] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:37:09] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:37:12] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:37:16] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:37:20] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:37:47] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:40:02] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:40:07] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:40:17] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:40:17] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php:15
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/open.php(30): deleteDir('../FileNet/HDD/...')
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 15
+[23-Aug-2013 23:40:22] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[23-Aug-2013 23:41:06] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:45:18] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/open.php on line 23
+[23-Aug-2013 23:47:58] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[24-Aug-2013 01:21:40] PHP Warning:  fopen() [<a href='function.fopen'>function.fopen</a>]: Filename cannot be empty in /home/vios/public_html/users/D/sysapps/DevCenter/update.php on line 6
+[24-Aug-2013 01:21:52] PHP Warning:  fopen() [<a href='function.fopen'>function.fopen</a>]: Filename cannot be empty in /home/vios/public_html/users/D/sysapps/DevCenter/update.php on line 6
+[24-Aug-2013 01:23:36] PHP Parse error:  syntax error, unexpected T_LNUMBER in /home/vios/public_html/users/D/sysapps/DevCenter/p.php(1) : eval()'d code on line 1

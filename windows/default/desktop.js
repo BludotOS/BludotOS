@@ -3,7 +3,7 @@ var SimpleWin = {
 theme:'default',
 zindexbase:10,
 Winds:0,
-init:function(wid, height, width, left, top, size, bar){
+init:function(widn, height, width, left, top, size, bar){
         if (!height && !width && !left && !top) {
                var height = window.innerHeight-document.getElementById('background').clientHeight;
                var width= window.innerWidth;
@@ -22,8 +22,8 @@ init:function(wid, height, width, left, top, size, bar){
         } else {
 	windowdiv.innerHTML = windowdata+windowdata2;
         }
-	windowdiv.id=wid;
-	windowdiv.className=wid;
+	windowdiv.id=widn;
+	windowdiv.className=widn;
 	var wid = windowdiv;
 	document.getElementById('dhtmlwindowholder').appendChild(wid);
 	wid.style.cssText = 'position:fixed;left:0px;top:23px;width:0px;height:0px;display:block;-webkit-border-radius: 30px;-moz-border-radius: 20px;border-radius: 20px;display:none;opacity = 0;';
@@ -201,11 +201,11 @@ resize:function(e){
 		if(thisis[actT.x].editor)
 		{
 			thisis[actT.x].editor.resize();
-		};
+		}
 		};
 },
 minimize:function(wid){	
-	if (!wid.min || wid.min==false){
+	if (!wid.min || wid.min === false){
 		wid.attrsleft=wid.style.left;
 		wid.attrstop=wid.style.top;
 		wid.attrswidth=wid.style.width;
@@ -216,7 +216,7 @@ minimize:function(wid){
         //wid.style.width = 0+'px';
         //wid.style.height = 0+'px';
         wid.style['-webkit-transform'] = 'scale(.1)';
-		wid.style.MozTransform = 'scale(1)';
+		wid.style.MozTransform = 'scale(.1)';
         wid.style.left = -15+'px';
         wid.style.top = -15+'px';
         wid.style.opacity = 0;
@@ -239,7 +239,7 @@ minimize:function(wid){
 		} else {
 			window.bar(1);
 		};
-	} else if (wid.min==true){
+	} else if (wid.min === true){
                 window.dock.removeApp(wid.id+wid.nim);
                 wid.nim-=1;
 		wid.style.display='block';
@@ -261,7 +261,7 @@ this.setfocus(wid);
 	};
 },
 maximize:function(wid){
-	if (!wid.max || wid.max==false){
+	if (!wid.max || wid.max === false){
 		wid.attrsleft=wid.style.left;
 		wid.attrstop=wid.style.top;
 		wid.attrswidth=wid.style.width;
@@ -271,7 +271,7 @@ maximize:function(wid){
 		wid.style.width=100+'%';
 		wid.style.height=(parseInt(window.innerHeight)-81)+'px';
 		wid.max=true;
-	} else if (wid.max==true){
+	} else if (wid.max === true){
 		wid.style.left=wid.attrsleft;
 		wid.style.top=wid.attrstop;
 		wid.style.width=wid.attrswidth;
@@ -280,7 +280,7 @@ maximize:function(wid){
 	};
 },
 rememberattr:function(wid){
-        	wid.attrsleft=wid.style.left;
+        wid.attrsleft=wid.style.left;
 		wid.attrstop=wid.style.top;
 		wid.attrswidth=wid.style.width;
 		wid.attrsheight=wid.style.height;
@@ -295,7 +295,7 @@ restore:function(wid){
 	window.actT = wid;
 for (var x=0; x < thisis.length; x++)
 {
-     if(window.actT == thisis[x])
+     if(window.actT === thisis[x])
      {
         var thisislength = x;
         window.actT.x = x;
@@ -308,11 +308,11 @@ for (var x=0; x < thisis.length; x++)
 },
 };
 window.addEventListener('keydown', function(event) {
-	if (event.keyCode == 115) {
+	if (event.keyCode === 115) {
            var exposeholder = document.getElementById('dhtmlwindowholder');
            window.exposeholder = exposeholder;
 	   if (exposeholder.children.length > 0) {
-              if (!window.expose || window.expose == false) {
+              if (!window.expose || window.expose === false) {
               window.expose = true;
               window.shim = document.createElement('div');
               document.body.appendChild(shim);
@@ -411,7 +411,7 @@ window.addEventListener('keydown', function(event) {
 		};
 		window.scrollbar = document.createElement('div');
 		window.dock.node.style.zIndex = 10;
-              } else if (window.expose == true) {
+              } else if (window.expose === true) {
               window.expose = false;
               for (var i=0; i < exposeholder.children.length; i++) {
                  SimpleWin.restore(exposeholder.children[i]);

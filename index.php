@@ -34,6 +34,7 @@ if (!$isMobile) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="apple-touch-startup-image" href="images/bludotipod.png" />
 	<link rel="apple-touch-icon" href="wallpaper/BluDotlogo.png"/>
+	<script src="http://s.cdpn.io/298/fastclick.js"></script>
 
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -220,11 +221,19 @@ background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHh
 body {
 font-family:arial;
 }
+.menu-sub:hover > ul {
+	display:block !important;
+}
 	</style>
 <? if(!$isMobile) { ?>
 <link rel="stylesheet" href="loadOS.css" type="text/css"/>
 <? }; ?>
 <script src="https://rawgithub.com/ajaxorg/ace-builds/master/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+window.addEventListener('load', function() {
+  new FastClick(document.body);
+}, false);
+</script>
 <script>
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                             //
@@ -572,6 +581,7 @@ return true
 },
 Appstore:function ()
 {
+core.checkupdates();
 var Appstore=SimpleWin.create("Appstore", "Appstore", "appstore/");
      
 Appstore.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
@@ -633,8 +643,16 @@ return true;
 },
 DevCenter:function ()
 {
+<?
+if (!$isMobile) {
+?>
 var DevCenter=SimpleWin.create("DevCenter", "DevCenter", "users/"+core.user+"/sysapps/DevCenter/?thefile=file.txt&userN="+core.user+"");
 <?
+} else if($isMobile) {
+?>
+var DevCenter=SimpleWin.create("DevCenter", "DevCenter", "users/"+core.user+"/sysapps/DevCenter/mobile.php?thefile=file.txt&userN="+core.user+"");
+<?
+};
 if (!$isMobile) {
 ?>
 dock.addclick('DevCenter', ['close', 'minimize'], [function(){SimpleWin.close(DevCenter);}, function(){SimpleWin.minimize(DevCenter);}]);
@@ -673,8 +691,17 @@ return true;
 },
 FileNet:function ()
 {
-
+<?
+if (!$isMobile) {
+?>
 var FileNet=SimpleWin.create("FileNet", "FileNet", "users/"+core.user+"/sysapps/FileNet/?userN="+core.user+"", 400, 750, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
+<?
+} else if($isMobile) {
+?>
+var FileNet=SimpleWin.create("FileNet", "FileNet", "users/"+core.user+"/sysapps/FileNet/mobile.php?userN="+core.user+"", 400, 750, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
+<?
+};
+?>
 dock.addclick('FileNet', ['close', 'minimize'], [function(){SimpleWin.close(FileNet);}, function(){SimpleWin.minimize(FileNet);}]);
      
 FileNet.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
@@ -697,8 +724,18 @@ window.dock.addIcon({
             menuClick: [function(){this.name();}],
             onclick:   function (){return false;}
           }, dock.findApp('Trash'));
+<?
+if (!$isMobile) {
+?>
 var Prefer=SimpleWin.create("Preferences", "prefed", "users/"+core.user+"/sysapps/Preferences/index.php?userN="+core.user+"", 420, 540, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
-dock.addclick('Prefs', ['close', 'minimize'], [function(){SimpleWin.close(Prefer);}, function(){SimpleWin.minimize(Prefer);}]);
+<?
+} else if($isMobile) {
+?>
+var Prefer=SimpleWin.create("Preferences", "prefed", "users/"+core.user+"/sysapps/Preferences/mobile.php?userN="+core.user+"", 420, 540, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
+<?
+};
+?>
+dock.addclick('Prefs', ['close', 'minimize'], [function(){SimpleWin.close(Prefer);}, function(){alert('test');}]);
 <?
 } else if ($isMobile) {
 ?>
@@ -718,9 +755,12 @@ window.dock.removeApp('Prefs');
 return true;
 }
 },
-Uploader:function(loc, callback){
+Uploader:function(loc, type, callback){
 	var tempdiv;
-	var Uploader=SimpleWin.create("Uploader", "Uploader", "users/"+core.user+"/sysapps/uploader/index.php?user="+core.user+"&location="+loc+"", 250, 525, function(obj){
+	<?
+if (!$isMobile) {
+?>
+	var Uploader=SimpleWin.create("Uploader", "Uploader", "users/"+core.user+"/sysapps/Uploader/index.php?user="+core.user+"&location="+loc+"&type="+type+"", 250, 525, function(obj){
 		var temp = document.createElement('div');
 		temp.style.cssText = "position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: transparent;z-index:1;";
 		document.getElementById('dhtmlwindowholder').insertBefore(temp, document.getElementById('dhtmlwindowholder').children[0]);
@@ -732,9 +772,30 @@ Uploader:function(loc, callback){
 			var interval = setInterval(function(){num++; if(num == 10){thisis[actT.x].style.display = 'block';clearInterval(interval);} else {thisis[actT.x].style.display = thisis[actT.x].style.display == 'none' ? 'block' : 'none';}}, 150);
 		};
 		});
+<?
+} else if($isMobile) {
+?>
+var Uploader=SimpleWin.create("Uploader", "Uploader", "users/"+core.user+"/sysapps/Uploader/mobile.php?user="+core.user+"&location="+loc+"&type="+type+"", 250, 525, function(obj){
+		var temp = document.createElement('div');
+		temp.style.cssText = "position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: transparent;z-index:1;";
+		document.getElementById('dhtmlwindowholder').insertBefore(temp, document.getElementById('dhtmlwindowholder').children[0]);
+		temp.style.zIndex = parseInt(document.getElementById('dhtmlwindowholder').lastChild.previousSibling.style.zIndex)+1;
+		tempdiv = temp;
+		window.tempdiv = tempdiv;
+		temp.onclick = function(){
+			var num = 0;
+			var interval = setInterval(function(){num++; if(num == 10){thisis[actT.x].style.display = 'block';clearInterval(interval);} else {thisis[actT.x].style.display = thisis[actT.x].style.display == 'none' ? 'block' : 'none';}}, 150);
+		};
+		});
+<?
+};
+?>
 Uploader.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
 document.getElementById('dhtmlwindowholder').removeChild(window.tempdiv);
-callback();
+if(callback)
+{
+	callback();
+}
 return true;
 }
 },
@@ -799,7 +860,7 @@ getapps.onreadystatechange = function() {
         temp.name.innerHTML = respit.dirs[i];
         temp.img.src = '/users/'+core.user+'/sysapps/FileNet/apps/'+respit.dirs[i]+'/img.png';
         appdiv.appendChild(temp);
-        temp.style.cssText = 'position:relative;top:0px;left:0px;float:left;width:75px;height:85px;';
+        temp.style.cssText = 'position:relative;top:0px;left:0px;float:left;width:75px;height:90px;margin:5px;overflow:hidden;';
         temp.appendChild(temp.img);
         temp.img.style.cssText = 'position:relative;top:0px;left:0px;width:75px;height75px;';
         temp.appendChild(temp.name);
@@ -826,7 +887,7 @@ var openapp = new XMLHttpRequest();
 	openapp.onreadystatechange = function() {
 	if (openapp.readyState==4) {
 window.dock.addIcon({
-            name:      'icons/'+name,
+            name:      'users/'+core.user+'/sysapps/FileNet/apps/'+name+'/img',
             label:     name,
             extension: '.png',
             sizes:     [44, 100],
@@ -906,6 +967,19 @@ openapp.send(sendit);
   		callback(true);
   		};
 	};
+	var previousOrientation = window.orientation;
+var checkOrientation = function(){
+    if(window.orientation !== previousOrientation){
+        previousOrientation = window.orientation;
+        dock.dock.style.left = (window.innerWidth/2)-(dock.dock.clientWidth/2)+'px';
+    }
+};
+
+window.addEventListener("resize", checkOrientation, false);
+window.addEventListener("orientationchange", checkOrientation, false);
+
+// (optional) Android doesn't always fire orientationChange on 180 degree turns
+setInterval(checkOrientation, 2000);
     core.ajaxlogin = function (user, pass, sub, box)
                 {
                      var checkit = new XMLHttpRequest();
@@ -947,7 +1021,7 @@ core.checkupdates();
                                if(checkp.readyState == 4){
                                      window.prefit = JSON.parse(checkp.responseText);
                                      //core.userprefs = prefit;
-                                     core.OS.Desktop.background.src = prefit.wallpaper;
+                                     core.OS.Desktop.background.src = 'users/'+core.user+'sysapps/FileNet/'+prefit.wallpaper;
                                      if (prefit.Dockmag == 'false') {
                                          prefit.Dockmag = false;
                                      } else if (prefit.Dockmag == 'true') {
@@ -998,7 +1072,8 @@ core.checkupdates();
                                           window.dockit.push(window.temp);
                                           };
                                      if (core.Admin == 1 || resp.Dev == 1) {
-                                        window.dock = new SimpleDock(
+                                        window.dock = SimpleDock;
+                                        window.dock.launch(
                                                 document.getElementById('dock'),
                                                 window.dockit,
                                                 parseInt(prefit.Dockmin),
@@ -1012,10 +1087,10 @@ core.checkupdates();
                                                 false);
                                                <?};?>
                                      } else if(core.Admin != 1 && reap.Dev != 1) {
-                                      window.dockit = [];
-                                     for(var i=1; i < prefit.Dockapps.length; i++)
+                                      window.docks = [];
+                                     for(var i=1; i < window.dockit.length; i++)
                                      {
-                                          var temp = {
+                                          /*var temp = {
                                                     name:      'icons/'+prefit.Dockapps[i]+'',
                                                     label:     prefit.Dockapps[i],
                                                     extension: '.png',
@@ -1023,10 +1098,11 @@ core.checkupdates();
                                                     menuItems: ['open'],
                                                     menuClick: [function(){prefit.Dockapps[i]();}],
                                                     onclick:   function(){prefit.Dockapps[i]();}
-                                          };
-                                          window.dockit[i-1] = temp;
+                                          };*/
+                                          	window.docks.push(window.dockit[i]);
                                      };
-                                        window.dock = new SimpleDock(
+                                        window.dock = SimpleDock;
+                                        window.dock.launch(
                                                 document.getElementById('dock'),
                                                 window.docks,
                                                 parseInt(prefit.Dockmin),
@@ -1039,7 +1115,7 @@ core.checkupdates();
                                                <? } else if($isMobile){?>
                                                 false);
                                                <?};?>
-                                     }
+                                     };
                                      }, 3000);
                                      };
                                      });
@@ -1079,15 +1155,21 @@ core.checkupdates();
     	core.OS.Taskbar.menu1.menu2sub1.li2.a.innerHTML = 'System Preferences...';
     	
     	core.OS.Taskbar.menu1.menu2sub1.li3 = core.create('li');
+    	core.OS.Taskbar.menu1.menu2sub1.li3.className = 'menu-sub';
     	core.OS.Taskbar.menu1.menu2sub1.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3);
     	core.OS.Taskbar.menu1.menu2sub1.li3.a = core.create('a');
     	core.OS.Taskbar.menu1.menu2sub1.li3.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.a);
     	core.OS.Taskbar.menu1.menu2sub1.li3.a.innerHTML = 'Dock';
-    	core.OS.Taskbar.menu1.menu2sub1.li3.li = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.li3.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.li);
-    	core.OS.Taskbar.menu1.menu2sub1.li3.li.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li3.li.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.li.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li3.li.a.innerHTML = 'on';
+    	core.OS.Taskbar.menu1.menu2sub1.li3.ul = core.create('ul');
+    	core.style('position: absolute;display: none;left: 100%;', core.OS.Taskbar.menu1.menu2sub1.li3.ul)
+    	core.OS.Taskbar.menu1.menu2sub1.li3.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.ul);
+    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li = core.create('li');
+    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.ul.li);
+    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a = core.create('a');
+    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a);
+    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a.innerHTML = dock.mag;
+    	core.style('color:white;', core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a);
+        core.style('position:relative;display:block;', core.OS.Taskbar.menu1.menu2sub1.li3.ul.li);
     	
     	if(core.Admin == 1)
     	{
@@ -1156,21 +1238,16 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
     	{
     		clickt(clicked);core.loadApps.Prefs();
     	};
-        core.OS.Taskbar.children[0].children[1].children[2].children[0].onmouseover = function(){
+        /*core.OS.Taskbar.children[0].children[1].children[2].children[0].onmouseover = function(){
                 movet(this.parentNode.children[1], 1);
         };
         core.OS.Taskbar.children[0].children[1].children[2].children[1].onmouseout = function(){
                 movet(this, 0);
-        };
+        };*/
         core.OS.Taskbar.children[0].children[1].children[2].children[1].children[0].onclick = function(){
-                if(dock.skip == 1)
-                {
-                     dock.magT(0);
-                     this.innerHTML = 'on';
-                } else {
-                     dock.magT(1);
-                     this.innerHTML = 'off';
-                };
+                dock.magT();
+				this.children[0].innerHTML = dock.mag==true ? 'on' : 'off';
+				this.children[0].style.cssText = "color:white";
         };
     	if(core.Admin == 1)
     	{
@@ -1295,8 +1372,9 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
                                		alert('success');
                                		core.getreg(document.getElementById('regbox'));
                                	} else {
-                               		alert('error');
+                               		alert(regit.responseText);
                                		core.getreg(document.getElementById('regbox'));
+                               		setTimeout(function(){location.href.reload();}, 5000);
                                	}
                                };
                          };
@@ -1535,19 +1613,15 @@ if(!$isMobile)
     	document.body.appendChild(this.OS.Desktop);
     	this.OS.Desktop.appendChild(this.OS.Desktop.background);
     	this.OS.Dock = this.create('div');
+    	this.OS.Dock.id = "dock";
     	document.body.appendChild(this.OS.Dock);
-    	this.OS.Dock.id = 'dockcontainer'
-    	//this.style('', this.OS.Dock);
-    	this.OS.Dock.Dock = this.create('div');
-    	this.OS.Dock.Dock.id = "dock";
-    	this.OS.Dock.appendChild(this.OS.Dock.Dock);
-    	this.OS.Dock.Dock.bg = this.create('div');
-    	this.OS.Dock.Dock.appendChild(this.OS.Dock.Dock.bg);
-    	this.OS.Dock.Dock.bg.id = 'background';
+    	this.OS.Dock.bg = this.create('div');
+    	this.OS.Dock.appendChild(this.OS.Dock.bg);
+    	this.OS.Dock.bg.id = 'background';
     	//this.style('', this.OS.Dock.bg);
-    	this.OS.Dock.Dock.dock = this.create('div');
-    	this.OS.Dock.Dock.appendChild(this.OS.Dock.Dock.dock);
-    	this.OS.Dock.Dock.dock.id = 'iconNodes';
+    	this.OS.Dock.dock = this.create('div');
+    	this.OS.Dock.appendChild(this.OS.Dock.dock);
+    	this.OS.Dock.dock.id = 'iconNodes';
     	//this.style('', this.OS.Dock.dock);
     	
         clearInterval(core.progressI);
@@ -1578,7 +1652,7 @@ var checkp = new XMLHttpRequest();
                                      window.prefit = JSON.parse(checkp.responseText);
                                      //core.userprefs = prefit;
                                         core.Cversion = <?echo $version;?>;
-                                     core.OS.Desktop.background.src = prefit.wallpaper;
+                                     core.OS.Desktop.background.src = 'users/'+core.user+'sysapps/FileNet/'+prefit.wallpaper;
                                      if (prefit.Dockmag == 'false') {
                                          prefit.Dockmag = false;
                                      } else if (prefit.Dockmag == 'true') {
@@ -1629,7 +1703,8 @@ var checkp = new XMLHttpRequest();
                                           window.dockit.push(window.temp);
                                           };
                                      if (core.Admin == 1 || core.Dev == 1) {
-                                        window.dock = new SimpleDock(
+                                        window.dock = SimpleDock;
+                                        window.dock.launch(
                                                 document.getElementById('dock'),
                                                 window.dockit,
                                                 parseInt(prefit.Dockmin),
@@ -1643,10 +1718,10 @@ var checkp = new XMLHttpRequest();
                                                 false);
                                                <?};?>
                                      } else if(core.Admin != 1 && core.Dev != 1) {
-                                      window.dockit = [];
-                                     for(var i=1; i < prefit.Dockapps.length; i++)
+                                      window.docks = [];
+                                     for(var i=1; i < window.dockit.length; i++)
                                      {
-                                          var temp = {
+                                          /*var temp = {
                                                     name:      'icons/'+prefit.Dockapps[i]+'',
                                                     label:     prefit.Dockapps[i],
                                                     extension: '.png',
@@ -1654,10 +1729,11 @@ var checkp = new XMLHttpRequest();
                                                     menuItems: ['open'],
                                                     menuClick: [function(){prefit.Dockapps[i]();}],
                                                     onclick:   function(){prefit.Dockapps[i]();}
-                                          };
-                                          window.dockit[i-1] = temp;
+                                          };*/
+                                          	window.docks.push(window.dockit[i]);
                                      };
-                                        window.dock = new SimpleDock(
+                                        window.dock = SimpleDock;
+                                        window.dock.launch(
                                                 document.getElementById('dock'),
                                                 window.docks,
                                                 parseInt(prefit.Dockmin),
@@ -1716,16 +1792,21 @@ var checkp = new XMLHttpRequest();
     	core.OS.Taskbar.menu1.menu2sub1.li2.a.innerHTML = 'System Preferences...';
     	
     	core.OS.Taskbar.menu1.menu2sub1.li3 = core.create('li');
+    	core.OS.Taskbar.menu1.menu2sub1.li3.className = 'menu-sub';
     	core.OS.Taskbar.menu1.menu2sub1.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3);
     	core.OS.Taskbar.menu1.menu2sub1.li3.a = core.create('a');
     	core.OS.Taskbar.menu1.menu2sub1.li3.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.a);
     	core.OS.Taskbar.menu1.menu2sub1.li3.a.innerHTML = 'Dock';
-    	core.OS.Taskbar.menu1.menu2sub1.li3.li = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.li3.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.li);
-    	core.OS.Taskbar.menu1.menu2sub1.li3.li.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li3.li.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.li.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li3.li.a.innerHTML = 'on';
-        core.style('position:absolute;left:100%;display:none;', core.OS.Taskbar.menu1.menu2sub1.li3.li);
+    	core.OS.Taskbar.menu1.menu2sub1.li3.ul = core.create('ul');
+    	core.style('position: absolute;display: none;left: 100%;', core.OS.Taskbar.menu1.menu2sub1.li3.ul)
+    	core.OS.Taskbar.menu1.menu2sub1.li3.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.ul);
+    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li = core.create('li');
+    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.ul.li);
+    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a = core.create('a');
+    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a);
+    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a.innerHTML = dock.mag;
+    	core.style('color:white;', core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a);
+        core.style('position:relative;display:block;', core.OS.Taskbar.menu1.menu2sub1.li3.ul.li);
     	
     	<? if($session->isAdmin()){ ?>
     	core.OS.Taskbar.menu1.menu2sub1.li4 = core.create('li');
@@ -1797,21 +1878,16 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
     	{
     		clickt(clicked);core.loadApps.Prefs();
     	};
-        core.OS.Taskbar.children[0].children[1].children[2].children[0].onmouseover = function(){
+        /*core.OS.Taskbar.children[0].children[1].children[2].children[0].onmouseover = function(){
                 movet(this.parentNode.children[1], 1);
         };
         core.OS.Taskbar.children[0].children[1].children[2].children[1].onmouseout = function(){
                 movet(this, 0);
-        };
+        };*/
         core.OS.Taskbar.children[0].children[1].children[2].children[1].onclick = function(){
-                if(dock.skip == 1)
-                {
-                     dock.magT(0);
-                     this.innerHTML = 'on';
-                } else {
-                     dock.magT(1);
-                     this.innerHTML = 'off';
-                };
+                dock.magT();
+				this.children[0].innerHTML = dock.mag==true ? 'on' : 'off';
+				this.children[0].style.cssText = "color:white";
         };
     	<? if($session->isAdmin()){ ?>
     	core.OS.Taskbar.children[0].children[1].children[3].onclick = function()
@@ -1930,7 +2006,7 @@ core.capps = [];
         for(var i=0; i < respit.dirs.length; i++) {
 window.capp = respit.dirs[i];
 var cupdateitq = new XMLHttpRequest();
-cupdateitq.open('GET', 'users/'+core.user+'/sysapps/FileNet/apps/'+respit.dirs[i]+'/version.txt', false);
+cupdateitq.open('GET', 'users/'+core.user+'/sysapps/FileNet/apps/'+respit.dirs[i]+'/version.txt?t='+new Date().getTime(), true);
 cupdateitq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 cupdateitq.onreadystatechange = function() {
         if(cupdateitq.readyState==4) {
@@ -1938,7 +2014,7 @@ cupdateitq.onreadystatechange = function() {
                 window.resp2 = resp;
                 window.resp2.app = window.capp;
 var updateitq = new XMLHttpRequest();
-updateitq.open('GET', 'appstore/apps/'+window.resp2.cat+'/'+window.resp2.app+'/version.txt', false);
+updateitq.open('GET', 'appstore/apps/'+window.resp2.cat+'/'+window.resp2.app+'/version.txt?t='+new Date().getTime(), true);
 updateitq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 updateitq.onreadystatechange = function() {
         if(updateitq.readyState==4) {
@@ -1994,7 +2070,10 @@ test.send();
     return core;
 }());
 //window.onload = function(){core.getscript('default', 'script', 'maintools');core.load();document.forms[0].children[0].children[0].focus();};
-window.onload = function(){core.getscript('default', 'script', 'maintools');core.load();};
+window.onload = function(){
+	core.getscript('default', 'script', 'maintools', function(){setTimeout(function(){MainTools.Notify("Welcome!!</br>This is the early release of Bludot OS.</br>Sign up and take a look.</br>Click <a href=\"https://bludot.codeplex.com/\">About</a> to find out more.</br></br>   -Bludot Administrator", null, 500);MainTools.Notify("If you are a developer and would</br>like a developer account then</br>signup and follow the email instructions.</br>Apps are developed in the javascript language.</br>More features will come soon.", null, 500);}, 3000);});
+	core.load();
+};
 </script>
 </head>
 <body scrolling="no" id="body" ondragstart="return false;" onselectstart="return false;">

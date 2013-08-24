@@ -41,7 +41,7 @@ $user=$_GET['userN'];
 </div>
 <div id="Display" style="left:0px; top: 50px; position:absolute;right:0px;bottom:0px; background:rgb(235,235,235);display:none;">
 <div style="left:0px; top: 0px; position:absolute;right:0px;border-bottom:1px solid black;margin-left: 30px;margin-right: 30px;box-shadow: inset -0px -5px 6px -6px #030303;bottom:10px;">
-	<input type="button" value="upload" style="position: absolute;top: 0px;left: 150px;" onclick="core.loadApps.Uploader('../FileNet/wallpaper/', function(){window.prefs.obj.children[2].children[0].children[2].children[0].innerHTML = ''; clickicon(window.prefs.obj.children[2].children[0], 'Display');});" />
+	<input type="button" value="upload" style="position: absolute;top: 0px;left: 150px;" onclick="if(document.getElementById('dropchoose').value != 'wallpaper'){var val = 'HDD/'+document.getElementById('dropchoose').value;};core.loadApps.Uploader('../FileNet/'+val+'/', 'image', function(){selectpic('HDD/'+document.getElementById('dropchoose').value);});" />
 	<select id="dropchoose" style="position:absolute;left:0px;width:auto;top:0px;height:20px;float:left;box-shadow: inset 0px 0px 3px #030303;" onchange="selectpic('HDD/'+this.value);">
 	  <option value="Wallpapers">Wallpapers</option>
 	  <option value="MyPictures">MyPictures</option>

@@ -1,1 +1,1 @@
-{"categories":{"All":[],"Productivity":["Mail"], "Games":[], "tweaks":[], "Office":[], "Social":["AmoebaChat"]}}
+{"categories":{"All":[],"Productivity":[], "Games":[], "tweaks":[], "Office":[], "Social":["Chatters"]}}
