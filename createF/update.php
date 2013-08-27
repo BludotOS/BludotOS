@@ -43,7 +43,11 @@ copydir("../users/admin/sysapps/FileNet/include","../users/$name/sysapps/FileNet
 copydir("../users/admin/sysapps/Uploader","../users/$name/sysapps/Uploader");
 //copydir("../users/admin/sysapps/FileNet/images","../users/$name/sysapps/FileNet/images");
 copydir("../users/admin/sysapps/Preferences","../users/$name/sysapps/Preferences");
+<<<<<<< HEAD
 $link = mysql_connect('localhost',user,pass);
+=======
+$link = mysql_connect(host, user, pass);
+>>>>>>> cb0bc74e15d6a6d48d680a3a581d83611d1e9bd4
 mysql_select_db('vios_users', $link);
 $sql = "SELECT userid FROM users WHERE username = '".$name."'";
 $result = mysql_query($sql, $link) or die(mysql_error());

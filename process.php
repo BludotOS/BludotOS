@@ -16,7 +16,11 @@ class Process
 {
    /* Class constructor */
    function Process(){
+<<<<<<< HEAD
    $this->connection = mysql_connect("127.0.0.1", user, pass) or die(mysql_error());
+=======
+   $this->connection = mysql_connect(host, user, pass) or die(mysql_error());
+>>>>>>> cb0bc74e15d6a6d48d680a3a581d83611d1e9bd4
       mysql_select_db("vios_users", $this->connection) or die(mysql_error());
       global $session;
       /* User submitted login form */
@@ -119,8 +123,13 @@ class Process
    	
 $quser_name = user;
 $qpassword = pass;
+<<<<<<< HEAD
 $qdatabase = "vios_beta";
 $qserver = "127.0.0.1";
+=======
+$qdatabase = db;
+$qserver = host;
+>>>>>>> cb0bc74e15d6a6d48d680a3a581d83611d1e9bd4
 $db_handle = mysql_connect($qserver, $quser_name, $qpassword);
 $db_found = mysql_select_db($qdatabase, $db_handle);
 

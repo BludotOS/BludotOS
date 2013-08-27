@@ -21,8 +21,13 @@ class MySQLDB
    /* Class constructor */
    function MySQLDB(){
       /* Make connection to database */
+<<<<<<< HEAD
       $this->connection = mysql_connect("127.0.0.1", user, pass) or die(mysql_error());
       mysql_select_db("vios_users", $this->connection) or die(mysql_error());
+=======
+      $this->connection = mysql_connect(localhost, user, pass) or die(mysql_error());
+      mysql_select_db(db, $this->connection) or die(mysql_error());
+>>>>>>> cb0bc74e15d6a6d48d680a3a581d83611d1e9bd4
       
       /**
        * Only query database to find out number of members

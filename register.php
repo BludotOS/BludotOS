@@ -13,8 +13,13 @@ include("include/session.php");
 $betacode = $_GET['code'];
 $user_name = user;
 $password = pass;
+<<<<<<< HEAD
 $database = "vios_beta";
 $server = "127.0.0.1";
+=======
+$database = db;
+$server = host;
+>>>>>>> cb0bc74e15d6a6d48d680a3a581d83611d1e9bd4
 $db_handle = mysql_connect($server, $user_name, $password);
 $db_found = mysql_select_db($database, $db_handle);
 $q = "SELECT * FROM beta_codes WHERE betacode = '$betacode'";
