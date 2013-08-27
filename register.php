@@ -11,10 +11,10 @@
  */
 include("include/session.php");
 $betacode = $_GET['code'];
-$user_name = "vios_admin";
-$password = "qlalsldl";
-$database = "vios_beta";
-$server = "127.0.0.1";
+$user_name = user;
+$password = pass;
+$database = db;
+$server = host;
 $db_handle = mysql_connect($server, $user_name, $password);
 $db_found = mysql_select_db($database, $db_handle);
 $q = "SELECT * FROM beta_codes WHERE betacode = '$betacode'";
