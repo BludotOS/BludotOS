@@ -33,7 +33,9 @@ class Mailer
              ."password will be generated for you and sent to this "
              ."email address, if you would like to change your "
              ."email address you can do so by going to the "
-             ."My Account page after signing in.\n\n"
+             ."Settings->User Settings.\n\n"
+             ."If you are a Developer or want to be one please email: dev@bludotos.com\n"
+             ."You will be verified by the Administrator for access to the Developer Center"
              ."- administrator";
 
       return mail($email,$subject,$body,$from);
@@ -50,7 +52,7 @@ class Mailer
       $body = $user.",\n\n"
              ."We've generated a new password for you at your "
              ."request, you can use this new password with your "
-             ."username to log in to http://bludot.tk \n\n"
+             ."username to log in to http://bludotos.com \n\n"
              ."Username: ".$user."\n"
              ."New Password: ".$pass."\n\n"
              ."It is recommended that you change your password "

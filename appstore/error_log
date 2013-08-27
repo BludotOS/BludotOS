@@ -676,3 +676,187 @@ Stack trace:
 [23-Aug-2013 14:06:58] PHP Warning:  copy(temp2/Chatters/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
 [23-Aug-2013 19:17:18] PHP Warning:  unlink(temp/Chatters/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 26
 [23-Aug-2013 19:17:18] PHP Warning:  copy(temp2/Chatters/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[25-Aug-2013 08:07:15] PHP Warning:  rmdir(../users/pikakai/sysapps/FileNet/apps/Chatters) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/appstore/uninstall.php on line 8
+[25-Aug-2013 08:07:18] PHP Warning:  rmdir(../users/pikakai/sysapps/FileNet/apps/Chatters) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/appstore/uninstall.php on line 8
+[25-Aug-2013 08:07:24] PHP Warning:  rmdir(../users/pikakai/sysapps/FileNet/apps/Chatters) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/appstore/uninstall.php on line 8
+[25-Aug-2013 13:35:20] PHP Warning:  copy(apps/Social/AmoebaChat/version.txt) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 10
+[25-Aug-2013 13:35:23] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 5
+[25-Aug-2013 13:35:23] PHP Warning:  copy(apps/Social/AmoebaChat/version.txt) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 10
+[25-Aug-2013 13:35:28] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 5
+[25-Aug-2013 13:35:28] PHP Warning:  copy(apps/Social/AmoebaChat/version.txt) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 10
+[25-Aug-2013 13:36:40] PHP Warning:  copy(apps/Social/AmoebaChat/version.txt) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 10
+[25-Aug-2013 13:37:27] PHP Warning:  rmdir(../users/admin/sysapps/FileNet/apps/AmoebaChat) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/appstore/uninstall.php on line 8
+[25-Aug-2013 13:37:31] PHP Warning:  copy(apps/Social/AmoebaChat/version.txt) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 10
+[25-Aug-2013 18:33:08] PHP Warning:  copy(DEV/AmoebaChat/APP_core/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 18
+[25-Aug-2013 18:33:08] PHP Warning:  copy(DEV/AmoebaChat/APP_core/version.txt) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 19
+[25-Aug-2013 18:48:19] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/submit.php on line 22
+[25-Aug-2013 18:50:23] PHP Fatal error:  Cannot use object of type stdClass as array in /home/vios/public_html/appstore/submit.php on line 29
+[25-Aug-2013 19:04:03] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/vios/public_html/appstore/submit.php on line 29
+[25-Aug-2013 19:06:06] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/appstore/submit.php on line 30
+[25-Aug-2013 19:06:24] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/appstore/submit.php on line 30
+[25-Aug-2013 19:07:31] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/appstore/submit.php on line 30
+[25-Aug-2013 19:07:46] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/appstore/submit.php on line 30
+[25-Aug-2013 19:08:15] PHP Warning:  Invalid argument supplied for foreach() in /home/vios/public_html/appstore/submit.php on line 30
+[25-Aug-2013 19:09:13] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/vios/public_html/appstore/submit.php on line 29
+[25-Aug-2013 19:09:35] PHP Fatal error:  Cannot use object of type stdClass as array in /home/vios/public_html/appstore/submit.php on line 29
+[25-Aug-2013 22:33:08] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/submit.php on line 52
+[25-Aug-2013 22:34:17] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/submit.php on line 52
+[25-Aug-2013 22:35:14] PHP Warning:  mysql_numrows(): supplied argument is not a valid MySQL result resource in /home/vios/public_html/appstore/submit.php on line 36
+[25-Aug-2013 22:35:14] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/submit.php on line 52
+[25-Aug-2013 22:35:53] PHP Warning:  mysql_numrows(): supplied argument is not a valid MySQL result resource in /home/vios/public_html/appstore/submit.php on line 36
+[25-Aug-2013 22:35:53] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/submit.php on line 52
+[25-Aug-2013 22:36:47] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/vios/public_html/appstore/submit.php on line 36
+[25-Aug-2013 22:36:47] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/submit.php on line 52
+[25-Aug-2013 22:37:26] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/vios/public_html/appstore/submit.php on line 36
+[25-Aug-2013 22:37:26] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/submit.php on line 52
+[25-Aug-2013 22:38:18] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/submit.php on line 52
+[25-Aug-2013 22:39:42] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/submit.php on line 53
+[25-Aug-2013 22:40:24] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/submit.php on line 53
+[25-Aug-2013 22:40:50] PHP Warning:  copy(../users//sysapps/FileNet/HDD/Applications/) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 46
+[25-Aug-2013 22:41:23] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/vios/public_html/appstore/submit.php on line 36
+[25-Aug-2013 22:41:23] PHP Warning:  copy(../users//sysapps/FileNet/HDD/Applications/) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 46
+[25-Aug-2013 22:43:09] PHP Warning:  mysql_select_db(): supplied argument is not a valid MySQL-Link resource in /home/vios/public_html/appstore/submit.php on line 33
+[25-Aug-2013 22:45:19] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/vios/public_html/appstore/submit.php on line 38
+[25-Aug-2013 22:45:19] PHP Warning:  copy(../users//sysapps/FileNet/HDD/Applications/) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 48
+[25-Aug-2013 22:46:36] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/vios/public_html/appstore/submit.php on line 37
+[25-Aug-2013 22:46:36] PHP Warning:  copy(../users//sysapps/FileNet/HDD/Applications/) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 47
+[25-Aug-2013 22:47:41] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/vios/public_html/appstore/submit.php on line 38
+[25-Aug-2013 22:47:41] PHP Warning:  copy(../users//sysapps/FileNet/HDD/Applications/) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 49
+[25-Aug-2013 22:50:37] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/vios/public_html/appstore/submit.php on line 38
+[25-Aug-2013 22:50:37] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: Access denied for user 'vios'@'localhost' (using password: NO) in /home/vios/public_html/appstore/submit.php on line 44
+[25-Aug-2013 22:50:37] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: A link to the server could not be established in /home/vios/public_html/appstore/submit.php on line 44
+[25-Aug-2013 22:50:37] PHP Warning:  mysql_query(): 12 is not a valid MySQL-Link resource in /home/vios/public_html/appstore/submit.php on line 46
+[25-Aug-2013 22:50:37] PHP Warning:  copy(../users//sysapps/FileNet/HDD/Applications/) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 50
+[25-Aug-2013 22:50:37] PHP Warning:  mysql_close(): 12 is not a valid MySQL-Link resource in /home/vios/public_html/appstore/submit.php on line 54
+[25-Aug-2013 22:52:21] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/vios/public_html/appstore/submit.php on line 38
+[25-Aug-2013 22:52:21] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: Access denied for user 'vios'@'localhost' (using password: NO) in /home/vios/public_html/appstore/submit.php on line 44
+[25-Aug-2013 22:52:21] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: A link to the server could not be established in /home/vios/public_html/appstore/submit.php on line 44
+[25-Aug-2013 22:52:21] PHP Warning:  mysql_query(): 12 is not a valid MySQL-Link resource in /home/vios/public_html/appstore/submit.php on line 46
+[25-Aug-2013 22:52:21] PHP Warning:  copy(../users//sysapps/FileNet/HDD/Applications/) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 50
+[25-Aug-2013 22:52:21] PHP Warning:  mysql_close(): 12 is not a valid MySQL-Link resource in /home/vios/public_html/appstore/submit.php on line 54
+[25-Aug-2013 22:52:34] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/vios/public_html/appstore/submit.php on line 38
+[25-Aug-2013 22:52:34] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: Access denied for user 'vios'@'localhost' (using password: NO) in /home/vios/public_html/appstore/submit.php on line 44
+[25-Aug-2013 22:52:34] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: A link to the server could not be established in /home/vios/public_html/appstore/submit.php on line 44
+[25-Aug-2013 22:52:34] PHP Warning:  mysql_query(): 12 is not a valid MySQL-Link resource in /home/vios/public_html/appstore/submit.php on line 46
+[25-Aug-2013 22:52:34] PHP Warning:  copy(../users//sysapps/FileNet/HDD/Applications/) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 50
+[25-Aug-2013 22:52:34] PHP Warning:  mysql_close(): 12 is not a valid MySQL-Link resource in /home/vios/public_html/appstore/submit.php on line 54
+[25-Aug-2013 23:04:45] PHP Warning:  Missing argument 1 for betacode(), called in /home/vios/public_html/appstore/submit.php on line 63 and defined in /home/vios/public_html/appstore/submit.php on line 58
+[25-Aug-2013 23:05:04] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/vios/public_html/appstore/submit.php on line 40
+[25-Aug-2013 23:05:04] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: Access denied for user 'vios'@'localhost' (using password: NO) in /home/vios/public_html/appstore/submit.php on line 46
+[25-Aug-2013 23:05:04] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: A link to the server could not be established in /home/vios/public_html/appstore/submit.php on line 46
+[25-Aug-2013 23:05:04] PHP Warning:  mysql_query(): 12 is not a valid MySQL-Link resource in /home/vios/public_html/appstore/submit.php on line 48
+[25-Aug-2013 23:05:04] PHP Warning:  copy(../users//sysapps/FileNet/HDD/Applications/) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 52
+[25-Aug-2013 23:05:04] PHP Warning:  mysql_close(): 12 is not a valid MySQL-Link resource in /home/vios/public_html/appstore/submit.php on line 56
+[25-Aug-2013 23:05:33] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/vios/public_html/appstore/submit.php on line 39
+[25-Aug-2013 23:05:33] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: Access denied for user 'vios'@'localhost' (using password: NO) in /home/vios/public_html/appstore/submit.php on line 45
+[25-Aug-2013 23:05:33] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: A link to the server could not be established in /home/vios/public_html/appstore/submit.php on line 45
+[25-Aug-2013 23:05:33] PHP Warning:  mysql_query(): 12 is not a valid MySQL-Link resource in /home/vios/public_html/appstore/submit.php on line 47
+[25-Aug-2013 23:05:33] PHP Warning:  copy(../users//sysapps/FileNet/HDD/Applications/) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 51
+[25-Aug-2013 23:05:33] PHP Warning:  mysql_close(): 12 is not a valid MySQL-Link resource in /home/vios/public_html/appstore/submit.php on line 55
+[25-Aug-2013 23:06:28] PHP Warning:  copy(../users//sysapps/FileNet/HDD/Applications/) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 52
+[25-Aug-2013 23:08:21] PHP Warning:  copy(../users//sysapps/FileNet/HDD/Applications/) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 52
+[25-Aug-2013 23:47:16] PHP Parse error:  syntax error, unexpected $end in /home/vios/public_html/appstore/get.php on line 64
+[26-Aug-2013 00:10:03] PHP Parse error:  syntax error, unexpected '}' in /home/vios/public_html/appstore/get.php on line 104
+[26-Aug-2013 01:14:59] PHP Warning:  unlink(temp/Social/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[26-Aug-2013 01:14:59] PHP Warning:  copy(temp2/Social/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 28
+[26-Aug-2013 01:14:59] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(temp/Social/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/appstore/update.php:48
+Stack trace:
+#0 /home/vios/public_html/appstore/update.php(48): RecursiveDirectoryIterator->__construct('temp/Social/')
+#1 /home/vios/public_html/appstore/update.php(29): ZIP('temp/Social.blu', 'temp/Social', '/')
+#2 {main}
+  thrown in /home/vios/public_html/appstore/update.php on line 48
+[26-Aug-2013 01:15:38] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 6
+[26-Aug-2013 01:15:38] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 17
+[26-Aug-2013 01:15:38] PHP Warning:  unlink(temp/Social/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[26-Aug-2013 01:15:38] PHP Warning:  copy(temp2/Social/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 28
+[26-Aug-2013 01:15:38] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(temp/Social/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/appstore/update.php:48
+Stack trace:
+#0 /home/vios/public_html/appstore/update.php(48): RecursiveDirectoryIterator->__construct('temp/Social/')
+#1 /home/vios/public_html/appstore/update.php(29): ZIP('temp/Social.blu', 'temp/Social', '/')
+#2 {main}
+  thrown in /home/vios/public_html/appstore/update.php on line 48
+[26-Aug-2013 01:15:48] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 6
+[26-Aug-2013 01:15:48] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 17
+[26-Aug-2013 01:15:48] PHP Warning:  unlink(temp/Social/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[26-Aug-2013 01:15:48] PHP Warning:  copy(temp2/Social/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 28
+[26-Aug-2013 01:15:48] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(temp/Social/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/appstore/update.php:48
+Stack trace:
+#0 /home/vios/public_html/appstore/update.php(48): RecursiveDirectoryIterator->__construct('temp/Social/')
+#1 /home/vios/public_html/appstore/update.php(29): ZIP('temp/Social.blu', 'temp/Social', '/')
+#2 {main}
+  thrown in /home/vios/public_html/appstore/update.php on line 48
+[26-Aug-2013 01:15:59] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 6
+[26-Aug-2013 01:15:59] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 17
+[26-Aug-2013 01:15:59] PHP Warning:  unlink(temp/Social/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[26-Aug-2013 01:15:59] PHP Warning:  copy(temp2/Social/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 28
+[26-Aug-2013 01:15:59] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(temp/Social/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/appstore/update.php:48
+Stack trace:
+#0 /home/vios/public_html/appstore/update.php(48): RecursiveDirectoryIterator->__construct('temp/Social/')
+#1 /home/vios/public_html/appstore/update.php(29): ZIP('temp/Social.blu', 'temp/Social', '/')
+#2 {main}
+  thrown in /home/vios/public_html/appstore/update.php on line 48
+[26-Aug-2013 01:16:18] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 6
+[26-Aug-2013 01:16:18] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 17
+[26-Aug-2013 01:16:18] PHP Warning:  unlink(temp/Social/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[26-Aug-2013 01:16:18] PHP Warning:  copy(temp2/Social/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 28
+[26-Aug-2013 01:16:18] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(temp/Social/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/appstore/update.php:48
+Stack trace:
+#0 /home/vios/public_html/appstore/update.php(48): RecursiveDirectoryIterator->__construct('temp/Social/')
+#1 /home/vios/public_html/appstore/update.php(29): ZIP('temp/Social.blu', 'temp/Social', '/')
+#2 {main}
+  thrown in /home/vios/public_html/appstore/update.php on line 48
+[26-Aug-2013 01:17:08] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 6
+[26-Aug-2013 01:17:08] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 17
+[26-Aug-2013 01:17:08] PHP Warning:  unlink(temp/Tweaks/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[26-Aug-2013 01:17:08] PHP Warning:  copy(temp2/Tweaks/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 28
+[26-Aug-2013 01:17:08] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(temp/Tweaks/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/appstore/update.php:48
+Stack trace:
+#0 /home/vios/public_html/appstore/update.php(48): RecursiveDirectoryIterator->__construct('temp/Tweaks/')
+#1 /home/vios/public_html/appstore/update.php(29): ZIP('temp/Tweaks.blu', 'temp/Tweaks', '/')
+#2 {main}
+  thrown in /home/vios/public_html/appstore/update.php on line 48
+[26-Aug-2013 01:18:20] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 6
+[26-Aug-2013 01:18:20] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 17
+[26-Aug-2013 01:18:20] PHP Warning:  unlink(temp/Chatters/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[26-Aug-2013 01:18:20] PHP Warning:  copy(temp2/Chatters/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 28
+[26-Aug-2013 01:18:20] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(temp/Chatters/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/appstore/update.php:48
+Stack trace:
+#0 /home/vios/public_html/appstore/update.php(48): RecursiveDirectoryIterator->__construct('temp/Chatters/')
+#1 /home/vios/public_html/appstore/update.php(29): ZIP('temp/Chatters.b...', 'temp/Chatters', '/')
+#2 {main}
+  thrown in /home/vios/public_html/appstore/update.php on line 48
+[26-Aug-2013 01:20:27] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 6
+[26-Aug-2013 01:20:27] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/update.php on line 17
+[26-Aug-2013 01:20:27] PHP Warning:  unlink(temp/Chatters/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[26-Aug-2013 01:20:27] PHP Warning:  copy(temp2/Chatters/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 28
+[26-Aug-2013 04:17:36] PHP Warning:  unlink(temp/Chatters/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[26-Aug-2013 04:17:36] PHP Warning:  copy(temp2/Chatters/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 28
+[26-Aug-2013 04:20:14] PHP Warning:  unlink(temp/Chatters/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[26-Aug-2013 04:20:14] PHP Warning:  copy(temp2/Chatters/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 28
+[26-Aug-2013 04:20:17] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[26-Aug-2013 04:20:21] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[26-Aug-2013 09:46:39] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: Access denied for user 'vios'@'localhost' (using password: NO) in /home/vios/public_html/appstore/submit.php on line 61
+[26-Aug-2013 09:46:39] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: A link to the server could not be established in /home/vios/public_html/appstore/submit.php on line 61
+[26-Aug-2013 09:47:19] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: Access denied for user 'vios'@'localhost' (using password: NO) in /home/vios/public_html/appstore/submit.php on line 61
+[26-Aug-2013 09:47:19] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: A link to the server could not be established in /home/vios/public_html/appstore/submit.php on line 61
+[26-Aug-2013 09:50:13] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: Access denied for user 'vios'@'localhost' (using password: NO) in /home/vios/public_html/appstore/submit.php on line 61
+[26-Aug-2013 09:50:13] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: A link to the server could not be established in /home/vios/public_html/appstore/submit.php on line 61
+[26-Aug-2013 09:50:37] PHP Warning:  mysql_close(): 14 is not a valid MySQL-Link resource in /home/vios/public_html/appstore/submit.php on line 69
+[26-Aug-2013 09:51:11] PHP Warning:  mysql_close(): 14 is not a valid MySQL-Link resource in /home/vios/public_html/appstore/submit.php on line 69
+[26-Aug-2013 09:52:55] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/vios/public_html/appstore/submit.php on line 65
+[26-Aug-2013 10:00:27] PHP Warning:  rmdir(apps/Social/Array) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/appstore/submit.php on line 7
+[26-Aug-2013 10:01:42] PHP Warning:  unlink(temp/Chatters/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[26-Aug-2013 10:01:42] PHP Warning:  copy(temp2/Chatters/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 28
+[26-Aug-2013 14:45:56] PHP Warning:  unlink(temp/Chatters/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[26-Aug-2013 14:45:56] PHP Warning:  copy(temp2/Chatters/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 28
+[26-Aug-2013 14:46:01] PHP Warning:  unlink(temp/Chatters/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[26-Aug-2013 14:46:01] PHP Warning:  copy(temp2/Chatters/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 28
+[26-Aug-2013 14:46:03] PHP Warning:  unlink(temp/Chatters/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[26-Aug-2013 14:46:03] PHP Warning:  copy(temp2/Chatters/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 28
+[26-Aug-2013 14:46:26] PHP Warning:  unlink(temp/Chatters/prefs.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/vios/public_html/appstore/update.php on line 27
+[26-Aug-2013 14:46:26] PHP Warning:  copy(temp2/Chatters/prefs.php) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/update.php on line 28
+[27-Aug-2013 10:22:10] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[27-Aug-2013 10:22:15] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[27-Aug-2013 10:22:15] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[27-Aug-2013 10:23:25] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[27-Aug-2013 10:23:25] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8

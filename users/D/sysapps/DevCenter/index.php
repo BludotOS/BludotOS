@@ -54,6 +54,9 @@ var newed = new XMLHttpRequest();
         }
         newed.send();
 }
+thisis[actT.x].upload = function(){
+	core.loadApps.Uploader(thisis[actT.x].response.location+'/', '');
+};
 thisis[actT.x].Rclick = function (details, node) {
         var temp = document.createElement('div');
 		var list = thisis[actT.x].children[1].querySelector('#leftfilemgr').parentNode;
@@ -80,7 +83,7 @@ thisis[actT.x].Rclick = function (details, node) {
 	};
 	window.tempnode = node;
 	temp.className = 'arrow_box_up';
-		temp.innerHTML = '<ul><li onclick="thisis[actT.x].view(\''+node.children[1].innerHTML+'\', (thisis[actT.x].nameit+thisis[actT.x].response.location.split(thisis[actT.x].nameit)[1]));">Open</li><li>New<ul><li onclick="thisis[actT.x].newobj(\'file\');">File</li><li onclick="thisis[actT.x].newobj(\'dir\');">Directory</li></ul></li><li>Edit</li><li>Copy</li><li>Cut</li><li>Paste</li><li onclick="thisis[actT.x].delete(\''+node.children[1].innerHTML+'\');">Delete</li></ul>';
+		temp.innerHTML = '<ul><li onclick="thisis[actT.x].view(\''+node.children[1].innerHTML+'\', (thisis[actT.x].nameit+thisis[actT.x].response.location.split(thisis[actT.x].nameit)[1]));">Open</li><li>New<ul><li onclick="thisis[actT.x].newobj(\'file\');">File</li><li onclick="thisis[actT.x].newobj(\'dir\');">Directory</li></ul></li><li>Edit</li><li>Copy</li><li>Cut</li><li>Paste</li><li onclick="thisis[actT.x].upload();">Upload</li><li onclick="thisis[actT.x].delete(\''+node.children[1].innerHTML+'\');">Delete</li></ul>';
 	var num = parseInt(node.parentNode.offsetTop)+91;
 	if((list.clientHeight-num) < temp.clientHeight)
 	{
@@ -296,6 +299,8 @@ thisis[actT.x].open = function(name) {
         ajax3.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	ajax3.onreadystatechange = function() {
 		if (ajax3.readyState==4) {
+			if(ajax3.responseText == 'success')
+			{
                         window.thisis[actT.x].old = '../FileNet/HDD/Applications/temp/'+name;
                         var ajax4 = new XMLHttpRequest();
 	ajax4.open('GET', 'users/<? echo $user; ?>/sysapps/DevCenter/pastephp.php?nameit='+nameit0+'&name=index.txt', true);
@@ -327,7 +332,10 @@ descript.open('GET', 'users/<? echo $user; ?>/sysapps/FileNet/HDD/Applications/t
 		};
 	};			
 	ajax4.send();
-				
+		} else {
+			MainTools.Notify(ajax3.responseText, 'icons/DevCenter.png', 3);
+			thisis[actT.x].popen();
+		}	
 		};
 	};			
 	ajax3.send(sendit);

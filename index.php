@@ -220,6 +220,7 @@ background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHh
 }
 body {
 font-family:arial;
+overflow:hidden;
 }
 .menu-sub:hover > ul {
 	display:block !important;
@@ -571,7 +572,7 @@ window.core = (function(){
 Trash:function ()
 {
 var dividofapps = "trashwin"
-var trash=SimpleWin.create("Trash", "trash", "sysapps/trash.txt");
+var trash=SimpleWin.create("Trash", "trash", "sysapps/trash.txt", null);
 dock.addclick('Trash', ['close', 'minimize'], [function(){SimpleWin.close(trash);}, function(){SimpleWin.minimize(trash);}]);
      
 trash.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
@@ -582,7 +583,7 @@ return true
 Appstore:function ()
 {
 core.checkupdates();
-var Appstore=SimpleWin.create("Appstore", "Appstore", "appstore/");
+var Appstore=SimpleWin.create("Appstore", "Appstore", "appstore/?dev=<? echo $session->isDev(); ?>&admin=<? echo $session->isAdmin(); ?>", null);
      
 Appstore.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
 
@@ -608,7 +609,7 @@ var AchatS = prompt('Username');
             menuClick: [function(){this.name();}],
             onclick:   function (){return false;}
           }, dock.findApp('Trash'));
-     	var AmoebaChat=SimpleWin.create("AmoebaChat", "amoebachat", 'http://amoeba.im/#username='+AchatS);
+     	var AmoebaChat=SimpleWin.create("AmoebaChat", "amoebachat", 'http://amoeba.im/#username='+AchatS, null);
         dock.addclick('AmoebaChat', ['close', 'minimize'], [function(){SimpleWin.close(AmoebaChat);}, function(){SimpleWin.minimize(AmoebaChat);}]);
      } else {
      	alert("You pressed Cancel or no value was entered!");
@@ -621,7 +622,7 @@ var AchatS = prompt('Username');
 
      // if (favorite) equivalent to if (favorite != null && favorite != "");
      if (AchatS) {
-var AmoebaChat=SimpleWin.create("AmoebaChat", "amoebachat", "sysapps/amoebachat.txt");
+var AmoebaChat=SimpleWin.create("AmoebaChat", "amoebachat", "sysapps/amoebachat.txt", null);
      } else {
      	alert("You pressed Cancel or no value was entered!");
      }
@@ -646,11 +647,11 @@ DevCenter:function ()
 <?
 if (!$isMobile) {
 ?>
-var DevCenter=SimpleWin.create("DevCenter", "DevCenter", "users/"+core.user+"/sysapps/DevCenter/?thefile=file.txt&userN="+core.user+"");
+var DevCenter=SimpleWin.create("DevCenter", "DevCenter", "users/"+core.user+"/sysapps/DevCenter/?thefile=file.txt&userN="+core.user+"", '');
 <?
 } else if($isMobile) {
 ?>
-var DevCenter=SimpleWin.create("DevCenter", "DevCenter", "users/"+core.user+"/sysapps/DevCenter/mobile.php?thefile=file.txt&userN="+core.user+"");
+var DevCenter=SimpleWin.create("DevCenter", "DevCenter", "users/"+core.user+"/sysapps/DevCenter/mobile.php?thefile=file.txt&userN="+core.user+"", '');
 <?
 };
 if (!$isMobile) {
@@ -694,11 +695,11 @@ FileNet:function ()
 <?
 if (!$isMobile) {
 ?>
-var FileNet=SimpleWin.create("FileNet", "FileNet", "users/"+core.user+"/sysapps/FileNet/?userN="+core.user+"", 400, 750, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
+var FileNet=SimpleWin.create("FileNet", "FileNet", "users/"+core.user+"/sysapps/FileNet/?userN="+core.user+"", '<div style="position: relative;height: 120px;top:0px;left:0px;width: 100px;"><img src="icons/FileNet.png" style="position:relative;top:0px;width:100%;left: 0px;"/><font style="position:relative;top:0px;left:0px;width:100%;text-align:center;">Loading</font></div>', 400, 750, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
 <?
 } else if($isMobile) {
 ?>
-var FileNet=SimpleWin.create("FileNet", "FileNet", "users/"+core.user+"/sysapps/FileNet/mobile.php?userN="+core.user+"", 400, 750, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
+var FileNet=SimpleWin.create("FileNet", "FileNet", "users/"+core.user+"/sysapps/FileNet/mobile.php?userN="+core.user+"", '', 400, 750, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
 <?
 };
 ?>
@@ -727,11 +728,11 @@ window.dock.addIcon({
 <?
 if (!$isMobile) {
 ?>
-var Prefer=SimpleWin.create("Preferences", "prefed", "users/"+core.user+"/sysapps/Preferences/index.php?userN="+core.user+"", 420, 540, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
+var Prefer=SimpleWin.create("Preferences", "prefed", "users/"+core.user+"/sysapps/Preferences/index.php?userN="+core.user+"", '', 420, 540, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
 <?
 } else if($isMobile) {
 ?>
-var Prefer=SimpleWin.create("Preferences", "prefed", "users/"+core.user+"/sysapps/Preferences/mobile.php?userN="+core.user+"", 420, 540, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
+var Prefer=SimpleWin.create("Preferences", "prefed", "users/"+core.user+"/sysapps/Preferences/mobile.php?userN="+core.user+"", '', 420, 540, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
 <?
 };
 ?>
@@ -760,7 +761,7 @@ Uploader:function(loc, type, callback){
 	<?
 if (!$isMobile) {
 ?>
-	var Uploader=SimpleWin.create("Uploader", "Uploader", "users/"+core.user+"/sysapps/Uploader/index.php?user="+core.user+"&location="+loc+"&type="+type+"", 250, 525, function(obj){
+	var Uploader=SimpleWin.create("Uploader", "Uploader", "users/"+core.user+"/sysapps/Uploader/index.php?user="+core.user+"&location="+loc+"&type="+type+"", '', 250, 525, function(obj){
 		var temp = document.createElement('div');
 		temp.style.cssText = "position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: transparent;z-index:1;";
 		document.getElementById('dhtmlwindowholder').insertBefore(temp, document.getElementById('dhtmlwindowholder').children[0]);
@@ -775,7 +776,7 @@ if (!$isMobile) {
 <?
 } else if($isMobile) {
 ?>
-var Uploader=SimpleWin.create("Uploader", "Uploader", "users/"+core.user+"/sysapps/Uploader/mobile.php?user="+core.user+"&location="+loc+"&type="+type+"", 250, 525, function(obj){
+var Uploader=SimpleWin.create("Uploader", "Uploader", "users/"+core.user+"/sysapps/Uploader/mobile.php?user="+core.user+"&location="+loc+"&type="+type+"", '', 250, 525, function(obj){
 		var temp = document.createElement('div');
 		temp.style.cssText = "position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: transparent;z-index:1;";
 		document.getElementById('dhtmlwindowholder').insertBefore(temp, document.getElementById('dhtmlwindowholder').children[0]);
@@ -801,14 +802,14 @@ return true;
 },
 AdminC:function ()
 {
-var AdminC=SimpleWin.create("AdminC", "AdminC", "users/"+core.user+"/admin/admin.php")
+var AdminC=SimpleWin.create("AdminC", "AdminC", "users/"+core.user+"/admin/admin.php", '')
 AdminC.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
 return true;
 }
 },
 Safari:function ()
 {
-var googlewin=SimpleWin.create("Safari", "safari", 'browserT/browser.html', 590, 500);
+var googlewin=SimpleWin.create("Safari", "safari", 'browserT/browser.html', '', 590, 500);
 dock.addclick('Safari', ['close', 'minimize'], [function(){SimpleWin.close(googlewin);}, function(){SimpleWin.minimize(googlewin);}]);
 googlewin.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
 dock.removeclick('Safari', ['close', 'minimize']);
@@ -817,7 +818,7 @@ return true;
 },
 AboutOS:function()
 {
-var aboutos=SimpleWin.create("About", "about", "aboutOSw.php?ver=<? echo $version; ?>", 450, 400, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;}, 1, 1);
+var aboutos=SimpleWin.create("About", "about", "aboutOSw.php?ver=<? echo $version; ?>", '', 450, 400, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;}, 1, 1);
      
 aboutos.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
 return true
@@ -826,7 +827,7 @@ return true
 logout:function()
                                         {
                                         setTimeout("location.href = 'process.php';",1500);
-                                        var logout=SimpleWin.create("logout", "logout", "sysapps/logout.txt", "width=590px,height=175px,resize=1,scrolling=1,center=1")
+                                        var logout=SimpleWin.create("logout", "logout", "sysapps/logout.txt", '', "width=590px,height=175px,resize=1,scrolling=1,center=1")
      
                                         logout.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
                                         return true
@@ -895,7 +896,7 @@ window.dock.addIcon({
             menuClick: [function(){return false;}],
             onclick:   function (){return false;}
           }, dock.findApp('Trash'));
-var temp = SimpleWin.create(name, name, "users/"+core.user+"/sysapps/FileNet/HDD/Applications/temp/"+name+"/index.php?name="+name+"&userN="+core.user+"");
+var temp = SimpleWin.create(name, name, "users/"+core.user+"/sysapps/FileNet/HDD/Applications/temp/"+name+"/index.php?name="+name+"&userN="+core.user+"", '');
 window.tempname = name;
 <?
 if ($isMobile) {
@@ -1021,7 +1022,7 @@ core.checkupdates();
                                if(checkp.readyState == 4){
                                      window.prefit = JSON.parse(checkp.responseText);
                                      //core.userprefs = prefit;
-                                     core.OS.Desktop.background.src = 'users/'+core.user+'sysapps/FileNet/'+prefit.wallpaper;
+                                     core.OS.Desktop.background.src = 'users/'+core.user+'/sysapps/FileNet/'+prefit.wallpaper;
                                      if (prefit.Dockmag == 'false') {
                                          prefit.Dockmag = false;
                                      } else if (prefit.Dockmag == 'true') {
@@ -1137,6 +1138,7 @@ core.checkupdates();
     	core.OS.Taskbar.menu1.li1.appendChild(core.OS.Taskbar.menu1.li1.img);
     	core.OS.Taskbar.menu1.li1.img.src = 'wallpaper/BluDotlogo.png';
     	core.OS.Taskbar.menu1.menu2sub1 = core.create('ul');
+    	core.OS.Taskbar.menu1.menu2sub1.className = 'arrow_box';
     	core.OS.Taskbar.menu1.appendChild(core.OS.Taskbar.menu1.menu2sub1);
     	core.OS.Taskbar.menu1.menu2sub1.id = 'menu2sub1';
     	core.OS.Taskbar.menu1.menu2sub1.name = 'test';
@@ -1652,7 +1654,7 @@ var checkp = new XMLHttpRequest();
                                      window.prefit = JSON.parse(checkp.responseText);
                                      //core.userprefs = prefit;
                                         core.Cversion = <?echo $version;?>;
-                                     core.OS.Desktop.background.src = 'users/'+core.user+'sysapps/FileNet/'+prefit.wallpaper;
+                                     core.OS.Desktop.background.src = 'users/'+core.user+'/sysapps/FileNet/'+prefit.wallpaper;
                                      if (prefit.Dockmag == 'false') {
                                          prefit.Dockmag = false;
                                      } else if (prefit.Dockmag == 'true') {
@@ -1774,6 +1776,7 @@ var checkp = new XMLHttpRequest();
     	core.OS.Taskbar.menu1.li1.appendChild(core.OS.Taskbar.menu1.li1.img);
     	core.OS.Taskbar.menu1.li1.img.src = 'wallpaper/BluDotlogo.png';
     	core.OS.Taskbar.menu1.menu2sub1 = core.create('ul');
+    	core.OS.Taskbar.menu1.menu2sub1.className = 'arrow_box';
     	core.OS.Taskbar.menu1.appendChild(core.OS.Taskbar.menu1.menu2sub1);
     	core.OS.Taskbar.menu1.menu2sub1.id = 'menu2sub1';
     	core.OS.Taskbar.menu1.menu2sub1.name = 'test';
@@ -1996,6 +1999,14 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
         priv.auth();
     };
     core.checkupdates = function() {
+    	var updateitq = new XMLHttpRequest();
+updateitq.open('GET', 'appcheck.php', true);
+updateitq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+updateitq.onreadystatechange = function() {
+        if(updateitq.readyState==4) {
+                var respw = JSON.parse(updateitq.responseText);
+                window.respw = respw;
+                
 var getapps = new XMLHttpRequest();
 getapps.open('GET', 'apps.php?goto=users/'+core.user+'/sysapps/FileNet/apps/', true);
 getapps.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -2013,20 +2024,19 @@ cupdateitq.onreadystatechange = function() {
                 var resp = JSON.parse(cupdateitq.responseText.toString());
                 window.resp2 = resp;
                 window.resp2.app = window.capp;
-var updateitq = new XMLHttpRequest();
-updateitq.open('GET', 'appstore/apps/'+window.resp2.cat+'/'+window.resp2.app+'/version.txt?t='+new Date().getTime(), true);
-updateitq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-updateitq.onreadystatechange = function() {
-        if(updateitq.readyState==4) {
-                var respw = JSON.parse(updateitq.responseText.toString());
-                window.respw = respw;
-                if(parseFloat(window.resp2.version) < parseFloat(window.respw.version)) {
-                	core.capps.push(window.resp2.app);
+                for(var a in  window.respw)
+                {
+                	for(var b in window.respw[a])
+                	{
+                		if(window.respw[a][b]['name'] == window.capp)
+                		{
+                			if(parseFloat(window.resp2.version) < parseFloat(window.respw[a][b]['version'])) {
+                				console.log(parseFloat(window.respw[a][b]['version']));
+                		core.capps.push(window.resp2.app);
+                		};
+                		};
                 	};
-                
-        }
-}
-updateitq.send();
+                };
         }
 }
 cupdateitq.send();
@@ -2037,6 +2047,9 @@ if(i == respit.dirs.length) {
 }
 }
 getapps.send();
+}
+}
+updateitq.send();
 };
 core.testu = function(array, name) {
 var test = new XMLHttpRequest();
@@ -2071,12 +2084,13 @@ test.send();
 }());
 //window.onload = function(){core.getscript('default', 'script', 'maintools');core.load();document.forms[0].children[0].children[0].focus();};
 window.onload = function(){
-	core.getscript('default', 'script', 'maintools', function(){setTimeout(function(){MainTools.Notify("Welcome!!</br>This is the early release of Bludot OS.</br>Sign up and take a look.</br>Click <a href=\"https://bludot.codeplex.com/\">About</a> to find out more.</br></br>   -Bludot Administrator", null, 500);MainTools.Notify("If you are a developer and would</br>like a developer account then</br>signup and follow the email instructions.</br>Apps are developed in the javascript language.</br>More features will come soon.", null, 500);}, 3000);});
+	//core.getscript('default', 'script', 'maintools', function(){setTimeout(function(){MainTools.Notify("Welcome!!</br>This is the early release of Bludot OS.</br>Sign up and take a look.</br>Click <a href=\"https://bludot.codeplex.com/\">About</a> to find out more.</br></br>   -Bludot Administrator", null, 500);MainTools.Notify("If you are a developer and would</br>like a developer account then</br>signup and follow the email instructions.</br>Apps are developed in the javascript language.</br>More features will come soon.", null, 500);}, 3000);});
+	core.getscript('default', 'script', 'maintools');
 	core.load();
 };
 </script>
 </head>
-<body scrolling="no" id="body" ondragstart="return false;" onselectstart="return false;">
+<body scrolling="no" id="body" ondragstart="return false;" onselectstart="return false;" style="overflow:hidden;">
 <div id="notifications"></div>
 </body>
 </html>

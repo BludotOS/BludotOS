@@ -11,8 +11,8 @@
  */
 include("include/session.php");
 $betacode = $_GET['code'];
-$user_name = "vios_admin";
-$password = "qlalsldl";
+$user_name = user;
+$password = pass;
 $database = "vios_beta";
 $server = "127.0.0.1";
 $db_handle = mysql_connect($server, $user_name, $password);

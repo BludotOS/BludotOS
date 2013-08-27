@@ -1,10 +1,10 @@
 <?PHP
 ob_start();
 
-$user_name = "vios_pub";
-$password = "qlalsldl";
+$user_name = user;
+$password = pass;
 $database = "vios_beta";
-$server = "74.53.164.85";
+$server = "127.0.0.1";
 $db_handle = mysql_connect($server, $user_name, $password);
 $db_found = mysql_select_db($database, $db_handle);
 

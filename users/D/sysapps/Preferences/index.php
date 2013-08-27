@@ -14,6 +14,9 @@ for (var x=0; x < thisis.length; x++)
         window.actT.x = x;
      }
 }
+thisis[actT.x].menu = function() {
+	
+};
 window.updatecon = function(change) {
 var wall = new XMLHttpRequest();
 	wall.open('GET', 'users/'+core.user+'/sysapps/Preferences/uconf.php?user='+core.user+'&name=wallpaper&change='+change, true);

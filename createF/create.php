@@ -64,7 +64,7 @@ if($file!="." && $file!=".." && !is_dir("$source/$file"))
 copy("$source/$file","$destination/$file");
 }
 closedir($dir_handle);
-header( 'Location: http://bludot.tk/index.php' );
+header( 'Location: http://bludotos.com/index.php' );
 }
 
 ?>

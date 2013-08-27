@@ -26,11 +26,14 @@ copydir("../users/admin/config","../users/$name/config");
 //copydir("../users/admin/sysapps","../users/$name/sysapps");
 copydir("../users/admin/sysapps/DevCenter","../users/$name/sysapps/DevCenter");
 //copydir("../users/admin/sysapps/DevCenter/images","../users/$name/sysapps/DevCenter/images");
-if($name != "admin")
+/*if($name != "admin")
 {
-	//rrmdir("../users/$name/sysapps/DevCenter/include");
+	unlink("../users/$name/sysapps/FileNet/HDD/Applications/APP.blu");
+	copy("../users/admin/sysapps/FileNet/HDD/Applications/APP.blu", "../users/$name/sysapps/FileNet/HDD/Applications/APP.blu");
+	//mkdir("../users/$name/sysapps/FileNet/HDD/Applications");
+	//mkdir("../users/$name/sysapps/FileNet/HDD/Applications/temp");
 	//mkdir("../users/$name/sysapps/DevCenter/include/APP_core");
-};
+};*/
 copydir("../users/admin/sysapps/DevCenter/include","../users/$name/sysapps/DevCenter/include");
 copydir("../users/admin/sysapps/DevCenter/include/APP_core","../users/$name/sysapps/DevCenter/include/APP_core");
 copydir("../users/admin/sysapps/FileNet","../users/$name/sysapps/FileNet");
@@ -40,7 +43,7 @@ copydir("../users/admin/sysapps/FileNet/include","../users/$name/sysapps/FileNet
 copydir("../users/admin/sysapps/Uploader","../users/$name/sysapps/Uploader");
 //copydir("../users/admin/sysapps/FileNet/images","../users/$name/sysapps/FileNet/images");
 copydir("../users/admin/sysapps/Preferences","../users/$name/sysapps/Preferences");
-$link = mysql_connect('localhost','vios_admin','qlalsldl');
+$link = mysql_connect('localhost',user,pass);
 mysql_select_db('vios_users', $link);
 $sql = "SELECT userid FROM users WHERE username = '".$name."'";
 $result = mysql_query($sql, $link) or die(mysql_error());

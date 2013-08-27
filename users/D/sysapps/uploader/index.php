@@ -138,7 +138,7 @@ thisis[actT.x].startUploading = function() {
     oXHR.addEventListener('load', thisis[actT.x].uploadFinish, false);
     oXHR.addEventListener('error', thisis[actT.x].uploadError, false);
     oXHR.addEventListener('abort', thisis[actT.x].uploadAbort, false);
-    oXHR.open('POST', 'users/<? echo $user; ?>/sysapps/uploader/upload.php?location=<? echo $location; ?>');
+    oXHR.open('POST', 'users/<? echo $user; ?>/sysapps/Uploader/upload.php?location=<? echo $location; ?>');
     oXHR.send(vFD);
 
     // set inner timer

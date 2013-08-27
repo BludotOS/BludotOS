@@ -220,6 +220,7 @@ background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHh
 }
 body {
 font-family:arial;
+overflow:hidden;
 }
 .menu-sub:hover > ul {
 	display:block !important;
@@ -1104,7 +1105,7 @@ core.checkupdates();
                                if(checkp.readyState == 4){
                                      window.prefit = JSON.parse(checkp.responseText);
                                      //core.userprefs = prefit;
-                                     core.OS.Desktop.background.src = 'users/'+core.user+'sysapps/FileNet/'+prefit.wallpaper;
+                                     core.OS.Desktop.background.src = 'users/'+core.user+'/sysapps/FileNet/'+prefit.wallpaper;
                                      if (prefit.Dockmag == 'false') {
                                          prefit.Dockmag = false;
                                      } else if (prefit.Dockmag == 'true') {
@@ -1740,7 +1741,7 @@ var checkp = new XMLHttpRequest();
                                      window.prefit = JSON.parse(checkp.responseText);
                                      //core.userprefs = prefit;
                                         core.Cversion = <?echo $version;?>;
-                                     core.OS.Desktop.background.src = 'users/'+core.user+'sysapps/FileNet/'+prefit.wallpaper;
+                                     core.OS.Desktop.background.src = 'users/'+core.user+'/sysapps/FileNet/'+prefit.wallpaper;
                                      if (prefit.Dockmag == 'false') {
                                          prefit.Dockmag = false;
                                      } else if (prefit.Dockmag == 'true') {
@@ -2166,7 +2167,7 @@ window.onload = function(){
 };
 </script>
 </head>
-<body scrolling="no" id="body" ondragstart="return false;" onselectstart="return false;">
+<body scrolling="no" id="body" ondragstart="return false;" onselectstart="return false;" style="overflow:hidden;">
 <div id="notifications"></div>
 </body>
 </html>

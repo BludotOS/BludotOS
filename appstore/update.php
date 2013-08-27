@@ -2,15 +2,16 @@
 $app = $_GET['app'];
 $cat = $_GET['cat'];
 $name = $_GET['name'];
+$id = $_GET["id"];
 mkdir('temp');
 //copy('apps/'.$cat.'/'.$app.'/'.$app.'.blu', 'apps/'.$cat.'/'.$app.'/'.$app.'.zip');
 $zip = new ZipArchive;
-if ($zip->open('apps/'.$cat.'/'.$app.'/'.$app.'.blu') === TRUE) {
+if ($zip->open('apps/'.$cat.'/'.$id.'/'.$app.'.blu') === TRUE) {
     $zip->extractTo('temp');
     $zip->close();
     //echo 'ok';
 } else {
-    echo 'apps/'.$cat.'/'.$app.'/'.$app.'.blu';
+    echo 'apps/'.$cat.'/'.$id.'/'.$app.'.blu';
     echo 'failed';
 }
 mkdir('temp2');
@@ -23,8 +24,12 @@ if ($zip->open('../users/'.$name.'/sysapps/FileNet/apps/'.$app.'/'.$app.'.blu') 
     echo '../users/'.$name.'/sysapps/FileNet/apps/'.$app.'/'.$app.'.blu';
     echo 'failed';
 }
-unlink('temp/'.$app.'/prefs.php');
-copy("temp2/$app/prefs.php", "temp/$app/prefs.php");
+if(is_file('temp/'.$app.'/prefs.php'))
+{
+	unlink('temp/'.$app.'/prefs.php');
+	copy("temp2/$app/prefs.php", "temp/$app/prefs.php");
+}
+
 ZIP("temp/$app.blu", "temp/$app", "/");
 function ZIP($new, $path, $old)
 {
@@ -86,7 +91,7 @@ deleteDir('temp');
 deleteDir('temp2');
 if(is_dir('../users/'.$name.'/sysapps/FileNet/apps/'.$app.'') && is_file("../users/$name/sysapps/FileNet/apps/$app/$app.blu")) {
 unlink('../users/'.$name.'/sysapps/FileNet/apps/'.$app.'/version.txt');
-copy("apps/$cat/$app/version.txt", "../users/$name/sysapps/FileNet/apps/$app/version.txt");
+copy("apps/$cat/$id/version.txt", "../users/$name/sysapps/FileNet/apps/$app/version.txt");
 echo "updated";
 } else {
 echo "error";

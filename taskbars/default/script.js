@@ -24,12 +24,14 @@ Object.prototype.previousObject = function() {
 window.clicked = clickth;
 clicked.nextObject().style.left=clicked.offsetLeft+'px';
 if (clicked.click !== 1) {
-clicked.children[0].style.background = '-webkit-gradient(linear, left top, left bottom, from(#7a7a7a), to(#6E24FF))';
-clicked.children[0].style.background = '-moz-linear-gradient(top,  #7a7a7a,  #6E24FF)';
+//clicked.children[0].style.background = '-webkit-gradient(linear, left top, left bottom, from(#7a7a7a), to(#6E24FF))';
+clicked.children[0].className = 'clicked';
+//clicked.children[0].style.background = '-moz-linear-gradient(top,  #7a7a7a,  #6E24FF)';
 clicked.nextObject().style.display='block'; 
 clicked.click=1;
 } else if (clicked.click === 1) {
-clicked.children[0].style.background='transparent';
+//clicked.children[0].style.background='transparent';
+clicked.children[0].className = '';
 clicked.nextObject().style.display='none';
 delete clicked.click; clicked = undefined; }
 }
@@ -53,12 +55,14 @@ var clicked = clickth;
 clicked.style.left=clicked.parentNode.clientWidth+'px';
 clicked.style.width = 'auto';
 if (val === 1) {
-clicked.style.background = '-webkit-gradient(linear, left top, left bottom, from(#7a7a7a), to(#6E24FF))';
-clicked.style.background = '-moz-linear-gradient(top,  #7a7a7a,  #6E24FF)';
+//clicked.style.background = '-webkit-gradient(linear, left top, left bottom, from(#7a7a7a), to(#6E24FF))';
+clicked.className = 'clicked';
+//clicked.style.background = '-moz-linear-gradient(top,  #7a7a7a,  #6E24FF)';
 clicked.style.display='block'; 
 clicked.click=1;
 } else if (val === 0) {
-clicked.style.background='transparent';
+//clicked.style.background='transparent';
+clicked.className = '';
 clicked.style.display='none';
 delete clicked.click; clicked = undefined; }
 }

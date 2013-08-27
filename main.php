@@ -74,7 +74,7 @@ outline:none;
 <div id="mymenu_10728205" style="z-index:1051;top:160px;left:10px;width:940px;height:25px;position:absolute;" objtype="6" class="">
 <div class="suckertreemenu">
 <ul id="treemenu1" isvertical="0">
-<li><a href="/">Home</a></li><li><a href="https://bludot.codeplex.com/">About</a></li><li><a href="http://dev.bludotos.com">Developers</a></li><li><a href="mailto:support@bludotos.com">Contact</a></li></ul></div></div>
+<li><a href="/">Home</a></li><li><a href="about.html">About</a></li><li><a href="http://dev.bludotos.com">Developers</a></li><li><a href="mailto:support@bludotos.com">Contact</a></li></ul></div></div>
 <div id="boxTool_1" style="width:960px;height:599px;position:absolute;top:140px;left:0px;z-index:1;background-color:rgb(0, 0, 0);opacity:0.7;filter:alpha(opacity=70);" objtype="5" class=""></div>
 <div id="txtBox_2" style="width:922px;height:42px;position:absolute;padding:10px;top:20px;left:71px;z-index:2;" objtype="2" class="" align="left"><span style="color:rgb(61, 133, 198);font-size:24pt;font-family:Verdana;font-weight:bold;">BluDot OS</span></div>
 <div id="txtBox_3" style="width:922px;height:18px;position:absolute;padding:10px;top:59px;left:76px;z-index:7;" objtype="2" class="" align="left"><span style="font-size:10pt;color:rgb(241, 194, 50);font-family:'Trebuchet MS';">Simple, Clean, Efficient</span></div>

@@ -3,7 +3,7 @@ var SimpleWin = {
 theme:'default',
 zindexbase:10,
 Winds:0,
-init:function(widn, height, width, left, top, size, bar){
+init:function(widn, splash, height, width, left, top, size, bar){
         if (!height && !width && !left && !top) {
                var height = window.innerHeight-document.getElementById('background').clientHeight;
                var width= window.innerWidth;
@@ -74,6 +74,7 @@ init:function(widn, height, width, left, top, size, bar){
 	wid.topbar.left3.onclick=function(){SimpleWin.maximize(wid);};
 	window.actT=wid;
         wid.nim=0;
+        
 	return wid;
 },
 
@@ -89,13 +90,13 @@ getdata:function(data, callback){
 	};
 	xmlhttp.send();
 },
-create:function(wid, title, data, height, width, left, top, size, bar){
+create:function(wid, title, data, splash, height, width, left, top, size, bar){
 	this.lastwid = this.lastact;
 	var d=SimpleWin;
-	wid=this.init(wid, height, width, left, top, size, bar);
+	wid=this.init(wid, splash, height, width, left, top, size, bar);
 	window.wid=wid;
 	this.getdata(data, function(xmlhttp){
-		wid.content.innerHTML=xmlhttp;
+		wid.content.innerHTML+=xmlhttp;
 		if (wid.children[1].getElementsByTagName('script')[0]) {
 		wid.scriptd = wid.children[1].getElementsByTagName('script')[0];
 		eval(wid.scriptd.innerHTML);

@@ -20,7 +20,7 @@ for(var i = 2; i < menu.children.length; i++)
 {
 document.getElementById('menu0').appendChild(menu.children[i].cloneNode(true));
 }
-}
+};
 thisis[actT.x].menu();
 thisis[actT.x].FileNet = [];
 thisis[actT.x].i = -1;
@@ -538,6 +538,10 @@ var goto = new XMLHttpRequest();
                 thisis[actT.x]['typew'].style.width = thisis[actT.x].children[1].children[2].clientWidth - parseInt(thisis[actT.x]['namew'].style.width)+'px';
                 }
                 }
+                if(thisis[actT.x].children[1].querySelector('#splashload'))
+                {
+                	thisis[actT.x].children[1].removeChild(thisis[actT.x].children[1].querySelector('#splashload'));
+                };
                 } else {
                 };
 window.mousedownN = function(node, e){

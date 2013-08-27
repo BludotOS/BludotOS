@@ -16,10 +16,10 @@
  * to the MySQL database. Make sure the information is
  * correct.
  */
-define("DB_SERVER", "74.53.164.85");
-define("DB_USER", "vios_pub");
-define("DB_PASS", "qlalsldl");
-define("DB_NAME", "vios_users");
+define("DB_SERVER", "localhost");
+define("DB_USER", db);
+define("DB_PASS", pass);
+define("DB_NAME", user);
 
 /**
  * Database Table Constants - these constants
@@ -80,8 +80,8 @@ define("COOKIE_PATH", "/");  //Available in whole domain
  * sends to users, and whether to send a
  * welcome email to newly registered users.
  */
-define("EMAIL_FROM_NAME", "Vios");
-define("EMAIL_FROM_ADDR", "admin@dev.bludot.tk");
+define("EMAIL_FROM_NAME", "Bludot OS");
+define("EMAIL_FROM_ADDR", "admin@bludotos.com");
 define("EMAIL_WELCOME", true);
 
 /**
