@@ -80,7 +80,7 @@ $version = $_GET['ver'];
 ?>
 <div id="about">
     <center style="position:relative;top:3px;">
-        <img src="http://bludot.tk/wallpaper/BluDotlogo.png" style="width:150px;height:150px"/>
+        <img src="http://bludotos.com/wallpaper/BluDotlogo.png" style="width:150px;height:150px"/>
         <br>
         <font style="font-weight:bold;">
             BluDot

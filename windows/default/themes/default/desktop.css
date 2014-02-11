@@ -14,7 +14,7 @@ background-color: white;
 .drag-handle{ /*CSS for Drag Handle*/
 height:20px;
 width:100%;
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#82806B), color-stop(100%,#716E61));
+background: black;
 position:relative;
 left:0px;
 text-indent: 3px;
@@ -52,8 +52,7 @@ border-bottom-right-radius: 4px;
 }
 
 .drag-topbar {
-background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 1)));
-background:-moz-linear-gradient(top,  rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 1));
+background: black;
 border-top-right-radius:5px;
 border-top-left-radius:5px;
 }
@@ -67,7 +66,7 @@ border-top-left-radius:5px;
 }
 
 .drag-content {
-border-radius:5px;
+/*border-radius:5px;*/
 }
 
 .drag-resizearea{ /*CSS for Resize Area itself*/

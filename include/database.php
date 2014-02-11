@@ -21,13 +21,8 @@ class MySQLDB
    /* Class constructor */
    function MySQLDB(){
       /* Make connection to database */
-<<<<<<< HEAD
-      $this->connection = mysql_connect("127.0.0.1", user, pass) or die(mysql_error());
+      $this->connection = mysql_connect("", "", "") or die(mysql_error());
       mysql_select_db("vios_users", $this->connection) or die(mysql_error());
-=======
-      $this->connection = mysql_connect(localhost, user, pass) or die(mysql_error());
-      mysql_select_db(db, $this->connection) or die(mysql_error());
->>>>>>> cb0bc74e15d6a6d48d680a3a581d83611d1e9bd4
       
       /**
        * Only query database to find out number of members
@@ -79,6 +74,23 @@ class MySQLDB
          return 2; //Indicates password failure
       }
    }
+   
+   function getuserbeta($username,  $email) {
+   	$connection2 = mysql_connect("", "", "") or die(mysql_error());
+      mysql_select_db("vios_beta", $this->connection) or die(mysql_error());
+   	$q = "SELECT betacode FROM beta_codes WHERE username = '$username'";
+   	$result = mysql_query($q, $connection2);
+   	if(!$result || (mysql_numrows($result) < 1)){
+         return 1; //Indicates username failure
+      }
+      
+      /* Retrieve userid from result, strip slashes */
+      $dbarray = mysql_fetch_array($result);
+      $dbarray['betacode'] = stripslashes($dbarray['betacode']);
+      $mail = $dbarray['betacode'];
+      return $mail;
+   }
+   
    
    /**
     * confirmUserID - Checks whether or not the given
@@ -279,6 +291,15 @@ class MySQLDB
       if(!TRACK_VISITORS) return;
       $timeout = time()-USER_TIMEOUT*60;
       $q = "DELETE FROM ".TBL_ACTIVE_USERS." WHERE timestamp < $timeout";
+      mysql_query($q, $this->connection);
+      $this->calcNumActiveUsers();
+   }
+   
+   
+   function unlock($user) {
+   	//if(!TRACK_VISITORS) return;
+      //$timeout = time()-USER_TIMEOUT*60;
+      $q = "DELETE FROM ".TBL_ACTIVE_USERS." WHERE username='$user'";
       mysql_query($q, $this->connection);
       $this->calcNumActiveUsers();
    }

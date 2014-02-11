@@ -36,3 +36,150 @@ html, body {
 	height: 100%;
 	overflow: hidden;
 }
+font {
+	cursor: default;
+}
+a {
+	cursor: default;
+}
+.login-username{
+    background: url(http://i.imgur.com/eSPIdoy.png) no-repeat center;
+}
+.login-password{
+    background: url(http://i.imgur.com/dKHpaR1.png) no-repeat center;
+}
+
+.wunderlog i {
+  width: 30px;
+    height: 32px;
+    float: left;
+}
+
+.wunderlog{
+    position: relative;
+    padding: 40px 0 0 0;
+}
+.inputwrapper{
+    position: relative;
+    width: 150px;
+    height: 32px;
+    background-color: #fff;
+    margin: 0 auto 30px auto;
+}
+.wunderlog .inputwrapper{
+    border:1px solid #fff;
+}
+.active{
+    border:1px solid #777;
+}
+.wunderlog input{
+    border: none;
+    font-family: 'Montserrat', sans-serif;    
+    line-height: 16px;
+    height:16px;
+    margin: 0;
+    outline: none;
+    float: left;
+    padding: 8px;
+    width: 104px;
+}
+/*::-webkit-input-placeholder { 
+    font-style: italic;
+    font-family: arial;
+}
+:-moz-placeholder { 
+    font-style: italic;
+    font-family: arial;
+}
+::-moz-placeholder { 
+    font-style: italic;
+    font-family: arial;
+}
+:-ms-input-placeholder {
+    font-style: italic;
+    font-family: arial;
+}*/
+
+.login-box {
+  background-color:rgba(33, 22, 0, 1);
+  width:100%;
+  height:100%;
+  position:relative;
+  top:0px;
+  left:0px;
+}
+
+.login-box .logo-container {
+  position:relative;
+  width:70px;
+  height:70px;
+  margin: 0 auto;
+  top:20px;
+}
+
+.login-box .logo-container .logo {
+ position:relative;
+  width:100%;
+  height:100%;
+}
+ .input-wrapper {
+ 	position: relative;
+	width: 150px;
+	height: 32px;
+	background-color: transparent;
+	margin: 0 auto 30px auto;
+ }
+ .input-submit {
+ 	position: relative;
+	width: 150px;
+	height: 32px;
+	background-color: transparent;
+	margin: 0 auto 30px auto;
+ }
+ .input-submit input {
+ 	position: relative;
+clear: both;
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+ }
+ .input-wrapper i {
+ 	width: 0px;
+position: relative;
+float: none;
+color: white;
+height: 0px;
+ }
+ body {
+  background: rgba(0,0,0,0.8);
+}
+
+#loader {
+  position: relative;
+  width: 530px;
+  height:20px;
+  margin: 150px auto;
+}
+
+#loader li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  float:left;
+  margin-left:15px;
+  margin-right:15px;
+  width:100px;
+  height:10px;
+  box-shadow: inset 0px 0px 10px 2px rgba(117,182,255,0.5);
+  -webkit-transition:all 1s ease;
+  -moz-transition:all 1s ease;
+}
+
+.loader-wrapper {
+	position: relative;
+width: 530px;
+height: 32px;
+background-color: transparent;
+margin: 0 auto 30px auto;
+}

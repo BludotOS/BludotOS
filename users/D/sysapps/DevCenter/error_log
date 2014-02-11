@@ -3840,3 +3840,1074 @@ Stack trace:
 [26-Aug-2013 04:13:26] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
 [26-Aug-2013 04:14:38] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
 [26-Aug-2013 04:15:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[26-Aug-2013 04:19:45] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[26-Aug-2013 09:42:49] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[26-Aug-2013 09:56:59] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[26-Aug-2013 10:00:21] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[26-Aug-2013 10:01:27] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[26-Aug-2013 14:32:30] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[26-Aug-2013 14:33:10] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[26-Aug-2013 14:33:12] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[26-Aug-2013 14:35:09] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[27-Aug-2013 14:17:37] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[27-Aug-2013 14:24:50] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[27-Aug-2013 14:34:59] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[27-Aug-2013 14:37:17] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[27-Aug-2013 14:47:26] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[28-Aug-2013 09:33:56] PHP Warning:  rename(../FileNet/HDD/Applications/temp/APP,../FileNet/HDD/Applications/temp/testnewapp543) [<a href='function.rename'>function.rename</a>]: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/rename.php on line 4
+[28-Aug-2013 09:33:56] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(../FileNet/HDD/Applications/temp/testnewapp543/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(20): RecursiveDirectoryIterator->__construct('../FileNet/HDD/...')
+#1 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 20
+[28-Aug-2013 09:45:03] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 61
+[28-Aug-2013 09:49:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 105
+[28-Aug-2013 09:50:07] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[28-Aug-2013 09:50:07] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/APP/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[28-Aug-2013 09:50:07] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[28-Aug-2013 09:50:07] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[28-Aug-2013 09:50:07] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/APP) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[28-Aug-2013 09:50:07] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/APP) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[28-Aug-2013 09:58:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 105
+[28-Aug-2013 09:58:36] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[28-Aug-2013 09:58:36] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/APP/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[28-Aug-2013 09:58:36] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[28-Aug-2013 09:58:36] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[28-Aug-2013 09:59:22] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 105
+[28-Aug-2013 09:59:26] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[28-Aug-2013 09:59:26] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/APP/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[28-Aug-2013 09:59:26] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[28-Aug-2013 09:59:26] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[28-Aug-2013 10:57:20] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 10:57:26] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[28-Aug-2013 10:57:26] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/APP/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[28-Aug-2013 10:57:26] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[28-Aug-2013 10:57:26] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[28-Aug-2013 10:58:15] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[28-Aug-2013 10:58:15] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/APP/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[28-Aug-2013 10:58:15] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[28-Aug-2013 10:58:15] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[28-Aug-2013 10:58:15] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/APP) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[28-Aug-2013 10:58:15] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/APP) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[28-Aug-2013 11:00:16] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 11:01:54] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 11:03:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 11:07:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 11:07:41] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 11:12:40] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 11:12:48] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 11:13:28] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[28-Aug-2013 11:14:12] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 11:14:26] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 11:16:02] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 11:16:20] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 11:16:46] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 11:16:51] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[28-Aug-2013 11:17:33] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 15:22:06] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 19:04:38] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[28-Aug-2013 19:05:05] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[28-Aug-2013 19:06:20] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 19:06:43] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 19:07:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 19:07:27] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Aug-2013 19:20:02] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[29-Aug-2013 09:32:55] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[29-Aug-2013 09:33:06] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[29-Aug-2013 09:33:10] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[29-Aug-2013 11:51:59] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[29-Aug-2013 11:52:01] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[29-Aug-2013 11:59:32] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[29-Aug-2013 13:49:58] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[29-Aug-2013 13:51:00] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[29-Aug-2013 13:54:47] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[29-Aug-2013 14:08:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[29-Aug-2013 14:08:30] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[29-Aug-2013 14:09:28] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[29-Aug-2013 14:10:06] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[29-Aug-2013 14:10:18] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP//version.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[29-Aug-2013 14:10:18] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/APP//version.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[29-Aug-2013 14:10:18] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[29-Aug-2013 14:10:18] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[29-Aug-2013 14:11:16] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[02-Sep-2013 23:31:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[02-Sep-2013 23:31:35] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[02-Sep-2013 23:31:41] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[02-Sep-2013 23:32:45] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 09:24:03] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 09:24:07] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:118
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(133): deleteDir()
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 118
+[03-Sep-2013 09:24:42] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 09:34:06] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 11:11:33] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 11:16:18] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 11:17:18] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:118
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(133): deleteDir()
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 118
+[03-Sep-2013 11:18:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 11:23:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 14:11:23] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 14:12:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 14:13:38] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 14:15:29] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 14:23:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 14:25:13] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 14:58:57] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 15:28:49] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Sep-2013 16:08:26] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[04-Sep-2013 09:38:40] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[04-Sep-2013 09:39:09] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[04-Sep-2013 09:40:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[04-Sep-2013 09:40:32] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[04-Sep-2013 22:24:18] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[08-Sep-2013 14:16:42] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[13-Sep-2013 09:30:56] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[13-Sep-2013 09:40:01] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[13-Sep-2013 09:42:43] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[21-Sep-2013 15:58:13] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[21-Sep-2013 16:08:05] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[02-Oct-2013 09:23:52] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Oct-2013 09:04:12] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Oct-2013 09:17:03] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[03-Oct-2013 09:17:05] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[03-Oct-2013 09:17:18] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[09-Oct-2013 09:53:01] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[22-Oct-2013 14:01:53] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Nov-2013 20:11:19] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Nov-2013 20:11:22] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Nov-2013 20:16:48] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[19-Nov-2013 09:55:15] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Dec-2013 13:28:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:28:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:28:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:28:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:28:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:28:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:28:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:28:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[08-Dec-2013 23:41:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Dec-2013 23:41:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Dec-2013 23:41:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:46:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:47:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:47:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:47:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:47:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:47:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:47:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:47:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:47:21] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[15-Dec-2013 16:51:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:51:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:51:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:51:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:51:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:51:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:51:36] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[16-Dec-2013 23:15:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 23:15:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 23:15:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 23:15:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 23:15:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 23:18:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 23:18:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 23:19:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 23:19:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[20-Dec-2013 14:35:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:35:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:35:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:35:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:35:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:38:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:38:26] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[20-Dec-2013 14:38:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:38:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:38:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:39:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:39:05] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:118
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(133): deleteDir()
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 118
+[20-Dec-2013 14:39:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:39:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:39:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:39:17] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:118
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(133): deleteDir()
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 118
+[20-Dec-2013 14:41:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:41:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:41:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:41:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:41:20] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:118
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(133): deleteDir()
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 118
+[20-Dec-2013 14:41:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:41:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:41:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:41:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:42:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:42:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:42:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:42:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:42:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[20-Dec-2013 14:42:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:42:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:42:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:42:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:42:44] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:118
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(133): deleteDir()
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 118
+[20-Dec-2013 14:44:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:44:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:44:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:44:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:44:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:44:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 14:44:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[22-Dec-2013 13:05:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:39] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[22-Dec-2013 13:05:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:43] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[22-Dec-2013 13:05:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:46] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[22-Dec-2013 13:05:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:05:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:06:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:06:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:06:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:09:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:10:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:11:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:11:22] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[22-Dec-2013 13:11:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:11:24] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[24-Dec-2013 14:27:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:27:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:27:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:27:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:27:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:27:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:27:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:27:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:28:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:28:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:28:21] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[24-Dec-2013 14:33:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:33:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:33:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:33:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:34:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:34:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:34:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:34:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:35:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:35:10] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[24-Dec-2013 14:39:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[24-Dec-2013 14:45:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:37] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/SRC_test2/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[24-Dec-2013 14:45:37] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/SRC_test2/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 14:45:37] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 14:45:37] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[24-Dec-2013 14:45:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:37] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/SRC_test2) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[24-Dec-2013 14:45:37] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/SRC_test2) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[24-Dec-2013 14:45:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:40] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/SRC_test2/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[24-Dec-2013 14:45:40] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/SRC_test2/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 14:45:40] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 14:45:40] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[24-Dec-2013 14:45:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:41] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/SRC_test2/error_log) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[24-Dec-2013 14:45:41] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/SRC_test2/error_log in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 14:45:41] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 14:45:41] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[24-Dec-2013 14:45:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:48] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/SRC_test2undefined/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[24-Dec-2013 14:45:48] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/SRC_test2undefined/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 14:45:48] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 14:45:48] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[24-Dec-2013 14:45:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:50] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/SRC_test2undefined/error_log) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[24-Dec-2013 14:45:50] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/SRC_test2undefined/error_log in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 14:45:50] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 14:45:50] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[24-Dec-2013 14:45:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:52] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:118
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(133): deleteDir()
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 118
+[24-Dec-2013 14:45:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:46:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:46:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:46:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:46:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:46:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:46:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:46:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:46:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:46:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:46:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:46:15] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 14:46:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:46:21] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[24-Dec-2013 18:17:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:51] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/SRC_test2/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[24-Dec-2013 18:17:51] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/SRC_test2/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 18:17:51] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 18:17:51] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[24-Dec-2013 18:17:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:52] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/SRC_test2) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[24-Dec-2013 18:17:52] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/SRC_test2) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[24-Dec-2013 18:17:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:17:58] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/SRC_test2undefined/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[24-Dec-2013 18:17:58] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/SRC_test2undefined/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 18:17:58] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 18:17:58] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[24-Dec-2013 18:18:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:18:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:18:04] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/SRC_test2undefined/version.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[24-Dec-2013 18:18:04] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/SRC_test2undefined/version.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 18:18:04] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 18:18:04] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[24-Dec-2013 18:18:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:18:56] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:118
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(133): deleteDir()
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 118
+[24-Dec-2013 18:20:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:20:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:20:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:20:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:20:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:20:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:20:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:20:39] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/SRC_test2/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[24-Dec-2013 18:20:39] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/SRC_test2/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 18:20:39] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 18:20:39] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[24-Dec-2013 18:20:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:20:39] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/SRC_test2) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[24-Dec-2013 18:20:39] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/SRC_test2) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[24-Dec-2013 18:20:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:20:49] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/SRC_test2/error_log) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[24-Dec-2013 18:20:49] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/SRC_test2/error_log in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 18:20:49] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 18:20:49] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[24-Dec-2013 18:20:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:20:51] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/SRC_test2/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[24-Dec-2013 18:20:51] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/SRC_test2/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 18:20:51] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 18:20:51] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[24-Dec-2013 18:20:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:20:52] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:118
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(133): deleteDir()
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 118
+[24-Dec-2013 18:21:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:21:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:21:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:08] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/SRC_test_two/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 5
+[24-Dec-2013 18:22:08] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ../FileNet/HDD/Applications/temp/SRC_test_two/index.txt in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 18:22:08] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 18:22:08] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 8
+[24-Dec-2013 18:22:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:08] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/SRC_test_two) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 6
+[24-Dec-2013 18:22:08] PHP Warning:  opendir(../FileNet/HDD/Applications/temp/SRC_test_two) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/goto.php on line 14
+[24-Dec-2013 18:22:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:14] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '$dirPath must be a directory' in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php:118
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/DevCenter/build.php(133): deleteDir()
+#1 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 118
+[24-Dec-2013 18:22:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:34] PHP Warning:  fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 in /home/vios/public_html/users/admin/sysapps/DevCenter/pastephp.php on line 7
+[24-Dec-2013 18:22:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:22:53] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[24-Dec-2013 18:23:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:10] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[24-Dec-2013 18:23:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:12] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[24-Dec-2013 18:23:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:30] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[24-Dec-2013 18:24:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:24:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:24:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:24:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:24:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:24:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:24:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:24:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:24:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:24:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:24:58] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[24-Dec-2013 18:25:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:00] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[24-Dec-2013 18:25:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:24] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[28-Dec-2013 16:42:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:42:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:42:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:42:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:42:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:42:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:42:51] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[29-Dec-2013 14:15:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[29-Dec-2013 22:28:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:39] PHP Warning:  fopen(../FileNet/HDD/Applications/temp/APP/index.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/vios/public_html/users/admin/sysapps/DevCenter/update.php on line 6
+[02-Jan-2014 14:20:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:40] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[02-Jan-2014 14:20:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:01] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[02-Jan-2014 14:21:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[02-Jan-2014 14:21:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:46] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[02-Jan-2014 14:21:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:21:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:22:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:22:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:22:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:22:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:22:08] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[03-Jan-2014 18:06:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 18:07:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 18:07:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 18:07:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 18:07:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 18:07:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 18:07:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 18:07:37] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[04-Jan-2014 14:45:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:45:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:45:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:45:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:45:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:45:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:45:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:45:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:45:17] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[04-Jan-2014 14:45:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:45:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:45:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:45:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:45:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:47:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:47:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[04-Jan-2014 14:55:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:56:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:56:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:56:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:56:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:56:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:56:17] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[04-Jan-2014 15:50:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:50:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:50:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:50:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:50:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:50:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:50:32] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[04-Jan-2014 16:44:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:44:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:44:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:44:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:44:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:44:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:44:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[04-Jan-2014 16:45:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:45:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:45:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:45:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:45:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:46:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:46:00] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[04-Jan-2014 17:13:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:13:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:13:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:13:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:13:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:15:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:15:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:15:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:15:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:15:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:16:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:16:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:16:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:16:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:16:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:17:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:17:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:17:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:17:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:17:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:18:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:18:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:18:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:18:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:18:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:18:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:18:55] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[04-Jan-2014 17:22:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:22:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:22:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:22:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:22:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:22:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:22:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:22:43] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Jan-2014 13:27:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:27:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:27:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:27:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:27:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:27:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:27:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:27:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Jan-2014 13:27:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:27:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:27:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:27:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:27:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:27:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:28:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:28:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:28:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:28:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:28:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:28:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:28:42] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[07-Jan-2014 09:43:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:43:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:43:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:43:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:43:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:43:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:43:57] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[07-Jan-2014 09:44:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:16] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[07-Jan-2014 09:44:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:16] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[07-Jan-2014 09:44:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:27] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[07-Jan-2014 09:44:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 09:44:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:31:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:31:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:31:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:31:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:31:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:32:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:32:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:32:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:32:06] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[07-Jan-2014 15:32:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:32:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:32:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:32:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:32:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[09-Jan-2014 09:32:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 09:32:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:37:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:37:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:37:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:37:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:37:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:37:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:37:20] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[19-Jan-2014 14:20:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:20:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:20:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:20:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:20:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:20:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:20:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:20:59] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[19-Jan-2014 14:21:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:21:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:21:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:21:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:21:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:21:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:21:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:21:12] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[19-Jan-2014 14:21:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:21:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:21:13] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[19-Jan-2014 14:21:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:21:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:21:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:21:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:21:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:21:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:21:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:22:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:22:01] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[19-Jan-2014 14:23:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:23:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:23:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:23:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:02] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[19-Jan-2014 14:24:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:21] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[19-Jan-2014 14:24:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:52] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[19-Jan-2014 14:24:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:25:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:25:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:17] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[19-Jan-2014 14:26:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:26:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:27:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:27:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:27:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:28:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:28:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:28:20] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[19-Jan-2014 14:29:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:29:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:29:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:29:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:29:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:29:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:29:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:29:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:29:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[19-Jan-2014 14:29:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:29:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:29:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:29:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:29:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:30:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:30:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:30:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:31:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:31:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:31:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:31:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:31:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:31:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:31:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:31:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:31:24] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[19-Jan-2014 14:31:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:31:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:31:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:31:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:31:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:31:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:31:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:32:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:32:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:33:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:35:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:35:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:35:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:37:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:37:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:37:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:38:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:38:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:41:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:41:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:41:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:41:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:41:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:42:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:42:08] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:42:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:42:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:42:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:42:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:42:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:42:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:42:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:42:45] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:43:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:43:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:43:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:43:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:43:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:43:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:43:29] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:43:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:10] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:44:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:29] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:44:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:41] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:44:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:44:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:45:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:45:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:45:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:45:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:45:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:45:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:45:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:45:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:45:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:45:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:45:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:45:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:45:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:45:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:45:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:45:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:46:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:46:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:46:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:46:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:46:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:46:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:46:42] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:46:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:47:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:47:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:47:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:47:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:47:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:47:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:47:45] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:47:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:49:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:49:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:49:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:49:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:49:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:49:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:49:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:49:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:50:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:50:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:50:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:50:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:50:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:50:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:50:33] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:50:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:52:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:52:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:52:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:52:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:52:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:53:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:53:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:53:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:53:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:53:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:53:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:53:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:53:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:53:55] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:53:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:54:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:54:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:54:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:54:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:54:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:54:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:54:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:54:54] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:54:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:57:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:57:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:57:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:57:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:57:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:57:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:57:42] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:57:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:58:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:58:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:58:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:58:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:58:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:58:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 14:58:35] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 14:58:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:00:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:00:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:00:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:00:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:00:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:00:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:00:15] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 15:00:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:13:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:13:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:13:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:13:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:13:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:09] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 15:14:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 15:14:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:12] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 15:14:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:42] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 15:14:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:43] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 15:14:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:14:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:16:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:16:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:16:56] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 12
+[05-Feb-2014 15:16:56] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 14
+[05-Feb-2014 15:17:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:17:37] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 12
+[05-Feb-2014 15:17:37] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 14
+[05-Feb-2014 15:31:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:31:25] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 12
+[05-Feb-2014 15:31:25] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 14
+[05-Feb-2014 15:31:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:32:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:32:09] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 12
+[05-Feb-2014 15:32:09] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 14
+[05-Feb-2014 15:32:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:32:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:32:24] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 12
+[05-Feb-2014 15:32:24] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 14
+[05-Feb-2014 15:32:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:33:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:33:59] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 12
+[05-Feb-2014 15:33:59] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 14
+[05-Feb-2014 15:34:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:34:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:34:46] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 12
+[05-Feb-2014 15:34:46] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/users/admin/sysapps/DevCenter/index.php on line 14
+[05-Feb-2014 15:34:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:35:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:35:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:35:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:35:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:35:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:35:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Feb-2014 15:35:59] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[05-Feb-2014 15:36:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 13:33:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 13:33:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 13:33:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 13:33:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 13:33:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 13:33:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 13:34:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 13:34:11] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/DevCenter/build.php on line 126
+[06-Feb-2014 13:34:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0

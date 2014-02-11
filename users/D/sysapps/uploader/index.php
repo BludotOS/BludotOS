@@ -13,6 +13,11 @@ for (x in thisis)
         actT.x = x;
      }
 };
+
+thisis[actT.x].menu = function() {
+	document.getElementById('menu0').innerHTML = '';
+	window.bar(0);
+};
 // common variables
 var iBytesUploaded = 0;
 var iBytesTotal = 0;
@@ -145,6 +150,33 @@ thisis[actT.x].startUploading = function() {
     oTimer = setInterval(thisis[actT.x].doInnerUpdates, 300);
 	}
 }
+
+thisis[actT.x].startUploading2 = function() {
+	/*if(document.getElementById('valid').value == 1)
+	{*/
+    // cleanup all temp states
+    iPreviousBytesLoaded = 0;
+    
+
+    // get form data for POSTing
+    //var vFD = document.getElementById('upload_form').getFormData(); // for FF3
+    var vFD = new FormData(document.getElementById('upload_form_url')); 
+    //var vFD = 'url='+document.getElementById('upload_form_url').children[0].value;
+console.log(vFD);
+    // create XMLHttpRequest object, adding few event listeners, and POSTing our data
+    var oXHR = new XMLHttpRequest();        
+    oXHR.upload.addEventListener('progress', thisis[actT.x].uploadProgress, false);
+    oXHR.addEventListener('load', thisis[actT.x].uploadFinish, false);
+    oXHR.addEventListener('error', thisis[actT.x].uploadError, false);
+    oXHR.addEventListener('abort', thisis[actT.x].uploadAbort, false);
+    oXHR.open('POST', 'users/<? echo $user; ?>/sysapps/Uploader/upload_url.php?location=<? echo $location; ?>');
+    oXHR.send(vFD);
+
+    // set inner timer
+    //oTimer = setInterval(thisis[actT.x].doInnerUpdates, 300);
+	//}
+}
+
 
 thisis[actT.x].doInnerUpdates = function() { // we will use this function to display upload speed
     var iCB = iBytesUploaded;
@@ -318,20 +350,61 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(1
 .clear_both {
     clear:both;
 }
+
+#tabs {
+display: block;
+width: 100%;
+height: 20px;
+}
+
+#tabs .tab {
+position: relative;
+float: left;
+background: lightblue;
+margin: 3px;
+padding: 5px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+width: 50px;
+text-align: center;
+line-height: 20px;
+font-weight: bold;
+height: 100%;
+cursor:pointer;
+}
 </style>
         <div class="container">
             <div class="upload_form_cont" style="width: 500px;height: 200px;background: white;margin: 0 auto;padding: 15px;border: 1px solid black;">
                 <img id="preview" />
+                <div id="tabs">
+                	<div class="tab" onclick="document.getElementById('upload_form').style.display = 'block';document.getElementById('upload_form_url').style.display = 'none';">File</div>
+                	<div class="tab" onclick="document.getElementById('upload_form').style.display = 'none';document.getElementById('upload_form_url').style.display = 'block';">URL</div>
+                </div>
                 <form id="upload_form" enctype="multipart/form-data" method="post" action="javascript:void();">
                     <div>
                         <div><label for="image_file">Please select image file</label></div>
-                        <div style="border: 1px solid black;border-radius: 5px;width: 200px;padding: 5px;box-shadow: inset 0px 0px 13px -3px black;"><input type="file" name="image_file" id="image_file" onchange="thisis[actT.x].fileSelected();" /></div>
+                        <div style="border: 1px solid black;border-radius: 5px;width: 200px;padding: 5px;box-shadow: inset 0px 0px 13px -3px black;">
+                        <input type="file" name="image_file" id="image_file" onchange="thisis[actT.x].fileSelected();" />
+                        </div>
                     </div>
                     <div>
                     	<input id="valid" type="hidden" name="valid" value="0" />
                         <input type="button" value="Upload" onclick="thisis[actT.x].startUploading()" />
                     </div>
-                    <div id="fileinfo">
+                    
+                </form>
+                <form id="upload_form_url" enctype="multipart/form-data" method="post" action="javascript:void();" style="display:none;">
+        <div>
+                        <div><label for="image_file">Please enter URL</label></div>
+                        <div style="border: 1px solid black;border-radius: 5px;width: 200px;padding: 5px;box-shadow: inset 0px 0px 13px -3px black;"><input type="text" name="url" />
+            </div>
+                    </div>
+                    <div>
+        <input type="button" value="Upload" onclick="thisis[actT.x].startUploading2()"/>
+        </div>
+        
+    </form>
+    <div id="fileinfo">
                         <div id="filename"></div>
                         <div id="filesize"></div>
                         <div id="filetype"></div>
@@ -354,6 +427,5 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(1
                         </div>
                         <div id="upload_response"></div>
                     </div>
-                </form>
             </div>
         </div>

@@ -36,7 +36,7 @@ class Mailer
              ."Settings->User Settings.\n\n"
              ."If you are a Developer or want to be one please email: dev@bludotos.com\n"
              ."You will be verified by the Administrator for access to the Developer Center"
-             ."- administrator";
+             ."- Bludot Administrator";
 
       return mail($email,$subject,$body,$from);
    }
@@ -59,7 +59,24 @@ class Mailer
              ."to something that is easier to remember, which "
              ."can be done by going to the My Account page "
              ."after signing in.\n\n"
-             ."- administrator";
+             ."- Bludot Administrator";
+             
+      return mail($email,$subject,$body,$from);
+   }
+   
+   function sendunlock($user, $email, $pass){
+      $from = "From: ".EMAIL_FROM_NAME." <".EMAIL_FROM_ADDR.">";
+      $subject = "bludot - Your new password";
+      $body = $user.",\n\n"
+             ."We've generated a code for you at your "
+             ."request, you can use this code to unlock "
+             ."your account. \n\n"
+             ."http://bludotos.com/unlock.php?code=".$pass."\n\n"
+             ."It is recommended that you change your password "
+             ."to something more difficult, which "
+             ."can be done by going to the Preferences app "
+             ."after signing in.\n\n"
+             ."- Bludot Administrator";
              
       return mail($email,$subject,$body,$from);
    }

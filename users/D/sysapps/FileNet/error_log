@@ -321,3 +321,1165 @@
 [22-Aug-2013 01:20:49] PHP Warning:  opendir(HDD/HDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
 [22-Aug-2013 17:28:55] PHP Warning:  opendir(HDD/error_logHDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
 [22-Aug-2013 17:28:55] PHP Warning:  opendir(HDD/error_logHDD) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[26-Aug-2013 09:06:03] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Aug-2013 11:37:19] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[27-Aug-2013 11:37:22] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[28-Aug-2013 11:18:29] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[31-Aug-2013 10:47:10] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[03-Sep-2013 09:28:03] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[04-Sep-2013 09:45:47] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/resolve.php on line 13
+[03-Oct-2013 09:04:32] PHP Warning:  opendir(HDD/PIC_1804.JPG) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[03-Oct-2013 09:04:32] PHP Warning:  opendir(HDD/PIC_1804.JPG) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[03-Dec-2013 13:27:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:27:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:29:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:29:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:52:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:52:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:52:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:52:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:52:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:52:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Dec-2013 18:10:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Dec-2013 18:10:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Dec-2013 18:16:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Dec-2013 18:17:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Dec-2013 18:17:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Dec-2013 18:17:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Dec-2013 18:17:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Dec-2013 23:39:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Dec-2013 23:39:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Dec-2013 23:39:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Dec-2013 23:40:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Dec-2013 23:40:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Dec-2013 23:40:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Dec-2013 23:40:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:14:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:14:37] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(HDD/Applications/temp/Appstore/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php(20): RecursiveDirectoryIterator->__construct('HDD/Application...')
+#1 /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 20
+[15-Dec-2013 16:15:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:15:38] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(HDD/Applications/temp/Appstore/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php(20): RecursiveDirectoryIterator->__construct('HDD/Application...')
+#1 /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 20
+[15-Dec-2013 16:25:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:48:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:48:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:48:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:48:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:48:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:48:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 18:42:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 18:42:51] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[16-Dec-2013 23:14:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 23:14:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Dec-2013 19:51:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Dec-2013 19:51:20] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[22-Dec-2013 13:11:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:11:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:11:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 18:03:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 18:03:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 18:03:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 18:03:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 18:03:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 18:03:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 18:03:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 18:03:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 18:03:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 18:03:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 19:55:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 19:55:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 19:55:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 19:55:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 19:55:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 19:55:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 19:56:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 19:58:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 23:29:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 23:29:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 23:29:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[23-Dec-2013 14:39:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[23-Dec-2013 14:39:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[23-Dec-2013 14:40:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[23-Dec-2013 14:51:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[23-Dec-2013 14:51:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[23-Dec-2013 14:51:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 03:06:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 03:06:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 03:06:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 03:07:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 03:07:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 03:07:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 03:07:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 03:07:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 03:07:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:15:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:15:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:15:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:16:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:19:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:19:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:19:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:19:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:20:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:20:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:21:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:21:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:24:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:24:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:25:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:25:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:25:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:25:32] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[24-Dec-2013 12:25:32] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[24-Dec-2013 12:27:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:27:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:27:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:27:08] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[24-Dec-2013 12:27:08] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[24-Dec-2013 12:27:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:27:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:28:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:28:00] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[24-Dec-2013 12:28:00] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[24-Dec-2013 12:30:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:30:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:31:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:31:00] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[24-Dec-2013 12:31:00] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[24-Dec-2013 12:31:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:31:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:31:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:31:46] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[24-Dec-2013 12:31:46] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[24-Dec-2013 12:32:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:32:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:32:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:32:06] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[24-Dec-2013 12:32:06] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[24-Dec-2013 12:33:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:33:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:33:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:33:04] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[24-Dec-2013 12:33:04] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[24-Dec-2013 12:33:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:33:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:34:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:34:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:34:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:34:30] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[24-Dec-2013 12:34:30] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[24-Dec-2013 12:34:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:34:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:35:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:35:01] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[24-Dec-2013 12:35:01] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[24-Dec-2013 12:35:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:35:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:35:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:35:34] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[24-Dec-2013 12:35:34] PHP Warning:  opendir(HDD/HDDMyPictures) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No such file or directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[24-Dec-2013 12:35:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:35:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:35:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:36:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:36:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:36:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:37:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:37:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:37:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:39:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:39:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:39:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:39:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:39:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:39:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:40:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:40:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:40:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:44:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:44:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:44:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:44:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:44:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:44:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:44:26] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 12:45:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:45:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:45:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:48:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:48:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:48:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:48:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:48:57] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 12:49:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:49:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:49:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:49:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:49:12] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 12:49:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:49:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:49:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:49:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:49:53] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 12:50:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:50:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:50:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:51:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:51:22] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 12:52:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:52:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:52:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:53:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:53:26] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 12:55:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:55:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:55:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:36:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:36:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:36:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:37:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:37:25] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 13:37:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:37:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:37:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:37:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:37:46] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 13:40:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:40:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:40:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:40:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:40:21] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 13:47:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:47:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:50:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:50:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:51:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 13:51:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:15:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:15:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:15:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:18:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:18:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:19:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:19:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:19:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:20:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:20:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:20:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:20:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:20:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:20:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:26:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:26:23] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 14:27:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:27:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:27:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:28:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:28:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:28:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:28:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:28:46] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 14:29:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:29:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:29:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:29:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:29:23] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 14:30:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:30:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:30:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:31:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:31:13] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 14:32:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:32:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:32:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:32:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:32:30] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 14:33:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:33:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:33:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:33:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:33:13] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 14:33:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:33:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:33:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:33:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:33:48] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 14:35:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:35:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:35:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:37:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:37:27] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 14:37:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:37:34] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 14:38:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:38:31] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 14:38:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:38:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:38:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:09] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 14:39:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:49] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 14:39:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:39:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:41:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:41:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:41:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:42:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:42:03] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(HDD/Applications/temp/SRC_test (1)/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php(20): RecursiveDirectoryIterator->__construct('HDD/Application...')
+#1 /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 20
+[24-Dec-2013 14:42:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:42:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:42:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:42:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:42:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:42:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:42:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:42:46] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(HDD/Applications/temp/SRC_test(1)/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php(20): RecursiveDirectoryIterator->__construct('HDD/Application...')
+#1 /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 20
+[24-Dec-2013 14:43:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:43:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:43:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:43:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:43:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:43:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:44:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:44:07] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(HDD/Applications/temp/SRC_test2/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php(20): RecursiveDirectoryIterator->__construct('HDD/Application...')
+#1 /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 20
+[24-Dec-2013 14:44:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:44:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:44:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:44:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:44:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:44:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:44:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:44:38] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(HDD/Applications/temp/SRC_test2/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php(20): RecursiveDirectoryIterator->__construct('HDD/Application...')
+#1 /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 20
+[24-Dec-2013 14:45:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:47:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:47:06] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 14:47:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:47:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:47:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:47:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:47:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:47:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:48:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:48:01] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(HDD/Applications/temp/SRC_test2/) [<a href='recursivedirectoryiterator.--construct'>recursivedirectoryiterator.--construct</a>]: failed to open dir: No such file or directory' in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php:20
+Stack trace:
+#0 /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php(20): RecursiveDirectoryIterator->__construct('HDD/Application...')
+#1 /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php(50): ZIP()
+#2 {main}
+  thrown in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 20
+[24-Dec-2013 18:19:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:19:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:19:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:20:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:21:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:21:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:21:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:21:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:21:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:21:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:24:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:24:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:24:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:24:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:24:19] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 18:25:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:26:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:26:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:26:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:29:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:29:10] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 18:29:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:29:23] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 18:29:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:29:28] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 18:29:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:29:39] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 18:29:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:29:56] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 18:30:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:30:23] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 18:30:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:30:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:31:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:31:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:31:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:31:17] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[24-Dec-2013 18:35:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:35:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:36:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:36:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:25:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:25:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:26:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:26:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:27:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:27:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:27:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:27:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:32:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:32:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:33:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:33:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:33:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:33:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:33:57] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[28-Dec-2013 16:34:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:34:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:36:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:36:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:36:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:36:58] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[28-Dec-2013 16:37:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:37:00] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[28-Dec-2013 16:37:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:37:05] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[28-Dec-2013 16:38:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:38:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:41:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:41:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:46:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:46:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:47:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:47:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:48:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:48:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:48:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:48:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:49:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:49:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:50:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:50:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:51:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:51:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:51:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:51:39] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[29-Dec-2013 14:15:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 06:57:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 06:57:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 06:57:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 06:57:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 06:58:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 07:37:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 07:37:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 07:38:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 07:38:08] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[30-Dec-2013 07:38:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 07:38:12] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[30-Dec-2013 07:38:12] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[30-Dec-2013 07:38:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 07:38:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 07:38:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 07:38:30] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[30-Dec-2013 07:38:30] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[30-Dec-2013 07:38:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 07:38:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 07:39:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 07:39:04] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[30-Dec-2013 07:39:04] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[30-Dec-2013 07:41:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 07:41:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 07:41:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:05:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:05:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:05:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:05:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:05:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:09:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:09:57] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[02-Jan-2014 14:20:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:20:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 18:06:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 18:06:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 18:06:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:48:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:48:00] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[04-Jan-2014 14:49:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 14:49:05] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[04-Jan-2014 15:50:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:50:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:53:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:53:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:54:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:54:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:55:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:55:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:55:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:55:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:55:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:55:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:57:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:57:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:57:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:58:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:59:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:59:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:00:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:00:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:02:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:02:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:03:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:03:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:05:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:05:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:18:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:18:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:19:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:19:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:20:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:20:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:21:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:21:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:21:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:21:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:26:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:26:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:27:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:27:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:29:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:29:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:30:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:30:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:31:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:31:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:31:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:31:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:33:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:33:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:35:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:35:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:38:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:38:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:38:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:38:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:40:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:40:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:41:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:41:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:43:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:43:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:47:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:47:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:48:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:48:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:50:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:50:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:52:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:52:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:58:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:58:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:58:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:58:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:59:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:59:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:02:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:02:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:03:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:03:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:05:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:05:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:06:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:06:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:07:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:07:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:09:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:09:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:10:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:10:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:11:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:11:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:11:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:11:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:13:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:13:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:20:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 17:20:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 19:50:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 19:50:40] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[05-Jan-2014 13:03:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:03:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:03:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:03:33] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[05-Jan-2014 13:03:33] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[05-Jan-2014 13:03:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:03:36] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[05-Jan-2014 13:03:36] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[05-Jan-2014 13:03:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:03:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:03:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:03:56] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[05-Jan-2014 13:03:56] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[05-Jan-2014 13:05:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:05:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:05:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:06:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:06:16] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[05-Jan-2014 13:06:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:06:17] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[05-Jan-2014 13:14:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:14:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:16:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:16:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:16:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:16:19] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[05-Jan-2014 13:16:19] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[05-Jan-2014 13:16:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:16:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:17:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:17:42] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 7
+[05-Jan-2014 13:17:42] PHP Warning:  opendir(HDD/error_log/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Not a directory in /home/vios/public_html/users/admin/sysapps/FileNet/goto.php on line 15
+[05-Jan-2014 13:20:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:21:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:21:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:21:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:23:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:23:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:23:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:23:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:23:19] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[05-Jan-2014 13:25:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:25:04] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[05-Jan-2014 13:26:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:26:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:26:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:27:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:27:21] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[05-Jan-2014 13:28:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:29:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:29:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:29:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:31:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:31:54] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[05-Jan-2014 14:12:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 14:12:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 14:13:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 14:13:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 14:15:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 14:15:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:24:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:24:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:25:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:25:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:28:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:28:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:36:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:36:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:40:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:40:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:42:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:43:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:44:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:44:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:44:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:44:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:45:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:45:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:46:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:46:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:47:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:47:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:47:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:47:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:48:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:48:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:49:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:49:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:50:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:51:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:52:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:54:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:54:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:55:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:55:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:56:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:56:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:57:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:57:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:58:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:58:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:59:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 15:59:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:00:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:00:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:00:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:00:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:01:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:01:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:04:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:04:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:06:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:06:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:07:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:07:14] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[05-Jan-2014 16:08:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:08:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:09:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:09:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:19:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:19:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:29:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:29:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:39:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:39:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:40:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:40:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:41:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:41:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:45:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:45:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:47:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:47:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:54:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 16:54:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 17:05:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 17:05:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 17:06:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 17:06:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 18:59:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 18:59:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:01:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:01:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:02:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:02:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:03:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:03:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:31:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:31:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Jan-2014 07:43:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Jan-2014 10:15:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Jan-2014 10:15:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Jan-2014 10:15:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Jan-2014 10:15:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 14:45:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 14:45:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 14:46:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 14:46:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 14:47:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 14:47:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:32:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:32:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:32:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:50:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:50:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:50:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:50:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:50:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 15:50:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 08:10:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 08:10:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 08:10:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 09:32:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 09:32:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 09:33:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 09:33:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 14:38:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 14:38:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 14:39:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 14:39:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 14:45:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 14:45:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 15:26:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 15:26:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[12-Jan-2014 00:18:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[12-Jan-2014 00:18:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[12-Jan-2014 00:18:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[12-Jan-2014 11:24:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[12-Jan-2014 11:24:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[12-Jan-2014 11:24:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[14-Jan-2014 09:48:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[14-Jan-2014 09:48:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[14-Jan-2014 09:48:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[14-Jan-2014 09:48:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[14-Jan-2014 09:48:21] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[14-Jan-2014 22:15:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[14-Jan-2014 22:15:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:37:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:37:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:39:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:39:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:41:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:41:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:41:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:41:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:46:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:46:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:47:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:47:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:47:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:47:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:49:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:49:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:51:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:51:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:20:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:20:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:25:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:25:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:26:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:26:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:27:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:27:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:28:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:28:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:29:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:29:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:31:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:31:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:31:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:31:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:32:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:32:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:33:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:33:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:33:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:33:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:34:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:34:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:35:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:35:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:36:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:36:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:37:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:37:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:38:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:38:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:38:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:38:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:38:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:38:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:39:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:39:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:39:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:39:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:39:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:39:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:39:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:40:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:44:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:44:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:44:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:44:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:44:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:44:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:48:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:48:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:49:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:52:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:52:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:53:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:53:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:53:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:53:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:54:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:54:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:54:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:56:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:56:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:56:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 14:56:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:00:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:00:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:00:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:00:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:08:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:08:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:10:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:10:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:11:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:11:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:13:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:13:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:17:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:17:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:18:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:18:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:18:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:19:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:22:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:22:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:22:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:25:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:25:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:30:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:30:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:30:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:30:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:31:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:31:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:32:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:32:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:33:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:33:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:34:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:41:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:41:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:41:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:44:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:44:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:44:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:44:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:45:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:45:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:46:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:46:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:46:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:46:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:47:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:47:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:48:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:48:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:49:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:49:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:49:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:49:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:49:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:49:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:49:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:55:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 15:55:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:00:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:00:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:00:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:00:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:00:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:00:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:03:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:03:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:03:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:03:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:05:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:05:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:05:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:05:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:12:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:12:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:12:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:12:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:13:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:22:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:22:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:25:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:25:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:26:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:26:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:26:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:26:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:26:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:26:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:26:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:48:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:48:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 17:04:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 17:04:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 17:04:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 17:04:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 17:04:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 17:04:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 17:04:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 17:04:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 17:09:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 17:09:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 23:26:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 23:26:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:19:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:19:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:19:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:22:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:22:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:22:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:23:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:23:08] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[19-Jan-2014 14:23:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:23:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:23:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:23:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:23:51] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[19-Jan-2014 14:24:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:24:43] PHP Fatal error:  Cannot access self:: when no class scope is active in /home/vios/public_html/users/admin/sysapps/FileNet/saveapp.php on line 61
+[19-Jan-2014 14:32:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:32:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[19-Jan-2014 14:32:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:05:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:05:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:05:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:25:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:25:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:27:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:27:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:28:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:28:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:29:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:29:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:29:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:29:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:32:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:32:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:33:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:33:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:36:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:36:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:38:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:38:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:39:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:39:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:40:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:40:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:42:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:42:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:44:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:44:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:45:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:45:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:45:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:45:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:46:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:46:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:47:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:47:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:28:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:28:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:29:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:29:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:30:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:30:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:31:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:31:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:32:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:32:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 20:20:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 20:20:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[21-Jan-2014 16:48:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[21-Jan-2014 16:48:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[21-Jan-2014 16:48:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[21-Jan-2014 16:48:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Jan-2014 11:58:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Jan-2014 11:58:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Jan-2014 11:59:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Jan-2014 11:59:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Jan-2014 11:59:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Jan-2014 11:59:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Jan-2014 11:59:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Jan-2014 11:59:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Jan-2014 12:00:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Jan-2014 12:00:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:41:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:41:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:41:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:41:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:43:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:43:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:44:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:44:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:46:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:46:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:50:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:50:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:53:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:53:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:54:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:54:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:55:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:55:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:58:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:58:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:00:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:00:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:01:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:01:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:04:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:04:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:05:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:05:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[26-Jan-2014 22:00:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[26-Jan-2014 22:00:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[27-Jan-2014 21:20:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[27-Jan-2014 21:20:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[27-Jan-2014 21:20:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[27-Jan-2014 23:12:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[27-Jan-2014 23:12:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[27-Jan-2014 23:12:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[27-Jan-2014 23:13:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[27-Jan-2014 23:13:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Jan-2014 14:55:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Jan-2014 14:55:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 13:33:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 13:33:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 21:11:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 21:11:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 21:12:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 21:12:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 22:15:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 22:15:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 22:15:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 22:15:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 22:15:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 22:15:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 22:16:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 22:46:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 22:46:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 00:20:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 00:20:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 10:45:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 10:45:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 13:51:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 13:51:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 13:56:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 13:56:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 13:56:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 13:56:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 13:57:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 13:57:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 13:58:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 13:58:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 13:58:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 13:58:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 14:00:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 14:00:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 14:00:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 14:00:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 14:00:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 14:00:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 14:00:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 14:01:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 14:01:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 19:37:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 19:38:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0

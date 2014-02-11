@@ -16,17 +16,10 @@
  * to the MySQL database. Make sure the information is
  * correct.
  */
-<<<<<<< HEAD
 define("DB_SERVER", "localhost");
-define("DB_USER", db);
-define("DB_PASS", pass);
-define("DB_NAME", user);
-=======
-define("DB_SERVER", host);
-define("DB_USER", user);
-define("DB_PASS", pass);
-define("DB_NAME", db);
->>>>>>> cb0bc74e15d6a6d48d680a3a581d83611d1e9bd4
+define("DB_USER", "");
+define("DB_PASS", "");
+define("DB_NAME", "");
 
 /**
  * Database Table Constants - these constants
@@ -87,13 +80,8 @@ define("COOKIE_PATH", "/");  //Available in whole domain
  * sends to users, and whether to send a
  * welcome email to newly registered users.
  */
-<<<<<<< HEAD
 define("EMAIL_FROM_NAME", "Bludot OS");
 define("EMAIL_FROM_ADDR", "admin@bludotos.com");
-=======
-define("EMAIL_FROM_NAME", "Bludot");
-define("EMAIL_FROM_ADDR", "admin@dev.bludotos.com");
->>>>>>> cb0bc74e15d6a6d48d680a3a581d83611d1e9bd4
 define("EMAIL_WELCOME", true);
 
 /**

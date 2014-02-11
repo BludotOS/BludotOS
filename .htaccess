@@ -1,0 +1,11 @@
+RewriteEngine on
+# mime type                     extension
+AddType text/cache-manifest .manifestRewriteCond %{HTTP_REFERER} !^http://admin.bludot.tk/.*$      [NC]
+AddType text/cache-manifest .manifest
+RewriteCond %{HTTP_HOST} ^apfelsineos\.tk$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.apfelsineos\.tk$
+RewriteRule ^/?$ "http\:\/\/vios\.tk" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^irc\.bludot\.tk$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.irc\.bludot\.tk$
+RewriteRule ^/?$ "http\:\/\/bluchat\.herokuapp\.com" [R=301,L]

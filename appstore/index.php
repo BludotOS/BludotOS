@@ -379,7 +379,7 @@ background: transparent;
 top: 2px;
 }
 </style>
-    <div style="position:relative;top:0px;left:0px;height:30px;width:100%;box-shadow:0px 3px 9px rgba(50, 50, 50, 1);z-index:1;  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(160,160,160,1)), color-stop(100%,rgba(63,63,63,1)));background:-moz-linear-gradient(top, rgba(160,160,160,1) 0%, rgba(63,63,63,1) 100%);text-align: center;">
+    <div class="topbar">
   <div class="topbar-opt"></div>
   <div class="topbar-opt"></div>
   <div class="topbar-opt"></div>

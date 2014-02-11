@@ -21,7 +21,7 @@ $array = array (
   'Dockmin' => '47',
   'Dockmax' => '100',
   'wallpaper' => 'wallpaper/BluDot.svg',
-  'version' => '0.91',
+  'version' => '1.00',
   'dock' => 
   array (
     0 => 'default',

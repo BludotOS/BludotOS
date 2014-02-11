@@ -65,7 +65,7 @@ class Session
       }
       
       /* Remove inactive visitors from database */
-      $database->removeInactiveUsers();
+      //$database->removeInactiveUsers();
       $database->removeInactiveGuests();
       
       /* Set referrer page */
@@ -318,9 +318,9 @@ if(fwrite($fh, $string)) {
             $form->setError($field, "* Password too short");
          }
          /* Check if password is not alphanumeric */
-         else if(!eregi("^([0-9a-z])+$", ($subpass = trim($subpass)))){
+         /*else if(!eregi("^([0-9a-z])+$", ($subpass = trim($subpass)))){
             $form->setError($field, "* Password not alphanumeric");
-         }
+         }*/
          /**
           * Note: I trimmed the password only after I checked the length
           * because if you fill the password field up with spaces
@@ -401,9 +401,9 @@ if(fwrite($fh, $string)) {
             $form->setError($field, "* New Password too short");
          }
          /* Check if password is not alphanumeric */
-         else if(!eregi("^([0-9a-z])+$", ($subnewpass = trim($subnewpass)))){
+         /*else if(!eregi("^([0-9a-z])+$", ($subnewpass = trim($subnewpass)))){
             $form->setError($field, "* New Password not alphanumeric");
-         }
+         }*/
       }
       /* Change password attempted */
       else if($subcurpass){
@@ -484,6 +484,15 @@ if(fwrite($fh, $string)) {
       }
       return $randstr;
    }
+   
+   /**
+    * remove locked user
+    * 
+    */
+    function unlock($user) {
+    	global $database;
+    	$database->unlock($user);
+    }
 };
 
 

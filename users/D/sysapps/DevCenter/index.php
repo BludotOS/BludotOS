@@ -7,7 +7,8 @@ function rrmdir($dir) {
   };
   if(is_dir($dir)) rmdir($dir); 
 }
-rrmdir( '../FileNet/HDD/Applications/temp/APP');
+rrmdir('../FileNet/HDD/Applications/temp/APP');
+//mkdir('../FileNet/HDD/Applications/temp');
 mkdir('../FileNet/HDD/Applications/temp/APP');
 copy('include/index.php', '../FileNet/HDD/Applications/temp/APP/index.php');
 mkdir('../FileNet/HDD/Applications/temp/APP/APP_core');
@@ -32,13 +33,14 @@ for (var x=0; x < thisis.length; x++)
 thisis[actT.x].menu = function() {
 var menu = document.getElementById('menu1').cloneNode(true);
 window.bar(0);
-menu.innerHTML += '<li onclick="clickt(this);"><a>DevCenter</a></li><ul><li><a>temp</a></li></ul><li onclick="clickt(this);"><a>File</a></li><ul><li><a onclick="clickt(clicked);thisis[actT.x].prename();">New app</a></li><li><a onclick="clickt(clicked);thisis[actT.x].popen();">open</a></li><li><a onclick="clict(clicked);save();">save</a></li><li><a onclick="clickt(clicked);thisis[actT.x].pnewfile();">new file</a></li></ul><li onclick="clickt(this);"><a>Edit</a></li>';
+menu.innerHTML += '<li onclick="clickt(this);"><a>DevCenter</a></li><ul><li><a>temp</a></li></ul><li onclick="clickt(this);"><a>File</a></li><ul><li><a onclick="clickt(clicked);thisis[actT.x].prename();">New app</a></li><li><a onclick="clickt(clicked);thisis[actT.x].popen();">open</a></li><li><a onclick="clict(clicked);save();">save</a></li><li><a onclick="clickt(clicked);thisis[actT.x].pnewfile();">new file</a></li></ul><li onclick="clickt(this);"><a>Edit</a></li><ul></ul>';
 for(var i = 2; i < menu.children.length; i++)
 {
 document.getElementById('menu0').appendChild(menu.children[i].cloneNode(true));
 }
 };
 thisis[actT.x].menu();
+thisis[actT.x].openApps = [];
 thisis[actT.x].old = '<? echo $old; ?>';
 thisis[actT.x].nameitf = 'APP';
 thisis[actT.x].delete = function (name) {
@@ -288,7 +290,7 @@ thisis[actT.x].checknew = function() {
 	};
 	return true;
 }
-thisis[actT.x].open = function(name) {
+thisis[actT.x].open = function(name, callaback) {
         thisis[actT.x].children[1].children[0].children[0].children[1].children[0].children[0].children[0].value = name;
         thisis[actT.x].nameit = name;
         var nameit0 = name;
@@ -309,7 +311,10 @@ thisis[actT.x].open = function(name) {
 			thisis[actT.x].editor.setValue(ajax4.responseText, -1);
 thisis[actT.x].children[1].children[0].children[2].children[0].children[0].selectionStart = thisis[actT.x].children[1].children[0].children[2].children[0].children[0].selectionEnd = thisis[actT.x].children[1].children[0].children[2].children[0].children[0].value.length;
 thisis[actT.x].children[1].children[0].children[2].children[0].children[0].focus();
-var descript = new XMLHttpRequest();
+                        thisis[actT.x].filemgr(nameit0);
+                        thisis[actT.x].editor.renderer.scroller.style.right=0;
+						thisis[actT.x].editor.renderer.scroller.children[0].style.width = "100%";
+						var descript = new XMLHttpRequest();
 descript.open('GET', 'users/<? echo $user; ?>/sysapps/FileNet/HDD/Applications/temp/'+thisis[actT.x].nameit+'/APP_core/descript.txt?t='+new Date().getTime(), true);
 	descript.onreadystatechange = function() {
 		if (descript.readyState==4) {
@@ -325,9 +330,7 @@ descript.open('GET', 'users/<? echo $user; ?>/sysapps/FileNet/HDD/Applications/t
 		};
 	};
 	descript.send();
-                        thisis[actT.x].filemgr(nameit0);
-                        thisis[actT.x].editor.renderer.scroller.style.right=0;
-						thisis[actT.x].editor.renderer.scroller.children[0].style.width = "100%";
+	thisis[actT.x].openApps.push(name);
 				
 		};
 	};			
@@ -335,7 +338,10 @@ descript.open('GET', 'users/<? echo $user; ?>/sysapps/FileNet/HDD/Applications/t
 		} else {
 			MainTools.Notify(ajax3.responseText, 'icons/DevCenter.png', 3);
 			thisis[actT.x].popen();
-		}	
+		}
+		if(callback) {
+		callback();
+	}
 		};
 	};			
 	ajax3.send(sendit);
@@ -364,6 +370,7 @@ thisis[actT.x].prename = function()
         };
 };
 thisis[actT.x].popen = function(){
+	thisis[actT.x].rename(thisis[actT.x].children[1].children[0].children[0].children[1].children[0].children[0].children[0].value);
         MainTools.popup(['Open'], ['text']);
         thisis[actT.x].form = function(a) {
                thisis[actT.x].open(a[0]);
@@ -379,16 +386,20 @@ var rename = new XMLHttpRequest();
 	rename.onreadystatechange = function() {
 	if (rename.readyState==4) {
         thisis[actT.x].old = '../FileNet/HDD/Applications/temp/'+name;	
-        thisis[actT.x].build(name);
-        thisis[actT.x].open(name);
+        thisis[actT.x].build(name, function() {
+        	thisis[actT.x].open(name);
+        });
         
 	};
 	};
 rename.send(sendit2);
 }
 save = function (callback) {
-
-        MainTools.Notify('Saving...', 'icons/DevCenter.png');
+	if(thisis[actT.x].renaming) {
+		thisis[actT.x].rename(thisis[actT.x].children[1].children[0].children[0].children[1].children[0].children[0].children[0].value);
+		thisis[actT.x].renaming = false;
+	} else {
+    MainTools.Notify('Saving...', 'icons/DevCenter.png');
 	var ajax4 = new XMLHttpRequest();
 	if(thisis[actT.x].active == "editor")
 	{
@@ -412,6 +423,7 @@ save = function (callback) {
 		};
 	};			
 	ajax4.send(sendit);
+}
 };
 thisis[actT.x].back = function(gotoit) {
 var goto2 = new XMLHttpRequest();
@@ -555,10 +567,10 @@ var ajax = new XMLHttpRequest();
 		};
 	};			
 	ajax2.send();*/
-			var ajax3 = new XMLHttpRequest();
+			/*var ajax3 = new XMLHttpRequest();
 	ajax3.open('GET', 'users/<? echo $user; ?>/sysapps/DevCenter/include/index.txt', true);
 	ajax3.onreadystatechange = function() {
-		if (ajax3.readyState==4) {
+		if (ajax3.readyState==4) {*/
 			thisis[actT.x].editor = ace.edit("editor");
 			thisis[actT.x].notes = ace.edit("notes");
 			thisis[actT.x].notes.on("focus", function(){
@@ -579,7 +591,7 @@ thisis[actT.x].editor.on("focus", function(){
 console.log('1')
 MainTools.scrollV(thisis[actT.x].editor.renderer.scrollBar.element.parentNode, thisis[actT.x].editor.renderer.scrollBar.element.children[0], thisis[actT.x].editor.renderer.scrollBar.element);
 console.log('2')
-			thisis[actT.x].editor.setValue(ajax3.responseText, -1);
+			//thisis[actT.x].editor.setValue(ajax3.responseText, -1);
 			console.log('3')
                         //thisis[actT.x].children[1].children[0].children[2].children[0].children[0].focus();
                         console.log('4')
@@ -648,9 +660,9 @@ ajax4.open('GET', 'users/<? echo $user; ?>/sysapps/DevCenter/include/APP_core/de
 	};
 goto.send(sendit3);*/
 				
-		};
+		/*};
 	};			
-	ajax3.send();			
+	ajax3.send();*/			
 		};
 	};			
 	ajax.send();
@@ -973,27 +985,27 @@ white-space: nowrap;
 <div id="topbar" style="left:0px; top: 0px; position:relative; height:70px; width:100%; background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(160,160,160,1)), color-stop(100%,rgba(63,63,63,1)));background: -moz-linear-gradient(top, rgba(160,160,160,1) 0%, rgba(63,63,63,1) 100%);">
 <div id="topbarleft" style="float:left; position:relative; height:70px; background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(160,160,160,1)), color-stop(100%,rgba(63,63,63,1)));background: -moz-linear-gradient(top, rgba(160,160,160,1) 0%, rgba(63,63,63,1) 100%);">
 	<div class="topbaricons">
-              <img class="topbaricons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/save.png" onclick="save();"/>
+              <img class="topbaricons" src="<? echo $isave; ?>" onclick="save();"/>
               <br>
               <font class="topbarfont">Save</font>
         </div>
 	<div class="topbaricons">
-             <img class="topbaricons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/open.png" onclick="thisis[actT.x].popen();">
+             <img class="topbaricons" src="<? echo $iopen; ?>" onclick="thisis[actT.x].popen();">
               <br>
               <font class="topbarfont">Open</font>
         </div>
 	<div class="topbaricons">
-             <img class="topbaricons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/help.png" onclick="help();"/>
+             <img class="topbaricons" src="<? echo $ihelp; ?>" onclick="help();"/>
               <br>
               <font class="topbarfont">Help</font>
               </div>
 	<div class="topbaricons">
-             <img class="topbaricons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/gear.png" onclick="thisis[actT.x].build(thisis[actT.x].children[1].children[0].children[0].children[1].children[0].children[0].children[0].value);"/>
+             <img class="topbaricons" src="<? echo $ibuild; ?>" onclick="thisis[actT.x].build(thisis[actT.x].children[1].children[0].children[0].children[1].children[0].children[0].children[0].value);"/>
               <br>
               <font class="topbarfont">Build</font>
         </div>
 	<div class="topbaricons">
-             <img class="topbaricons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/debug.png" onclick="thisis[actT.x].debug(thisis[actT.x].children[1].children[0].children[0].children[1].children[0].children[0].children[0].value);"/>
+             <img class="topbaricons" src="<? echo $idebug; ?>" onclick="thisis[actT.x].debug(thisis[actT.x].children[1].children[0].children[0].children[1].children[0].children[0].children[0].value);"/>
               <br>
               <font class="topbarfont">Debug</font>
         </div>
@@ -1001,7 +1013,8 @@ white-space: nowrap;
 <div id="topbarcenter">
 	<center>
 	<form action="javascript:thisis[actT.x].rename(thisis[actT.x].children[1].children[0].children[0].children[1].children[0].children[0].children[0].value);" style="top: 10px;">
-	Appname:<input type="text" name="AppName" id="AppName">
+	Appname:<input type="text" name="AppName" id="AppName" >
+	<input type="submit" value="Save"/>
 	</form>
 	</center>
 </div>
@@ -1010,19 +1023,19 @@ white-space: nowrap;
 	<div id="leftsidebar" style="relative; float:left; width:200px;background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(160,160,160,1)), color-stop(100%,rgba(63,63,63,1)));background: -moz-linear-gradient(top, rgba(160,160,160,1) 0%, rgba(63,63,63,1) 100%);">
 		<div id="topsidebar" style="position:relative;left:0px;float:left;white-space:nowrap;">
 			<div class="smallicons">
-				<img class="smallicons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/Folderview.png" onclick="for(var i=2; i < thisis[actT.x].children[1].children[0].children[1].children.length; i++){thisis[actT.x].children[1].children[0].children[1].children[i].style.display='none';};thisis[actT.x].children[1].children[0].children[1].children[2].style.display='block';">
+				<img class="smallicons" src="<? echo $ifilemgr; ?>" onclick="for(var i=2; i < thisis[actT.x].children[1].children[0].children[1].children.length; i++){thisis[actT.x].children[1].children[0].children[1].children[i].style.display='none';};thisis[actT.x].children[1].children[0].children[1].children[2].style.display='block';">
 				<div class="label" style="margin-left:0px;">File List</div>
 			</div>
 			<div class="smallicons">
-				<img class="smallicons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/Function.png" onclick="for(var i=2; i < thisis[actT.x].children[1].children[0].children[1].children.length; i++){thisis[actT.x].children[1].children[0].children[1].children[i].style.display='none';};thisis[actT.x].children[1].children[0].children[1].children[3].style.display='block';">
+				<img class="smallicons" src="<? echo $ifunc; ?>" onclick="for(var i=2; i < thisis[actT.x].children[1].children[0].children[1].children.length; i++){thisis[actT.x].children[1].children[0].children[1].children[i].style.display='none';};thisis[actT.x].children[1].children[0].children[1].children[3].style.display='block';">
 				<div class="label" style="margin-left:0px;">Functions</div>
 			</div>
 			<div class="smallicons">
-				<img class="smallicons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/Notes.png" onclick="for(var i=2; i < thisis[actT.x].children[1].children[0].children[1].children.length; i++){thisis[actT.x].children[1].children[0].children[1].children[i].style.display='none';};thisis[actT.x].children[1].children[0].children[1].children[4].style.display='block';">
+				<img class="smallicons" src="<? echo $inotes; ?>" onclick="for(var i=2; i < thisis[actT.x].children[1].children[0].children[1].children.length; i++){thisis[actT.x].children[1].children[0].children[1].children[i].style.display='none';};thisis[actT.x].children[1].children[0].children[1].children[4].style.display='block';">
 				<div class="label" style="margin-left:0px;">Notes</div>
 			</div>
 			<div class="smallicons">
-				<img class="smallicons" src="users/<? echo $user; ?>/sysapps/DevCenter/images/Description.png" onclick="for(var i=2; i < thisis[actT.x].children[1].children[0].children[1].children.length; i++){thisis[actT.x].children[1].children[0].children[1].children[i].style.display='none';};thisis[actT.x].children[1].children[0].children[1].children[5].style.display='block';">
+				<img class="smallicons" src="<? echo $idescript; ?>" onclick="for(var i=2; i < thisis[actT.x].children[1].children[0].children[1].children.length; i++){thisis[actT.x].children[1].children[0].children[1].children[i].style.display='none';};thisis[actT.x].children[1].children[0].children[1].children[5].style.display='block';">
 				<div class="label" style="margin-left:0px;">Description</div>
 			</div>
 		</div>

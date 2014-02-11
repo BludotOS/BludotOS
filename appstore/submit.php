@@ -14,9 +14,9 @@ if ($zip->open('../users/'.$user.'/sysapps/FileNet/HDD/Applications/'.$app) === 
 /*{"version":"1.3", "cat":"Social"}
 */
 function insertb($code, $cat, $appn, $auth, $ver, $user, $app){
-$dbhost = '127.0.0.1';
-$dbuser = user;
-$dbpass = pass;
+$dbhost = ;
+$dbuser = ;
+$dbpass = ;
 $conn = mysql_connect($dbhost, $dbuser, $dbpass);
 if(! $conn )
 {
@@ -49,8 +49,8 @@ mysql_select_db('vios_apps');
 $SQL = "INSERT INTO ".$cat." (name, id, author, version) VALUES ('$appn', '$code', '$auth', '$ver')";
 $result = mysql_query( $SQL, $conn );
 mkdir('apps/'.$cat.'/'.$betacoded);
-copy('DEV/APP_core/img.png', 'apps/'.$cat.'/'.$betacoded.'/img.png');
-copy('DEV/APP_core/version.txt', 'apps/'.$cat.'/'.$betacoded.'/version.txt');
+copy('DEV/'.$appn.'/APP_core/img.png', 'apps/'.$cat.'/'.$betacoded.'/img.png');
+copy('DEV/'.$appn.'/APP_core/version.txt', 'apps/'.$cat.'/'.$betacoded.'/version.txt');
 copy('../users/'.$user.'/sysapps/FileNet/HDD/Applications/'.$app, 'apps/'.$cat.'/'.$betacoded.'/'.$app);
 rrmdir('DEV');
 mkdir('DEV');
@@ -79,8 +79,8 @@ WHERE name='$appn'";
       $resulted = mysql_query( $q, $conn ) or die(mysql_error());
       rrmdir('apps/'.$cat.'/'.$tempres2[0]);
       mkdir('apps/'.$cat.'/'.$tempres2[0]);
-copy('DEV/APP_core/img.png', 'apps/'.$cat.'/'.$tempres2[0].'/img.png');
-copy('DEV/APP_core/version.txt', 'apps/'.$cat.'/'.$tempres2[0].'/version.txt');
+copy('DEV/'.$appn.'/APP_core/img.png', 'apps/'.$cat.'/'.$tempres2[0].'/img.png');
+copy('DEV/'.$appn.'/APP_core/version.txt', 'apps/'.$cat.'/'.$tempres2[0].'/version.txt');
 copy('../users/'.$user.'/sysapps/FileNet/HDD/Applications/'.$app, 'apps/'.$cat.'/'.$tempres2[0].'/'.$app);
 rrmdir('DEV');
 mkdir('DEV');
@@ -93,13 +93,13 @@ function betacode($cat, $appn, $auth, $ver, $user, $app){
 	$temp = base_convert(mt_rand(0x1D39D3E06400000, 0x41C21CB8E0FFFFFF), 36, 15);
 	insertb($temp, $cat, $appn, $auth, $ver, $user, $app);
 };
-if($info = file_get_contents('DEV/APP_core/version.txt'))
+$appn = substr($app, 0, -4);
+if($info = file_get_contents('DEV/'.$appn.'/APP_core/version.txt'))
 {
 	if($obj = json_decode($info))
 	{
-		if($obj->{'auth'} && $obj->{'version'} && $user && $app)
+		if($obj->{'auth'} && $obj->{'version'} && $user && $appn)
 		{
-			$appn = substr($app, 0, -4);
 			$cat = (string)$obj->{'cat'};
 betacode($cat, $appn, $obj->{'auth'}, $obj->{'version'}, $user, $app);
 		} else {

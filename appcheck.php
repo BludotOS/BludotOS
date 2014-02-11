@@ -7,10 +7,10 @@
 ****************/
 
 //connection variables
-$host = "127.0.0.1";
-$database = "vios_apps";
-$user = "vios_apps";
-$pass = "apfelorange1";
+$host = "";
+$database = "";
+$user = "";
+$pass = "";
 
 //connection to the database
 mysql_connect($host, $user, $pass)

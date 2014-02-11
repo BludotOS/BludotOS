@@ -16,13 +16,16 @@ class Process
 {
    /* Class constructor */
    function Process(){
-<<<<<<< HEAD
-   $this->connection = mysql_connect("127.0.0.1", user, pass) or die(mysql_error());
-=======
-   $this->connection = mysql_connect(host, user, pass) or die(mysql_error());
->>>>>>> cb0bc74e15d6a6d48d680a3a581d83611d1e9bd4
+   $this->connection = mysql_connect("", "", "") or die(mysql_error());
       mysql_select_db("vios_users", $this->connection) or die(mysql_error());
       global $session;
+      if(isset($_POST['task'])) {
+      	if($_POST['task'] == "unlock") {
+      		$this->unlock();
+      	} else if($_POST['task'] == "unlocked") {
+      		$this->unlocked();
+      	}
+      }
       /* User submitted login form */
       if(isset($_POST['sublogin'])){
          $this->procLogin();
@@ -92,7 +95,13 @@ class Process
    function procLogout(){
       global $session;
       $retval = $session->logout();
-      header("Location: http://bludotos.com/index.php");
+      if($_GET["url"])
+      {
+      	$url = $_GET["url"];
+      } else {
+      	$url = "index";
+      }
+      header("Location: http://bludotos.com/".$url.".php");
    }
    
    function generateRandStr($length){
@@ -119,17 +128,46 @@ class Process
       return mysql_query($q, $this->connection);
    }
    
+   function betacheck($user, $pass, $mail, $code){
+   	
+$quser_name = "";
+$qpassword = "";
+$qdatabase = "";
+$qserver = "";
+$db_handle = mysql_connect($qserver, $quser_name, $qpassword);
+$db_found = mysql_select_db($qdatabase, $db_handle);
+
+if ($db_found) {
+$qsubemail = $mail;
+$qusername = $user;
+$qusername = addslashes($qusername);
+      $q = "SELECT * FROM beta_codes WHERE username = '$qusername'";
+      $resulted = mysql_query($q);
+      $dbarray = mysql_fetch_array($resulted);
+		//echo 'username already taken';
+	//header('Location:http://bludotos.com/');
+	if($dbarray['betacode'] == $code) {
+		mysql_close($db_handle);
+		return 1;
+      } else {
+      	mysql_close($db_handle);
+      	return 0;
+      	
+};
+//header("location: http://bludotos.com/register.php?code=".$_POST[betacode]."");
+}
+else {
+print "Database NOT Found ";
+mysql_close($db_handle);
+}
+   }
+   
    function betacode($user, $pass, $mail, $code){
    	
-$quser_name = user;
-$qpassword = pass;
-<<<<<<< HEAD
-$qdatabase = "vios_beta";
-$qserver = "127.0.0.1";
-=======
-$qdatabase = db;
-$qserver = host;
->>>>>>> cb0bc74e15d6a6d48d680a3a581d83611d1e9bd4
+$quser_name = "";
+$qpassword = "";
+$qdatabase = "";
+$qserver = "";
 $db_handle = mysql_connect($qserver, $quser_name, $qpassword);
 $db_found = mysql_select_db($qdatabase, $db_handle);
 
@@ -193,18 +231,20 @@ mysql_close($db_handle);
       if(ALL_LOWERCASE){
          $_POST['user'] = strtolower($_POST['user']);
       }
-      /* Registration attempt */
-      $retval = $session->register($_POST['user'], $_POST['pass'], $_POST['email']);
+      $this->betacode($_POST['user'], $_POST['pass'], $_POST['email'], $_POST['betacode']);
+      if($this->betacheck($_POST['user'], $_POST['pass'], $_POST['email'], $_POST['betacode']) == 1) {
       
+      /* Registration attempt */
+      //$retval = $session->register($_POST['user'], $_POST['pass'], $_POST['email']);
       /* Registration Successful */
       if($retval == 0){
-      	 $this->betacode($_POST['user'], $_POST['pass'], $_POST['email'], $_POST['betacode']);
+      	 
          $_SESSION['reguname'] = $_POST['user'];
          $_SESSION['regsuccess'] = true;
          $newuser = $_POST['user'];
          $userid = $this->generateRandID();
       	 $this->updateUserField($newuser, "userid", $userid);
-         header("Location: http://bludotos.com/createF/createT.php?namer=$newuser&id=$userid");
+         //header("Location: http://bludotos.com/createF/createT.php?namer=$newuser&id=$userid");
          //echo "success";
       }
       /* Error found with form */
@@ -224,6 +264,7 @@ mysql_close($db_handle);
          exit;
       }
    }
+   }
    
    /**
     * procForgotPass - Validates the given username then if
@@ -242,7 +283,7 @@ mysql_close($db_handle);
          /* Make sure username is in database */
          $subuser = stripslashes($subuser);
          if(strlen($subuser) < 5 || strlen($subuser) > 30 ||
-            !preg_match("^([0-9a-z])+$", $subuser) ||
+            !eregi("^([0-9a-z])+$", $subuser) ||
             (!$database->usernameTaken($subuser))){
             $form->setError($field, "* Username does not exist<br>");
          }
@@ -274,7 +315,8 @@ mysql_close($db_handle);
          }
       }
       
-      header("Location: ".$session->referrer);
+      //header("Location: ".$session->referrer);
+      echo "This username does not exist";
    }
    
    /**
@@ -299,6 +341,38 @@ mysql_close($db_handle);
          header("Location: ".$session->referrer);
       }
    }
+   
+   /*
+    * remove the user from the active user group
+    * 
+    */
+    function unlocked() {
+    	global $session, $database;
+    	if($_POST['code'] == $database->getuserbeta($_POST['user'], $email)) {
+    		$session->unlock($_POST['user']);
+    		header("Location: index.php");
+    	}
+    }
+    function unlock() {
+    	global $session, $mailer, $database;
+    	//$session->unlock($_POST['user']);
+    	//$newpass = $session->generateRandStr(8);
+         
+         /* Get email of user */
+         $usrinf = $database->getUserInfo($_POST['user']);
+         if(strlen($usrinf) == 0) {
+         	echo "This username was not found";
+         	return;
+         }
+         $email  = $usrinf['email'];
+         echo $email;
+         
+         // Attempt to send the email with new password 
+         if($mailer->sendunlock($_POST['user'],$email,$database->getuserbeta($_POST['user'], $email))){
+         	echo "An email was sent to you.";
+	    }
+    }
+    
 };
 
 /* Initialize process */

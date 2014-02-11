@@ -2,6 +2,15 @@
 include('include/session.php');
 include('include/view_active.php');
 include('include/coreBC.php');
+if($_GET["sub"])
+{
+	$sub = $_GET["sub"];
+} else {
+	$sub = "OSlogin";
+}
+if($isMobile) {
+	$sub = "OSlogin";
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" manifest="manifest2.php">
 <?
@@ -12,7 +21,7 @@ function load($path)
     return require $path;
 }
 $version = '0.91';
-$updateinfo = "<We are almost there!!!!</br>Huge update to most of the system and apps</br>Now runs on Android and iOS!</br>New uploader for wallpapers!</br>New improved Dock</br>ETA:Late August(Hopefully the 26th)!!";
+$updateinfo = "We are almost there!!!!</br>Huge update to most of the system and apps</br>Now runs on Android and iOS!</br>New uploader for wallpapers!</br>New improved Dock</br>ETA:Late August(Hopefully the 26th)!!";
 ?>
 <?
 if (!$isMobile) {
@@ -21,9 +30,11 @@ if (!$isMobile) {
 <?
 };
 ?>
-<head id="csslinks">
-	<meta name="keywords" content="webos, operating system, online os, online operating system, idevice os, oses, apfelsine, apfelsineos, apfelsineoses">
+<html>
+<head>
 	<title>bludot</title>
+	<meta name="keywords" content="webos, operating system, online os, online operating system, idevice os, oses, bludot, bludotos">
+	<meta name="description" content="Desktop Environment built from the ground up to give the seamless sync experience. Run all apps anywhere at the same speed on any device."></meta>
 	<link rel="shortcut icon" href="wallpaper/BluDotlogo.png">
 	<meta name="google-site-verification" content="vfXTQKdRGnkavfXcKZjSPoToLOSVV0JDvQ_HjgEAhmo" />
 	<meta itemprop="name" content="ApfelsineOS">
@@ -34,12 +45,14 @@ if (!$isMobile) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="apple-touch-startup-image" href="images/bludotipod.png" />
 	<link rel="apple-touch-icon" href="wallpaper/BluDotlogo.png"/>
+	<link rel="stylesheet" type="text/css" href="theme.css" />
 	<script src="http://s.cdpn.io/298/fastclick.js"></script>
-
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<link rel="stylesheet" type="text/css" href="test/GUI/main.css" />
+<script type="text/javascript" src="jquery/jquery-1.10.2.min.js"></script>
 <script src="jqnoconflict.js"></script>
 <script src="jqezbgresize.js"></script>
+<script src="formmkr/formmkr.js"></script>
+<link type="text/css" rel="stylesheet" href="formmkr/formmkr.css" />
 <script type="text/javascript" for="jqlibcyc" src="http://malsup.github.io/jquery.cycle.all.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -220,22 +233,192 @@ background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHh
 }
 body {
 font-family:arial;
-overflow:hidden;
+overflow:hidden !important;
 }
 .menu-sub:hover > ul {
 	display:block !important;
 }
 	</style>
-
+<? if(!$isMobile) { ?>
 <link rel="stylesheet" href="loadOS.css" type="text/css"/>
-
-<script src="https://rawgithub.com/ajaxorg/ace-builds/master/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<? }; ?>
+<script src="http://ajaxorg.github.io/ace-builds/src/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
 window.addEventListener('load', function() {
   new FastClick(document.body);
 }, false);
 </script>
-<script>
+<head>
+  <body>
+    <ul class="taskbar" style="opacity:1;display:block;">
+      <li style="float:left;">
+        <div class="font" onclick="core.UI.taskbarlist(this.parentNode, this);">
+        <font>Applications</font>
+        </div>
+        <div class="list" style="display:none;">
+          <div class="topbar">
+            <div class="ops">
+              <div class="all" onclick="core.UI.appDisplay('');"></div>
+              <div class="divider"></div>
+              <div class="cat"  onclick="core.UI.appDisplay('cat');"></div>
+            </div>
+            <div class="search">
+              <input type="text" placeholder="search" onkeyup="core.UI.Search(this.value);" />
+            </div>
+          </div>
+          <ul class="menu">
+            <li onclick="core.UI.menuSort(this.innerHTML);">System</li>
+            <li onclick="core.UI.menuSort(this.innerHTML);">Social</li>
+            <li onclick="core.UI.menuSort(this.innerHTML);">Games</li>
+            <li onclick="core.UI.menuSort(this.innerHTML);">Other</li>
+          </ul>
+          <div class="content">
+            <div class="pages"></div>
+          </div>
+          <div class="scrolldiv">
+          <div class="scroller">
+            </div>
+          </div>
+          <div class="pages">
+            
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="font" onclick="core.UI.taskbarlist(this.parentNode, this);">
+        <font onload="getTime(this);"></font>
+        </div>
+        <div class="list menu" style="display:none;">
+          <div class="calander">
+  <div class="top">
+    <div class="arrow left" onclick="turnLeft();">
+    </div>
+    <div class="font">
+      
+    </div>
+    <div class="arrow right" onclick="turnRight();">
+    </div>
+  </div>
+  <div class="container">
+  </div>
+</div>
+        </div>
+      </li>
+      <li>
+        <div class="font" onclick="core.UI.taskbarlist(this.parentNode, this);">
+        <font class="username-text">Username</font>
+        </div>
+        <div class="list menu username" style="display:none;">
+          <div class="li">
+            User Preferences
+          </div>
+          <div class="li">
+            Change Wallpaper
+          </div>
+        </div>
+      </li>
+      <? /*if($isMobile) {*/ ?>
+        <li class="switch">
+        	<div class="list switch" onclick="core.UI.twindow();">
+        	</div>
+        </li>
+        <? /*};*/ ?>
+    </ul>
+    <div class="container">
+    <div class="body">
+    </div>
+    <div class="dock" style="-webkit-transform: rotate(360deg);-Moz-transform: rotate(360deg);-webkit-transform : rotateX(360deg);-Moz-transform: rotateX(360deg);">
+      <div class="pages">
+      <div class="page">
+        
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="notification_bottom">
+      <ul class="list_row">
+        <li>
+          <div class="wifi_signal">
+            <div class="message">
+              <font>Connected</font>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="bludot_services">
+            <div class="message">
+              <font>Running</font>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div style="display: none" id="menu1"><li>test</li></div>
+    <div style="display: none" id="menu0"></div>
+    <ul class="taskbar twindow">
+    	<li class="switch">
+        	<div class="list close switch" onclick="SimpleWin.close(thisis[actT.x]);">
+        	</div>
+        </li>
+    	<li class="switch">
+        	<div class="list minimize switch" onclick="SimpleWin.minimize(thisis[actT.x]);">
+        	</div>
+        </li>
+      <li class="switch">
+        	<div class="list switch" onclick="core.UI.twindow();">
+        	</div>
+        </li>
+            </ul>
+    <script>
+    window.bar = function(obj) {
+    	//for(var a=1; a < core.UI.ttaskbar.children.length; a++) {
+    	//	core.UI.ttaskbar.removeChild(core.UI.ttaskbar.children[0]);
+    	//}
+    	core.UI.ttaskbar.innerHTML = '<li class="switch"><div class="list close switch" onclick="SimpleWin.close(thisis[actT.x]);"></div></li><li class="switch"><div class="list minimize switch" onclick="SimpleWin.minimize(thisis[actT.x]);"></div></li><li class="switch"><div class="list switch" onclick="core.UI.twindow();"></div></li>';
+    	console.log(obj);
+    	var add = document.getElementById('menu'+obj);
+    	console.log(add);
+    	//core.UI.ttaskbar.appendChild(add.cloneNode(true));
+    	var allLI = [];
+    	var allUL = [];
+    	console.log('-1');
+    	add = document.getElementById('menu'+obj);
+    	for(var i=0; i < add.children.length; i++) {
+    		console.log('0');
+    		//console.log(add.children[i]);
+    		//core.UI.ttaskbar.appendChild(add.children[i].cloneNode(true));
+    		if(add.children[i].tagName == 'LI') {
+    			console.log('1');
+    			allLI.push(add.children[i].cloneNode(true));
+    			if(add.children[i+1]) {
+    				console.log('2');
+    				allUL.push(add.children[i+1].cloneNode(true));
+    			};
+    		};
+    		
+    	}
+    	console.log('test next');
+    	for(var c=0; c < allLI.length; c++){
+    		var temp = document.createElement('li');
+    		var temp2 = '';
+    		if(allUL[c].childNodes) {
+    			console.log('3');
+    			for(var t=0; t < allUL[c].children.length; t++) {
+	    			temp2+= '<div class="li" onclick="'+allUL[c].children[t].children[0].attributes.onclick.textContent.replace('clickt(clicked);', '')+'core.UI.taskbarlist(this.parentNode.parentNode, this.parentNode);">'+allUL[c].children[t].children[0].innerHTML+'</div>';
+	    		}
+    		}
+    		temp.innerHTML = '<div class="font" onclick="core.UI.taskbarlist(this.parentNode, this);"><font class="text">'+allLI[c].innerHTML+'</font></div>'+'<div class="list menu username" style="display: none; opacity: 0;">'+temp2+'</div>';
+			allLI[c] = temp;
+			console.log(allLI[c]);
+    	};
+    	for(var i=0; i < allLI.length; i++) {
+    		//if(add.children[i].tagName == 'LI') {
+    			//console.log(allLI[i]);
+    			core.UI.ttaskbar.appendChild(allLI[i].cloneNode(true));
+    		//}
+    	}
+    	add.innerHTML = '';
+    };
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                             //
 //                    Firefox input fix                                                        //
@@ -572,18 +755,18 @@ window.core = (function(){
 Trash:function ()
 {
 var dividofapps = "trashwin"
-var trash=SimpleWin.create("Trash", "trash", "sysapps/trash.txt");
-dock.addclick('Trash', ['close', 'minimize'], [function(){SimpleWin.close(trash);}, function(){SimpleWin.minimize(trash);}]);
+var trash=SimpleWin.create("Trash", "trash", "sysapps/trash.txt", null);
+//dock.addclick('Trash', ['close', 'minimize'], [function(){SimpleWin.close(trash);}, function(){SimpleWin.minimize(trash);}]);
      
 trash.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
-dock.removeclick('Trash', ['close', 'minimize']);
+//dock.removeclick('Trash', ['close', 'minimize']);
 return true
 }
 },
 Appstore:function ()
 {
 core.checkupdates();
-var Appstore=SimpleWin.create("Appstore", "Appstore", "appstore/");
+var Appstore=SimpleWin.create("Appstore", "Appstore", "appstore/?dev=<? echo $session->isDev(); ?>&admin=<? echo $session->isAdmin(); ?>", null);
      
 Appstore.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
 
@@ -600,7 +783,7 @@ var AchatS = prompt('Username');
 
      // if (favorite) equivalent to if (favorite != null && favorite != "");
      if (AchatS) {
-        window.dock.addIcon({
+        /*window.dock.addIcon({
             name:      'images/AmoebaChat',
             label:     'AmoebaChat',
             extension: '.png',
@@ -608,8 +791,8 @@ var AchatS = prompt('Username');
             menuItems: ['open'],
             menuClick: [function(){this.name();}],
             onclick:   function (){return false;}
-          }, dock.findApp('Trash'));
-     	var AmoebaChat=SimpleWin.create("AmoebaChat", "amoebachat", 'http://amoeba.im/#username='+AchatS);
+          }, dock.findApp('Trash'));*/
+     	var AmoebaChat=SimpleWin.create("AmoebaChat", "amoebachat", 'http://amoeba.im/#username='+AchatS, null);
         dock.addclick('AmoebaChat', ['close', 'minimize'], [function(){SimpleWin.close(AmoebaChat);}, function(){SimpleWin.minimize(AmoebaChat);}]);
      } else {
      	alert("You pressed Cancel or no value was entered!");
@@ -622,7 +805,7 @@ var AchatS = prompt('Username');
 
      // if (favorite) equivalent to if (favorite != null && favorite != "");
      if (AchatS) {
-var AmoebaChat=SimpleWin.create("AmoebaChat", "amoebachat", "sysapps/amoebachat.txt");
+var AmoebaChat=SimpleWin.create("AmoebaChat", "amoebachat", "sysapps/amoebachat.txt", null);
      } else {
      	alert("You pressed Cancel or no value was entered!");
      }
@@ -633,8 +816,8 @@ AmoebaChat.onclose=function(){ //Run custom code when window is being closed (re
 <?
 if (!$isMobile) {
 ?>
-dock.removeclick('AmoebaChat', ['close', 'minimize']);
-window.dock.removeApp('AmoebaChat');
+//dock.removeclick('AmoebaChat', ['close', 'minimize']);
+//window.dock.removeApp('AmoebaChat');
 return true;
 <?
 } else if ($isMobile) { };
@@ -647,16 +830,16 @@ DevCenter:function ()
 <?
 if (!$isMobile) {
 ?>
-var DevCenter=SimpleWin.create("DevCenter", "DevCenter", "users/"+core.user+"/sysapps/DevCenter/?thefile=file.txt&userN="+core.user+"");
+var DevCenter=SimpleWin.create("DevCenter", "DevCenter", "users/"+core.user+"/sysapps/DevCenter/?thefile=file.txt&userN="+core.user+"", '');
 <?
 } else if($isMobile) {
 ?>
-var DevCenter=SimpleWin.create("DevCenter", "DevCenter", "users/"+core.user+"/sysapps/DevCenter/mobile.php?thefile=file.txt&userN="+core.user+"");
+var DevCenter=SimpleWin.create("DevCenter", "DevCenter", "users/"+core.user+"/sysapps/DevCenter/mobile.php?thefile=file.txt&userN="+core.user+"", '');
 <?
 };
 if (!$isMobile) {
 ?>
-dock.addclick('DevCenter', ['close', 'minimize'], [function(){SimpleWin.close(DevCenter);}, function(){SimpleWin.minimize(DevCenter);}]);
+//dock.addclick('DevCenter', ['close', 'minimize'], [function(){SimpleWin.close(DevCenter);}, function(){SimpleWin.minimize(DevCenter);}]);
 <?
 };
 ?>
@@ -671,6 +854,7 @@ for (var x=0; x < thisis.length; x++)
         var thisislength = x;
      }
 }
+console.log(thisis[actT.x].openApps);
 thisis[actT.x].checknew();
 var renameit = new XMLHttpRequest();
         var nameit = window.thisis[actT.x].old.split("/")[window.thisis[actT.x].old.split("/").length-1];
@@ -683,7 +867,27 @@ var renameit = new XMLHttpRequest();
 	};
 	};
 renameit.send(sendit2);
-dock.removeclick('DevCenter', ['close', 'minimize']);
+var sendapps = '';
+console.log(thisis[actT.x].openApps);
+for(var i=0; i < thisis[actT.x].openApps.length; i++) {
+	sendapps+=thisis[actT.x].openApps[i]+',';
+};
+console.log(sendapps);
+sendapps = sendapps.substring(0,sendapps.length-1);
+var tempapps = sendapps;
+sendapps = 'apps='+tempapps;
+console.log(sendapps);
+renameit = new XMLHttpRequest();
+	renameit.open('POST', 'users/'+core.user+'/sysapps/DevCenter/resolve.php', false);
+        renameit.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	renameit.onreadystatechange = function() {
+	if (renameit.readyState==4) {
+        //thisis.old = '../FileNet/HDD/Applications/temp/'+name;	
+        console.log(renameit.responseText);
+	};
+	};
+renameit.send(sendapps);
+//dock.removeclick('DevCenter', ['close', 'minimize']);
 <?
 };
 ?>
@@ -695,18 +899,18 @@ FileNet:function ()
 <?
 if (!$isMobile) {
 ?>
-var FileNet=SimpleWin.create("FileNet", "FileNet", "users/"+core.user+"/sysapps/FileNet/?userN="+core.user+"", 400, 750, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
+var FileNet=SimpleWin.create("FileNet", "FileNet", "users/"+core.user+"/sysapps/FileNet/?userN="+core.user+"", '<div style="position: relative;height: 120px;top:0px;left:0px;width: 100px;"><img src="icons/FileNet.png" style="position:relative;top:0px;width:100%;left: 0px;"/><font style="position:relative;top:0px;left:0px;width:100%;text-align:center;">Loading</font></div>', 400, 750, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
 <?
 } else if($isMobile) {
 ?>
-var FileNet=SimpleWin.create("FileNet", "FileNet", "users/"+core.user+"/sysapps/FileNet/mobile.php?userN="+core.user+"", 400, 750, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
+var FileNet=SimpleWin.create("FileNet", "FileNet", "users/"+core.user+"/sysapps/FileNet/mobile.php?userN="+core.user+"", '', 400, 750, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
 <?
 };
 ?>
-dock.addclick('FileNet', ['close', 'minimize'], [function(){SimpleWin.close(FileNet);}, function(){SimpleWin.minimize(FileNet);}]);
+//dock.addclick('FileNet', ['close', 'minimize'], [function(){SimpleWin.close(FileNet);}, function(){SimpleWin.minimize(FileNet);}]);
      
 FileNet.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
-dock.removeclick('FileNet', ['close', 'minimize']);
+//dock.removeclick('FileNet', ['close', 'minimize']);
 
 return true
 }
@@ -716,7 +920,7 @@ Prefs:function ()
 <?
 if (!$isMobile) {
 ?>
-window.dock.addIcon({
+/*window.dock.addIcon({
             name:      'icons/Preferences',
             label:     'Prefs',
             extension: '.png',
@@ -724,19 +928,19 @@ window.dock.addIcon({
             menuItems: ['open'],
             menuClick: [function(){this.name();}],
             onclick:   function (){return false;}
-          }, dock.findApp('Trash'));
+          }, dock.findApp('Trash'));*/
 <?
 if (!$isMobile) {
 ?>
-var Prefer=SimpleWin.create("Preferences", "prefed", "users/"+core.user+"/sysapps/Preferences/index.php?userN="+core.user+"", 420, 540, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
+var Prefer=SimpleWin.create("Preferences", "prefed", "users/"+core.user+"/sysapps/Preferences/index.php?userN="+core.user+"", '', 420, 540, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
 <?
 } else if($isMobile) {
 ?>
-var Prefer=SimpleWin.create("Preferences", "prefed", "users/"+core.user+"/sysapps/Preferences/mobile.php?userN="+core.user+"", 420, 540, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
+var Prefer=SimpleWin.create("Preferences", "prefed", "users/"+core.user+"/sysapps/Preferences/mobile.php?userN="+core.user+"", '', 420, 540, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;});
 <?
 };
 ?>
-dock.addclick('Prefs', ['close', 'minimize'], [function(){SimpleWin.close(Prefer);}, function(){alert('test');}]);
+//dock.addclick('Prefs', ['close', 'minimize'], [function(){SimpleWin.close(Prefer);}, function(){alert('test');}]);
 <?
 } else if ($isMobile) {
 ?>
@@ -749,7 +953,7 @@ Prefer.onclose=function(){ //Run custom code when window is being closed (return
 if (!$isMobile) {
 ?>
 //dock.removeclick('Prefs', ['close', 'minimize']);
-window.dock.removeApp('Prefs');
+//window.dock.removeApp('Prefs');
 <?
 } else if ($isMobile) { };
 ?>
@@ -761,7 +965,11 @@ Uploader:function(loc, type, callback){
 	<?
 if (!$isMobile) {
 ?>
-	var Uploader=SimpleWin.create("Uploader", "Uploader", "users/"+core.user+"/sysapps/Uploader/index.php?user="+core.user+"&location="+loc+"&type="+type+"", 250, 525, function(obj){
+if(loc == false)
+{
+	var loc = "../FileNet/HDD/";
+}
+	var Uploader=SimpleWin.create("Uploader", "Uploader", "users/"+core.user+"/sysapps/Uploader/index.php?user="+core.user+"&location="+loc+"&type="+type+"", '', 250, 525, function(obj){
 		var temp = document.createElement('div');
 		temp.style.cssText = "position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: transparent;z-index:1;";
 		document.getElementById('dhtmlwindowholder').insertBefore(temp, document.getElementById('dhtmlwindowholder').children[0]);
@@ -776,7 +984,11 @@ if (!$isMobile) {
 <?
 } else if($isMobile) {
 ?>
-var Uploader=SimpleWin.create("Uploader", "Uploader", "users/"+core.user+"/sysapps/Uploader/mobile.php?user="+core.user+"&location="+loc+"&type="+type+"", 250, 525, function(obj){
+if(loc == false)
+{
+	var loc = "../FileNet/HDD/";
+}
+var Uploader=SimpleWin.create("Uploader", "Uploader", "users/"+core.user+"/sysapps/Uploader/mobile.php?user="+core.user+"&location="+loc+"&type="+type+"", '', 250, 525, function(obj){
 		var temp = document.createElement('div');
 		temp.style.cssText = "position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: transparent;z-index:1;";
 		document.getElementById('dhtmlwindowholder').insertBefore(temp, document.getElementById('dhtmlwindowholder').children[0]);
@@ -802,23 +1014,23 @@ return true;
 },
 AdminC:function ()
 {
-var AdminC=SimpleWin.create("AdminC", "AdminC", "users/"+core.user+"/admin/admin.php")
+var AdminC=SimpleWin.create("AdminC", "AdminC", "users/"+core.user+"/admin/admin.php", '')
 AdminC.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
 return true;
 }
 },
 Safari:function ()
 {
-var googlewin=SimpleWin.create("Safari", "safari", 'browserT/browser.html', 590, 500);
-dock.addclick('Safari', ['close', 'minimize'], [function(){SimpleWin.close(googlewin);}, function(){SimpleWin.minimize(googlewin);}]);
+var googlewin=SimpleWin.create("Safari", "safari", 'browserT/browser.html', '', 590, 500);
+//dock.addclick('Safari', ['close', 'minimize'], [function(){SimpleWin.close(googlewin);}, function(){SimpleWin.minimize(googlewin);}]);
 googlewin.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
-dock.removeclick('Safari', ['close', 'minimize']);
+//dock.removeclick('Safari', ['close', 'minimize']);
 return true;
 }
 },
 AboutOS:function()
 {
-var aboutos=SimpleWin.create("About", "about", "aboutOSw.php?ver=<? echo $version; ?>", 450, 400, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;}, 1, 1);
+var aboutos=SimpleWin.create("About", "about", "aboutOSw.php?ver=<? echo $version; ?>", '', 450, 400, function(obj){var left = (window.innerWidth-obj.clientWidth)/2; return left;}, function(obj){var top = ((window.innerHeight-obj.clientHeight)/2)-23; return top;}, 1, 1);
      
 aboutos.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
 return true
@@ -826,8 +1038,8 @@ return true
 },
 logout:function()
                                         {
-                                        setTimeout("location.href='process.php?url=login';",1500);
-                                        var logout=SimpleWin.create("logout", "logout", "sysapps/logout.txt", "width=590px,height=175px,resize=1,scrolling=1,center=1")
+                                        setTimeout("location.href = 'process.php';",1500);
+                                        var logout=SimpleWin.create("logout", "logout", "sysapps/logout.txt", '', "width=590px,height=175px,resize=1,scrolling=1,center=1")
      
                                         logout.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
                                         return true
@@ -861,7 +1073,7 @@ getapps.onreadystatechange = function() {
         temp.name.innerHTML = respit.dirs[i];
         temp.img.src = '/users/'+core.user+'/sysapps/FileNet/apps/'+respit.dirs[i]+'/img.png';
         appdiv.appendChild(temp);
-        temp.style.cssText = 'position:relative;top:0px;left:0px;float:left;width:75px;height:85px;';
+        temp.style.cssText = 'position:relative;top:0px;left:0px;float:left;width:75px;height:90px;margin:5px;overflow:hidden;';
         temp.appendChild(temp.img);
         temp.img.style.cssText = 'position:relative;top:0px;left:0px;width:75px;height75px;';
         temp.appendChild(temp.name);
@@ -877,8 +1089,28 @@ document.body.removeChild(window.appdiv);
 dock.docklock();
 };
 }
+
+
+
 };
-core.openapp = function(name) {
+core.FileAPI = function(name) {
+	console.log('func');
+	var name = name;
+	console.log(name);
+	var dev = SimpleWin.create("devsub", "devsub", "users/"+core.user+"/sysapps/FileNet/FileAPI.php?user="+core.user+"&func="+name, null);
+	dev.onclose=function(){ //Run custom code when window is being closed (return false to cancel action):
+//dock.removeclick('FileNet', ['close', 'minimize']);
+
+return true;
+}
+}
+core.openapp = function(name, attrib) {
+	console.log(attrib);
+	if(attrib) {
+		var attrib = attrib;
+	} else {
+		var attrib = "NULL";
+	}
 var name = name;
 var openapp = new XMLHttpRequest();
         var sendit = 'name='+name+'&user='+core.user+'';
@@ -887,7 +1119,7 @@ var openapp = new XMLHttpRequest();
 	//goto2.setRequestHeader("Content-length", sendit.length);
 	openapp.onreadystatechange = function() {
 	if (openapp.readyState==4) {
-window.dock.addIcon({
+/*window.dock.addIcon({
             name:      'users/'+core.user+'/sysapps/FileNet/apps/'+name+'/img',
             label:     name,
             extension: '.png',
@@ -895,13 +1127,15 @@ window.dock.addIcon({
             menuItems: ['open'],
             menuClick: [function(){return false;}],
             onclick:   function (){return false;}
-          }, dock.findApp('Trash'));
-var temp = SimpleWin.create(name, name, "users/"+core.user+"/sysapps/FileNet/HDD/Applications/temp/"+name+"/index.php?name="+name+"&userN="+core.user+"");
+          }, dock.findApp('Trash'));*/
+var temp = SimpleWin.create(name, name, "users/"+core.user+"/sysapps/FileNet/HDD/Applications/temp/"+name+"/index.php?name="+name+"&userN="+core.user+"", '');
+temp.DevAPIattrib = attrib;
+console.log(temp);
 window.tempname = name;
 <?
 if ($isMobile) {
 ?>
-dock.addclick(name, ['close', 'minimize'], [function(){SimpleWin.close(temp);}, function(){SimpleWin.minimize(temp);}]);
+//dock.addclick(name, ['close', 'minimize'], [function(){SimpleWin.close(temp);}, function(){SimpleWin.minimize(temp);}]);
 <?
 };
 ?>
@@ -909,7 +1143,7 @@ temp.onclose=function(){ //Run custom code when window is being closed (return f
 <?
 if (!$isMobile) {
 ?>
-window.dock.removeApp(thisis[actT.x].id);
+//window.dock.removeApp(thisis[actT.x].id);
 var saveapp = new XMLHttpRequest();
         var sendit2 = 'path=HDD/Applications/temp/&old='+encodeURIComponent(window.tempname+'/')+'&new='+encodeURIComponent('apps/'+window.tempname+'/'+window.tempname+'.blu')+'&move='+window.tempname;
         saveapp.open('POST', 'users/'+core.user+'/sysapps/FileNet/saveapp.php', true);
@@ -930,7 +1164,6 @@ return true;
 }
 openapp.send(sendit);
 }
-
     core.getstyle = function(path, type, ex, name, callback)
     {
 					var fileref=document.createElement("link");
@@ -969,89 +1202,119 @@ openapp.send(sendit);
   		callback(true);
   		};
 	};
-	core.loginkeydown = function(e)
-	{
-		e = e || window.event;
-		var key = e.keyCode || e.which;
-		if(key===13 && !core.user)
-		{
-			var form = document.getElementById('loginform');
-			core.ajaxlogin(form.querySelectorAll('input')[0].value, form.querySelectorAll('input')[1].value, form.querySelectorAll('input')[2].value, form.querySelectorAll('input')[3].value);
-			return false;
-		} else if(key===13 && core.user)
-		{
-			var form = document.getElementById('loginform');
-			core.ajaxlock(form.querySelectorAll('input')[0].value, form.querySelectorAll('input')[1].value, form.querySelectorAll('input')[2].value, form.querySelectorAll('input')[3].value);
-			return false;
+	var previousOrientation = window.orientation;
+var checkOrientation = function(){
+    if(window.orientation !== previousOrientation){
+        previousOrientation = window.orientation;
+        dock.dock.style.left = (window.innerWidth/2)-(dock.dock.clientWidth/2)+'px';
+    }
+};
+
+window.addEventListener("resize", checkOrientation, false);
+window.addEventListener("orientationchange", checkOrientation, false);
+
+// (optional) Android doesn't always fire orientationChange on 180 degree turns
+setInterval(checkOrientation, 2000);
+
+
+
+
+
+
+core.GetApps = function()
+{
+var getapps = new XMLHttpRequest();
+getapps.open('GET', 'apps.php?goto=users/'+core.user+'/sysapps/FileNet/apps/', true);
+getapps.onreadystatechange = function() {
+        if(getapps.readyState==4) {
+        window.respit = JSON.parse(getapps.responseText);
+        core.Aapps = [];
+        for(var i=0; i < respit.dirs.length; i++) {
+        var temp = {};
+        temp.img = '/users/'+core.user+'/sysapps/FileNet/apps/'+respit.dirs[i]+'/img.png';
+        temp.name = respit.dirs[i];
+        temp.cat = 'Other';
+        temp.click = function() {
+        	core.openapp(this.name.innerHTML);
+        	core.loadApps.Applications(null);
+        };
+        core.Aapps.push(temp);
+        };
+        if(core.SystemApps) {
+        	for(var a in core.SystemApps) {
+        		core.Aapps.push(core.SystemApps[a]);
+        	}
+        };
+}
+}
+getapps.send();
+};
+
+
+
+
+core.backgroundSRC = function(change) {
+	
+	if(core.UI) {
+	    core.UI.Desktop.style.opacity = 0;
+	    console.log('bloops');
+	    var change = change;
+		setTimeout(function() {
+			core.UI.Desktop.style.background = 'url(\''+change+'\')';
+			core.UI.Desktop.style.backgroundSize = 'cover';
+			core.UI.Desktop.style.opacity = 1;
+			if(change.indexOf('FileNet/') == -1)
+			{
+				var temp  = change;
+				temp = encodeURIComponent(temp);
+				temp = temp.toString().replace('%20', '/');
+				console.log('test: '+temp);
+				change = 'users/'+core.user+'/sysapps/FileNet/'+temp;
+			}
+			console.log(change);
+			core.backgroundSRC.updatecon(change.split('FileNet/')[1]);
+		},500);
+
+		} else {
+			document.getElementById('thedesktop').style.opacity = 0;
+			setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;core.backgroundSRC.updatecon(change.split('FileNet/')[1]);",500);
 		};
+}
+
+
+core.backgroundSRC.updatecon = function(file) {
+var wall = new XMLHttpRequest();
+	wall.open('GET', 'users/'+core.user+'/sysapps/Preferences/uconf.php?user='+core.user+'&name=wallpaper&change='+file, true);
+	//wall.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	wall.onreadystatechange = function() {
+		if (wall.readyState==4) {
+		
+		};
+	};
+wall.send();
+};
+
+
+logmein = function() {
+	var form = document.querySelector('form');
+		core.ajaxlogin(form.querySelectorAll('input')[0].value, form.querySelectorAll('input')[1].value, 1, "checked");
 	}
-	core.ajaxlock = function (user, pass, sub, box)
-                {
-                     var checkit = new XMLHttpRequest();
-                     window.testtemp = checkit;
-                         var sendit = 'sublogin='+sub+'&user='+user+'&pass='+pass+'&remember='+box;
-                         checkit.open("POST", "process.php", true);
-                         checkit.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                         checkit.setRequestHeader( "Pragma", "no-cache" );
-						checkit.setRequestHeader( "Cache-Control", "no-cache" );
-                         checkit.onreadystatechange = function() {
-                               if(checkit.readyState == 4){
-                                     var resp = JSON.parse(checkit.responseText);
-                                     //window.resp = JSON.parse(checkit.responseText);
-                                     if (resp.result == 'false'){
-                                     	//checkit.abort();
-                                     	//core.loadlogin();
-                                            var divit = document.getElementById('logdiv');
-                                            divit.querySelector('.error').innerHTML += 'Error!';
-                                            /*divit.querySelectorAll('input')[1].blur();
-                                            divit.querySelectorAll('input')[1].focus();
-                                            divit.querySelectorAll('input')[0].blur();
-                                            divit.querySelectorAll('input')[0].focus();
-                                            divit.querySelectorAll('input')[1].value = '';*/
-                                            //window.location.href="http://bludotos.com";
-                                            delete resp.result;
-                                            delete checkit;
-                                            delete user;
-                                            delete pass;
-                                            delete sub;
-                                            delete box;
-                                            delete resp;
-                                            
-                                            //document.getElementById('loginf').action = "javascript:core.ajaxlogin(document.getElementById('loginf').children[0].value, document.getElementById('loginf').children[2].value, document.getElementById('loginf').children[1].value, document.getElementById('loginf').children[3].checked);";                                            //delete window.resp;';                                            //delete window.resp;
-                                     } else if (resp.result == 'true') {
-                                        var divit = document.getElementById('logdiv');
-                                        divit.style['-webkit-transition'] = 'all 1s ease';
-                                        divit.style.top = -100+'%';
-                                        setTimeout(function(){
-                                        	divit.style.display = 'none';
-                                        }, 1000);
-                                     };
-                               }
-                         }
-                         checkit.send(sendit);
-                };
+
+
+
+
+
+
+
+
     core.ajaxlogin = function (user, pass, sub, box)
                 {
-                	var loader = document.getElementById('loader');
-                	loader.style.display = 'block';
-  loader.timeout1 = setTimeout(function(){
-    var i = 0;
-    loader.interval1= setInterval(function(){
-      loader.children[i].style.background = 'rgba(50,150,255,0.9)'; 
-      loader.children[i].style['box-shadow'] = 'inset 0px 0px 10px 2px rgba(117,182,255,0.5),0px 0px 20px rgba(117,182,214,0.5)';
-      if(i == 3)
-      {
-        loader.timeout2 = setTimeout(function(){i=0;
-        for(a in loader.children)
-        {
-          loader.children[a].style.background = ''; 
-      loader.children[a].style['box-shadow'] = 'inset 0px 0px 10px 2px rgba(117,182,255,0.5),';
-        }}, 500);
-      } else {
-        i++;
-      }
-    }, 500);
-  }, 1000);
+                	var form  = document.querySelector('form');
+                	form.div = document.createElement('div');
+                	form.div.style.cssText = 'position:absolute;top:0px;left:0;right:0;bottom:0;z-index:1;';
+                	form.appendChild(form.div);
+                	form.querySelectorAll('input')[0].style.opacity = 0.5;
+                	form.querySelectorAll('input')[1].style.opacity = 0.5;
                      var checkit = new XMLHttpRequest();
                      window.testtemp = checkit;
                          var sendit = 'sublogin='+sub+'&user='+user+'&pass='+pass+'&remember='+box;
@@ -1061,10 +1324,10 @@ openapp.send(sendit);
 						checkit.setRequestHeader( "Cache-Control", "no-cache" );
                          checkit.onreadystatechange = function() {
                                if(checkit.readyState == 4){
-                               	loader.style.display = 'none';
+                               	/*loader.style.display = 'none';
                                	clearTimeout(loader.timeout1);
                                	clearInterval(loader.interval1);
-                               	clearTimeout(loader.timeout2);
+                               	clearTimeout(loader.timeout2);*/
                                      var resp = JSON.parse(checkit.responseText);
                                      //window.resp = JSON.parse(checkit.responseText);
                                      if (resp.result == 'false'){
@@ -1072,6 +1335,34 @@ openapp.send(sendit);
                                      	//core.loadlogin();
                                             var divit = document.getElementById('logdiv');
                                             divit.querySelector('.error').innerHTML += 'Error!';
+                                            var form  = document.querySelector('form');
+											//var login = document.querySelector('.login');
+											var i=0;
+                                            var interval = setInterval(function() {
+											    /*login.style.left = -10+'px';
+											    setTimeout(function() {
+											      login.style.left = 10+'px';
+											    }, 25);
+											    setTimeout(function() {
+											      login.style.left = 0+'px';
+											    }, 75);*/
+											    i++;
+											    if(i == 3)
+											    {
+											      clearInterval(interval);
+											        document.querySelector('.error').innerHTML = "<font>wrong username or password</font></br><a href=\"javascript:core.lockedout();\">You might be locked out!</a>";
+											        document.querySelector('.error').style.height = "60px";
+											        document.querySelector('.error').style.color = '#B94A48';
+											      document.querySelector('.error').style.opacity = 0;
+											  document.querySelector('.error').style.opacity = 1;
+											  setTimeout(function() {
+											    document.querySelector('.error').style.opacity = 0;
+											  }, 3000);
+											    }
+											  }, 125);
+											  form.removeChild(form.div);
+											  form.querySelectorAll('input')[0].style.opacity = 1;
+                							  form.querySelectorAll('input')[1].style.opacity = 1;
                                             /*divit.querySelectorAll('input')[1].blur();
                                             divit.querySelectorAll('input')[1].focus();
                                             divit.querySelectorAll('input')[0].blur();
@@ -1088,16 +1379,22 @@ openapp.send(sendit);
                                             
                                             //document.getElementById('loginf').action = "javascript:core.ajaxlogin(document.getElementById('loginf').children[0].value, document.getElementById('loginf').children[2].value, document.getElementById('loginf').children[1].value, document.getElementById('loginf').children[3].checked);";                                            //delete window.resp;';                                            //delete window.resp;
                                      } else if (resp.result == 'true') {
-                                     	loader.style.display = 'none';
+                                     	var form  = document.querySelector('form');
+                                     	/*loader.style.display = 'none';
                                	clearTimeout(loader.timeout1);
                                	clearInterval(loader.interval1);
-                               	clearTimeout(loader.timeout2);
+                               	clearTimeout(loader.timeout2);*/
                                         //document.body.removeChild(divit);
+                                        form.removeChild(form.div);
+                                        form.querySelectorAll('input')[0].style.opacity = 1;
+                							  form.querySelectorAll('input')[1].style.opacity = 1;
+                                        clearInterval(core.backgroundI);
                                         core.user = resp.user;
                                         window.user = resp.user;
                                         core.Admin = resp.Admin;
                                         core.Cversion = <?echo $version;?>;
 core.checkupdates();
+core.GetApps();
                      var checkp = new XMLHttpRequest();
                          checkp.open("GET", "users/"+window.user+"/config/configB.php", true);
                          checkp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -1105,351 +1402,124 @@ core.checkupdates();
                                if(checkp.readyState == 4){
                                      window.prefit = JSON.parse(checkp.responseText);
                                      //core.userprefs = prefit;
-                                     core.OS.Desktop.background.src = 'users/'+core.user+'/sysapps/FileNet/'+prefit.wallpaper;
-                                     if (prefit.Dockmag == 'false') {
-                                         prefit.Dockmag = false;
-                                     } else if (prefit.Dockmag == 'true') {
-                                         prefit.Dockmag = true;
-                                     }
-                                     core.getstyle(prefit.dock[0], prefit.dock[1], 'dock', prefit.dock[2]);
-                                     core.docktheme = prefit.dock[1];
-                                     core.getscript(prefit.dock[0], 'dock', prefit.dock[3], function(result){
-                                     if(result == true)
-                                     {
-                                     setTimeout(function(){
-                                     window.dockit = [];
+                                     core.getscript('', 'test/temp_file', 'new', function() {
+                                        var testt = setInterval(function() {
+                                        	console.log('interval');
+                                     	if(window.core.UI) {
+                                     		if(window.core.UI.Desktop) {
+                                     			window.dockit = [];
                                           //window.i = i;
-                                          for(var t=0; t < prefit.Dockapps.length; t++) {
-                                          var t = t;
-                                          window.temp = {
-                                                    name:      'icons/'+prefit.Dockapps[t],
-                                                    label:     prefit.Dockapps[t],
+                                          core.SystemApps = [];
+                                          var coreapps = ['DevCenter', 'FileNet', 'Appstore'];
+                                          for(var t=0; t < coreapps.length; t++) {
+                                           var temp = {
+                                           	name:      coreapps[t],
+                                                    label:     coreapps[t],
                                                     extension: '.png',
+                                                    img:		'icons/'+coreapps[t]+'.png',
                                                     sizes:     [44,100],
                                                     menuItems: ['open'],
-                                                    menuClick: [core.loadApps[prefit.Dockapps[t]]],
-                                                    onclick:   core.loadApps[prefit.Dockapps[t].toString()]
-                                          };
-                                          window.dockit[t] = window.temp;
-                                          };
-                                          if (prefit.trash == 'empty') { 
-                                          window.temp = {
-                                                    name:      'icons/trash-empty',
-                                                    label:     'Trash',
-                                                    extension: '.png',
-                                                    sizes:     [44,100],
-                                                    menuItems: ['open'],
-                                                    menuClick: [function(){core.loadApps.Trash();}],
-                                                    onclick:   function(){core.loadApps.Trash();}
-                                          };
-                                          window.dockit.push(window.temp);
-                                          } else if (prefit.trash == 'full') {
-                                          window.temp = {
-                                                    name:      'icons/trash-full',
-                                                    label:     'Trash',
-                                                    extension: '.png',
-                                                    sizes:     [44,100],
-                                                    menuItems: ['open'],
-                                                    menuClick: [function(){core.loadApps.Trash();}],
-                                                    onclick:   function(){core.loadApps.Trash();}
-                                          };
-                                          window.dockit.push(window.temp);
-                                          };
-                                     if (core.Admin == 1 || resp.Dev == 1) {
-                                        window.dock = SimpleDock;
-                                        window.dock.launch(
-                                                document.getElementById('dock'),
-                                                window.dockit,
-                                                parseInt(prefit.Dockmin),
-                                                parseInt(prefit.Dockmax),
-                                                3,
-                                                5,
-                                                1,
-                                               <? if(!$isMobile){?>
-                                                prefit.Dockmag);
-                                               <? } else if($isMobile){?>
-                                                false);
-                                               <?};?>
-                                     } else if(core.Admin != 1 && core.Dev != 1) {
-                                      window.docks = [];
-                                     for(var i=1; i < window.dockit.length; i++)
-                                     {
-                                          /*var temp = {
-                                                    name:      'icons/'+prefit.Dockapps[i]+'',
-                                                    label:     prefit.Dockapps[i],
-                                                    extension: '.png',
-                                                    sizes:     [44,100],
-                                                    menuItems: ['open'],
-                                                    menuClick: [function(){prefit.Dockapps[i]();}],
-                                                    onclick:   function(){prefit.Dockapps[i]();}
-                                          };*/
-                                          	window.docks.push(window.dockit[i]);
-                                     };
-                                        window.dock = SimpleDock;
-                                        window.dock.launch(
-                                                document.getElementById('dock'),
-                                                window.docks,
-                                                parseInt(prefit.Dockmin),
-                                                parseInt(prefit.Dockmax),
-                                                3,
-                                                5,
-                                                1,
-                                               <? if(!$isMobile){?>
-                                                prefit.Dockmag);
-                                               <? } else if($isMobile){?>
-                                                false);
-                                               <?};?>
-                                     };
-                                     }, 3000);
-                                     };
-                                     });
-                                     core.getstyle(prefit.taskbar[0], prefit.taskbar[1], 'taskbar', prefit.taskbar[2]);
-                                     core.taskbartheme = prefit.taskbar[1];
-                                     core.getscript(prefit.taskbar[0], 'taskbar', prefit.taskbar[3], function()
-                                     {
-                                     core.OS.Taskbar = core.create('div');
-    	document.body.appendChild(core.OS.Taskbar);
-    	core.OS.Taskbar.id = 'menubar';
-    	core.OS.br = core.create('br');
-    	document.body.appendChild(core.OS.br);
-    	core.OS.Taskbar.menu1 = core.create('ul');
-    	document.body.appendChild(core.OS.Taskbar.menu1);
-    	core.OS.Taskbar.menu1.id  = 'menu1';
-    	core.OS.Taskbar.menu1.li1 = core.create('li');
-    	core.OS.Taskbar.menu1.appendChild(core.OS.Taskbar.menu1.li1);
-    	core.OS.Taskbar.menu1.li1.img = core.create('img');
-    	core.OS.Taskbar.menu1.li1.appendChild(core.OS.Taskbar.menu1.li1.img);
-    	core.OS.Taskbar.menu1.li1.img.src = 'wallpaper/BluDotlogo.png';
-    	core.OS.Taskbar.menu1.menu2sub1 = core.create('ul');
-    	core.OS.Taskbar.menu1.menu2sub1.className = 'arrow_box';
-    	core.OS.Taskbar.menu1.appendChild(core.OS.Taskbar.menu1.menu2sub1);
-    	core.OS.Taskbar.menu1.menu2sub1.id = 'menu2sub1';
-    	core.OS.Taskbar.menu1.menu2sub1.name = 'test';
-    	
-    	core.OS.Taskbar.menu1.menu2sub1.li = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.appendChild(core.OS.Taskbar.menu1.menu2sub1.li);
-    	core.OS.Taskbar.menu1.menu2sub1.li.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li.appendChild(core.OS.Taskbar.menu1.menu2sub1.li.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li.a.id = 'testt';
-    	core.OS.Taskbar.menu1.menu2sub1.li.a.innerHTML = 'About core OS';
-    	
-    	core.OS.Taskbar.menu1.menu2sub1.li2 = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.appendChild(core.OS.Taskbar.menu1.menu2sub1.li2);
-    	core.OS.Taskbar.menu1.menu2sub1.li2.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li2.appendChild(core.OS.Taskbar.menu1.menu2sub1.li2.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li2.a.innerHTML = 'System Preferences...';
-    	
-    	core.OS.Taskbar.menu1.menu2sub1.li3 = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.li3.className = 'menu-sub';
-    	core.OS.Taskbar.menu1.menu2sub1.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3);
-    	core.OS.Taskbar.menu1.menu2sub1.li3.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li3.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li3.a.innerHTML = 'Dock';
-    	core.OS.Taskbar.menu1.menu2sub1.li3.ul = core.create('ul');
-    	core.style('position: absolute;display: none;left: 100%;', core.OS.Taskbar.menu1.menu2sub1.li3.ul)
-    	core.OS.Taskbar.menu1.menu2sub1.li3.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.ul);
-    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.ul.li);
-    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a.innerHTML = dock.mag;
-    	core.style('color:white;', core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a);
-        core.style('position:relative;display:block;', core.OS.Taskbar.menu1.menu2sub1.li3.ul.li);
-    	
-    	if(core.Admin == 1)
-    	{
-    	core.OS.Taskbar.menu1.menu2sub1.li4 = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.appendChild(core.OS.Taskbar.menu1.menu2sub1.li4);
-    	core.OS.Taskbar.menu1.menu2sub1.li4.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li4.appendChild(core.OS.Taskbar.menu1.menu2sub1.li4.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li4.a.innerHTML = 'Admin Center';
-    	};
-    	
-    	core.OS.Taskbar.menu1.menu2sub1.li5 = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.appendChild(core.OS.Taskbar.menu1.menu2sub1.li5);
-    	core.OS.Taskbar.menu1.menu2sub1.li5.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li5.appendChild(core.OS.Taskbar.menu1.menu2sub1.li5.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li5.a.innerHTML = 'Logout '+core.user;
-    	
-    	core.OS.Taskbar.menu1.menu2sub1.li6 = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.appendChild(core.OS.Taskbar.menu1.menu2sub1.li6);
-    	core.OS.Taskbar.menu1.menu2sub1.li6.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li6.appendChild(core.OS.Taskbar.menu1.menu2sub1.li6.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li6.a.innerHTML = 'Reboot';
-    	core.OS.Taskbar.temp = core.OS.Taskbar.menu1.cloneNode(true);
-    	document.body.appendChild(core.OS.Taskbar.temp);
-    	//core.style('top:-8px', core.OS.Taskbar.temp);
-    	core.OS.Taskbar.temp.id = 'menu0';
-    	core.OS.Taskbar.temp2 = core.OS.Taskbar.menu1.cloneNode(true);
-    	document.body.appendChild(core.OS.Taskbar.temp2);
-    	//core.style('top:-8px', core.OS.Taskbar.temp2);
-    	core.OS.Taskbar.temp2.id = 'menu2';
-			document.getElementById('menubar').style.right = '0px';
-    	
-    	
-    	});
-
-    	menubar = document.querySelector("#menubar");
-
-menues = document.querySelectorAll("ul");
-function clearNodes(node){
-    while(node.children.length){
-        node.removeChild(node.children[0]);
-    }
-
-}
-clearNodes(menubar);
-menubar.appendChild(menues[0].cloneNode(true));
-window.addEventListener("hashchange", function(){
-    var loc = document.location+"";
-    clearNodes(menubar);
-    menubar.appendChild(document.querySelector(loc.substr(loc.indexOf("#"))).cloneNode(true));
-}, false);
-window.bar = function(idn){
-    var loc = document.location+"";
-    clearNodes(menubar);
-    //menubar.appendChild(document.querySelector("#menu"+idn).cloneNode(true));
-    menubar.appendChild(document.getElementById("menu"+idn).cloneNode(true));
-
-core.OS.Taskbar.children[0].children[0].onclick = function()
-    	{
-    	clickt(this);
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[0].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.AboutOS();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[1].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.Prefs();
-    	};
-        /*core.OS.Taskbar.children[0].children[1].children[2].children[0].onmouseover = function(){
-                movet(this.parentNode.children[1], 1);
-        };
-        core.OS.Taskbar.children[0].children[1].children[2].children[1].onmouseout = function(){
-                movet(this, 0);
-        };*/
-        core.OS.Taskbar.children[0].children[1].children[2].children[1].children[0].onclick = function(){
-                dock.magT();
-				this.children[0].innerHTML = dock.mag==true ? 'on' : 'off';
-				this.children[0].style.cssText = "color:white";
-        };
-    	if(core.Admin == 1)
-    	{
-    	core.OS.Taskbar.children[0].children[1].children[3].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.AdminC();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[4].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.logout();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[5].onclick = function()
-    	{
-    		clickt(clicked);
-    		window.location.reload();
-    	};
-    	} else {
-    	core.OS.Taskbar.children[0].children[1].children[3].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.logout();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[4].onclick = function()
-    	{
-    		clickt(clicked);
-    		window.location.reload();
-    	};
-    	};
-};
-bar(1);
-core.OS.Taskbar.children[0].children[0].onclick = function()
-    	{
-    	clickt(this);
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[0].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.AboutOS();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[1].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.Prefs();
-    	};
-    	if(core.Admin == 1)
-    	{
-    	core.OS.Taskbar.children[0].children[1].children[3].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.AdminC();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[4].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.logout();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[5].onclick = function()
-    	{
-    		clickt(clicked);
-    		window.location.reload();
-    	};
-    	} else {
-    	core.OS.Taskbar.children[0].children[1].children[3].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.logout();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[4].onclick = function()
-    	{
-    		clickt(clicked);
-    		window.location.reload();
-    	};
-    	};
-    				core.getstyle(prefit.windows[0], prefit.windows[1], 'window', prefit.windows[2]);
-                                core.windowtheme = prefit.windows[1];
-    				core.getscript(prefit.windows[0], 'window', prefit.windows[3]);
-                                     if('<? echo $version; ?>' > prefit.version) {
-                                     var updatev = new XMLHttpRequest();
-                         updatev.open("GET", "uconf.php?path=users/"+core.user+"/config&change=<? echo $version; ?>", true);
-                         updatev.onreadystatechange = function() {
-                               if(updatev.readyState == 4){
-                                     MainTools.Notify('Version Updatdhtmldhtmled\n<? echo $version; ?>B<br><? echo $updateinfo; ?>', null, 20);
-                               }
-                               }
-                               updatev.send();
-                                     }
+                                                    menuClick: [core.loadApps[coreapps[t]]],
+                                                    onclick:   core.loadApps[coreapps[t].toString()],
+                                                    click:		function() {
+                                                    	core.openapp(coreapps[t]);
+        												core.loadApps.Applications(null);
+                                                    },
+                                                    cat:		'System'
+                                           };
+                                           core.SystemApps.push(temp);
+                                          }
+                                          		console.log(prefit.wallpaper);
+                                     			window.core.UI.Desktop.style.background = 'URL(\'http://bludotos.com/users/'+core.user+'/sysapps/FileNet/'+prefit.wallpaper+'\')';
+                                     			window.core.UI.Desktop.style.backgroundSize = 'cover';
+                                     			core.UI.taskbar.username.innerHTML = core.user;
+                                     			var taskbarlis = core.UI.taskbar.children[core.UI.taskbar.children.length-2].querySelector('.list');
+                                     			taskbarlis.children[0].addEventListener('click', function() {
+                                     				core.loadApps.Prefs();
+                                     				core.UI.taskbarlist(this.parentNode, this.parentNode.children[0]);
+														}, false);
+                                     			 if(core.Admin == 1) {
+													var newop = core.create('div');
+													newop.add = core.UI.taskbar.children[core.UI.taskbar.children.length-2].querySelector('.list');
+													newop.className = 'li';
+													newop.innerHTML = 'Admin Options';
+													newop.add.appendChild(newop);
+													newop.addEventListener('click', function() {
+														core.loadApps.AdminC();
+														core.UI.taskbarlist(this.parentNode, this.parentNode.children[0]);
+														}, false);
+                         						};
+                         						var newop = core.create('div');
+													newop.add = core.UI.taskbar.children[core.UI.taskbar.children.length-2].querySelector('.list');
+													newop.className = 'li';
+													newop.innerHTML = 'Logout';
+													newop.add.appendChild(newop);
+													newop.addEventListener('click', function() {
+														core.loadApps.logout();
+														core.UI.taskbarlist(this.parentNode, this.parentNode.children[0]);
+														}, false);
+														core.UI.appSort();
+                                     			clearInterval(testt);
+                                     		}
+                                     	}
+                                     	core.GetApps();
+                                     }, 500);
+                                     //core.OS.Desktop.background.src = 'users/'+core.user+'/sysapps/FileNet/'+prefit.wallpaper;
+                                     //core.getscript(prefit.windows[0], 'window', prefit.windows[3]);
+                                     core.getstyle(prefit.windows[0], prefit.windows[1], 'window', prefit.windows[2]);
+                                		core.windowtheme = prefit.windows[1];
+                                     core.getscript(prefit.windows[0], 'window', 'temp');
+                                        });
                                }
                          }
                          checkp.send();
-                                        if (resp.Admin == 1) {
+                                       if (resp.Admin == 1) {
                                         //document.getElementById('ajax1').style.display = 'block';
                                         };
                                         //document.getElementById('ajax2').innerHTML += core.user+'...';
                                         var divit = document.getElementById('logdiv');
-                                        divit.style['-webkit-transition'] = 'all 1s ease';
-                                        divit.style['-moz-transition'] = 'all 1s ease';
-                                        divit.style.top = -100+'%';
+                                        divit.style['-webkit-transition'] = 'all 1.5s ease';
+                                        divit.style['-moz-transition'] = 'all 1.5s ease';
+                                        document.querySelector('.error').innerHTML = "Success! Welcome";
+                                        document.querySelector('.error').style.height = "30px";
+        document.querySelector('.error').style.color = '#11eb1f';
+    document.querySelector('.error').style.opacity = 0;
+  document.querySelector('.error').style.opacity = 1;
+    setTimeout(function() {
+    document.querySelector('.error').style.opacity = 0;
+  }, 3000);
+                                        setTimeout(function() {
+                                        	//divit.style.top = -100+'%';
+                                        	divit.style.opacity = 0;
+                                        	setTimeout(function() {
+                                        		divit.style.top = 100+'%';
+                                        	}, 1500);
+                                        }, 1500);
                                      }
                                }
                          }
                          checkit.send(sendit);
                 };
-    core.register = function(){
+                core.register = function(){
     	var temp = core.create('div');
     	temp.id="regbox";
-    	core.style('position:fixed;top:'+(window.innerHeight-200)/2+'px;left:'+(window.innerWidth-100)/2+'px;width:257px;height:246px;background: #707070;background-image: url("images/zenbg-1.png"), url("images/zenbg-2.png");background-repeat: repeat-x, repeat;border-radius: 20px;border: 10px solid rgba(0,0,0,0.5);z-index:2147487;', temp);
+    	core.style('position:absolute;top:0px;left:0px;width:257px;height:380px;right:0px;bottom:0px;background: -moz-linear-gradient(top, #ffffff 0%, #f7f7f7 47%, #eaeaea 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f7f7f7), color-stop(100%,#eaeaea));background: -webkit-linear-gradient(top, #ffffff 0%,#f7f7f7 47%,#eaeaea 100%);background: -o-linear-gradient(top, #ffffff 0%,#f7f7f7 47%,#eaeaea 100%);background: -ms-linear-gradient(top, #ffffff 0%,#f7f7f7 47%,#eaeaea 100%);background: linear-gradient(to bottom, #ffffff 0%,#f7f7f7 47%,#eaeaea 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#ffffff\', endColorstr=\'#eaeaea\',GradientType=0 );border-radius: 20px;border: 10px solid rgba(0,0,0,0.5);z-index:2147487;margin:auto;', temp);
     	document.body.appendChild(temp);
     	core.getreg(temp);
     };
-    core.getreg = function(node){
-    	var node = node;
-    	var ajax = new XMLHttpRequest();
-    		ajax.open('GET', 'reg.php', true);
-    		ajax.onreadystatechange = function(){
-    			if(ajax.readyState == 4) {
-    				node.innerHTML = ajax.responseText;
-    			}
-    		}
-    		ajax.send();
-    }
-    core.sendreg = function(user, pass, mail, sub, beta){
+    core.forgotpass = function(){
+    	if(document.getElementById('regbox')) {
+    		document.body.removeChild(document.getElementById('regbox'));
+    	}
+    	var temp = core.create('div');
+    	temp.id="regbox";
+    	core.style('position: absolute;top: 0px;left: 0px;width: 350px;height: 200px;right: 0px;bottom: 0px;border-radius: 10px;border: 1px solid;box-shadow: 0px 0px 10px 0px black;z-index: 2147487;margin: auto;-webkit-transition: all 2.2s ease;transition: all .2s ease;background-position: initial initial;background-repeat: repeat-x, repeat;background: -moz-linear-gradient(top, #ffffff 0%, #f7f7f7 47%, #eaeaea 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f7f7f7), color-stop(100%,#eaeaea));background: -webkit-linear-gradient(top, #ffffff 0%,#f7f7f7 47%,#eaeaea 100%);background: -o-linear-gradient(top, #ffffff 0%,#f7f7f7 47%,#eaeaea 100%);background: -ms-linear-gradient(top, #ffffff 0%,#f7f7f7 47%,#eaeaea 100%);background: linear-gradient(to bottom, #ffffff 0%,#f7f7f7 47%,#eaeaea 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#ffffff\', endColorstr=\'#eaeaea\',GradientType=0 );border-color:lightgray;', temp);
+    	document.body.appendChild(temp);
+    	core.getpass(temp);
+    };
+    core.sendlo = function(user, sub){
     	var regit = new XMLHttpRequest();
-                         var sendit = 'user='+user+'&pass='+pass+'&email='+mail+'&subjoin='+sub+'&betacode='+beta;
+                         var sendit = 'user='+user+'&task=unlock&t='+new Date().getTime();
                          regit.open("POST", "process.php", true);
                          regit.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                          //checkit.setRequestHeader("Content-length", sendit.length);
@@ -1457,12 +1527,184 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
                         regit.onreadystatechange = function() {
                                if(regit.readyState == 4){
                                	window.testresp = regit.responseText;
-                               	if(regit.responseText=="success"){
-                               		alert('success');
-                               		core.getreg(document.getElementById('regbox'));
+								MainTools.Notify(regit.responseText, null, 5);
+                               };
+                         };
+                         regit.send(sendit);
+    };
+    core.lockedout = function(){
+    	if(document.getElementById('regbox')) {
+    		document.body.removeChild(document.getElementById('regbox'));
+    	}
+    	var temp = core.create('div');
+    	temp.id="regbox";
+    	core.style('position: absolute;top: 0px;left: 0px;width: 257px;height: 175px;right: 0px;bottom: 0px;border-radius: 10px;border: 1px solid;box-shadow: 0px 0px 10px 0px black;z-index: 2147487;margin: auto;-webkit-transition: all 1s ease;transition: all 1s ease;background-position: initial initial;background-repeat: repeat-x, repeat;background: -moz-linear-gradient(top, #ffffff 0%, #f7f7f7 47%, #eaeaea 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f7f7f7), color-stop(100%,#eaeaea));background: -webkit-linear-gradient(top, #ffffff 0%,#f7f7f7 47%,#eaeaea 100%);background: -o-linear-gradient(top, #ffffff 0%,#f7f7f7 47%,#eaeaea 100%);background: -ms-linear-gradient(top, #ffffff 0%,#f7f7f7 47%,#eaeaea 100%);background: linear-gradient(to bottom, #ffffff 0%,#f7f7f7 47%,#eaeaea 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#ffffff\', endColorstr=\'#eaeaea\',GradientType=0 );border-color:lightgray;', temp);
+    	document.body.appendChild(temp);
+    	temp.innerHTML = '<div style="position: absolute;top: -13px;right: -15px;background: black;border-radius: 20px;width: 25px;height: 25px;text-align: center;font-weight: bold;color: white;line-height: 25px;font-size: 16px;box-shadow: 0px 0px 10px 0px black;cursor: pointer;font-family: sans-serif;border: 1px solid white;" onclick="document.body.removeChild(this.parentNode);">X</div>';
+    	var head = document.createElement('div');
+    	head.appendChild(document.createTextNode('Enter your username and you will receive an email to unlock your account.'));
+    	temp.appendChild(head);
+    	head.style.cssText = 'position: relative; padding: 3px 26px; text-align: center; font-weight: bold; margin-bottom: -10px;';
+    	var form = document.createElement('form');
+    	form.style.position = 'relative';
+    	form.username = document.createElement('input');
+    	form.username.style.cssText = 'position: absolute; outline: none; border: 1px solid grey; border-radius: 5px; background: -moz-linear-gradient(top, #e5e5e5 0%, #f6f6f6 53%, #ffffff 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(53%,#f6f6f6), color-stop(100%,#ffffff)); background: -webkit-linear-gradient(top, #e5e5e5 0%,#f6f6f6 53%,#ffffff 100%); background: -o-linear-gradient(top, #e5e5e5 0%,#f6f6f6 53%,#ffffff 100%); background: -ms-linear-gradient(top, #e5e5e5 0%,#f6f6f6 53%,#ffffff 100%); background: linear-gradient(to bottom, #e5e5e5 0%,#f6f6f6 53%,#ffffff 100%); padding: 5px 5px; font-size: 15px; height: 15px; line-height: 15px; width: 215px; top: 15px; left: 0px; right: 0; margin: 0px auto;';
+    	form.send = document.createElement('input');
+    	form.send.style.cssText = 'background: -moz-linear-gradient(top, #fcfcfc 0%, #ededed 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#ededed)); background: -webkit-linear-gradient(top, #fcfcfc 0%,#ededed 100%); background: -o-linear-gradient(top, #fcfcfc 0%,#ededed 100%); background: -ms-linear-gradient(top, #fcfcfc 0%,#ededed 100%); background: linear-gradient(to bottom, #fcfcfc 0%,#ededed 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#fcfcfc\', endColorstr=\'#ededed\',GradientType=0 ); outline: none; border: 1px solid #D6D6D6; border-radius: 3px; position: absolute; top: 55px; left: 0; right: 0; height: 30px; width: 100px; margin: 0 auto; text-align: center;';
+    	form.username.type = 'text';
+    	form.send.type = 'submit';
+    	form.onsubmit = function() {
+			//var temp = document.querySelector('.FormMkr');
+			core.sendlo(form.username.value);
+		return false;
+		};
+		form.appendChild(form.username);
+		form.appendChild(form.send);
+    	temp.appendChild(form);
+    }
+    core.getpass = function(node){
+    	var node = node;
+    	//node.style['-webkit-transition'] = 'all .2s ease';
+    	var ajax = new XMLHttpRequest();
+    		ajax.open('GET', 'forgotpass.php', true);
+    		ajax.onreadystatechange = function(){
+    			if(ajax.readyState == 4) {
+    				node.innerHTML = ajax.responseText;
+    				eval(node.getElementsByTagName('script')[0].innerHTML);
+    				/*var temp = new FormMkr ('Sign-up', function() {
+	var temp = document.querySelector('.FormMkr');
+	core.sendreg(temp.querySelector('.username').value,
+		temp.querySelector('.email').value,
+		temp.querySelector('.beta').value
+	);
+	return false;
+	},
+ {text: 'Sign-up', css: 'height:50px; font-weight: bold; color: white;border-radius:8px;'},
+ [
+  {type: ''    , text: 'Username:', css: '', placeholder:'Username', class:'username'},
+  {type: 'email', text: 'Email:', css: '', placeholder:'Email', class:'email'},
+   {type: 'hidden'   , text: 'beta:'   , css: ''                        , class:'beta', value:node.getElementsByTagName('betacode')[0].innerHTML}
+ ],
+ [
+  {type: 'submit', text: 'Sign-up'}
+ ]
+);
+
+temp.design = 'round';
+//temp.design = 'flat';
+temp.themecolors = ['rgba(0,0,0,0.5)', 'transparent', 'rgba(0,0,0,0.5)'];
+node.appendChild(temp);*/
+    			}
+    		}
+    		ajax.send();
+    }
+    core.sendfpass = function(user, sub){
+    	var regit = new XMLHttpRequest();
+                         var sendit = 'user='+user+'&subforgot='+sub+'&t='+new Date().getTime();
+                         regit.open("POST", "process.php", true);
+                         regit.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                         //checkit.setRequestHeader("Content-length", sendit.length);
+                         //checkit.setRequestHeader("Connection", "close");
+                        regit.onreadystatechange = function() {
+                               if(regit.readyState == 4){
+                               	window.testresp = regit.responseText;
+								MainTools.Notify(regit.responseText, null, 5);
+                               	//core.getreg(document.getElementById('regbox'));                               	
+                               	/*if(regit.responseText=="success"){
+                               		MainTools.Notify(regit.responseText);
+                               		document.getElementById('regbox').innerHTML += '<div style="position: relative;width: 100%;text-align: center;color: blue;font-weight: bold;">An Email has been sent to you to verify you email account.</div>'
+                               		document.body.removeChild(document.getElementById('regbox'));
+                               		<? //if($_GET["sub"]){ ?>
+                               		var sub = new XMLHttpRequest();
+                         var sendit2 = 'user='+user+'&sub=<? //echo $sub; ?>&key=<? //echo $_GET["key"] ?>';
+                         sub.open("POST", "subdomains/signup.php", true);
+                         sub.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                         //checkit.setRequestHeader("Content-length", sendit.length);
+                         //checkit.setRequestHeader("Connection", "close");
+                        sub.onreadystatechange = function() {
+                               if(sub.readyState == 4){
+                               		alert(sub.responseText);
+                               }
+                        }
+                        sub.send(sendit2);
+                        <? //}; ?>
                                	} else {
-                               		alert('error');
+                               		MainTools.Notify(regit.responseText);
                                		core.getreg(document.getElementById('regbox'));
+                               		setTimeout(function(){location.href.reload();}, 5000);
+                               	}*/
+                               };
+                         };
+                         regit.send(sendit);
+    };
+    core.getreg = function(node){
+    	var node = node;
+    	node.style['-webkit-transition'] = 'all 1s ease';
+    	var ajax = new XMLHttpRequest();
+    		ajax.open('GET', 'registerBeta.php', true);
+    		ajax.onreadystatechange = function(){
+    			if(ajax.readyState == 4) {
+    				node.innerHTML = ajax.responseText;
+    				eval(node.getElementsByTagName('script')[0].innerHTML);
+    				var temp = new FormMkr ('Sign-up', function() {
+	var temp = document.querySelector('.FormMkr');
+	core.sendreg(temp.querySelector('.username').value,
+		temp.querySelector('.email').value,
+		temp.querySelector('.beta').value
+	);
+	return false;
+	},
+ {text: 'Sign-up', css: 'height:50px; font-weight: bold; color: white;border-radius:8px;'},
+ [
+  {type: ''    , text: 'Username:', css: '', placeholder:'Username', class:'username'},
+  {type: 'email', text: 'Email:', css: '', placeholder:'Email', class:'email'},
+   {type: 'hidden'   , text: 'beta:'   , css: ''                        , class:'beta', value:node.getElementsByTagName('betacode')[0].innerHTML}
+ ],
+ [
+  {type: 'submit', text: 'Sign-up'}
+ ]
+);
+
+temp.design = 'round';
+//temp.design = 'flat';
+temp.themecolors = ['rgba(0,0,0,0.5)', 'transparent', 'rgba(0,0,0,0.5)'];
+node.appendChild(temp);
+    			}
+    		}
+    		ajax.send();
+    }
+    core.sendreg = function(user, mail, beta){
+    	var regit = new XMLHttpRequest();
+                         var sendit = 'username='+user+'&email='+mail+'&betacode='+beta+'&t='+new Date().getTime();
+                         regit.open("POST", "Betaprocess.php", true);
+                         regit.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                         //checkit.setRequestHeader("Content-length", sendit.length);
+                         //checkit.setRequestHeader("Connection", "close");
+                        regit.onreadystatechange = function() {
+                               if(regit.readyState == 4){
+                               	window.testresp = regit.responseText;
+                               	if(regit.responseText=="success"){
+                               		MainTools.Notify(regit.responseText);
+                               		document.getElementById('regbox').innerHTML += '<div style="position: relative;width: 100%;text-align: center;color: blue;font-weight: bold;">An Email has been sent to you to verify you email account.</div>'
+                               		document.body.removeChild(document.getElementById('regbox'));
+                               		<? if($_GET["sub"]){ ?>
+                               		var sub = new XMLHttpRequest();
+                         var sendit2 = 'user='+user+'&sub=<? echo $sub; ?>&key=<? echo $_GET["key"] ?>';
+                         sub.open("POST", "subdomains/signup.php", true);
+                         sub.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                         //checkit.setRequestHeader("Content-length", sendit.length);
+                         //checkit.setRequestHeader("Connection", "close");
+                        sub.onreadystatechange = function() {
+                               if(sub.readyState == 4){
+                               		alert(sub.responseText);
+                               }
+                        }
+                        sub.send(sendit2);
+                        <? }; ?>
+                               	} else {
+                               		MainTools.Notify(regit.responseText);
+                               		core.getreg(document.getElementById('regbox'));
+                               		setTimeout(function(){location.href.reload();}, 5000);
                                	}
                                };
                          };
@@ -1470,189 +1712,8 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
     };
     core.load = function(){
 
-	document.body.innerHTML+='<div id="dhtmlwindowholder" style="position: fixed;top: 0px;left: 0px;z-index:30;"></div>';
-        this.OS = this.create('div');
-        this.OS.id = 'loading';
-        this.OS.style.cssText = 'position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:2147486;-webkit-transition:opacity .5s linear;';
-		this.OS.canvas = this.create('canvas');
-        this.OS.canvas.width = 1600;
-        this.OS.canvas.height = 1200;
-        this.style('width: 100%;height: 100%;position:fixed;top:0px;left:0px;z-index:2147486;', this.OS.canvas);
-        this.OS.meter = this.create('div');
-        this.style('position: absolute;left: 50%;width: 200px;margin-left: -100px;top: 75%;text-align: center;color: white;z-index:2147486;', this.OS.meter);
-        this.OS.meter.progress = this.create('progress');
-        this.OS.meter.progress.min = 0;
-        this.OS.meter.progress.max = 1;
-        this.OS.meter.progress.value = 0;
-        this.style('apearance: none;-webkit-appearance: none;', this.OS.meter.progress);
-        this.OS.meter.span = this.create('span');
-        this.OS.meter.span.className = 'progressText';
-        this.OS.meter.span.innerHTML = 'Loading';
-        this.OS.meter.audio = this.create('audio');
-        this.OS.meter.audio.id = 'loadaudio';
-        this.OS.meter.audio.src = 'http://www.soundjay.com/appliances/microwave-oven-bell-1.wav';
-        document.body.appendChild(this.OS);
-        this.OS.appendChild(this.OS.canvas);
-        this.OS.appendChild(this.OS.meter);
-        this.OS.meter.appendChild(this.OS.meter.progress);
-        this.OS.meter.appendChild(this.OS.meter.span);
-        this.OS.meter.appendChild(this.OS.meter.audio);
-        
-        canvas = document.querySelector("canvas");
-progress = document.querySelector(".progressText");
-progressMeter = document.querySelector(".meter progress");
-context = canvas.getContext("2d");
-radius = 48;
-//14, 10
-//var bluDot = {x: 14, y: 10};
-var bluDot = {x: 11, y: 6};
-gradient1 = context.createRadialGradient(radius+bluDot.x*radius*2, radius+bluDot.y*radius*2, 0,radius+bluDot.x*radius*2, radius+bluDot.y*radius*2,1400);
-gradient1.addColorStop(0, "#666");
-gradient1.addColorStop(1, "#333");
-gradient2 = context.createRadialGradient(radius+bluDot.x*radius*2, radius+bluDot.y*radius*2, 0,radius+bluDot.x*radius*2, radius+bluDot.y*radius*2,1400);
-gradient2.addColorStop(0, "rgba(102,102,102,0)");
-gradient2.addColorStop(1, "#333");
-var lerp = function(s,e,i){
-	return s+(e-s)*i;
-};
-var rgba = function(r,g,b,a){
-	return "rgba("+[Math.round(r),Math.round(g),Math.round(b),Math.round(a)].join(',')+")";
-}
-var draw = function(loaded){
-//	loaded %= 1;
-	context.fillStyle = gradient1;
-	context.fillRect(0,0,1600,1200);
-	
-	context.lineWidth = 10;
-	context.fillStyle="#333";
-	context.strokeStyle="#777";
-	for(var x = 0; x <= 19; x++){
-		for(var y = 0; y <= 14; y++){
-			if(x == bluDot.x && y == bluDot.y)
-				continue;
-			context.beginPath();
-			context.arc(radius+x*radius*2,radius+y*radius*2,radius-10, 0, Math.PI*2);
-			context.fill();
-			context.stroke();
-			context.closePath();
-		}
-	}
-	context.beginPath();
-	
-	context.fillStyle = gradient2;
-	context.fillRect(0,0,1600,1200);
-	
-	//context.fillStyle="#2a7fff";
-	var fillP = Math.min(loaded/0.5,1);
-	context.fillStyle=rgba(lerp(0x33,0x2a,fillP), lerp(0x33,0x7f,fillP), 
-						   lerp(0x33,0xff,fillP), 255);
-	//context.strokeStyle = "#0055d4";
-	context.strokeStyle=rgba(lerp(0x77,0x00,fillP), lerp(0x77,0x75,fillP), 
-						   lerp(0x77,0xd4,fillP), 255);
-	context.arc(radius + bluDot.x*radius*2, radius+bluDot.y*radius*2, radius-10, 0, Math.PI*2);
-	context.fill();
-	context.stroke();
-	context.closePath();
-	if(loaded > 0.5){
-		var circlePercent = Math.min((loaded-0.5)/0.25, 1);
-		context.beginPath();
-		//#156ae9
-		context.arc(radius + bluDot.x*radius*2, radius+bluDot.y*radius*2, lerp(radius-10,radius*2, circlePercent), 0, Math.PI*2);
-		context.strokeStyle="rgba("+0x15+","+0x6a+","+0xe9+","+circlePercent+")";
-		context.stroke();
-		context.closePath();
-	}
-	if(loaded > 0.75){
-		var circlePercent = Math.min((loaded-0.75)/0.25, 1);
-		context.beginPath();
-		//#156ae9
-		context.arc(radius + bluDot.x*radius*2, radius+bluDot.y*radius*2, lerp(radius-10,radius*3, circlePercent), 0, Math.PI*2);
-		context.strokeStyle="rgba("+0x55+","+0x99+","+0xff+","+circlePercent*0.75+")";
-		context.lineWidth*=3;
-		context.stroke();
-		context.closePath();
-	}
-};
-var percentLoaded = 0;
-draw(1);
-core.progressI = setInterval(function(){
-                if(progressMeter.value < 1) {
-                      progressMeter.value += .1;
-                } else {
-                      progressMeter.value = 0;
-                }
-           }, 10);
-var loadCore = function(every, done){
-	//progress.innerHTML = "Loading the core";
-	var loadTime = 10;
-	var packets = 10;
-	window.loadedPackets = 0;
-	every = every || function(){};
-	done = done || function(){};
-	function go(){
-		//every(progressMeter.value = loadedPackets/packets);
-		loadedPackets++;
-		if(packets > loadedPackets)
-			setTimeout(go, loadTime);
-		else
-			done();
-	};
-	go();
-}
-var loadDock = function(every, done){
-	//progress.innerHTML = "Loading the dock";
-	var loadTime = 10;
-	var packets = 10;
-	window.loadedPackets = 0;
-	every = every || function(){};
-	done = done || function(){};
-	function go(){
-		//every(progressMeter.value = loadedPackets/packets);
-		loadedPackets++;
-		if(packets > loadedPackets)
-			setTimeout(go, loadTime);
-		else
-			done();
-	};
-	go();
-}
-var loadPrefs = function(every, done){
-	//progress.innerHTML = "Loading user preferences";
-	var loadTime = 10;
-	var packets = 10;
-	window.loadedPackets = 0;
-	every = every || function(){};
-	done = done || function(){};
-	function go(){
-		//every(progressMeter.value = loadedPackets/packets*2);
-		loadedPackets++;
-		if(packets > loadedPackets)
-		{
-			setTimeout(go, loadTime);
-		} else {
-		done();
-		}
-	};
-	go();
-}
-	
-	loadCore(function(percent){
-		draw(percent*0.5);
-	},function(){loadDock(function(percent){
-		draw(0.50 + percent*0.25);
-	},function(){
-		loadPrefs(function(percent){
-			draw(0.75+percent*0.25);
-		},function(){
-			var audio = document.querySelector("audio");
-			audio.play();
-			/*canvas.style.display='none';
-			progress.style.display='none';
-			progressMeter.style.display='none';*/
-			setTimeout("document.getElementById('loading').style.opacity=0;", 500);
-			setTimeout("document.body.removeChild(document.getElementById('loading'));", 500);
-		});
-	})});
+	document.body.innerHTML+='<div id="dhtmlwindowholder" style="position: absolute;top: 0px;left: 0px;z-index:30;"></div>';
+
         this.OS.logindiv = this.create('div');
         document.body.appendChild(this.OS.logindiv);
         this.style('position:fixed;width:100%;height:100%;left:0px;top:0px;z-index:2147487;', this.OS.logindiv);
@@ -1660,23 +1721,26 @@ var loadPrefs = function(every, done){
         core.loadlogin = function()
         {
         var loadmain = new XMLHttpRequest();
-        	loadmain.open('GET', 'OSlogin.php', true);
-        	loadmain.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        	loadmain.open('GET', '<? echo $sub; ?>.php', true);
+        	//loadmain.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             loadmain.onreadystatechange = function() {
 	            if(loadmain.readyState == 4){
 	            	core.OS.logindiv.innerHTML = loadmain.responseText;
-	            	$j(document).ready(function() { $j("body").ezBgResize({ img : "images/BluDot__1_-svg.jpg" }) ;});
-	            	$j(document).ready(function() { $j('#ss_i_1368247137').cycle({ fx: 'uncover', timeout: 2000, sync: 1, next: '#next_1368247137', prev: '#prev_1368247137' });  });
+	            	
 	            	if (core.OS.logindiv.children[0].attachEvent) {
-	            		core.OS.logindiv.children[0].attachEvent('onkeydown', core.loginkeydown, false);
+	            		//core.OS.logindiv.children[0].attachEvent('onkeydown', core.loginkeydown, false);
+	            		core.OS.logindiv.children[0].querySelector('#submit').attachEvent('onclick', core.loginkeydown, false);
 	            	} else if(core.OS.logindiv.children[0].addEventListener)
 	            	{
 	            		core.OS.logindiv.children[0].addEventListener('keydown', core.loginkeydown, false);
+	            		//core.OS.logindiv.children[0].querySelector('#submit').addEventListener('click', core.loginkeydown, false);
 	            	};
+	            	core.getscript('..', 'window', 'OSlogin');
 	            }
             }
             loadmain.send();
         };
+        
         core.loadlogin();
         
         
@@ -1684,7 +1748,8 @@ var loadPrefs = function(every, done){
         
         
         
-    	this.OS.Desktop = this.create('div');
+        
+    	/*this.OS.Desktop = this.create('div');
     	this.OS.Desktop.background = this.create('img');
         this.OS.Desktop.background.id = 'thedesktop';
     	this.style('width:100%;height:100%;position:fixed;top:1px;left:0px;', this.OS.Desktop);
@@ -1698,7 +1763,6 @@ var loadPrefs = function(every, done){
     	
     	document.body.appendChild(this.OS.Desktop);
     	this.OS.Desktop.appendChild(this.OS.Desktop.background);
-    	//this.style('', this.OS.Dock);
     	this.OS.Dock = this.create('div');
     	this.OS.Dock.id = "dock";
     	document.body.appendChild(this.OS.Dock);
@@ -1709,9 +1773,10 @@ var loadPrefs = function(every, done){
     	this.OS.Dock.dock = this.create('div');
     	this.OS.Dock.appendChild(this.OS.Dock.dock);
     	this.OS.Dock.dock.id = 'iconNodes';
-    	//this.style('', this.OS.Dock.dock);
+    	//this.style('', this.OS.Dock.dock);*/
     	
         clearInterval(core.progressI);
+        
 <?
 if ($session->logged_in && $session->username != 'Guest') {
 
@@ -1729,9 +1794,10 @@ core.user = '<? echo $session->username; ?>';
 core.user = '<? echo $session->username; ?>';
 core.checkupdates();
 var divit = document.getElementById('logdiv');
-                                        //document.body.removeChild(divit);
-                                        divit.style.top = -100+'%';
-                                        divit.style['-webkit-transition'] = 'all 1s ease';
+                                        document.body.removeChild(divit);
+                                        core.GetApps();
+                                        
+
 var checkp = new XMLHttpRequest();
                          checkp.open("GET", "users/<? echo $session->username; ?>/config/configB.php", true);
                          checkp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -1741,336 +1807,79 @@ var checkp = new XMLHttpRequest();
                                      window.prefit = JSON.parse(checkp.responseText);
                                      //core.userprefs = prefit;
                                         core.Cversion = <?echo $version;?>;
-                                     core.OS.Desktop.background.src = 'users/'+core.user+'/sysapps/FileNet/'+prefit.wallpaper;
-                                     if (prefit.Dockmag == 'false') {
-                                         prefit.Dockmag = false;
-                                     } else if (prefit.Dockmag == 'true') {
-                                         prefit.Dockmag = true;
-                                     }
-                                     core.getstyle(prefit.dock[0], prefit.dock[1], 'dock', prefit.dock[2]);
-                                     core.docktheme = prefit.dock[1];
-                                     core.getscript(prefit.dock[0], 'dock', prefit.dock[3], function(result){
-                                     if(result == true)
-                                     {
-                                     setTimeout(function(){
-                                     window.dockit = [];
+                                        core.getscript('', 'test/temp_file', 'new', function() {
+                                        var testt = setInterval(function() {
+                                        	console.log('interval');
+                                     	if(window.core.UI) {
+                                     		if(window.core.UI.Desktop) {
+                                     			window.dockit = [];
                                           //window.i = i;
-                                          for(var t=0; t < prefit.Dockapps.length; t++) {
-                                          var t = t;
-                                          window.temp = {
-                                                    name:      'icons/'+prefit.Dockapps[t],
-                                                    label:     prefit.Dockapps[t],
+                                          core.SystemApps = [];
+                                          var coreapps = ['DevCenter', 'FileNet', 'Appstore'];
+                                          for(var t=0; t < coreapps.length; t++) {
+                                           var temp = {
+                                           	name:      coreapps[t],
+                                                    label:     coreapps[t],
                                                     extension: '.png',
+                                                    img:		'icons/'+coreapps[t]+'.png',
                                                     sizes:     [44,100],
                                                     menuItems: ['open'],
-                                                    menuClick: [core.loadApps[prefit.Dockapps[t]]],
-                                                    onclick:   core.loadApps[prefit.Dockapps[t].toString()]
-                                          };
-                                          window.dockit[t] = window.temp;
-                                          };
-                                          if (prefit.trash == 'empty') { 
-                                          window.temp = {
-                                                    name:      'icons/trash-empty',
-                                                    label:     'Trash',
-                                                    extension: '.png',
-                                                    sizes:     [44,100],
-                                                    menuItems: ['open'],
-                                                    menuClick: [function(){core.loadApps.Trash();}],
-                                                    onclick:   function(){core.loadApps.Trash();}
-                                          };
-                                          window.dockit.push(window.temp);
-                                          } else if (prefit.trash == 'full') {
-                                          window.temp = {
-                                                    name:      'icons/trash-full',
-                                                    label:     'Trash',
-                                                    extension: '.png',
-                                                    sizes:     [44,100],
-                                                    menuItems: ['open'],
-                                                    menuClick: [function(){core.loadApps.Trash();}],
-                                                    onclick:   function(){core.loadApps.Trash();}
-                                          };
-                                          window.dockit.push(window.temp);
-                                          };
-                                     if (core.Admin == 1 || core.Dev == 1) {
-                                        window.dock = SimpleDock;
-                                        window.dock.launch(
-                                                document.getElementById('dock'),
-                                                window.dockit,
-                                                parseInt(prefit.Dockmin),
-                                                parseInt(prefit.Dockmax),
-                                                3,
-                                                5,
-                                                1,
-                                               <? if(!$isMobile){?>
-                                                prefit.Dockmag);
-                                               <? } else if($isMobile){?>
-                                                false);
-                                               <?};?>
-                                     } else if(core.Admin != 1 && core.Dev != 1) {
-                                      window.docks = [];
-                                     for(var i=1; i < window.dockit.length; i++)
-                                     {
-                                          /*var temp = {
-                                                    name:      'icons/'+prefit.Dockapps[i]+'',
-                                                    label:     prefit.Dockapps[i],
-                                                    extension: '.png',
-                                                    sizes:     [44,100],
-                                                    menuItems: ['open'],
-                                                    menuClick: [function(){prefit.Dockapps[i]();}],
-                                                    onclick:   function(){prefit.Dockapps[i]();}
-                                          };*/
-                                          	window.docks.push(window.dockit[i]);
-                                     };
-                                        window.dock = SimpleDock;
-                                        window.dock.launch(
-                                                document.getElementById('dock'),
-                                                window.docks,
-                                                parseInt(prefit.Dockmin),
-                                                parseInt(prefit.Dockmax),
-                                                3,
-                                                5,
-                                                1,
-                                               <? if(!$isMobile){?>
-                                                prefit.Dockmag);
-                                               <? } else if($isMobile){?>
-                                                false);
-                                               <?};?>
-                                     }
-                                     }, 3000);
-                                     };
-                                     });
-                                     core.getstyle(prefit.taskbar[0], prefit.taskbar[1], 'taskbar', prefit.taskbar[2]);
-                                     core.taskbartheme = prefit.taskbar[1];
-                                     core.getscript(prefit.taskbar[0], 'taskbar', prefit.taskbar[3], function()
-                                     {
-                                     core.OS.Taskbar = core.create('div');
-    	document.body.appendChild(core.OS.Taskbar);
-    	core.OS.Taskbar.id = 'menubar';
-    	core.OS.br = core.create('br');
-    	document.body.appendChild(core.OS.br);
-    	core.OS.Taskbar.menu1 = core.create('ul');
-    	document.body.appendChild(core.OS.Taskbar.menu1);
-    	core.OS.Taskbar.menu1.id  = 'menu1';
-/*    	document.getElementById('menu0').style.display = 'none';
-    	document.getElementById('menu1').style.display = 'none';
-    	document.getElementById('menu2').style.display = 'none';
-    	document.getElementById('menu0').style.zIndex = 1;
-    	document.getElementById('menu1').style.zIndex = 1;
-    	document.getElementById('menu2').style.zIndex = 1;*/
-    	core.OS.Taskbar.menu1.li1 = core.create('li');
-    	core.OS.Taskbar.menu1.appendChild(core.OS.Taskbar.menu1.li1);
-    	core.OS.Taskbar.menu1.li1.img = core.create('img');
-    	core.OS.Taskbar.menu1.li1.appendChild(core.OS.Taskbar.menu1.li1.img);
-    	core.OS.Taskbar.menu1.li1.img.src = 'wallpaper/BluDotlogo.png';
-    	core.OS.Taskbar.menu1.menu2sub1 = core.create('ul');
-    	core.OS.Taskbar.menu1.menu2sub1.className = 'arrow_box';
-    	core.OS.Taskbar.menu1.appendChild(core.OS.Taskbar.menu1.menu2sub1);
-    	core.OS.Taskbar.menu1.menu2sub1.id = 'menu2sub1';
-    	core.OS.Taskbar.menu1.menu2sub1.name = 'test';
-    	
-    	core.OS.Taskbar.menu1.menu2sub1.li = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.appendChild(core.OS.Taskbar.menu1.menu2sub1.li);
-    	core.OS.Taskbar.menu1.menu2sub1.li.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li.appendChild(core.OS.Taskbar.menu1.menu2sub1.li.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li.a.id = 'testt';
-    	core.OS.Taskbar.menu1.menu2sub1.li.a.innerHTML = 'About core OS';
-    	
-    	core.OS.Taskbar.menu1.menu2sub1.li2 = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.appendChild(core.OS.Taskbar.menu1.menu2sub1.li2);
-    	core.OS.Taskbar.menu1.menu2sub1.li2.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li2.appendChild(core.OS.Taskbar.menu1.menu2sub1.li2.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li2.a.innerHTML = 'System Preferences...';
-    	
-    	core.OS.Taskbar.menu1.menu2sub1.li3 = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.li3.className = 'menu-sub';
-    	core.OS.Taskbar.menu1.menu2sub1.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3);
-    	core.OS.Taskbar.menu1.menu2sub1.li3.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li3.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li3.a.innerHTML = 'Dock';
-    	core.OS.Taskbar.menu1.menu2sub1.li3.ul = core.create('ul');
-    	core.style('position: absolute;display: none;left: 100%;', core.OS.Taskbar.menu1.menu2sub1.li3.ul)
-    	core.OS.Taskbar.menu1.menu2sub1.li3.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.ul);
-    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.ul.li);
-    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.appendChild(core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a.innerHTML = dock.mag;
-    	core.style('color:white;', core.OS.Taskbar.menu1.menu2sub1.li3.ul.li.a);
-        core.style('position:relative;display:block;', core.OS.Taskbar.menu1.menu2sub1.li3.ul.li);
-    	
-    	<? if($session->isAdmin()){ ?>
-    	core.OS.Taskbar.menu1.menu2sub1.li4 = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.appendChild(core.OS.Taskbar.menu1.menu2sub1.li4);
-    	core.OS.Taskbar.menu1.menu2sub1.li4.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li4.appendChild(core.OS.Taskbar.menu1.menu2sub1.li4.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li4.a.innerHTML = 'Admin Center';
-    	<? }; ?>
-    	
-    	core.OS.Taskbar.menu1.menu2sub1.li5 = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.appendChild(core.OS.Taskbar.menu1.menu2sub1.li5);
-    	core.OS.Taskbar.menu1.menu2sub1.li5.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li5.appendChild(core.OS.Taskbar.menu1.menu2sub1.li5.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li5.a.innerHTML = 'Logout '+core.user;
-    	
-    	core.OS.Taskbar.menu1.menu2sub1.li6 = core.create('li');
-    	core.OS.Taskbar.menu1.menu2sub1.appendChild(core.OS.Taskbar.menu1.menu2sub1.li6);
-    	core.OS.Taskbar.menu1.menu2sub1.li6.a = core.create('a');
-    	core.OS.Taskbar.menu1.menu2sub1.li6.appendChild(core.OS.Taskbar.menu1.menu2sub1.li6.a);
-    	core.OS.Taskbar.menu1.menu2sub1.li6.a.innerHTML = 'Reboot';
-    	core.OS.Taskbar.temp = core.OS.Taskbar.menu1.cloneNode(true);
-    	document.body.appendChild(core.OS.Taskbar.temp);
-    	//core.style('top:-8px', core.OS.Taskbar.temp);
-    	core.OS.Taskbar.temp.id = 'menu0';
-    	core.OS.Taskbar.temp2 = core.create('ul');
-    	document.body.appendChild(core.OS.Taskbar.temp2);
-    	//core.style('top:-8px', core.OS.Taskbar.temp2);
-    	core.OS.Taskbar.temp2.id = 'menu2';
-			document.getElementById('menubar').style.right = '0px';
-    	
-    	
-    	});
-
-    	menubar = document.querySelector("#menubar");
-
-menues = document.querySelectorAll("ul");
-function clearNodes(node){
-    while(node.children.length){
-        node.removeChild(node.children[0]);
-    }
-
-}
-clearNodes(menubar);
-menubar.appendChild(menues[0].cloneNode(true));
-window.addEventListener("hashchange", function(){
-    var loc = document.location+"";
-    clearNodes(menubar);
-    menubar.appendChild(document.querySelector(loc.substr(loc.indexOf("#"))).cloneNode(true));
-    menubar.children[0].style.display = 'block';
-}, false);
-window.bar = function(idn){
-    var loc = document.location+"";
-    clearNodes(menubar);
-    //menubar.appendChild(document.querySelector("#menu"+idn).cloneNode(true));
-    /*document.getElementById('menu0').innerHTML = '';
-document.getElementById('menu0').appendChild(document.getElementById('menu1').children[0].cloneNode(true));
-document.getElementById('menu0').appendChild(document.getElementById('menu1').children[1].cloneNode(true));*/
-    menubar.appendChild(document.getElementById("menu"+idn).cloneNode(true));
-    menubar.children[0].style.display = 'block';
-core.OS.Taskbar.children[0].children[0].onclick = function()
-    	{
-    	clickt(this);
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[0].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.AboutOS();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[1].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.Prefs();
-    	};
-        /*core.OS.Taskbar.children[0].children[1].children[2].children[0].onmouseover = function(){
-                movet(this.parentNode.children[1], 1);
-        };
-        core.OS.Taskbar.children[0].children[1].children[2].children[1].onmouseout = function(){
-                movet(this, 0);
-        };*/
-        core.OS.Taskbar.children[0].children[1].children[2].children[1].onclick = function(){
-                dock.magT();
-				this.children[0].innerHTML = dock.mag==true ? 'on' : 'off';
-				this.children[0].style.cssText = "color:white";
-        };
-    	<? if($session->isAdmin()){ ?>
-    	core.OS.Taskbar.children[0].children[1].children[3].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.AdminC();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[4].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.logout();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[5].onclick = function()
-    	{
-    		clickt(clicked);
-    		window.location.reload();
-    	};
-    	<? } else { ?>
-    	core.OS.Taskbar.children[0].children[1].children[3].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.logout();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[4].onclick = function()
-    	{
-    		clickt(clicked);
-    		window.location.reload();
-    	};
-    	<? }; ?>
-}
-bar(1);
-core.OS.Taskbar.children[0].children[0].onclick = function()
-    	{
-    	clickt(this);
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[0].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.AboutOS();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[1].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.Prefs();
-    	};
-    	<? if($session->isAdmin()){ ?>
-    	core.OS.Taskbar.children[0].children[1].children[3].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.AdminC();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[4].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.logout();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[5].onclick = function()
-    	{
-    		clickt(clicked);
-    		window.location.reload();
-    	};
-    	<? } else { ?>
-    	core.OS.Taskbar.children[0].children[1].children[3].onclick = function()
-    	{
-    		clickt(clicked);core.loadApps.logout();
-    	};
-    	core.OS.Taskbar.children[0].children[1].children[4].onclick = function()
-    	{
-    		clickt(clicked);
-    		window.location.reload();
-    	};
-    	<? }; ?>
-                                for (var i=0; i < document.body.children.length; i++) {
-                                     if(document.body.children[i].id == 'menu0') {
-                                     document.body.children[i].style.display = 'none';
-                                     } else if(document.body.children[i].id == 'menu1') {
-                                     document.body.children[i].style.display = 'none';
-                                     } else if(document.body.children[i].id == 'menu2') {
-                                     document.body.children[i].style.display = 'none';
-                                     };
-                                };
-    				core.getstyle(prefit.windows[0], prefit.windows[1], 'window', prefit.windows[2]);
-                                core.windowtheme = prefit.windows[1];
-    				core.getscript(prefit.windows[0], 'window', prefit.windows[3]);
-                                     if('<? echo $version; ?>' > prefit.version) {
-                                     var updatev = new XMLHttpRequest();
-                         updatev.open("GET", "uconf.php?path=users/"+core.user+"/config&change=<? echo $version; ?>", true);
-                         updatev.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                         updatev.onreadystatechange = function() {
-                               if(updatev.readyState == 4){
-                                     MainTools.Notify('Version Updated\n<? echo $version; ?>B<br><? echo $updateinfo; ?>', null, 8);
-                               }
-                               }
-                               updatev.send();
-                                     }
+                                                    menuClick: [core.loadApps[coreapps[t]]],
+                                                    onclick:   core.loadApps[coreapps[t].toString()],
+                                                    click:		function() {
+                                                    	core.openapp(coreapps[t]);
+        												core.loadApps.Applications(null);
+                                                    },
+                                                    cat:		'System'
+                                           };
+                                           core.SystemApps.push(temp);
+                                          }
+                                          		console.log(prefit.wallpaper);
+                                     			window.core.UI.Desktop.style.background = 'URL(\'http://bludotos.com/users/'+core.user+'/sysapps/FileNet/'+prefit.wallpaper+'\')';
+                                     			window.core.UI.Desktop.style.backgroundSize = 'cover';
+                                     			core.UI.taskbar.username.innerHTML = core.user;
+                                     			var taskbarlis = core.UI.taskbar.children[core.UI.taskbar.children.length-2].querySelector('.list');
+                                     			taskbarlis.children[0].addEventListener('click', function() {
+                                     				core.loadApps.Prefs();
+                                     				core.UI.taskbarlist(this.parentNode, this.parentNode.children[0]);
+														}, false);
+                                     			 if(core.Admin == 1) {
+													var newop = core.create('div');
+													newop.add = core.UI.taskbar.children[core.UI.taskbar.children.length-2].querySelector('.list');
+													newop.className = 'li';
+													newop.innerHTML = 'Admin Options';
+													newop.add.appendChild(newop);
+													newop.addEventListener('click', function() {
+														core.loadApps.AdminC();
+														core.UI.taskbarlist(this.parentNode, this.parentNode.children[0]);
+														}, false);
+                         						};
+                         						var newop = core.create('div');
+													newop.add = core.UI.taskbar.children[core.UI.taskbar.children.length-2].querySelector('.list');
+													newop.className = 'li';
+													newop.innerHTML = 'Logout';
+													newop.add.appendChild(newop);
+													newop.addEventListener('click', function() {
+														core.loadApps.logout();
+														core.UI.taskbarlist(this.parentNode, this.parentNode.children[0]);
+														}, false);
+                                     			clearInterval(testt);
+                                     		}
+                                     	}
+                                     	core.GetApps();
+                                     }, 500);
+                                     //core.OS.Desktop.background.src = 'users/'+core.user+'/sysapps/FileNet/'+prefit.wallpaper;
+                                     //core.getscript(prefit.windows[0], 'window', prefit.windows[3]);
+                                     core.getstyle(prefit.windows[0], prefit.windows[1], 'window', prefit.windows[2]);
+                                		core.windowtheme = prefit.windows[1];
+                                     core.getscript(prefit.windows[0], 'window', 'temp');
+                                        });
                                }
                          }
                          checkp.send();
                          <? };?>
-    setTimeout(function() {document.body.style.cssText = 'position:fixed;top:0px;left:0px;right:0px;bottom:0px;height:100%;padding:0px;margin:0px;background:black;overflow:hidden;';}, 5000);
+        
+        setTimeout(function() {document.body.style.cssText = 'position:fixed;top:0px;left:0px;right:0px;bottom:0px;height:100%;padding:0px;margin:0px;background:black;overflow:hidden;';}, 5000);
     };
     priv.auth = function(){
         var rand = function() {
@@ -2086,6 +1895,14 @@ core.OS.Taskbar.children[0].children[0].onclick = function()
         priv.auth();
     };
     core.checkupdates = function() {
+    	var updateitq = new XMLHttpRequest();
+updateitq.open('GET', 'appcheck.php', true);
+updateitq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+updateitq.onreadystatechange = function() {
+        if(updateitq.readyState==4) {
+                var respw = JSON.parse(updateitq.responseText);
+                window.respw = respw;
+                
 var getapps = new XMLHttpRequest();
 getapps.open('GET', 'apps.php?goto=users/'+core.user+'/sysapps/FileNet/apps/', true);
 getapps.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -2093,9 +1910,8 @@ getapps.onreadystatechange = function() {
         if(getapps.readyState==4) {
         window.respit = window.installed = JSON.parse(getapps.responseText);
 core.capps = [];
-window.capp = [];
-        for(var i=0; i < (respit.dirs.length-1); i++) {
-window.capp.push(respit.dirs[i]);
+        for(var i=0; i < respit.dirs.length; i++) {
+window.capp = respit.dirs[i];
 var cupdateitq = new XMLHttpRequest();
 cupdateitq.open('GET', 'users/'+core.user+'/sysapps/FileNet/apps/'+respit.dirs[i]+'/version.txt?t='+new Date().getTime(), true);
 cupdateitq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -2104,20 +1920,19 @@ cupdateitq.onreadystatechange = function() {
                 var resp = JSON.parse(cupdateitq.responseText.toString());
                 window.resp2 = resp;
                 window.resp2.app = window.capp;
-var updateitq = new XMLHttpRequest();
-updateitq.open('GET', 'appstore/apps/'+window.resp2.cat+'/'+window.resp2.app+'/version.txt?t='+new Date().getTime(), true);
-updateitq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-updateitq.onreadystatechange = function() {
-        if(updateitq.readyState==4) {
-                var respw = JSON.parse(updateitq.responseText.toString());
-                window.respw = respw;
-                if(parseFloat(window.resp2.version) < parseFloat(window.respw.version)) {
-                	core.capps.push(window.resp2.app);
+                for(var a in  window.respw)
+                {
+                	for(var b in window.respw[a])
+                	{
+                		if(window.respw[a][b]['name'] == window.capp)
+                		{
+                			if(parseFloat(window.resp2.version) < parseFloat(window.respw[a][b]['version'])) {
+                				console.log(parseFloat(window.respw[a][b]['version']));
+                		core.capps.push(window.resp2.app);
+                		};
+                		};
                 	};
-                
-        }
-}
-updateitq.send();
+                };
         }
 }
 cupdateitq.send();
@@ -2128,7 +1943,15 @@ if(i == respit.dirs.length) {
 }
 }
 getapps.send();
+}
+}
+updateitq.send();
 };
+<? if($isMobile) { ?>
+	core.isMobile = true;
+<? } else { ?>
+	core.isMobile = false;
+<? }; ?>
 core.testu = function(array, name) {
 var test = new XMLHttpRequest();
 test.open('GET', 'updateconf.php?user='+core.user+'&array='+array+'&name='+name, true);
@@ -2162,12 +1985,10 @@ test.send();
 }());
 //window.onload = function(){core.getscript('default', 'script', 'maintools');core.load();document.forms[0].children[0].children[0].focus();};
 window.onload = function(){
+	//core.getscript('default', 'script', 'maintools', function(){setTimeout(function(){MainTools.Notify("Welcome!!</br>This is the early release of Bludot OS.</br>Sign up and take a look.</br>Click <a href=\"https://bludot.codeplex.com/\">About</a> to find out more.</br></br>   -Bludot Administrator", null, 500);MainTools.Notify("If you are a developer and would</br>like a developer account then</br>signup and follow the email instructions.</br>Apps are developed in the javascript language.</br>More features will come soon.", null, 500);}, 3000);});
 	core.getscript('default', 'script', 'maintools');
 	core.load();
 };
 </script>
-</head>
-<body scrolling="no" id="body" ondragstart="return false;" onselectstart="return false;" style="overflow:hidden;">
-<div id="notifications"></div>
-</body>
+  </body>
 </html>

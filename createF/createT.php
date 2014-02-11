@@ -69,6 +69,7 @@ copydir("../users/D/sysapps/FileNet/HDD","../users/$name/sysapps/FileNet/HDD");
 copydir("../users/D/sysapps/FileNet/HDD/Applications","../users/$name/sysapps/FileNet/HDD/Applications");
 copydir("../users/D/sysapps/Preferences","../users/$name/sysapps/Preferences");
 echo "success";
+header("location: http://bludotos.com/login.php");
 
 function copydir($source,$destination)
 {

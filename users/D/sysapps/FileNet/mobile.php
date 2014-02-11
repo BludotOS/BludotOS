@@ -20,7 +20,7 @@ for(var i = 2; i < menu.children.length; i++)
 {
 document.getElementById('menu0').appendChild(menu.children[i].cloneNode(true));
 }
-}
+};
 thisis[actT.x].menu();
 thisis[actT.x].FileNet = [];
 thisis[actT.x].i = -1;
@@ -112,27 +112,39 @@ var goto2 = new XMLHttpRequest();
         if (gotoit != 'Applications' && gotoit != 'HDD/Applications'){
 		thisis[actT.x].response2 = goto2.responseText;
 		thisis[actT.x].response = JSON.parse(goto2.responseText);
+		
 		var k = window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].children.length;
 		for(var i=0; i < k; i++)
 		{
 			window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].removeChild(window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].children[0]);
 		}
+		var tempi = 0;
 		if(thisis[actT.x].response.dirs){
+			thisis[actT.x].response.dirs.sort(function (a, b) {
+			    return a.toLowerCase().localeCompare(b.toLowerCase());
+			});
 		for(var i=0; i < thisis[actT.x].response.dirs.length; i++)
 		{
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.children[0].children[1].innerHTML));" class="name"><div><img alt="" src="<? echo $Ifolder; ?>" /><a>'+thisis[actT.x].response.dirs[i]+'</a></div></td><td style="text-align:left;" class="type">Directory</td>';
+			newtr.className = 'list'+(i%2);
+			newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.children[0].children[1].innerHTML));" class="name"><div><img alt="" src="<? echo $Ifolder; ?>" /><a>'+thisis[actT.x].response.dirs[i]+'</a></div></td><td style="text-align:left;" class="type"><font>Directory</font></td>';
 			window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].appendChild(newtr);
+			tempi = (i%2)+1;
 		};
 		}
 		if(thisis[actT.x].response.files){
+			thisis[actT.x].response.files.sort(function (a, b) {
+    			return a.toLowerCase().localeCompare(b.toLowerCase());
+			});
 		for(var i=0; i < thisis[actT.x].response.files.length; i++)
 		{
 			var temp = thisis[actT.x].response.files[i].substring(thisis[actT.x].response.files[i].indexOf(".") + 1);
+			temp = temp.toLowerCase();
 			var newtr = document.createElement('tr');
+			newtr.className = 'list'+((i+tempi)%2);
 			if(temp == 'png' || temp == 'jpg' || temp == 'jpeg' || temp == 'gif'){
 				var type = 'image';
-			newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].goto((this.children[0].children[1].innerHTML+thisis[actT.x].response.location));" class="name"><div><img alt="" src="users/<? echo $user; ?>/sysapps/FileNet/'+thisis[actT.x].response.location+'/'+thisis[actT.x].response.files[i]+'" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type">'+type+'</td>';
+			newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].goto((this.children[0].children[1].innerHTML+thisis[actT.x].response.location));" class="name"><div><img alt="" src="users/<? echo $user; ?>/sysapps/FileNet/'+thisis[actT.x].response.location+'/'+thisis[actT.x].response.files[i]+'" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type"><font>'+type+'</font></td>';
 			} else {
 				var type = 'undefined';
 			newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].goto((this.children[0].children[1].innerHTML+thisis[actT.x].response.location));" class="name"><div><img alt="" src="<? echo $Ifile; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type">'+type+'</td>';
@@ -143,15 +155,21 @@ var goto2 = new XMLHttpRequest();
         } else if (gotoit == 'Applications' || gotoit == 'HDD/Applications') {
 		thisis[actT.x].response2 = goto2.responseText;
 		thisis[actT.x].response = JSON.parse(goto2.responseText);
+		
 		var k = window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].children.length;
 		for(var i=0; i < k; i++)
 		{
 			window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].removeChild(window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].children[0]);
 		}
 		if(thisis[actT.x].response.files){
+			thisis[actT.x].response.files.sort(function (a, b) {
+    			return a.toLowerCase().localeCompare(b.toLowerCase());
+			});
+			var tempi = 0;
 		for(var i=0; i < thisis[actT.x].response.files.length; i++)
 		{
 			var temp = thisis[actT.x].response.files[i].substring(thisis[actT.x].response.files[i].indexOf(".") + 1);
+			temp = temp.toLowerCase();
 			if(temp == 'png' || temp == 'jpg' || temp == 'jpeg' || temp == 'gif'){
 				var type = 'image';
 			} else if (temp == 'blu') {
@@ -160,15 +178,16 @@ var goto2 = new XMLHttpRequest();
 				var type = 'undefined';
 			}
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].openapp((this.children[0].children[1].innerHTML));" class="name"><div><img alt="" src="<? echo $Iapp; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type">'+type+'</td>';
+			newtr.className = 'list'+(i%2);
+			newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].openapp((this.children[0].children[1].innerHTML));" class="name"><div><img alt="" src="<? echo $Iapp; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type"><font>'+type+'</font></td>';
 			window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].appendChild(newtr);
+			tempi = (i%2)+1;
 		};
 		}
         }
         thisis[actT.x].children[1].children[0].children[2].innerHTML = thisis[actT.x].response.location;
         window.actT.children[1].children[2].children[thisis[actT.x].cdivs].removeChild(window.actT.children[1].children[2].children[thisis[actT.x].cdivs].lastChild);
 		MainTools.scrollV(thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs], thisis[actT.x], thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0]);	
-				
 	};
 	};
 goto2.send(sendit);
@@ -264,7 +283,8 @@ thisis[actT.x].new = function(type){
 	{
 		console.log('dir');
 		var newtr = document.createElement('tr');
-		newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.children[0].children[1].innerHTML));" class="name"><div><img alt="" src="<? echo $Ifolder; ?>" /><a><input type="text" /></a></div></td><td style="text-align:left;" class="type">Directory</td>';
+		newtr.className = 'list'+((i+tempi)%2);
+		newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.children[0].children[1].innerHTML));" class="name"><div><img alt="" src="<? echo $Ifolder; ?>" /><a><input type="text" /></a></div></td><td style="text-align:left;" class="type"><font>Directory</font></td>';
 		console.log('1');
 		window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].appendChild(newtr);
 		console.log('2');
@@ -273,7 +293,8 @@ thisis[actT.x].new = function(type){
 	{
 		console.log('file');
 		var newtr = document.createElement('tr');
-		newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].goto(this.children[0].children[1].innerHTML);" class="name"><div><img alt="" src="<? echo $Ifile; ?>" /><a><input type="text" /></a></div></td><td class="type" style="text-align:left;">File</td>';
+		newtr.className = 'list'+((i+tempi)%2);
+		newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].goto(this.children[0].children[1].innerHTML);" class="name"><div><img alt="" src="<? echo $Ifile; ?>" /><a><input type="text" /></a></div></td><td class="type" style="text-align:left;"><font>File</font></td>';
 		window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].appendChild(newtr);
 	};
 	window.newtr = newtr;
@@ -450,30 +471,42 @@ thisis[actT.x].gotoit=gotoit;
         if (gotoit != 'Applications' && gotoit != 'HDD/Applications'){
 		thisis[actT.x].response2 = goto2.responseText;
 		thisis[actT.x].response = JSON.parse(goto2.responseText);
+
 		var k = window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].children.length;
 		for(var i=0; i < k; i++)
 		{
 			window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].removeChild(window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].children[0]);
 		}
 		if(thisis[actT.x].response.dirs){
+			thisis[actT.x].response.dirs.sort(function (a, b) {
+    			return a.toLowerCase().localeCompare(b.toLowerCase());
+			});
+			var tempi = 0;
 		for(var i=0; i < thisis[actT.x].response.dirs.length; i++)
 		{
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].click(this);thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.children[0].children[1].innerHTML));" class="name"><div><img alt="" src="<? echo $Ifolder; ?>" /><a>'+thisis[actT.x].response.dirs[i]+'</a></div></td><td style="text-align:left;" class="type">Directory</td>';
+			newtr.className = 'list'+(i%2);
+			newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].click(this);thisis[actT.x].goto((thisis[actT.x].response.location+\'/\'+this.children[0].children[1].innerHTML));" class="name"><div><img alt="" src="<? echo $Ifolder; ?>" /><a>'+thisis[actT.x].response.dirs[i]+'</a></div></td><td style="text-align:left;" class="type"><font>Directory</font></td>';
 			window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].appendChild(newtr);
+			tempi = 0;
 		};
 		}
 		if(thisis[actT.x].response.files){
+			thisis[actT.x].response.files.sort(function (a, b) {
+    			return a.toLowerCase().localeCompare(b.toLowerCase());
+			});
 		for(var i=0; i < thisis[actT.x].response.files.length; i++)
 		{
 			var temp = thisis[actT.x].response.files[i].substring(thisis[actT.x].response.files[i].indexOf(".") + 1);
 			var newtr = document.createElement('tr');
+			newtr.className = 'list'+((i+tempi)%2);
+			temp = temp.toLowerCase();
 			if(temp == 'png' || temp == 'jpg' || temp == 'jpeg' || temp == 'gif'){
 				var type = 'image';
-			newtr.innerHTML = '<td style="text-align:left;" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" class="name"><div><img alt="" src="users/<? echo $user; ?>/sysapps/FileNet/'+thisis[actT.x].response.location+'/'+thisis[actT.x].response.files[i]+'" /><a onclick="void(0);">'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type">'+type+'</td>';
+			newtr.innerHTML = '<td style="text-align:left;" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" class="name"><div><img alt="" src="users/<? echo $user; ?>/sysapps/FileNet/'+thisis[actT.x].response.location+'/'+thisis[actT.x].response.files[i]+'" /><a onclick="void(0);">'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type"><font>'+type+'</font></td>';
 			}  else if(temp != 'png' || temp != 'jpg' || temp != 'jpeg' || temp != 'gif'){
 				var type = 'undefined';
-                        newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].goto(this.children[0].children[1].innerHTML);" class="name"><div><img alt="" src="<? echo $Ifile; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td class="type" style="text-align:left;">'+type+'</td>';
+                        newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].goto(this.children[0].children[1].innerHTML);" class="name"><div><img alt="" src="<? echo $Ifile; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td class="type" style="text-align:left;"><font>'+type+'</font></td>';
                         };
 			window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].appendChild(newtr);
 		};
@@ -481,15 +514,21 @@ thisis[actT.x].gotoit=gotoit;
         } else if (gotoit == 'Applications' || gotoit == 'HDD/Applications') {
 		thisis[actT.x].response2 = goto2.responseText;
 		thisis[actT.x].response = JSON.parse(goto2.responseText);
+		
 		var k = window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].children.length;
 		for(var i=0; i < k; i++)
 		{
 			window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].removeChild(window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].children[0]);
 		}
 		if(thisis[actT.x].response.files){
+			thisis[actT.x].response.files.sort(function (a, b) {
+    			return a.toLowerCase().localeCompare(b.toLowerCase());
+			});
+			var tempi = 0;
 		for(var i=0; i < thisis[actT.x].response.files.length; i++)
 		{
 			var temp = thisis[actT.x].response.files[i].substring(thisis[actT.x].response.files[i].indexOf(".") + 1);
+			temp = temp.toLowerCase();
 			if(temp == 'png' || temp == 'jpg' || temp == 'jpeg' || temp == 'gif'){
 				var type = 'image';
 			} else if (temp == 'blu') {
@@ -498,15 +537,17 @@ thisis[actT.x].gotoit=gotoit;
 				var type = 'undefined';
 			}
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].openapp((this.children[0].children[1].innerHTML));" class="name"><div><img alt="" src="<? echo $Iapp; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type">'+type+'</td>';
+			newtr.className = 'list'+(i%2);
+			newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].openapp((this.children[0].children[1].innerHTML));" class="name"><div><img alt="" src="<? echo $Iapp; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td style="text-align:left;" class="type"><font>'+type+'</font></td>';
 			window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].appendChild(newtr);
+			tempi = (i%2)+1;
 		};
 		}
         }
         thisis[actT.x].children[1].children[0].children[2].innerHTML = thisis[actT.x].response.location;
         window.actT.children[1].children[2].children[thisis[actT.x].cdivs].removeChild(window.actT.children[1].children[2].children[thisis[actT.x].cdivs].lastChild);
 //window.actT.children[1].children[2].children[thisis[actT.x].cdivs].style.width = window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].clientWidth+'px';
-		MainTools.scrollV(thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs], thisis[actT.x], thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0], -(parseInt(window.actT.children[1].children[2].children[thisis[actT.x].cdivs].offsetLeft)+150), 45);				
+		MainTools.scrollV(thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs], thisis[actT.x], thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0], -(parseInt(window.actT.children[1].children[2].children[thisis[actT.x].cdivs].offsetLeft)+150), 25);				
 	};
 	};
 goto2.send(sendit);
@@ -538,6 +579,10 @@ var goto = new XMLHttpRequest();
                 thisis[actT.x]['typew'].style.width = thisis[actT.x].children[1].children[2].clientWidth - parseInt(thisis[actT.x]['namew'].style.width)+'px';
                 }
                 }
+                if(thisis[actT.x].children[1].querySelector('#splashload'))
+                {
+                	thisis[actT.x].children[1].removeChild(thisis[actT.x].children[1].querySelector('#splashload'));
+                };
                 } else {
                 };
 window.mousedownN = function(node, e){
@@ -562,20 +607,31 @@ node.onmouseup = function(){
      document.onmousemove = null;
 };
 };
+response.dirs.sort(function (a, b) {
+    return a.toLowerCase().localeCompare(b.toLowerCase());
+});
+response.files.sort(function (a, b) {
+    return a.toLowerCase().localeCompare(b.toLowerCase());
+});
+var tempi = 0;
 		for(var i=0; i < response.dirs.length; i++)
 		{
 			var newtr = document.createElement('tr');
-			newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].click(this);thisis[actT.x].goto(this.children[0].children[1].innerHTML);" class="name"><div><img alt="" src="<? echo $Ifolder; ?>" /><a>'+thisis[actT.x].response.dirs[i]+'</a></div></td><td class="type" style="text-align:left;">Directory</td>';
+			newtr.className = 'list'+(i%2);
+			newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].click(this);thisis[actT.x].goto(this.children[0].children[1].innerHTML);" class="name"><div><img alt="" src="<? echo $Ifolder; ?>" /><a>'+thisis[actT.x].response.dirs[i]+'</a></div></td><td class="type" style="text-align:left;"><font>Directory</font></td>';
 			window.actT.children[1].children[2].children[0].children[0].children[0].appendChild(newtr);
+			tempi = (i%2)+1;
 		};
 		for(var i=0; i < response.files.length; i++)
 		{
 			var newtr = document.createElement('tr');
+			newtr.className = 'list'+((i+tempi)%2);
                         var temp = response.files[i].split('.')[1];
+                        //temp = temp.toLowerCase();
                         if(temp != 'png' || temp != 'jpg' || temp != 'jpeg' || temp != 'gif'){
-			newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].goto(this.children[0].children[1].innerHTML);" class="name"><div><img alt="" src="<? echo $Ifile; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td class="type" style="text-align:left;">Undefined</td>';
+			newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].goto(this.children[0].children[1].innerHTML);" class="name"><div><img alt="" src="<? echo $Ifile; ?>" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td class="type" style="text-align:left;"><font>Undefined</font></td>';
                         } else if(temp == 'png' || temp == 'jpg' || temp == 'jpeg' || temp == 'gif'){
-                        newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].goto(this.children[0].children[1].innerHTML);" class="name"><div><img alt="" src="users/<? echo $user; ?>/sysapps/FileNet/'+thisis[actT.x].response.location+'/'+thisis[actT.x].response.files[i]+'" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td class="type" style="text-align:left;">Image</td>';
+                        newtr.innerHTML = '<td style="text-align:left;" ontouchstart="thisis[actT.x].stouch(this);" oncontextmenu="thisis[actT.x].filelistdrop(this);return false;" onclick="thisis[actT.x].goto(this.children[0].children[1].innerHTML);" class="name"><div><img alt="" src="users/<? echo $user; ?>/sysapps/FileNet/'+thisis[actT.x].response.location+'/'+thisis[actT.x].response.files[i]+'" /><a>'+thisis[actT.x].response.files[i]+'</a></div></td><td class="type" style="text-align:left;"><font>Image</font></td>';
                         };
 			window.actT.children[1].children[2].children[0].children[0].children[0].appendChild(newtr);
 		};
@@ -583,8 +639,9 @@ node.onmouseup = function(){
         thisis[actT.x].children[1].children[0].children[2].innerHTML = thisis[actT.x].response.location;
 //window.actT.children[1].children[2].children[thisis[actT.x].cdivs].style.width = window.actT.children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0].clientWidth+'px';
 		//MainTools.mscroll(thisis[actT.x].children[1].children[0].children[2].children[0]);
-		MainTools.scrollV(thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs], thisis[actT.x], thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0], (parseInt(window.actT.children[1].children[2].children[thisis[actT.x].cdivs].offsetLeft)+150*(-1)), 45);	
-				
+		MainTools.scrollV(thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs], thisis[actT.x], thisis[actT.x].children[1].children[2].children[thisis[actT.x].cdivs].children[0].children[0], (parseInt(window.actT.children[1].children[2].children[thisis[actT.x].cdivs].offsetLeft)+150*(-1)), 25);	
+				window.testside = thisis[actT.x];
+	thisis[actT.x].querySelector('#sidebar').children[0].children[0].className = 'selected';
 	};
 	};
 goto.send();
@@ -602,11 +659,13 @@ thisis[actT.x].click = function(node) {
             window.testnode = node;
             for(var i=0; i < node.parentNode.children.length; i++)
             {
-                 node.parentNode.children[i].style.background = '';
-                 node.parentNode.children[i].style['boxShadow'] = '';
+                 //node.parentNode.children[i].style.background = '';
+                 //node.parentNode.children[i].style['boxShadow'] = '';
+                 node.parentNode.children[i].className = '';
             };
-       node.style.background='rgba(70,70,70,1)';
-       node.style['boxShadow'] = 'inset 0px 0px 3px 1px black';
+       //node.style.background='rgba(70,70,70,1)';
+       //node.style['boxShadow'] = 'inset 0px 0px 3px 1px black';
+       node.className = 'selected';
 };
 </script>
 <style>
@@ -975,23 +1034,27 @@ font-size:20px;
 html{
 }
 #FileNet #topname:hover {
-background:none;
 box-shadow:none;
 }
 #FileNet .name {
-width:100px;
+width:300px;
 }
 #FileNet .type {
 text-align:left;
 }
+
+#FileNet .type font {
+	margin-left:5px;
+}
+
 #FileNet tr {
 position:relative;
 display:block;
 }
-#FileNet tr:hover {
+/*#FileNet .list tr {
 background:rgba(70,70,70,1);
 box-shadow: inset 0px 0px 3px 1px black;
-}
+}*/
 /*#FileNet #content tr {
 
 }
@@ -1038,6 +1101,11 @@ padding-left: 5px;
 	-moz-transition: left,top,width,height,margin .5s ease;
 
 }
+
+#FileNet #file-list tr.list0 {
+	background: #cecece;
+}
+
 #FileNet #file-list:nth-child(2) tr {
 width:150px;
 padding: 0px;
@@ -1052,7 +1120,16 @@ padding: 0px 10px 0px 10px;
 #FileNet #file-list tr div img {
 height: 30px;
 width: 30px;
+float: left;
+margin-right: 10px;
 }
+
+#FileNet #file-list tr div a {
+height: 34px;
+line-height: 34px;
+float: left;
+}
+
 #FileNet #file-list:nth-child(2) tr div font {
 position: relative;
 float: left;
@@ -1080,8 +1157,8 @@ overflow: hidden;
 float:left;
 }
 #FileNet #file-list tr td {
-border-right: 1px dotted black;
-border-bottom: 1px dotted black;
+padding:0;
+marign:0;
 }
 
 #FileNet #file-icon tr {
@@ -1153,17 +1230,60 @@ word-wrap: break-word;
 }
 #FileNet #sidebar img {
 	width:25px;
+	margin-right: 5px;
+	margin-top: 4px;
+float: left;
 }
+
+#FileNet #sidebar font {
+	height: 34px;
+line-height: 34px;
+float: left;
+}
+
+#topname:hover {
+	
+}
+
+#sidebar tr {
+margin: 0px -10px;
+padding: 0px 15px;
+}
+
+#sidebar tr.selected {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdjNzQ3NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI5JSIgc3RvcC1jb2xvcj0iIzdjNzQ3NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg4JSIgc3RvcC1jb2xvcj0iIzYwNjA2MCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2MDYwNjAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(124,116,116,1) 0%, rgba(124,116,116,1) 29%, rgba(96,96,96,1) 88%, rgba(96,96,96,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(124,116,116,1)), color-stop(29%,rgba(124,116,116,1)), color-stop(88%,rgba(96,96,96,1)), color-stop(100%,rgba(96,96,96,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(124,116,116,1) 0%,rgba(124,116,116,1) 29%,rgba(96,96,96,1) 88%,rgba(96,96,96,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(124,116,116,1) 0%,rgba(124,116,116,1) 29%,rgba(96,96,96,1) 88%,rgba(96,96,96,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(124,116,116,1) 0%,rgba(124,116,116,1) 29%,rgba(96,96,96,1) 88%,rgba(96,96,96,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(124,116,116,1) 0%,rgba(124,116,116,1) 29%,rgba(96,96,96,1) 88%,rgba(96,96,96,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c7474', endColorstr='#606060',GradientType=0 ); /* IE6-8 */
+}
+
+#sidebar tr.selected:after {
+content: '';
+position: absolute;
+border-top: 5px solid transparent;
+top: 50%;
+left: 10px;
+width: 5px;
+height: 0px;
+border-bottom: 5px solid transparent;
+border-left: 5px solid rgba(0,0,0,0.6);
+margin-top: -5px;
+}
+
 </style>
-<div style="position:absolute;left:0px;top:0px;right:0px;height:35px;background: -moz-linear-gradient(top, rgba(160,160,160,1) 0%, rgba(63,63,63,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(160,160,160,1)), color-stop(100%,rgba(63,63,63,1)));">
+<div class="topbar">
 <div class="topbar-btns" onclick="thisis[actT.x].back(thisis[actT.x].response.location.split((thisis[actT.x].response.location.split('/')[(thisis[actT.x].response.location.split('/')).length-1]))[0].substring(0, thisis[actT.x].response.location.split((thisis[actT.x].response.location.split('/')[(thisis[actT.x].response.location.split('/')).length]))[0].length-1));"><img src="<? echo $backbtn; ?>"></div>
 <div class="topbar-btns" onclick="thisis[actT.x].add();"><img src="<? echo $addbtn; ?>"></div>
-<div style="position: relative;width: 300px;border: 1px solid black;margin: 0 auto;top: 6px;height: 20px;border-radius: 20px;padding: 0px 5px 0px 5px;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmNmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjE1JSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2Q2ZDZkNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg3JSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);" onmouseover="var node=this;window.rep2=window.setInterval(function(){node.scrollLeft=(node.scrollLeft+1);}, 90);" onmouseout="clearInterval(window.rep2);this.scrollLeft=0;"></div>
+<div style="position: relative;width: 300px;border: 1px solid #a7a7a7;margin: 0 auto;top: 6px;height: 20px;border-radius: 20px;padding: 0px 10px;line-height:20px;background:white;" onmouseover="var node=this;window.rep2=window.setInterval(function(){node.scrollLeft=(node.scrollLeft+1);}, 90);" onmouseout="clearInterval(window.rep2);this.scrollLeft=0;"></div>
 <div style="position: absolute;width: 125px;height: 20px;border: 1px solid black;top: 6px;right: 5px;border-radius: 20px;background: white;margin: 0;padding: 0;overflow: hidden;"><input style="position: relative;outline: none;border: none;border-radius: 20px;top: 0px;left: 5px;width: 100px;height: 100%;padding: 0;margin: 0;border-spacing: 0;" /><img src="<? echo $Isearch; ?>" style="position: absolute;width: 20px;height: 20px;top: 0px;right: 0px;border-left: 1px solid gray;" /></div>
 </div>
-<div id="0" style="position:absolute;left:0px;top:35px;width:150px;bottom:0px;background:rgba(30,30,30,1);border-right:1px solid black;" onmouseover="thisis[actT.x].cdiv=parseInt(this.id);">
+<div id="0" class="sidebar" style="position:absolute;left:0px;top:35px;width:150px;bottom:0px;" onmouseover="thisis[actT.x].cdiv=parseInt(this.id);">
 <table id="sidebar" style="width:100%;border-spacing:0;">
-<tr style="background:rgba(70,70,70,1);box-shadow: inset 0px 0px 3px 1px black;width:150px;">
+<tr>
 <td style="width:150px;" onclick="thisis[actT.x].click(this.parentNode);thisis[actT.x].back(this.children[0].children[1].innerHTML+'/');thisis[actT.x].cdiv=parseInt(-1);"><div><img alt="" src="<? echo $IHDD; ?>" /><font>HDD</font></div></td>
 </tr>
 <tr>
@@ -1177,18 +1297,18 @@ word-wrap: break-word;
 </tr>
 </table>
 </div>
-<div style="position:absolute;left:150px;top:35px;right:0px;bottom:0px;background:rgba(157,201,214, 1);border-left:1px solid black;">
-<div id="0" style="position: absolute;float: left;border-left-width: 1px;border-left-style: solid;border-left-color: black;top: 0px;left: 0px;right: 0px;bottom: 0px;" onmouseover="thisis[actT.x].cdiv=parseInt(this.id);">
+<div style="position:absolute;left:150px;top:35px;right:0px;bottom:0px;background:#f4f4f4;">
+<div id="0" style="position: absolute;float: left;top: 0px;left: 0px;right: 0px;bottom: 0px;" onmouseover="thisis[actT.x].cdiv=parseInt(this.id);">
 <table id="file-list" class="list" align="left" style="border-spacing: 0px;top: 0px;left: 0px;position: relative;width: 100%;height: 100%;padding-top: 20px;">
-<tbody  style="position: absolute;top: 45px;bottom: 0px;left: 0px;right: 0px;overflow: hidden;">
+<tbody style="position: absolute;top: 25px;bottom: 0px;left: 0px;right: 0px;overflow: hidden;">
 </tbody>
 </table>
-<table style="position: absolute;top: 20px;left: 0px;right: 0px;height: 20px;width: 100%;border-spacing: 0;">
+<table style="position: absolute;top: 0px;left: 0px;right: 0px;height: 20px;width: 100%;border-spacing: 0;">
 <tbody>
-<tr id="topname" onmouseover="return false;" style="border-spacing:0;background: -moz-linear-gradient(top, rgba(160,160,160,1) 0%, rgba(63,63,63,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(160,160,160,1)), color-stop(100%,rgba(63,63,63,1)));">
-<td class="name" id="name" style="position:relative;background:transparent;text-align:left;border-radius:0px;">name</td>
-<td class="divider" style="width:5px;height:21px;background:transparent;border:1px solid black;" onmousedown="window.mousedownN(this);"></td>
-<td class="type" id="type" style="position:relative;background:transparent;text-align:left;border-radius:0px;">type</td>
+<tr id="topname" class="tablebar topbar" onmouseover="return false;" >
+<td class="name" id="name" style="position:relative;background:transparent;text-align:left;border-radius:0px;"><font>name</font></td>
+<td class="divider" style="width: 5px;background:#d6d6d6;height: 25px;border: none;padding: 0;margin: 0;" onmousedown="window.mousedownN(this);"></td>
+<td class="type" id="type" style="position:relative;background:transparent;text-align:left;border-radius:0px;"><font>type<font></td>
 </tr>
 </tbody>
 </table>

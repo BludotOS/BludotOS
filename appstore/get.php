@@ -7,10 +7,10 @@
 ****************/
 
 //connection variables
-$host = "127.0.0.1";
-$database = db;
-$user = user;
-$pass = pass;
+$host = ;
+$database = ;
+$user = ;
+$pass = ;
 
 //connection to the database
 mysql_connect($host, $user, $pass)

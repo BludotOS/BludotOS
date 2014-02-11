@@ -14,6 +14,10 @@ for (var x=0; x < thisis.length; x++)
         window.actT.x = x;
      }
 }
+thisis[actT.x].menu = function() {
+	document.getElementById('menu0').innerHTML = '';
+	window.bar(0);
+};
 window.updatecon = function(change) {
 var wall = new XMLHttpRequest();
 	wall.open('GET', 'users/'+core.user+'/sysapps/Preferences/uconf.php?user='+core.user+'&name=wallpaper&change='+change, true);
@@ -30,8 +34,8 @@ window.setrangedockmax = function(node) {
 window.setrangedockmin = function(node) {
     node.value = window.dock.min;
 };
-window.thumbnail = function(tempim, imt, name) {
-var tempim = tempim,
+window.thumbnail = function(tempim, imt, name, id, len) {
+/*var tempim = tempim,
       imt = imt,
       c  = document.createElement( 'canvas' ),
       cx = c.getContext( '2d' ),
@@ -39,16 +43,36 @@ var tempim = tempim,
       crop = false,
       background = 'white',
       jpeg = false,
-      quality = 1;
-function loadImage(file) {
+      quality = 1;*/
+      
+function loadImage(file, num) {
+   var num = num;
+   var file = file;
+   if(name.split('.')[1] != 'svg') {
     var img = new Image();
-    img.src = file;
-    img.onload = function() {
+    var test = new XMLHttpRequest();
+    console.log(file);
+	var sendit = 'file=../FileNet'+file;
+		test.open('POST', 'users/'+core.user+'/sysapps/Preferences/images.php', true);
+		test.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		test.onload = function() {
+			var res = test.responseText;
+			img.src = res;
+			console.log(res);
+				addtothumbslist2(res, name, num, len);
+		}
+		test.send(sendit);
+    //img.src = file;
+    /*img.onload = function() {
       grabformvalues();
-      imagetocanvas( this, thumbwidth, thumbheight, crop, background, name );
-    };
+      imagetocanvas( this, thumbwidth, thumbheight, crop, background, name, num );
+    };*/
+	} else {
+		var res = 'users/'+core.user+'/sysapps/FileNet'+file;
+		addtothumbslist2(res, name, num, len);
+	}
   }
-  function grabformvalues() {
+/*  function grabformvalues() {
     //thumbwidth  = document.querySelector( '#width' ).value;
     //thumbheight = document.querySelector( '#height' ).value;
     //crop = document.querySelector( '#crop' ).checked;
@@ -74,15 +98,117 @@ function loadImage(file) {
       img, dimensions.x, dimensions.y, dimensions.w, dimensions.h 
     );
     addtothumbslist( jpeg, quality, name );
+  };*/
+  function addtothumbslist2( data, name, num, len ) {
+  	if(data.substring(0,6) == "users/" || data.substring(0,11) == "data:image/") {
+    var thumb = new Image();
+        //url = jpeg ? c.toDataURL( 'image/jpeg' , quality ) : c.toDataURL();
+    thumb.title = name;
+    thumb.id = imt;
+    thumb.style.cssText = 'width:90px;height:90px;position:relative;float:left;top:0px;left:0px;padding:2px;background:transparent;';
+    tempim.children[2].children[0].insertBefore( thumb, tempim.children[2].children[0].querySelector('.loader'));
+    //thumb.onload = function() {
+    	thumb.src = data;
+    	console.log('num: '+num);
+    	console.log('len: '+thisis[actT.x].len);
+    //}
+    console.log(thumb);
+			//tempimg.onclick = function(){document.getElementById('thedesktop').src = this.src;};
+			thumb.oncontextmenu = function(e){
+				if(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
+				{
+					thisis[actT.x].pobj.children[2].children[0].children[2].children[0].removeChild(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
+				}
+            	if(!e)
+            	{
+            		var e = window.event;
+            	}
+            	var div = document.createElement('div');
+            	div.innerHTML = "<ul><li>Set as Background</li><li>Delete</li></ul>";
+            	div.children[0].children[0].onclick = function(){
+            		window.change = 'users/'+core.user+'/sysapps/FileNet'+e.target.id;
+            		if(core.UI) {
+	            		core.UI.Desktop.style.opacity = 0;
+            			setTimeout(function() {
+            				core.UI.Desktop.style.background = 'url(\''+change+'\') no-repeat center fixed';
+            				core.UI.Desktop.style.backgroundSize = 'cover';
+            				core.UI.Desktop.style.backgroundSize = 'cover';
+							core.UI.Desktop.style.opacity = 1;
+							window.updatecon(change.split('FileNet/')[1]);
+            			},500);
+            			
+            		} else {
+            			document.getElementById('thedesktop').style.opacity = 0;
+            			setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change.split('FileNet/')[1]);",500);
+            		};
+            	};
+            	div.children[0].children[1].onclick = function(){
+            		alert(e.target.title);
+            		var ajax = new XMLHttpRequest();
+            		var sendit = "loc="+e.target.title;
+            		ajax.open('POST', 'users/'+core.user+'/sysapps/Preferences/delete.php', false);
+            		ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            		ajax.onreadystatechange = function() {
+            			if(ajax.readyState == 4)
+            			{
+            				if(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
+				{
+					thisis[actT.x].pobj.children[2].children[0].children[2].children[0].removeChild(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
+				};
+            			};
+            		};
+            		ajax.send(sendit);
+            	};
+            	div.className = "wallpaperdrop";
+            	div.style.width = 100+'px';
+            	div.style.height = 26+'px';
+            	div.style.background = 'rgba(0,0,0,0.7)';
+            	div.style.position = 'absolute';
+            	div.style.zIndex = 99999;
+            	div.style.left = e.target.offsetLeft+'px';
+            	div.style.top = e.target.offsetTop+e.target.clientHeight+'px';
+            	div.style.borderRadius = 5+'px';
+            	div.children[0].style.cssText = "display: block;padding: 0px;margin: 0px;text-align:center;"
+            	div.children[0].children[0].style.cssText = div.children[0].children[1].style.cssText = "display: block;color: white;font-size: 11px;line-height: 10px;float: left;position: relative;top: 0px;left: 0px;padding: 2px 0 2px 0px;width:100%;"
+            	thisis[actT.x].pobj.children[2].children[0].children[2].children[0].appendChild(div);
+            	return false;
+            };
+			thumb.onclick = function(){
+				if(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
+				{
+					thisis[actT.x].pobj.children[2].children[0].children[2].children[0].removeChild(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
+				}
+				window.change = 'users/'+core.user+'/sysapps/FileNet'+this.id;
+				if(core.UI) {
+	            		core.UI.Desktop.style.opacity = 0;
+            			setTimeout(function() {
+            				core.UI.Desktop.style.background = 'url(\''+change+'\') no-repeat center fixed';
+            				core.UI.Desktop.style.backgroundSize = 'cover';
+							core.UI.Desktop.style.opacity = 1;
+							window.updatecon(change.split('FileNet/')[1]);
+            			},500);
+            			
+            		} else {
+            			document.getElementById('thedesktop').style.opacity = 0;
+            			setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change.split('FileNet/')[1]);",500);
+            		};
+			};
+  	}
+  	if(num == (thisis[actT.x].len-1)) {
+			tempim.children[2].children[0].removeChild(tempim.children[2].children[0].querySelector('.loader'));
+    	}
   };
-  function addtothumbslist( jpeg, quality, name ) {
+  function addtothumbslist( jpeg, quality, name, num, len ) {
     var thumb = new Image(),
         url = jpeg ? c.toDataURL( 'image/jpeg' , quality ) : c.toDataURL();
     thumb.src = url;
     thumb.title = name;
     thumb.id = imt;
     thumb.style.cssText = 'width:90px;height:90px;position:relative;float:left;top:0px;left:0px;padding:2px;background:transparent;';
-    tempim.children[2].children[0].appendChild( thumb );
+    tempim.children[2].children[0].insertBefore( thumb, tempim.children[2].children[0].querySelector('.loader') );
+    if(num == (len-1)) {
+		tempim.children[2].children[0].removeChild(tempim.children[2].children[0].querySelector('.loader'));
+    }
 			//tempimg.onclick = function(){document.getElementById('thedesktop').src = this.src;};
 			thumb.oncontextmenu = function(e){
 				if(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
@@ -97,8 +223,20 @@ function loadImage(file) {
             	div.innerHTML = "<ul><li>Set as Background</li><li>Delete</li></ul>";
             	div.children[0].children[0].onclick = function(){
             		window.change = e.target.id;
-            		document.getElementById('thedesktop').style.opacity = 0;
-            		setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change);",500);
+            		if(core.UI) {
+	            		core.UI.Desktop.style.opacity = 0;
+            			setTimeout(function() {
+            				core.UI.Desktop.style.background = 'url(\''+change+'\') no-repeat center fixed';
+            				core.UI.Desktop.style.backgroundSize = 'cover';
+            				core.UI.Desktop.style.backgroundSize = 'cover';
+							core.UI.Desktop.style.opacity = 1;
+							window.updatecon(change.split('FileNet/')[1]);
+            			},500);
+            			
+            		} else {
+            			document.getElementById('thedesktop').style.opacity = 0;
+            			setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change.split('FileNet/')[1]);",500);
+            		};
             	};
             	div.children[0].children[1].onclick = function(){
             		alert(e.target.title);
@@ -137,8 +275,19 @@ function loadImage(file) {
 					thisis[actT.x].pobj.children[2].children[0].children[2].children[0].removeChild(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
 				}
 				window.change = this.id;
-				document.getElementById('thedesktop').style.opacity = 0;
-				setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change);",500);
+				if(core.UI) {
+	            		core.UI.Desktop.style.opacity = 0;
+            			setTimeout(function() {
+            				core.UI.Desktop.style.background = 'url(\''+change+'\') no-repeat center fixed';
+            				core.UI.Desktop.style.backgroundSize = 'cover';
+							core.UI.Desktop.style.opacity = 1;
+							window.updatecon(change.split('FileNet/')[1]);
+            			},500);
+            			
+            		} else {
+            			document.getElementById('thedesktop').style.opacity = 0;
+            			setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change.split('FileNet/')[1]);",500);
+            		};
 			};
   };
 function resize( imagewidth, imageheight, thumbwidth, thumbheight ) {
@@ -157,7 +306,7 @@ function resize( imagewidth, imageheight, thumbwidth, thumbheight ) {
     y = ( thumbheight - h ) / 2;
     return { w:w, h:h, x:x, y:y };
   };
-loadImage(imt);
+loadImage(imt, id);
 };
 window.themeup = function(type, string) {
 //var string = '  array (\n    0 => "default",\n    1 => "default",\n    2 => "check",\n    3 => "check",\n  ),';
@@ -169,8 +318,8 @@ var string = 'default,'+string+',check,check';
 core.getstyle('default', string, 'taskbar', 'check');
 var string = 'default,'+string+',check,script';
 } else if(type == 'dock') {
-core.getstyle('default', string, 'dock', 'style');
-var string = 'default,'+string+',style,script';
+core.getstyle('default', string, 'dock', 'check');
+var string = 'default,'+string+',check,script';
 };
 	wall.open('GET', 'users/'+core.user+'/sysapps/Preferences/uconf.php?array=true&user='+core.user+'&name='+type+'&change='+encodeURIComponent(string), true);
 	wall.onreadystatechange = function() {
@@ -242,15 +391,22 @@ window.loadwall = function(folder, obj, tempload) {
 	wall.onreadystatechange = function() {
 		if (wall.readyState==4) {
 		window.results = JSON.parse(wall.responseText);
+		var thumb = document.createElement('img');
+    thumb.className = 'img loader';
+    thumb.src = 'http://bludotos.com/images/loader.gif';
+    thumb.style.cssText = 'width:90px;height:90px;position:relative;float:left;top:0px;left:0px;padding:2px;background:transparent;';
+    obj.children[2].children[0].appendChild(thumb);
 		for(var i=0; i < results.files.length; i++) {
-                        if(('users/'+core.user+'/sysapps/FileNet/'+folder+'/'+results.files[i]).split('.')[1] != 'svg') {
-			window.thumbnail(obj, 'users/'+core.user+'/sysapps/FileNet/'+folder+'/'+results.files[i], results.files[i]);
-                        } else {
+			thisis[actT.x].num = i;
+			thisis[actT.x].len = results.files.length;
+                        //if(('users/'+core.user+'/sysapps/FileNet/'+folder+'/'+results.files[i]).split('.')[1] != 'svg') {
+			window.thumbnail(obj, '/'+folder+'/'+results.files[i], results.files[i], i, results.files.length);
+                        /*} else {
                         var tempimg = document.createElement('img');
                         tempimg.style.cssText = 'width:90px;height:90px;position:relative;float:left;top:0px;left:0px;padding:2px;background:transparent;';
                         tempimg.title = results.files[i];
                         tempimg.src = 'users/'+core.user+'/sysapps/FileNet/'+folder+'/'+results.files[i];
-                        obj.children[2].children[0].appendChild( tempimg );
+                        obj.children[2].children[0].insertBefore( tempimg, obj.children[2].children[0].querySelector('.loader') );
 			//tempimg.onclick = function(){document.getElementById('thedesktop').src = this.src;};
 			tempimg.oncontextmenu = function(e){
 				if(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0])
@@ -265,8 +421,19 @@ window.loadwall = function(folder, obj, tempload) {
             	div.innerHTML = "<ul><li>Set as Background</li><li>Delete</li></ul>";
             	div.children[0].children[0].onclick = function(){
             		window.change = e.target.src;
-            		document.getElementById('thedesktop').style.opacity = 0;
-            		setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change);",500);
+            		if(core.UI) {
+	            		core.UI.Desktop.style.opacity = 0;
+            			setTimeout(function() {
+            				core.UI.Desktop.style.background = 'url(\''+change+'\') no-repeat center fixed';
+            				core.UI.Desktop.style.backgroundSize = 'cover';
+							core.UI.Desktop.style.opacity = 1;
+							window.updatecon(change.split('FileNet/')[1]);
+            			},500);
+            			
+            		} else {
+            			document.getElementById('thedesktop').style.opacity = 0;
+            			setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change.split('FileNet/')[1]);",500);
+            		};
             	};
             	div.className = "wallpaperdrop";
             	div.children[0].children[1].onclick = function(){
@@ -305,16 +472,32 @@ window.loadwall = function(folder, obj, tempload) {
 					thisis[actT.x].pobj.children[2].children[0].children[2].children[0].removeChild(thisis[actT.x].pobj.children[2].children[0].children[2].children[0].getElementsByTagName('div')[0]);
 				}
 				window.change = this.src;
-				document.getElementById('thedesktop').style.opacity = 0;
-				setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change);",500);
+				if(core.UI) {
+	            		core.UI.Desktop.style.opacity = 0;
+            			setTimeout(function() {
+            				core.UI.Desktop.style.background = 'url(\''+change+'\') no-repeat center fixed';
+            				core.UI.Desktop.style.backgroundSize = 'cover';
+							core.UI.Desktop.style.opacity = 1;
+							window.updatecon(change.split('FileNet/')[1]);
+            			},500);
+            			
+            		} else {
+            			document.getElementById('thedesktop').style.opacity = 0;
+            			setTimeout("document.getElementById('thedesktop').src = change;document.getElementById('thedesktop').style.opacity = 1;window.updatecon(change.split('FileNet/')[1]);",500);
+            		};
 			};
-                        };
-			document.getElementById('thedesktop').style['-webkit-transition'] = "opacity .5s linear";
-			document.getElementById('thedesktop').style.MozTransition = "opacity .5s linear";
-		}
-                if(tempload) {
-                obj.children[1].removeChild(tempload);
-                }
+                        };*/
+			if(core.UI) {
+				core.UI.Desktop.style['-webkit-transition'] = "opacity .5s linear";
+				core.UI.Desktop.style.MozTransition = "opacity .5s linear";
+			} else {
+				document.getElementById('thedesktop').style['-webkit-transition'] = "opacity .5s linear";
+				document.getElementById('thedesktop').style.MozTransition = "opacity .5s linear";
+			}
+		};
+                //if(tempload) {
+                //obj.children[1].removeChild(tempload);
+                //}
                 MainTools.scrollV(obj.children[2], document.getElementById('Preferences').children[1], obj.children[2].children[0]);
 		};
 	};

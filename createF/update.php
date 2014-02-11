@@ -26,14 +26,19 @@ copydir("../users/admin/config","../users/$name/config");
 //copydir("../users/admin/sysapps","../users/$name/sysapps");
 copydir("../users/admin/sysapps/DevCenter","../users/$name/sysapps/DevCenter");
 //copydir("../users/admin/sysapps/DevCenter/images","../users/$name/sysapps/DevCenter/images");
-/*if($name != "admin")
+if($name != "admin")
 {
 	unlink("../users/$name/sysapps/FileNet/HDD/Applications/APP.blu");
 	copy("../users/admin/sysapps/FileNet/HDD/Applications/APP.blu", "../users/$name/sysapps/FileNet/HDD/Applications/APP.blu");
 	//mkdir("../users/$name/sysapps/FileNet/HDD/Applications");
 	//mkdir("../users/$name/sysapps/FileNet/HDD/Applications/temp");
 	//mkdir("../users/$name/sysapps/DevCenter/include/APP_core");
-};*/
+	rrmdir("../users/$name/sysapps/FileNet/HDD/Applications/temp");
+	mkdir("../users/$name/sysapps/FileNet/HDD/Applications/temp");
+	rrmdir("../users/$name/sysapps/Uploader");
+	mkdir("../users/$name/sysapps/Uploader");
+	copydir("../users/admin/sysapps/Uploader", "../users/$name/sysapps/Uploader");
+};
 copydir("../users/admin/sysapps/DevCenter/include","../users/$name/sysapps/DevCenter/include");
 copydir("../users/admin/sysapps/DevCenter/include/APP_core","../users/$name/sysapps/DevCenter/include/APP_core");
 copydir("../users/admin/sysapps/FileNet","../users/$name/sysapps/FileNet");
@@ -43,11 +48,7 @@ copydir("../users/admin/sysapps/FileNet/include","../users/$name/sysapps/FileNet
 copydir("../users/admin/sysapps/Uploader","../users/$name/sysapps/Uploader");
 //copydir("../users/admin/sysapps/FileNet/images","../users/$name/sysapps/FileNet/images");
 copydir("../users/admin/sysapps/Preferences","../users/$name/sysapps/Preferences");
-<<<<<<< HEAD
-$link = mysql_connect('localhost',user,pass);
-=======
-$link = mysql_connect(host, user, pass);
->>>>>>> cb0bc74e15d6a6d48d680a3a581d83611d1e9bd4
+$link = mysql_connect('localhost','vios_admin','qlalsldl');
 mysql_select_db('vios_users', $link);
 $sql = "SELECT userid FROM users WHERE username = '".$name."'";
 $result = mysql_query($sql, $link) or die(mysql_error());

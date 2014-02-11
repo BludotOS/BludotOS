@@ -5,7 +5,11 @@ zindexbase:10,
 Winds:0,
 init:function(widn, splash, height, width, left, top, size, bar){
         if (!height && !width && !left && !top) {
-               var height = window.innerHeight-document.getElementById('background').clientHeight;
+        	if(document.getElementById('background')) {
+				var height = window.innerHeight-document.getElementById('background').clientHeight;
+        	} else {
+        		var height = window.innerHeight-core.UI.Desktop.clientHeight;
+        	}
                var width= window.innerWidth;
         }
 	var windowdiv = document.createElement('div');

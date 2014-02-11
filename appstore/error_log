@@ -860,3 +860,470 @@ Stack trace:
 [27-Aug-2013 10:22:15] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
 [27-Aug-2013 10:23:25] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
 [27-Aug-2013 10:23:25] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[28-Aug-2013 11:07:50] PHP Warning:  file_get_contents(DEV/Chatters.bluAPP_core/version.txt) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 96
+[28-Aug-2013 11:07:50] PHP Warning:  file_get_contents(DEV/Chatters.bluAPP_core/version.txt) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 96
+[28-Aug-2013 11:08:44] PHP Warning:  file_get_contents(DEV/Chatters.blu/APP_core/version.txt) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 96
+[28-Aug-2013 15:37:18] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[28-Aug-2013 15:37:18] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[28-Aug-2013 15:37:21] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[28-Aug-2013 15:37:23] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[29-Aug-2013 21:02:11] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[29-Aug-2013 21:02:11] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[29-Aug-2013 21:02:13] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[29-Aug-2013 21:02:13] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[29-Aug-2013 21:02:13] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[30-Aug-2013 09:19:09] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[30-Aug-2013 09:19:09] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[30-Aug-2013 09:19:11] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[30-Aug-2013 09:26:12] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[30-Aug-2013 09:26:12] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[01-Sep-2013 09:35:06] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[01-Sep-2013 17:02:31] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[01-Sep-2013 17:04:42] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[01-Sep-2013 17:04:46] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[01-Sep-2013 17:04:47] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[01-Sep-2013 17:04:47] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[06-Sep-2013 21:10:40] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[06-Sep-2013 21:10:44] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[06-Sep-2013 21:10:44] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[10-Sep-2013 08:29:52] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[10-Sep-2013 08:29:52] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[11-Sep-2013 21:56:31] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[11-Sep-2013 21:56:31] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[11-Sep-2013 21:56:33] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[11-Sep-2013 21:56:33] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[11-Sep-2013 21:56:33] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[11-Sep-2013 21:56:34] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[11-Sep-2013 21:56:34] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[11-Sep-2013 21:56:34] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[11-Sep-2013 21:56:34] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[11-Sep-2013 21:56:34] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[11-Sep-2013 21:56:34] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[11-Sep-2013 21:56:35] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[11-Sep-2013 21:56:35] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[11-Sep-2013 21:56:35] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[11-Sep-2013 21:56:36] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[17-Sep-2013 13:50:36] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[17-Sep-2013 13:50:36] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[17-Sep-2013 13:50:38] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[17-Sep-2013 13:50:38] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[17-Sep-2013 13:50:38] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[17-Sep-2013 13:50:39] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[17-Sep-2013 13:50:39] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[17-Sep-2013 13:50:39] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[17-Sep-2013 13:50:40] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[17-Sep-2013 13:50:40] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[17-Sep-2013 13:50:40] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[17-Sep-2013 13:50:40] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[17-Sep-2013 13:50:40] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[17-Sep-2013 13:50:40] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[17-Sep-2013 13:50:44] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[18-Oct-2013 08:18:19] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[18-Oct-2013 08:18:19] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[30-Nov-2013 13:36:24] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[30-Nov-2013 13:36:29] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[30-Nov-2013 13:36:29] PHP Warning:  copy(apps/Productivity/1dd2a42c1dbbb7c15a56c925a/Test.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[03-Dec-2013 13:27:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 13:27:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 18:06:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Dec-2013 18:06:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Dec-2013 12:10:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Dec-2013 12:10:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Dec-2013 09:18:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Dec-2013 09:18:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Dec-2013 00:36:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Dec-2013 00:36:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Dec-2013 23:39:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Dec-2013 23:39:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Dec-2013 10:14:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Dec-2013 10:14:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[14-Dec-2013 07:09:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[14-Dec-2013 07:09:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[14-Dec-2013 07:09:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[14-Dec-2013 07:09:57] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[14-Dec-2013 07:10:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[14-Dec-2013 07:10:01] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[14-Dec-2013 07:10:01] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[14-Dec-2013 07:10:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[14-Dec-2013 07:10:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[14-Dec-2013 07:10:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 13:51:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 13:51:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 13:52:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 13:52:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:24:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:25:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:26:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:27:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:28:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:29:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:29:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:30:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:30:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:30:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:30:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:31:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:31:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:53:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 16:53:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 18:04:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 18:04:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 23:23:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[15-Dec-2013 23:23:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 18:36:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 18:36:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 18:41:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 18:41:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 19:31:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Dec-2013 19:31:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 17:30:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 17:30:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 17:30:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 17:32:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 17:32:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 17:32:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 17:35:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 17:35:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 17:36:01] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 17:36:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 17:36:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 17:36:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 17:38:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Dec-2013 17:38:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:37:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:37:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:37:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:46:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:46:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:46:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:46:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:47:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 13:47:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 14:11:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 14:11:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 14:21:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[22-Dec-2013 14:21:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:14:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:14:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:15:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 12:16:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:26:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:26:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:16] PHP Warning:  file_get_contents(DEV/SRC_test2/APP_core/version.txt) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 97
+[24-Dec-2013 14:45:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 14:45:19] PHP Warning:  file_get_contents(DEV/SRC_test2/APP_core/version.txt) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 97
+[24-Dec-2013 18:21:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:21:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:23:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:25:58] PHP Warning:  rmdir(../users/admin/sysapps/FileNet/apps/Image_test) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/appstore/uninstall.php on line 8
+[24-Dec-2013 18:26:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:30:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:30:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:31:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:31:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:32:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:32:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:32:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:32:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:33:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:33:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:34:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:34:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:36:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:36:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:37:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[24-Dec-2013 18:37:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[26-Dec-2013 12:35:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[26-Dec-2013 12:35:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[26-Dec-2013 12:35:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[26-Dec-2013 12:37:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[26-Dec-2013 12:37:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[27-Dec-2013 10:58:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[27-Dec-2013 10:58:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:27:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[28-Dec-2013 16:27:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[29-Dec-2013 17:40:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[29-Dec-2013 17:40:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[29-Dec-2013 18:59:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[29-Dec-2013 18:59:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:54:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:54:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:54:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:54:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:54:31] PHP Warning:  file_get_contents(DEV//APP_core/version.txt) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/submit.php on line 97
+[30-Dec-2013 14:54:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:54:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:54:50] PHP Warning:  rmdir(../users/Liongold/sysapps/FileNet/apps/Image_test) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/appstore/uninstall.php on line 8
+[30-Dec-2013 14:54:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:54:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 14:54:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 23:07:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[30-Dec-2013 23:07:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[31-Dec-2013 10:06:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[31-Dec-2013 10:06:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[01-Jan-2014 23:47:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[01-Jan-2014 23:47:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:38:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:38:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:38:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[02-Jan-2014 14:38:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 00:08:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 00:08:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 06:53:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 06:53:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 06:53:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:20:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:20:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:20:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:20:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:20:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:20:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:23:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:23:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:25:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:25:55] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:32:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:32:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:33:14] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:33:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:35:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:35:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:36:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:36:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:37:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:38:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:39:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:39:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:39:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:39:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:40:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:40:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:41:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:41:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:42:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:42:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:42:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:42:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:43:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:43:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:47:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:47:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:48:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:48:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 10:49:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 15:26:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 15:26:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 18:12:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[03-Jan-2014 18:12:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:44:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 15:44:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:43:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[04-Jan-2014 16:43:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:28:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:28:51] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:28:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:29:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:29:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:29:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:29:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:29:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:29:40] PHP Warning:  rmdir(../users/admin/sysapps/FileNet/apps/Image_test) [<a href='function.rmdir'>function.rmdir</a>]: No such file or directory in /home/vios/public_html/appstore/uninstall.php on line 8
+[05-Jan-2014 13:29:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:50:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 13:50:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 17:20:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 17:20:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 18:52:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 18:52:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 18:54:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 18:54:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 18:56:37] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 18:56:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 18:59:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 18:59:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:01:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:01:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:02:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:02:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:03:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:03:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:06:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:06:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:20:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:20:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:22:27] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:22:29] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:33:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:33:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:36:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:36:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:41:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:41:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:43:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:43:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:45:03] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:45:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:48:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[05-Jan-2014 19:48:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Jan-2014 07:47:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Jan-2014 07:47:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Jan-2014 11:19:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Jan-2014 11:19:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Jan-2014 22:37:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Jan-2014 22:37:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Jan-2014 22:39:24] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Jan-2014 22:39:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Jan-2014 22:56:25] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Jan-2014 22:56:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 16:40:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[07-Jan-2014 16:40:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Jan-2014 13:59:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Jan-2014 13:59:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Jan-2014 13:59:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Jan-2014 13:59:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 09:32:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 09:32:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 09:32:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 15:25:42] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Jan-2014 15:25:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[11-Jan-2014 11:57:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[11-Jan-2014 11:57:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[11-Jan-2014 11:57:57] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[11-Jan-2014 11:58:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[12-Jan-2014 11:24:35] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[12-Jan-2014 11:24:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[14-Jan-2014 22:14:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[14-Jan-2014 22:14:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:49:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:49:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:50:34] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:50:41] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:51:16] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 09:51:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:31:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:31:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:33:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[16-Jan-2014 16:33:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[17-Jan-2014 12:53:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[17-Jan-2014 12:53:56] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[17-Jan-2014 12:53:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[17-Jan-2014 12:54:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:25:12] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:25:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:28:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:28:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:29:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:30:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:32:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:32:07] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:33:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:33:54] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:36:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:36:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:38:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:38:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:39:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:39:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:40:30] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:40:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:42:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:42:33] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:44:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:44:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:45:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:45:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:45:45] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:45:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:46:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:46:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:48:02] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 13:48:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:28:26] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:28:28] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:30:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:30:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:31:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:31:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:32:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 14:32:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 20:20:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[20-Jan-2014 20:20:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:42:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:42:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:43:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:43:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:44:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:44:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:47:04] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:47:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:51:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:51:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:53:13] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:53:15] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:54:59] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:55:00] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:55:43] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:55:44] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:56:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:56:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:58:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 17:58:47] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:00:36] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:00:38] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:01:46] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:01:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:04:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:04:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:05:39] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[25-Jan-2014 18:05:40] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[26-Jan-2014 22:01:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[26-Jan-2014 22:01:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[27-Jan-2014 00:19:05] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[27-Jan-2014 00:19:06] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[27-Jan-2014 00:19:11] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 22:46:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[06-Feb-2014 22:46:21] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 00:20:48] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[08-Feb-2014 00:20:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Feb-2014 00:13:08] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Feb-2014 00:13:09] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Feb-2014 00:13:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Feb-2014 00:13:10] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Feb-2014 00:13:17] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Feb-2014 00:13:18] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[09-Feb-2014 00:13:18] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Feb-2014 00:13:18] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[09-Feb-2014 00:13:18] PHP Warning:  copy(apps///img.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 7
+[09-Feb-2014 00:13:18] PHP Warning:  copy(apps///.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[09-Feb-2014 00:13:23] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Feb-2014 00:17:22] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Feb-2014 00:17:22] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists in /home/vios/public_html/appstore/install.php on line 6
+[09-Feb-2014 22:17:19] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[09-Feb-2014 22:17:20] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[10-Feb-2014 06:10:52] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[10-Feb-2014 06:10:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[10-Feb-2014 06:10:58] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[10-Feb-2014 06:10:58] PHP Warning:  copy(apps/Social/1dd2a42c1dbbb7c15a56c925a/AmoebaChat.blu) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/vios/public_html/appstore/install.php on line 8
+[10-Feb-2014 06:11:49] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[10-Feb-2014 06:11:50] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[10-Feb-2014 06:11:53] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[10-Feb-2014 06:13:31] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0
+[10-Feb-2014 06:13:32] PHP Warning:  Module 'mailparse' already loaded in Unknown on line 0

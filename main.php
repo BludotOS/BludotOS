@@ -64,24 +64,88 @@ left: 2px;
 color: #99a1a7;
 outline:none;
 }
+
+.login-btn-r {
+position: absolute;
+top: -4px;
+right: 60px;
+height: 25px;
+line-height: 25px;
+font-family: sans-serif;
+padding: 6px 25px;
+font-size: 20px;
+font-weight: bold;
+color: white;
+text-decoration: none;
+border-radius: 8px;
+background: -webkit-linear-gradient(top, rgba(0,181,232,1) 0%,rgba(0,129,193,1) 100%);
+}
+.login-btn-r:after {
+content: '';
+position: absolute;
+width: 0px;
+height: 0px;
+top: 11px;
+right: 6px;
+border-top: 8px solid transparent;
+border-bottom: 8px solid transparent;
+border-left: 10px solid white;
+}
+
+.reg-btn-r {
+position: absolute;
+top: 39px;
+right: 49px;
+height: 25px;
+line-height: 25px;
+font-family: sans-serif;
+padding: 6px 25px;
+font-size: 20px;
+font-weight: bold;
+color: white;
+text-decoration: none;
+border-radius: 8px;
+background: -webkit-linear-gradient(top, rgba(0,181,232,1) 0%,rgba(0,129,193,1) 100%);
+}
+.reg-btn-r:after {
+content: '';
+position: absolute;
+width: 0px;
+height: 0px;
+top: 11px;
+right: 6px;
+border-top: 8px solid transparent;
+border-bottom: 8px solid transparent;
+border-left: 10px solid white;
+}
+
+.bg-login {
+	position: relative;
+	height: 100%;
+	background: url(wallpaper/BluDot.svg) no-repeat center fixed;
+	background-size: cover;
+}
 </style>
 <script type="text/javascript" for="jqlibcyc" src="http://malsup.github.io/jquery.cycle.all.js"></script>
 </script><script type="text/javascript" for="bg-resize" requires="jquery">$j(document).ready(function() { $j("body").ezBgResize({ img : "images/BluDot__1_-svg.jpg" }) ;});</script><script type="text/javascript" for="clrslideshow" requires="jquery jqcycle">$j(document).ready(function() { $j('#ss_i_1368247137').cycle({ fx: 'uncover', timeout: 2000, sync: 1, next: '#next_1368247137', prev: '#prev_1368247137' });  });</script>
 </head>
 <body>
-<center>
+<center class="bg-login">
 <div style="position:relative;width:960px;height:100%;" align="left">
 <div id="mymenu_10728205" style="z-index:1051;top:160px;left:10px;width:940px;height:25px;position:absolute;" objtype="6" class="">
 <div class="suckertreemenu">
 <ul id="treemenu1" isvertical="0">
-<li><a href="/">Home</a></li><li><a href="about.html">About</a></li><li><a href="http://dev.bludotos.com">Developers</a></li><li><a href="mailto:support@bludotos.com">Contact</a></li></ul></div></div>
+<li><a href="/">Home</a></li><li><a href="https://bludot.codeplex.com/">About</a></li><li><a href="http://dev.bludotos.com">Developers</a></li><li><a href="mailto:support@bludotos.com">Contact</a></li></ul></div></div>
 <div id="boxTool_1" style="width:960px;height:599px;position:absolute;top:140px;left:0px;z-index:1;background-color:rgb(0, 0, 0);opacity:0.7;filter:alpha(opacity=70);" objtype="5" class=""></div>
 <div id="txtBox_2" style="width:922px;height:42px;position:absolute;padding:10px;top:20px;left:71px;z-index:2;" objtype="2" class="" align="left"><span style="color:rgb(61, 133, 198);font-size:24pt;font-family:Verdana;font-weight:bold;">BluDot OS</span></div>
 <div id="txtBox_3" style="width:922px;height:18px;position:absolute;padding:10px;top:59px;left:76px;z-index:7;" objtype="2" class="" align="left"><span style="font-size:10pt;color:rgb(241, 194, 50);font-family:'Trebuchet MS';">Simple, Clean, Efficient</span></div>
 <img id="boxTool_10" src="images/BluDotlogo.png"style="width:67px;height:67px;position:absolute;top:29px;left:0px;z-index:14;" objtype="5" class="" />
 <div id="txtBox_11" style="width:940px;height:23px;position:absolute;padding:20px;top:676px;left:-20px;z-index:15;" objtype="2" class="" align="right"><span style="font-family:'Trebuchet MS';font-size:10pt;color:rgb(102, 102, 102);">Developed by: James Trotter</span></div>
 <div id="txtBox_17" style="width:300px;height:19px;position:absolute;padding:10px;top:20px;left:640px;z-index:23;" objtype="2" align="right" class=""><span style="color:rgb(255, 255, 255);font-family:monospace;font-weight:bold;">Email:</span><a style="color:rgb(255, 255, 255);font-family:monospace;" href="mailto:support@bludotos.com">support@bludotos.com</a></div>
-<div id="txtBox_19" style="width:220px;height:52px;position:absolute;padding:10px;top:56px;left:711px;z-index:25;" objtype="2" class=""><form id="loginf" action="javascript:core.ajaxlogin(document.forms[0].children[0].value, document.forms[0].children[1].value, document.forms[0].children[2].value, document.forms[0].children[3].checked);" style="width: 90px;margin-left: 54px;" ><input class="login" type="text" value="Username" onfocus="this.value='';"  onblur="if(this.value==''){this.value='Username';}"/><input type="password" class="login" value="Password"  onfocus="this.value='';"  onblur="if(this.value.length == 0 ){this.value='Password';}"/><input type="hidden" name="sublogin" value="1"><input id="remember" class="checkbox" type="checkbox" name="remember" style="width: 100%;display:none;"/><label for="remember"></label><span style="color: white;font-size: 10px;line-height: 10px;top: -2px;position: relative;left: 10px;">Remember me</span><input class="fbut" style="top: 12px;" type="submit" value="Login" /><input class="fbut" style="top:34px;"type="button" value="Sign up" onclick="core.register();" /></form></div>
+<div id="txtBox_19" style="width:220px;height:52px;position:absolute;padding:10px;top:56px;left:711px;z-index:25;" objtype="2" class="">
+	<a href="login.php" class="login-btn-r">Login</a>
+	<a href="javascript:core.register()" class="reg-btn-r">Sign-up</a>
+	</div>
 <div id="ss_c_1368247137" style="position:absolute;top:202px;left:0px;width:960px;height:474px;z-index:27;" objtype="28" options="{'transition': 'uncover', 'interval': '2000', 'manual': 'on', 'sync': 'on', 'pause': 'off'}" class="">
 <div id="ss_i_1368247137" style="position:relative;width:100%;height:100%;overflow:hidden;">
 <div style="width:100%;height:100%;">
